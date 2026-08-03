@@ -1,0 +1,1155 @@
+﻿> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:dataBindingTriggerDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:kspDebugKotlin UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+.\gradlew.bat : warning: The following options were not recognized by any processor: 
+'[dagger.hilt.internal.useAggregatingRootProcessor, dagger.fastInit, 
+dagger.hilt.android.internal.disableAndroidSuperclassValidation, dagger.hilt.android.internal.projectType]'
+At C:\Users\codebuzz\AppData\Local\Temp\ps-script-54fea83e-cfc9-4427-9d6c-6544d29ef3b9.ps1:79 char:34
++ ... roid\PdfReader"; .\gradlew.bat compileDebugJavaWithJavac 2>&1 | Out-F ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: The fo...l.projectType]':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:381: 
+error: missing return statement
+    }
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:347: 
+error: variable bitmap might not have been initialized
+                        Bitmap bitmap522 = bitmap;
+                                           ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:348: 
+error: variable f10 might not have been initialized
+                        drawY = f10;
+                                ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:349: 
+error: variable f6 might not have been initialized
+                        drawX = f6;
+                                ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:351: 
+error: variable f8 might not have been initialized
+                        matrix22.postScale(f8 / bitmap522.getWidth(), f9 / bitmap522.getHeight());
+                                           ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:351: 
+error: variable f9 might not have been initialized
+                        matrix22.postScale(f8 / bitmap522.getWidth(), f9 / bitmap522.getHeight());
+                                                                      ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:360: 
+error: variable f10 might not have been initialized
+                    f11 = f10;
+                          ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\Paragraph.java:402: 
+error: cannot find symbol
+        return "Paragraph [" + getStartOffset() + VectorFormat.DEFAULT_SEPARATOR + getEndOffset() + ")";
+                                                  ^
+  symbol:   variable VectorFormat
+  location: class Paragraph
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:68: 
+error: cannot find symbol
+                        rectangle2.x = (int) (((r0.getCol1() * f) * 96.0f) / 914400.0f);
+                                                ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:69: 
+error: cannot find symbol
+                        rectangle2.y = (int) (((r0.getFlag() * f2) * 96.0f) / 914400.0f);
+                                                ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:70: 
+error: cannot find symbol
+                        rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                     ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:70: 
+error: cannot find symbol
+                        rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                                   ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:71: 
+error: cannot find symbol
+                        rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                      ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:71: 
+error: cannot find symbol
+                        rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                                     ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:75: 
+error: cannot find symbol
+                    rectangle2.x = (int) (((r0.getDx1() * f) * 96.0f) / 914400.0f);
+                                            ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:76: 
+error: cannot find symbol
+                    rectangle2.y = (int) (((r0.getDy1() * f2) * 96.0f) / 914400.0f);
+                                            ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:77: 
+error: cannot find symbol
+                    rectangle2.width = (int) ((((r0.getDx2() - r0.getDx1()) * f) * 96.0f) / 914400.0f);
+                                                 ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:77: 
+error: cannot find symbol
+                    rectangle2.width = (int) ((((r0.getDx2() - r0.getDx1()) * f) * 96.0f) / 914400.0f);
+                                                               ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:78: 
+error: cannot find symbol
+                    rectangle2.height = (int) ((((r0.getDy2() - r0.getDy1()) * f2) * 96.0f) / 914400.0f);
+                                                  ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:78: 
+error: cannot find symbol
+                    rectangle2.height = (int) ((((r0.getDy2() - r0.getDy1()) * f2) * 96.0f) / 914400.0f);
+                                                                ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:83: 
+error: cannot find symbol
+                    rectangle2.x = (int) (((r0.getCol1() * f) * 96.0f) / 914400.0f);
+                                            ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:84: 
+error: cannot find symbol
+                    rectangle2.y = (int) (((r0.getFlag() * f2) * 96.0f) / 914400.0f);
+                                            ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:85: 
+error: cannot find symbol
+                    rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                 ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:85: 
+error: cannot find symbol
+                    rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                               ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:86: 
+error: cannot find symbol
+                    rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                  ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:86: 
+error: cannot find symbol
+                    rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                                 ^
+  symbol:   variable r0
+  location: class HWPFShape
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\sprm\SprmBuffer.java:197: error: 
+cannot find symbol
+            sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                      ^
+  symbol:   variable VectorFormat
+  location: class SprmBuffer
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\CharacterProperties.java
+:250: error: ACTION_MODE_DRAG_MASK is not public in ItemTouchHelper; cannot be accessed from outside package
+                return ItemTouchHelper.ACTION_MODE_DRAG_MASK;
+                                      ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\CharacterProperties.java
+:274: error: cannot find symbol
+                return TIFFConstants.COMPRESSION_IT8LW;
+                       ^
+  symbol:   variable TIFFConstants
+  location: class CharacterProperties
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java:1
+02: error: DirectionalityEstimator has private access in BidiFormatter
+    private static final BitField ftsWidthBefore = new 
+BitField(BidiFormatter.DirectionalityEstimator.DIR_TYPE_CACHE_SIZE);
+                                                                             ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java:1
+06: error: cannot find symbol
+    private static final BitField widthAndFitsFlags_empty1 = new BitField(Opcodes.ASM7);
+                                                                          ^
+  symbol:   variable Opcodes
+  location: class TAPAbstractType
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java:1
+09: error: cannot find symbol
+    private static final BitField pcHorz = new BitField(Frame.UNINITIALIZED_KIND);
+                                                        ^
+  symbol:   variable Frame
+  location: class TAPAbstractType
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TCAbstractType.java:44
+: error: cannot find symbol
+    private static final BitField fUnused = new BitField(CpioConstants.C_ISSOCK);
+                                                         ^
+  symbol:   variable CpioConstants
+  location: class TCAbstractType
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\OfficeDrawingsImpl.java:
+164: error: cannot find symbol
+            if (m7100$$Nest$mgetEscherShapeRecordContainer == null || (escherOptRecord = (EscherOptRecord) 
+m7100$$Nest$mgetEscherShapeRecordContainer.getChildById(EscherOptRecord.RECORD_ID)) == null || (escherSimpleProperty = 
+(EscherSimpleProperty) escherOptRecord.lookup(MetaDo.META_SETROP2)) == null) {
+                                                                                                                       
+                                                                                                                       
+                                  ^
+  symbol:   variable MetaDo
+  location: class OfficeDrawingImpl
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\OfficeDrawingsImpl.java:
+192: error: method createShape in class HWPFShapeFactory cannot be applied to given types;
+                return HWPFShapeFactory.createShape(m7100$$Nest$mgetEscherShapeRecordContainer);
+                                       ^
+  required: EscherContainerRecord,HWPFShape
+  found:    EscherContainerRecord
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PieceDescriptor.java:91: 
+error: cannot find symbol
+        sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                  ^
+  symbol:   variable VectorFormat
+  location: class PieceDescriptor
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:69: 
+error: cannot find symbol
+        sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                  ^
+  symbol:   variable VectorFormat
+  location: class PropertyModifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:73: 
+error: cannot find symbol
+            sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                      ^
+  symbol:   variable VectorFormat
+  location: class PropertyModifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:77: 
+error: cannot find symbol
+            sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                      ^
+  symbol:   variable VectorFormat
+  location: class PropertyModifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:80: 
+error: cannot find symbol
+            sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                      ^
+  symbol:   variable VectorFormat
+  location: class PropertyModifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\InlineWordArt.java:28: 
+error: method createShape in class HWPFShapeFactory cannot be applied to given types;
+        return HWPFShapeFactory.createShape((EscherContainerRecord) this.escherRecords.get(0));
+                               ^
+  required: EscherContainerRecord,HWPFShape
+  found:    EscherContainerRecord
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\GenericPropertyNode.java:21:
+ error: cannot find symbol
+        sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                  ^
+  symbol:   variable VectorFormat
+  location: class GenericPropertyNode
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\GenericPropertyNode.java:27:
+ error: cannot find symbol
+            str = BaseParser.NULL;
+                  ^
+  symbol:   variable BaseParser
+  location: class GenericPropertyNode
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:185: 
+error: CHPBinTable.AnonymousClass1 is not abstract and does not override abstract method compare(CHPX,CHPX) in 
+Comparator
+    public class AnonymousClass1 implements Comparator<CHPX> {
+           ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:192: 
+error: method does not override or implement a method from a supertype
+        @Override // java.util.Comparator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:289: 
+error: cannot find symbol
+        int byteIndex = charIndexTranslator.getByteIndex(this._textRuns.get(r2.size() - 1).getEnd());
+                                                                            ^
+  symbol:   variable r2
+  location: class CHPBinTable
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:146: 
+error: PAPBinTable.AnonymousClass1 is not abstract and does not override abstract method compare(PAPX,PAPX) in 
+Comparator
+    public class AnonymousClass1 implements Comparator<PAPX> {
+           ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:153: 
+error: method does not override or implement a method from a supertype
+        @Override // java.util.Comparator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:257: 
+error: cannot find symbol
+        int byteIndex = charIndexTranslator.getByteIndex(this._paragraphs.get(r3.size() - 1).getEnd());
+                                                                              ^
+  symbol:   variable r3
+  location: class PAPBinTable
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\fs\filesystem\CFBFileSystem.java:129: 
+error: cannot find symbol
+        if (name.equals("Pictures") || name.endsWith("WorkBook") || name.equals(HSLFSlideShow.POWERPOINT_DOCUMENT) || 
+name.endsWith("Ole") || name.endsWith("ObjInfo") || name.endsWith("ComObj") || name.endsWith("EPRINT")) {
+                                                                                ^
+  symbol:   variable HSLFSlideShow
+  location: class CFBFileSystem
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\fs\filesystem\Property.java:107: 
+error: cannot find symbol
+            return r0[0].getData().length * this.blocks.length;
+                   ^
+  symbol:   variable r0
+  location: class Property
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:183: error: 
+KEY_BACKGROUND has private access in WearableExtender
+        Element element = read.getRootElement().element(NotificationCompat.WearableExtender.KEY_BACKGROUND);
+                                                                                           ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:185: error: 
+KEY_BACKGROUND has private access in WearableExtender
+            if (element.element(NotificationCompat.WearableExtender.KEY_BACKGROUND) != null) {
+                                                                   ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:186: error: 
+KEY_BACKGROUND has private access in WearableExtender
+                backgroundAndFill = 
+processBackgroundAndFill(element.element(NotificationCompat.WearableExtender.KEY_BACKGROUND));
+                                                                                                                ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:218: error: cannot 
+find symbol
+        List<Element> elements = rootElement.elements(HtmlTags.STYLE);
+                                                      ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:241: error: 
+package HtmlTags does not exist
+            if (HtmlTags.TABLE.equals(element9.attributeValue("type")) && (element = element9.element("tblStylePr")) 
+!= null && "firstRow".equals(element.attributeValue("type")) && (element2 = element.element("tcPr")) != null && 
+(element3 = element2.element("shd")) != null && (attributeValue = element3.attributeValue("fill")) != null) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:302: error: 
+incompatible types: Object cannot be converted to Element
+        for (Element element2 : rootElement.elements("num")) {
+                                                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:308: error: 
+incompatible types: Object cannot be converted to Element
+        for (Element element4 : rootElement.elements("abstractNum")) {
+                                                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:355: error: 
+package HtmlTags does not exist
+            if (HtmlTags.ALIGN_LEFT.equals(attributeValue)) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:357: error: 
+package HtmlTags does not exist
+            } else if (HtmlTags.ALIGN_CENTER.equals(attributeValue)) {
+                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:359: error: 
+package HtmlTags does not exist
+            } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue)) {
+                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:419: error: cannot 
+find symbol
+        String attributeValue5 = element2.attributeValue(HtmlTags.ALIGN_LEFT);
+                                                         ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:426: error: 
+package XmlErrorCodes does not exist
+        if (XmlErrorCodes.DECIMAL.equalsIgnoreCase(str)) {
+                         ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:507: error: cannot 
+find symbol
+            AttrManage.instance().setPageMarginLeft(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_LEFT)));
+                                                                                                        ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:508: error: cannot 
+find symbol
+            AttrManage.instance().setPageMarginRight(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_RIGHT)));
+                                                                                                         ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:509: error: cannot 
+find symbol
+            AttrManage.instance().setPageMarginTop(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_TOP)));
+                                                                                                       ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:510: error: cannot 
+find symbol
+            AttrManage.instance().setPageMarginBottom(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_BOTTOM)));
+                                                                                                          ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:521: error: 
+package Annotation does not exist
+            if (Annotation.PAGE.equals(element4.attributeValue("offsetFrom"))) {
+                          ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:524: error: cannot 
+find symbol
+            Element element5 = element4.element(HtmlTags.ALIGN_TOP);
+                                                ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:530: error: cannot 
+find symbol
+            Element element6 = element4.element(HtmlTags.ALIGN_LEFT);
+                                                ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:536: error: cannot 
+find symbol
+            Element element7 = element4.element(HtmlTags.ALIGN_RIGHT);
+                                                ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:542: error: cannot 
+find symbol
+            Element element8 = element4.element(HtmlTags.ALIGN_BOTTOM);
+                                                ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:633: error: cannot 
+find symbol
+            border.setSpace((short) (Integer.parseInt(r4) * 1.8f));
+                                                      ^
+  symbol:   variable r4
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:657: error: cannot 
+find symbol
+        Iterator it = element.elements(HtmlTags.TR).iterator();
+                                       ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:672: error: 
+package HtmlTags does not exist
+            if (HtmlTags.ALIGN_CENTER.equals(attributeValue2)) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:674: error: 
+package HtmlTags does not exist
+            } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue2)) {
+                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:758: error: 
+package HtmlTags does not exist
+            if (HtmlTags.ALIGN_CENTER.equals(attributeValue2)) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:760: error: 
+package HtmlTags does not exist
+            } else if (HtmlTags.ALIGN_BOTTOM.equals(attributeValue2)) {
+                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:774: error: 
+package HtmlTags does not exist
+            if (HtmlTags.P.equals(next.getName())) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:783: error: cannot 
+find symbol
+        Iterator it = element.elements(HtmlTags.TR).iterator();
+                                       ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:860: error: cannot 
+find symbol
+                if (attributeValue13 == null && (attributeValue10 = element5.attributeValue(HtmlTags.BEFORE)) != null 
+&& attributeValue10.length() > 0) {
+                                                                                            ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:867: error: cannot 
+find symbol
+                if (attributeValue14 == null && (attributeValue9 = element5.attributeValue(HtmlTags.AFTER)) != null && 
+attributeValue9.length() > 0) {
+                                                                                           ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:871: error: cannot 
+find symbol
+                String attributeValue15 = element5.attributeValue(HtmlTags.BEFORE);
+                                                                  ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:880: error: cannot 
+find symbol
+                String attributeValue17 = element5.attributeValue(HtmlTags.AFTER);
+                                                                  ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:922: error: cannot 
+find symbol
+                String attributeValue21 = element6.attributeValue(HtmlTags.ALIGN_LEFT);
+                                                                  ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:930: error: cannot 
+find symbol
+                        attributeValue4 = element6.attributeValue(HtmlTags.ALIGN_RIGHT);
+                                                                  ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:970: error: cannot 
+find symbol
+            attributeValue4 = element6.attributeValue(HtmlTags.ALIGN_RIGHT);
+                                                      ^
+  symbol:   variable HtmlTags
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:995: error: 
+package HtmlTags does not exist
+            if (HtmlTags.ALIGN_LEFT.equals(attributeValue22) || "both".equals(attributeValue22) || 
+"distribute".equals(attributeValue22)) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1039: error: 
+package HtmlTags does not exist
+            if (HtmlTags.ALIGN_CENTER.equals(attributeValue22)) {
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1041: error: 
+package HtmlTags does not exist
+            } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue22)) {
+                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1051: error: 
+cannot find symbol
+            while (r3.hasNext()) {
+                   ^
+  symbol:   variable r3
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1273: error: 
+package Annotation does not exist
+                                                } else if (Annotation.PAGE.equals(element17.attributeValue("type"))) {
+                                                                     ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1274: error: 
+package Parser does not exist
+                                                    str2 = String.valueOf(Parser.Tokenizer.FF);
+                                                                                ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1295: error: 
+MAILTO has private access in MailTo
+                                                        if (str5.indexOf(MailTo.MAILTO) >= 0) {
+                                                                               ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1296: error: 
+MAILTO has private access in MailTo
+                                                            str3 = str5.substring(str5.indexOf(MailTo.MAILTO));
+                                                                                                     ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1417: error: 
+incompatible types: Object cannot be converted to Element
+                for (Element element4 : element.elements("r")) {
+                                                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1467: error: 
+cannot find symbol
+            while (r14.hasNext()) {
+                   ^
+  symbol:   variable r14
+  location: class DOCXReader
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1523: error: 
+package Annotation does not exist
+        if (Annotation.PAGE.equalsIgnoreCase(str)) {
+                      ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1529: error: 
+package FirebaseAnalytics.Param does not exist
+        if (FirebaseAnalytics.Param.CHARACTER.equalsIgnoreCase(str)) {
+                                   ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1557: error: 
+package HtmlTags does not exist
+        if (HtmlTags.ALIGN_LEFT.equalsIgnoreCase(str)) {
+                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:105
+: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                           ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+2 warnings
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+[Incubating] Problems report is available at: file:///F:/HiteshAndroid/PdfReader/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler output below.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:1
+05: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+          new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                             ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\OfficeDrawingsImpl.jav
+a:192: error: method createShape in class HWPFShapeFactory cannot be applied to given types;
+                  return HWPFShapeFactory.createShape(m7100$$Nest$mgetEscherShapeRecordContainer);
+                                         ^
+    required: EscherContainerRecord,HWPFShape
+    found:    EscherContainerRecord
+    reason: actual and formal argument lists differ in length
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\InlineWordArt.java:28: 
+error: method createShape in class HWPFShapeFactory cannot be applied to given types;
+          return HWPFShapeFactory.createShape((EscherContainerRecord) this.escherRecords.get(0));
+                                 ^
+    required: EscherContainerRecord,HWPFShape
+    found:    EscherContainerRecord
+    reason: actual and formal argument lists differ in length
+  Note: Recompile with -Xlint:deprecation for details.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\Paragraph.java:402: 
+error: cannot find symbol
+          return "Paragraph [" + getStartOffset() + VectorFormat.DEFAULT_SEPARATOR + getEndOffset() + ")";
+                                                    ^
+    symbol:   variable VectorFormat
+    location: class Paragraph
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:68: 
+error: cannot find symbol
+                          rectangle2.x = (int) (((r0.getCol1() * f) * 96.0f) / 914400.0f);
+                                                  ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:69: 
+error: cannot find symbol
+                          rectangle2.y = (int) (((r0.getFlag() * f2) * 96.0f) / 914400.0f);
+                                                  ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:70: 
+error: cannot find symbol
+                          rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                       ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:70: 
+error: cannot find symbol
+                          rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                                     ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:71: 
+error: cannot find symbol
+                          rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                        ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:71: 
+error: cannot find symbol
+                          rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                                       ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:75: 
+error: cannot find symbol
+                      rectangle2.x = (int) (((r0.getDx1() * f) * 96.0f) / 914400.0f);
+                                              ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:76: 
+error: cannot find symbol
+                      rectangle2.y = (int) (((r0.getDy1() * f2) * 96.0f) / 914400.0f);
+                                              ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:77: 
+error: cannot find symbol
+                      rectangle2.width = (int) ((((r0.getDx2() - r0.getDx1()) * f) * 96.0f) / 914400.0f);
+                                                   ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:77: 
+error: cannot find symbol
+                      rectangle2.width = (int) ((((r0.getDx2() - r0.getDx1()) * f) * 96.0f) / 914400.0f);
+                                                                 ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:78: 
+error: cannot find symbol
+                      rectangle2.height = (int) ((((r0.getDy2() - r0.getDy1()) * f2) * 96.0f) / 914400.0f);
+                                                    ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:78: 
+error: cannot find symbol
+                      rectangle2.height = (int) ((((r0.getDy2() - r0.getDy1()) * f2) * 96.0f) / 914400.0f);
+                                                                  ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:83: 
+error: cannot find symbol
+                      rectangle2.x = (int) (((r0.getCol1() * f) * 96.0f) / 914400.0f);
+                                              ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:84: 
+error: cannot find symbol
+                      rectangle2.y = (int) (((r0.getFlag() * f2) * 96.0f) / 914400.0f);
+                                              ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:85: 
+error: cannot find symbol
+                      rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                   ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:85: 
+error: cannot find symbol
+                      rectangle2.width = (int) ((((r0.getDx1() - r0.getCol1()) * f) * 96.0f) / 914400.0f);
+                                                                 ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:86: 
+error: cannot find symbol
+                      rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                    ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\HWPFShape.java:86: 
+error: cannot find symbol
+                      rectangle2.height = (int) ((((r0.getRow1() - r0.getFlag()) * f2) * 96.0f) / 914400.0f);
+                                                                   ^
+    symbol:   variable r0
+    location: class HWPFShape
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\sprm\SprmBuffer.java:197: 
+error: cannot find symbol
+              sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                        ^
+    symbol:   variable VectorFormat
+    location: class SprmBuffer
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\CharacterProperties.ja
+va:274: error: cannot find symbol
+                  return TIFFConstants.COMPRESSION_IT8LW;
+                         ^
+    symbol:   variable TIFFConstants
+    location: class CharacterProperties
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java
+:106: error: cannot find symbol
+      private static final BitField widthAndFitsFlags_empty1 = new BitField(Opcodes.ASM7);
+                                                                            ^
+    symbol:   variable Opcodes
+    location: class TAPAbstractType
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java
+:109: error: cannot find symbol
+      private static final BitField pcHorz = new BitField(Frame.UNINITIALIZED_KIND);
+                                                          ^
+    symbol:   variable Frame
+    location: class TAPAbstractType
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TCAbstractType.java:
+44: error: cannot find symbol
+      private static final BitField fUnused = new BitField(CpioConstants.C_ISSOCK);
+                                                           ^
+    symbol:   variable CpioConstants
+    location: class TCAbstractType
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\OfficeDrawingsImpl.jav
+a:164: error: cannot find symbol
+              if (m7100$$Nest$mgetEscherShapeRecordContainer == null || (escherOptRecord = (EscherOptRecord) 
+m7100$$Nest$mgetEscherShapeRecordContainer.getChildById(EscherOptRecord.RECORD_ID)) == null || (escherSimpleProperty = 
+(EscherSimpleProperty) escherOptRecord.lookup(MetaDo.META_SETROP2)) == null) {
+                                                                                                                       
+                                                                                                                       
+                                    ^
+    symbol:   variable MetaDo
+    location: class OfficeDrawingImpl
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PieceDescriptor.java:91: 
+error: cannot find symbol
+          sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                    ^
+    symbol:   variable VectorFormat
+    location: class PieceDescriptor
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:69: 
+error: cannot find symbol
+          sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                    ^
+    symbol:   variable VectorFormat
+    location: class PropertyModifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:73: 
+error: cannot find symbol
+              sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                        ^
+    symbol:   variable VectorFormat
+    location: class PropertyModifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:77: 
+error: cannot find symbol
+              sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                        ^
+    symbol:   variable VectorFormat
+    location: class PropertyModifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyModifier.java:80: 
+error: cannot find symbol
+              sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                        ^
+    symbol:   variable VectorFormat
+    location: class PropertyModifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\GenericPropertyNode.java:2
+1: error: cannot find symbol
+          sb.append(VectorFormat.DEFAULT_SEPARATOR);
+                    ^
+    symbol:   variable VectorFormat
+    location: class GenericPropertyNode
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\GenericPropertyNode.java:2
+7: error: cannot find symbol
+              str = BaseParser.NULL;
+                    ^
+    symbol:   variable BaseParser
+    location: class GenericPropertyNode
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:289: 
+error: cannot find symbol
+          int byteIndex = charIndexTranslator.getByteIndex(this._textRuns.get(r2.size() - 1).getEnd());
+                                                                              ^
+    symbol:   variable r2
+    location: class CHPBinTable
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:257: 
+error: cannot find symbol
+          int byteIndex = charIndexTranslator.getByteIndex(this._paragraphs.get(r3.size() - 1).getEnd());
+                                                                                ^
+    symbol:   variable r3
+    location: class PAPBinTable
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\fs\filesystem\CFBFileSystem.java:129: 
+error: cannot find symbol
+          if (name.equals("Pictures") || name.endsWith("WorkBook") || name.equals(HSLFSlideShow.POWERPOINT_DOCUMENT) 
+|| name.endsWith("Ole") || name.endsWith("ObjInfo") || name.endsWith("ComObj") || name.endsWith("EPRINT")) {
+                                                                                  ^
+    symbol:   variable HSLFSlideShow
+    location: class CFBFileSystem
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\fs\filesystem\Property.java:107: 
+error: cannot find symbol
+              return r0[0].getData().length * this.blocks.length;
+                     ^
+    symbol:   variable r0
+    location: class Property
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:218: error: 
+cannot find symbol
+          List<Element> elements = rootElement.elements(HtmlTags.STYLE);
+                                                        ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:419: error: 
+cannot find symbol
+          String attributeValue5 = element2.attributeValue(HtmlTags.ALIGN_LEFT);
+                                                           ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:507: error: 
+cannot find symbol
+              AttrManage.instance().setPageMarginLeft(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_LEFT)));
+                                                                                                          ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:508: error: 
+cannot find symbol
+              AttrManage.instance().setPageMarginRight(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_RIGHT)));
+                                                                                                           ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:509: error: 
+cannot find symbol
+              AttrManage.instance().setPageMarginTop(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_TOP)));
+                                                                                                         ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:510: error: 
+cannot find symbol
+              AttrManage.instance().setPageMarginBottom(attribute, 
+Integer.parseInt(element3.attributeValue(HtmlTags.ALIGN_BOTTOM)));
+                                                                                                            ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:524: error: 
+cannot find symbol
+              Element element5 = element4.element(HtmlTags.ALIGN_TOP);
+                                                  ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:530: error: 
+cannot find symbol
+              Element element6 = element4.element(HtmlTags.ALIGN_LEFT);
+                                                  ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:536: error: 
+cannot find symbol
+              Element element7 = element4.element(HtmlTags.ALIGN_RIGHT);
+                                                  ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:542: error: 
+cannot find symbol
+              Element element8 = element4.element(HtmlTags.ALIGN_BOTTOM);
+                                                  ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:633: error: 
+cannot find symbol
+              border.setSpace((short) (Integer.parseInt(r4) * 1.8f));
+                                                        ^
+    symbol:   variable r4
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:657: error: 
+cannot find symbol
+          Iterator it = element.elements(HtmlTags.TR).iterator();
+                                         ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:783: error: 
+cannot find symbol
+          Iterator it = element.elements(HtmlTags.TR).iterator();
+                                         ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:860: error: 
+cannot find symbol
+                  if (attributeValue13 == null && (attributeValue10 = element5.attributeValue(HtmlTags.BEFORE)) != 
+null && attributeValue10.length() > 0) {
+                                                                                              ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:867: error: 
+cannot find symbol
+                  if (attributeValue14 == null && (attributeValue9 = element5.attributeValue(HtmlTags.AFTER)) != null 
+&& attributeValue9.length() > 0) {
+                                                                                             ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:871: error: 
+cannot find symbol
+                  String attributeValue15 = element5.attributeValue(HtmlTags.BEFORE);
+                                                                    ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:880: error: 
+cannot find symbol
+                  String attributeValue17 = element5.attributeValue(HtmlTags.AFTER);
+                                                                    ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:922: error: 
+cannot find symbol
+                  String attributeValue21 = element6.attributeValue(HtmlTags.ALIGN_LEFT);
+                                                                    ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:930: error: 
+cannot find symbol
+                          attributeValue4 = element6.attributeValue(HtmlTags.ALIGN_RIGHT);
+                                                                    ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:970: error: 
+cannot find symbol
+              attributeValue4 = element6.attributeValue(HtmlTags.ALIGN_RIGHT);
+                                                        ^
+    symbol:   variable HtmlTags
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1051: error: 
+cannot find symbol
+              while (r3.hasNext()) {
+                     ^
+    symbol:   variable r3
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1467: error: 
+cannot find symbol
+              while (r14.hasNext()) {
+                     ^
+    symbol:   variable r14
+    location: class DOCXReader
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\types\TAPAbstractType.java
+:102: error: DirectionalityEstimator has private access in BidiFormatter
+      private static final BitField ftsWidthBefore = new 
+BitField(BidiFormatter.DirectionalityEstimator.DIR_TYPE_CACHE_SIZE);
+                                                                               ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:183: error: 
+KEY_BACKGROUND has private access in WearableExtender
+          Element element = read.getRootElement().element(NotificationCompat.WearableExtender.KEY_BACKGROUND);
+                                                                                             ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:185: error: 
+KEY_BACKGROUND has private access in WearableExtender
+              if (element.element(NotificationCompat.WearableExtender.KEY_BACKGROUND) != null) {
+                                                                     ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:186: error: 
+KEY_BACKGROUND has private access in WearableExtender
+                  backgroundAndFill = 
+processBackgroundAndFill(element.element(NotificationCompat.WearableExtender.KEY_BACKGROUND));
+                                                                                                                  ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1295: error: 
+MAILTO has private access in MailTo
+                                                          if (str5.indexOf(MailTo.MAILTO) >= 0) {
+                                                                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1296: error: 
+MAILTO has private access in MailTo
+                                                              str3 = str5.substring(str5.indexOf(MailTo.MAILTO));
+                                                                                                       ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\usermodel\CharacterProperties.ja
+va:250: error: ACTION_MODE_DRAG_MASK is not public in ItemTouchHelper; cannot be accessed from outside package
+                  return ItemTouchHelper.ACTION_MODE_DRAG_MASK;
+                                        ^
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:192: 
+error: method does not override or implement a method from a supertype
+          @Override // java.util.Comparator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:153: 
+error: method does not override or implement a method from a supertype
+          @Override // java.util.Comparator
+          ^
+  Note: Some input files use unchecked or unsafe operations.
+  warning: The following options were not recognized by any processor: 
+'[dagger.hilt.internal.useAggregatingRootProcessor, dagger.fastInit, 
+dagger.hilt.android.internal.disableAndroidSuperclassValidation, dagger.hilt.android.internal.projectType]'
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:347: 
+error: variable bitmap might not have been initialized
+                          Bitmap bitmap522 = bitmap;
+                                             ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:348: 
+error: variable f10 might not have been initialized
+                          drawY = f10;
+                                  ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:349: 
+error: variable f6 might not have been initialized
+                          drawX = f6;
+                                  ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:351: 
+error: variable f8 might not have been initialized
+                          matrix22.postScale(f8 / bitmap522.getWidth(), f9 / bitmap522.getHeight());
+                                             ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:351: 
+error: variable f9 might not have been initialized
+                          matrix22.postScale(f8 / bitmap522.getWidth(), f9 / bitmap522.getHeight());
+                                                                        ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:360: 
+error: variable f10 might not have been initialized
+                      f11 = f10;
+                            ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\common\picture\PictureKit.java:381: 
+error: missing return statement
+      }
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:302: error: 
+incompatible types: Object cannot be converted to Element
+          for (Element element2 : rootElement.elements("num")) {
+                                                      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:308: error: 
+incompatible types: Object cannot be converted to Element
+          for (Element element4 : rootElement.elements("abstractNum")) {
+                                                      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1417: error: 
+incompatible types: Object cannot be converted to Element
+                  for (Element element4 : element.elements("r")) {
+                                                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\CHPBinTable.java:185: 
+error: CHPBinTable.AnonymousClass1 is not abstract and does not override abstract method compare(CHPX,CHPX) in 
+Comparator
+      public class AnonymousClass1 implements Comparator<CHPX> {
+             ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PAPBinTable.java:146: 
+error: PAPBinTable.AnonymousClass1 is not abstract and does not override abstract method compare(PAPX,PAPX) in 
+Comparator
+      public class AnonymousClass1 implements Comparator<PAPX> {
+             ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:241: error: 
+package HtmlTags does not exist
+              if (HtmlTags.TABLE.equals(element9.attributeValue("type")) && (element = element9.element("tblStylePr")) 
+!= null && "firstRow".equals(element.attributeValue("type")) && (element2 = element.element("tcPr")) != null && 
+(element3 = element2.element("shd")) != null && (attributeValue = element3.attributeValue("fill")) != null) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:355: error: 
+package HtmlTags does not exist
+14 actionable tasks: 1 executed, 13 up-to-date
+              if (HtmlTags.ALIGN_LEFT.equals(attributeValue)) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:357: error: 
+package HtmlTags does not exist
+              } else if (HtmlTags.ALIGN_CENTER.equals(attributeValue)) {
+                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:359: error: 
+package HtmlTags does not exist
+              } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue)) {
+                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:426: error: 
+package XmlErrorCodes does not exist
+          if (XmlErrorCodes.DECIMAL.equalsIgnoreCase(str)) {
+                           ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:521: error: 
+package Annotation does not exist
+              if (Annotation.PAGE.equals(element4.attributeValue("offsetFrom"))) {
+                            ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:672: error: 
+package HtmlTags does not exist
+              if (HtmlTags.ALIGN_CENTER.equals(attributeValue2)) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:674: error: 
+package HtmlTags does not exist
+              } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue2)) {
+                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:758: error: 
+package HtmlTags does not exist
+              if (HtmlTags.ALIGN_CENTER.equals(attributeValue2)) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:760: error: 
+package HtmlTags does not exist
+              } else if (HtmlTags.ALIGN_BOTTOM.equals(attributeValue2)) {
+                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:774: error: 
+package HtmlTags does not exist
+              if (HtmlTags.P.equals(next.getName())) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:995: error: 
+package HtmlTags does not exist
+              if (HtmlTags.ALIGN_LEFT.equals(attributeValue22) || "both".equals(attributeValue22) || 
+"distribute".equals(attributeValue22)) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1039: error: 
+package HtmlTags does not exist
+              if (HtmlTags.ALIGN_CENTER.equals(attributeValue22)) {
+                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1041: error: 
+package HtmlTags does not exist
+              } else if (HtmlTags.ALIGN_RIGHT.equals(attributeValue22)) {
+                                 ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1273: error: 
+package Annotation does not exist
+                                                  } else if (Annotation.PAGE.equals(element17.attributeValue("type"))) 
+{
+                                                                       ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1274: error: 
+package Parser does not exist
+                                                      str2 = String.valueOf(Parser.Tokenizer.FF);
+                                                                                  ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1523: error: 
+package Annotation does not exist
+          if (Annotation.PAGE.equalsIgnoreCase(str)) {
+                        ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1529: error: 
+package FirebaseAnalytics.Param does not exist
+          if (FirebaseAnalytics.Param.CHARACTER.equalsIgnoreCase(str)) {
+                                     ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\doc\DOCXReader.java:1557: error: 
+package HtmlTags does not exist
+          if (HtmlTags.ALIGN_LEFT.equalsIgnoreCase(str)) {
+                      ^
+  100 errors
+  2 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 19s

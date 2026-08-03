@@ -1,0 +1,8 @@
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-pngs-0 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\generated\res\pngs\debug
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-updated_navigation_xml-1 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\generated\updated_navigation_xml\debug
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-mergeDebugResources-2 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-mergeDebugResources-3 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-debug-4 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\intermediates\merged_res\debug\mergeDebugResources
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-debug-5 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\build\intermediates\packaged_res\debug\packageDebugResources
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-debug-6 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\src\debug\res
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni.mupdfdemo-jni-main-7 F:\HiteshAndroid\PdfReader\mupdfdemo-jni\src\main\res

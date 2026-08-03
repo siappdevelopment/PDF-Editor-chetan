@@ -1,0 +1,939 @@
+﻿> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:dataBindingTriggerDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:kspDebugKotlin UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+.\gradlew.bat : 
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\simpletext\font\Font.java:3: error: 
+package androidx.webkit does not exist
+At C:\Users\codebuzz\AppData\Local\Temp\ps-script-d5047b64-535d-4b7e-b36e-3fa6f7c94b02.ps1:79 char:34
++ ... roid\PdfReader"; .\gradlew.bat compileDebugJavaWithJavac 2>&1 | Out-F ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (F:\HiteshAndroi... does not exist:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+import androidx.webkit.Profile;
+                      ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\ss\util\DateUtil.java:3: error: package 
+com.google.gson.internal.bind does not exist
+import com.google.gson.internal.bind.TypeAdapters;
+                                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:3: 
+error: package androidx.webkit does not exist
+import androidx.webkit.Profile;
+                      ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\openxml4j\opc\PackagePartCollection.jav
+a:12: error: Override is not a repeatable annotation interface
+    @Override // java.util.TreeMap, java.util.AbstractMap, java.util.Map
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowHea
+derRecyclerViewAdapter.java:23: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowHea
+derRecyclerViewAdapter.java:26: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Column
+HeaderRecyclerViewAdapter.java:24: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Column
+HeaderRecyclerViewAdapter.java:27: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:31: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:34: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:36: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:38: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:20: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:23: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:25: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:27: error: Override is not a repeatable annotation interface
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.java
+:28: error: Override is not a repeatable annotation interface
+        @Override // android.os.Parcelable.Creator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.java
+:32: error: Override is not a repeatable annotation interface
+        @Override // android.os.Parcelable.Creator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.java
+:29: error: NonNull is not a repeatable annotation interface
+        @NonNull
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.java
+:33: error: NonNull is not a repeatable annotation interface
+        @NonNull
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.java:
+21: error: Override is not a repeatable annotation interface
+        @Override // android.os.Parcelable.Creator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.java:
+25: error: Override is not a repeatable annotation interface
+        @Override // android.os.Parcelable.Creator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.java:
+22: error: NonNull is not a repeatable annotation interface
+        @NonNull
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.java:
+26: error: NonNull is not a repeatable annotation interface
+        @NonNull
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:188: error: 
+Override is not a repeatable annotation interface
+        @Override // java.util.Map
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:190: error: 
+Override is not a repeatable annotation interface
+        @Override // java.util.Map
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:12:
+ error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:14:
+ error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:16:
+ error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:18:
+ error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.java:
+20: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.java:
+22: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.java:
+24: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.java:
+26: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPicture.java:34: 
+error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Picture
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:31: 
+error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:33: 
+error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:30: error: 
+Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:32: error: 
+Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:34: error: 
+Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:36: error: 
+Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:38: error: 
+Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCellStyle.java:21: 
+error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ICellStyle
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalForm
+atting.java:28: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalForm
+atting.java:30: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalForm
+atting.java:32: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:22: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:24: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:26: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:28: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:30: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\LazyAreaEval.java:15: 
+error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.hssf.formula.TwoDEval
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.ja
+va:10: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.ja
+va:12: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.ja
+va:14: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.ja
+va:16: error: Override is not a repeatable annotation interface
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\pg\control\PGPageListItem.java:118: 
+error: Override is not a repeatable annotation interface
+        @Override // android.os.AsyncTask
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\openxml4j\opc\PackagePartName.java:16: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // java.lang.Comparable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowHea
+derRecyclerViewAdapter.java:21: error: annotation interface not applicable to this kind of declaration
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowHea
+derRecyclerViewAdapter.java:24: error: annotation interface not applicable to this kind of declaration
+    @NonNull
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Column
+HeaderRecyclerViewAdapter.java:22: error: annotation interface not applicable to this kind of declaration
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Column
+HeaderRecyclerViewAdapter.java:25: error: annotation interface not applicable to this kind of declaration
+    @NonNull
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:29: error: annotation interface not applicable to this kind of declaration
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRe
+cyclerViewAdapter.java:32: error: annotation interface not applicable to this kind of declaration
+    @NonNull
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:18: error: annotation interface not applicable to this kind of declaration
+    @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\CellRo
+wRecyclerViewAdapter.java:21: error: annotation interface not applicable to this kind of declaration
+    @NonNull
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\ColumnForRowHeaderSort
+Comparator.java:23: error: annotation interface not applicable to this kind of declaration
+    @Override // java.util.Comparator
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\ColumnSortComparator.j
+ava:11: error: annotation interface not applicable to this kind of declaration
+    @Override // java.util.Comparator
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\RowHeaderForCellSortCo
+mparator.java:22: error: annotation interface not applicable to this kind of declaration
+    @Override // java.util.Comparator
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\RowHeaderSortComparato
+r.java:8: error: annotation interface not applicable to this kind of declaration
+    @Override // java.util.Comparator
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ddf\EscherContainerRecord.java:206: 
+error: annotation interface not applicable to this kind of declaration
+        @Override // java.util.Iterator
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyNode.java:21: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // java.lang.Comparable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:186: error: 
+annotation interface not applicable to this kind of declaration
+        @Override // java.util.Map
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\DocumentBlock.java:21: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BigBlock, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockWritable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\BATBlock.java:17: error: 
+annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BigBlock, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockWritable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:10:
+ error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\LastCel
+lOfRowDummyRecord.java:8: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\Missing
+CellDummyRecord.java:8: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\Missing
+RowDummyRecord.java:7: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFWorkbook.java:80: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Workbook
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.java:
+18: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRichTextString.java:
+17: error: annotation interface not applicable to this kind of declaration
+    @Override // java.lang.Comparable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFFormulaEvaluator.jav
+a:39: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFComment.java:18: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Comment
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPicture.java:32: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Picture
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:29: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:28: error: 
+annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCellStyle.java:19: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ICellStyle
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\ss\model\XLSModel\AWorkbook.java:76: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Workbook
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalForm
+atting.java:26: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+g.java:14: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormatting
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormattin
+gRule.java:20: error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\util\Region.java:11: error: 
+annotation interface not applicable to this kind of declaration
+    @Override // java.lang.Comparable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java:3
+6: error: annotation interface not applicable to this kind of declaration
+    @Override // java.lang.Comparable
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java:4
+06: error: annotation interface not applicable to this kind of declaration
+        @Override // java.lang.Comparable
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java:3
+48: error: annotation interface not applicable to this kind of declaration
+        @Override // java.lang.Comparable
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\eval\ForkedEvaluationSheet
+.java:56: error: annotation interface not applicable to this kind of declaration
+        @Override // java.lang.Comparable
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\eval\ForkedEvaluationWorkb
+ook.java:104: error: annotation interface not applicable to this kind of declaration
+        @Override // java.lang.Comparable
+        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\LazyAreaEval.java:13: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.hssf.formula.TwoDEval
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\ptg\RefNPtg.java:14: 
+error: annotation interface not applicable to this kind of declaration
+    @Override // com.office.alldocumentreader.xs.fc.hssf.formula.ptg.Ref2DPtgBase, 
+com.office.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg
+    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\system\MainControl.java:250: warning: 
+non-varargs call of varargs method with inexact argument type for last parameter;
+            Object invoke = view.getClass().getMethod("isHardwareAccelerated", null).invoke(view, null);
+                                                                               ^
+  cast to Class<?> for a varargs call
+  cast to Class<?>[] for a non-varargs call and to suppress this warning
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\system\MainControl.java:250: warning: 
+non-varargs call of varargs method with inexact argument type for last parameter;
+            Object invoke = view.getClass().getMethod("isHardwareAccelerated", null).invoke(view, null);
+                                                                                                  ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\dom4j\io\SAXContentHandler.java:438: 
+warning: non-varargs call of varargs method with inexact argument type for last parameter;
+                return (String) method.invoke(this.locator, null);
+                                                            ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:104
+: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                           ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+4 warnings
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+[Incubating] Problems report is available at: file:///F:/HiteshAndroid/PdfReader/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler output below.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\openxml4j\opc\PackagePartCollection.j
+ava:12: error: Override is not a repeatable annotation interface
+      @Override // java.util.TreeMap, java.util.AbstractMap, java.util.Map
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowH
+eaderRecyclerViewAdapter.java:23: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowH
+eaderRecyclerViewAdapter.java:26: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Colu
+mnHeaderRecyclerViewAdapter.java:24: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Colu
+mnHeaderRecyclerViewAdapter.java:27: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:31: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:34: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:36: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:38: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:20: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:23: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:25: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:27: error: Override is not a repeatable annotation interface
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.ja
+va:28: error: Override is not a repeatable annotation interface
+          @Override // android.os.Parcelable.Creator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.ja
+va:32: error: Override is not a repeatable annotation interface
+          @Override // android.os.Parcelable.Creator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.ja
+va:29: error: NonNull is not a repeatable annotation interface
+          @NonNull
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\Preferences.ja
+va:33: error: NonNull is not a repeatable annotation interface
+          @NonNull
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.jav
+a:21: error: Override is not a repeatable annotation interface
+          @Override // android.os.Parcelable.Creator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.jav
+a:25: error: Override is not a repeatable annotation interface
+          @Override // android.os.Parcelable.Creator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.jav
+a:22: error: NonNull is not a repeatable annotation interface
+          @NonNull
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\preference\SavedState.jav
+a:26: error: NonNull is not a repeatable annotation interface
+          @NonNull
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:188: 
+error: Override is not a repeatable annotation interface
+          @Override // java.util.Map
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:190: 
+error: Override is not a repeatable annotation interface
+          @Override // java.util.Map
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:1
+2: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:1
+4: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:1
+6: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:1
+8: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.jav
+a:20: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.jav
+a:22: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.jav
+a:24: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.jav
+a:26: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPicture.java:34: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Picture
+      ^
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:31: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+      ^
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:33: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:30: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:32: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:34: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:36: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:38: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCellStyle.java:21: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ICellStyle
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalFo
+rmatting.java:28: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalFo
+rmatting.java:30: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalFo
+rmatting.java:32: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:22: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:24: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:26: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:28: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:30: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\LazyAreaEval.java:15: 
+error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.hssf.formula.TwoDEval
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.
+java:10: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.
+java:12: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.
+java:14: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\SmallDocumentBlockList.
+java:16: error: Override is not a repeatable annotation interface
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\pg\control\PGPageListItem.java:118: 
+error: Override is not a repeatable annotation interface
+          @Override // android.os.AsyncTask
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\system\MainControl.java:250: warning: 
+non-varargs call of varargs method with inexact argument type for last parameter;
+              Object invoke = view.getClass().getMethod("isHardwareAccelerated", null).invoke(view, null);
+                                                                                 ^
+    cast to Class<?> for a varargs call
+    cast to Class<?>[] for a non-varargs call and to suppress this warning
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\system\MainControl.java:250: warning: 
+non-varargs call of varargs method with inexact argument type for last parameter;
+              Object invoke = view.getClass().getMethod("isHardwareAccelerated", null).invoke(view, null);
+                                                                                                    ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\dom4j\io\SAXContentHandler.java:438: 
+warning: non-varargs call of varargs method with inexact argument type for last parameter;
+                  return (String) method.invoke(this.locator, null);
+                                                              ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:1
+04: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+          new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                             ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\openxml4j\opc\PackagePartName.java:16: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // java.lang.Comparable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowH
+eaderRecyclerViewAdapter.java:21: error: annotation interface not applicable to this kind of declaration
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\RowH
+eaderRecyclerViewAdapter.java:24: error: annotation interface not applicable to this kind of declaration
+      @NonNull
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Colu
+mnHeaderRecyclerViewAdapter.java:22: error: annotation interface not applicable to this kind of declaration
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Colu
+mnHeaderRecyclerViewAdapter.java:25: error: annotation interface not applicable to this kind of declaration
+      @NonNull
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:29: error: annotation interface not applicable to this kind of declaration
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RecyclerViewAdapter.java:32: error: annotation interface not applicable to this kind of declaration
+      @NonNull
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:18: error: annotation interface not applicable to this kind of declaration
+      @Override // androidx.recyclerview.widget.RecyclerView.Adapter
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\adapter\recyclerview\Cell
+RowRecyclerViewAdapter.java:21: error: annotation interface not applicable to this kind of declaration
+      @NonNull
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\ColumnForRowHeaderSo
+rtComparator.java:23: error: annotation interface not applicable to this kind of declaration
+      @Override // java.util.Comparator
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\ColumnSortComparator
+.java:11: error: annotation interface not applicable to this kind of declaration
+      @Override // java.util.Comparator
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\RowHeaderForCellSort
+Comparator.java:22: error: annotation interface not applicable to this kind of declaration
+      @Override // java.util.Comparator
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\widgets\tableview\sort\RowHeaderSortCompara
+tor.java:8: error: annotation interface not applicable to this kind of declaration
+      @Override // java.util.Comparator
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ddf\EscherContainerRecord.java:206: 
+error: annotation interface not applicable to this kind of declaration
+          @Override // java.util.Iterator
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\PropertyNode.java:21: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // java.lang.Comparable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hwpf\model\ListTables.java:186: 
+error: annotation interface not applicable to this kind of declaration
+          @Override // java.util.Map
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\DocumentBlock.java:21: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BigBlock, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockWritable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\BATBlock.java:17: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BigBlock, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockWritable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\poifs\storage\RawDataBlockList.java:1
+0: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.poifs.storage.BlockListImpl, 
+com.office.alldocumentreader.xs.fc.poifs.storage.BlockList
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\LastC
+ellOfRowDummyRecord.java:8: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\Missi
+ngCellDummyRecord.java:8: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\eventusermodel\dummyrecord\Missi
+ngRowDummyRecord.java:7: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.hssf.eventusermodel.dummyrecord.DummyRecordBase, 
+com.office.alldocumentreader.xs.fc.hssf.record.RecordBase
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFWorkbook.java:80: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Workbook
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCreationHelper.jav
+a:18: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.CreationHelper
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRichTextString.jav
+a:17: error: annotation interface not applicable to this kind of declaration
+      @Override // java.lang.Comparable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFFormulaEvaluator.j
+ava:39: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFComment.java:18: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Comment
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPicture.java:32: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Picture
+      ^
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFPatriarch.java:29: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Drawing
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFRow.java:28: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.IRow
+      ^
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFCellStyle.java:19: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ICellStyle
+14 actionable tasks: 1 executed, 13 up-to-date
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\ss\model\XLSModel\AWorkbook.java:76: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.Workbook
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFSheetConditionalFo
+rmatting.java:26: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ing.java:14: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormatting
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\usermodel\HSSFConditionalFormatt
+ingRule.java:20: error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\util\Region.java:11: error: 
+annotation interface not applicable to this kind of declaration
+      @Override // java.lang.Comparable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java
+:36: error: annotation interface not applicable to this kind of declaration
+      @Override // java.lang.Comparable
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java
+:406: error: annotation interface not applicable to this kind of declaration
+          @Override // java.lang.Comparable
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\record\common\UnicodeString.java
+:348: error: annotation interface not applicable to this kind of declaration
+          @Override // java.lang.Comparable
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\eval\ForkedEvaluationShe
+et.java:56: error: annotation interface not applicable to this kind of declaration
+          @Override // java.lang.Comparable
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\eval\ForkedEvaluationWor
+kbook.java:104: error: annotation interface not applicable to this kind of declaration
+          @Override // java.lang.Comparable
+          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\LazyAreaEval.java:13: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.hssf.formula.TwoDEval
+      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\hssf\formula\ptg\RefNPtg.java:14: 
+error: annotation interface not applicable to this kind of declaration
+      @Override // com.office.alldocumentreader.xs.fc.hssf.formula.ptg.Ref2DPtgBase, 
+com.office.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg
+      ^
+  Note: Recompile with -Xlint:deprecation for details.
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: Some input files use unchecked or unsafe operations.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\simpletext\font\Font.java:3: error: 
+package androidx.webkit does not exist
+  import androidx.webkit.Profile;
+                        ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\ss\util\DateUtil.java:3: error: package 
+com.google.gson.internal.bind does not exist
+  import com.google.gson.internal.bind.TypeAdapters;
+                                      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:3: 
+error: package androidx.webkit does not exist
+  import androidx.webkit.Profile;
+                        ^
+  100 errors
+  4 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 6s

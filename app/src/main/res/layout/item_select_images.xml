@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_4sdp"
+    android:paddingBottom="@dimen/_4sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundedCorner10"
+        app:strokeColor="@color/view_color"
+        app:strokeWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/icClose"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_gravity="end|top"
+        android:elevation="5dp"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_remove" />
+
+    <ImageView
+        android:id="@+id/imViewOpen"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_imview" />
+</FrameLayout>

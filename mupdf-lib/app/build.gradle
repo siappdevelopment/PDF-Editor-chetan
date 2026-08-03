@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+group = 'com.reader.alldocviewer.pdfeditorartifex.mupdf'
+version = '1.27.1a'
+
+dependencies {
+	if (file('../lib/build.gradle').isFile())
+		api project(':lib')
+	else
+		api 'com.reader.alldocviewer.pdfeditorartifex.mupdf:mini:1.27.1a'
+}
+
+android {
+	namespace 'com.reader.alldocviewer.pdfeditorartifex.mupdf.mini.app'
+	compileSdkVersion 33
+	defaultConfig {
+		minSdkVersion 21
+		targetSdkVersion 35
+		versionName '1.27.1a'
+		versionCode 210
+	}
+
+	splits {
+		abi {
+			enable true
+			universalApk true
+		}
+	}
+
+	bundle {
+		abi {
+			enableSplit true
+		}
+	}
+
+	if (project.hasProperty('release_storeFile')) {
+		signingConfigs {
+			release {
+				storeFile file(release_storeFile)
+				storePassword release_storePassword
+				keyAlias release_keyAlias
+				keyPassword release_keyPassword
+			}
+		}
+		buildTypes {
+			release {
+				signingConfig signingConfigs.release
+				ndk {
+					debugSymbolLevel 'FULL'
+				}
+			}
+		}
+	}
+}

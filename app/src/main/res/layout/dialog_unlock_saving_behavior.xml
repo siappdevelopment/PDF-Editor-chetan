@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_rounded_corner_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_20sdp">
+
+    <!-- Title -->
+    <TextView
+        style="@style/TextStyle.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="@string/unlock_file_saving_behavior"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp" />
+
+    <!-- Options Group -->
+    <RadioGroup
+        android:id="@+id/rgUnlockOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Option Save Copy -->
+        <RelativeLayout
+            android:id="@+id/rlSaveCopy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp">
+
+            <TextView
+                style="@style/TextStyle.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/save_copy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <RadioButton
+                android:id="@+id/rbSaveCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/radio_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <!-- Option Overwrite File -->
+        <RelativeLayout
+            android:id="@+id/rlOverwriteFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp">
+
+            <TextView
+                style="@style/TextStyle.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/overwrite_file"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <RadioButton
+                android:id="@+id/rbOverwriteFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/radio_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <!-- Option Always Ask -->
+        <RelativeLayout
+            android:id="@+id/rlAlwaysAsk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp">
+
+            <TextView
+                style="@style/TextStyle.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/always_ask"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <RadioButton
+                android:id="@+id/rbAlwaysAsk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/radio_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+    </RadioGroup>
+
+    <!-- Ok Button -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnOk"
+        style="@style/TextStyle.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_action_button"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/shape_bt_positive"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/white_"
+        android:textSize="@dimen/_14sdp" />
+
+</LinearLayout>

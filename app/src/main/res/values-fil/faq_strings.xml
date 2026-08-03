@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="how_can_we_help">Paano kami makakatulong?</string>
+    <string name="find_answers_to_frequently_asked">Maghanap ng mga sagot sa mga madalas itanong tungkol sa pag-edit, pag-annotate, at pamamahala ng iyong mga PDF na dokumento.</string>
+    <string name="search_faqs">Maghanap sa FAQ</string>
+    <string name="no_faq_found">Walang FAQ na Nahanap</string>
+    <string name="faq_1_question">1. Ano ang PDF Editor?</string>
+    <string name="faq_1_answer">Ang PDF Editor ay nagbibigay-daan sa iyo na baguhin ang mga PDF na dokumento sa pamamagitan ng pag-edit ng teksto, pagpapalit ng font, pagdaragdag ng mga larawan, paglalagay ng lagda, pag-highlight ng nilalaman, pag-annotate ng mga pahina, pag-aayos ng mga dokumento, at pag-save ng mga pagbabago nang hindi muling ginagawa ang file.</string>
+    <string name="faq_2_question">2. Anong mga tool sa pag-edit ang available sa app?</string>
+    <string name="faq_2_answer">Kasama sa app ang Text Edit, Font Change, Font Size Adjustment, Bold, Italic, Underline, Text Color, Highlight, Strike-through, Add Images, Insert Shapes, Draw with Pen, Add Comments, Digital Signature, at Page Management tools.</string>
+    <string name="faq_3_question">3. Maaari ko bang i-edit ang teksto sa loob ng anumang PDF?</string>
+    <string name="faq_3_answer">Maaari mong i-edit ang teksto sa karamihan ng mga nae-edit na PDF. Gayunpaman, ang mga na-scan o image-based na PDF ay walang selectable na teksto. Kailangan munang i-convert sa editable na teksto gamit ang OCR kung available ang feature.</string>
+    <string name="faq_4_question">4. Paano ko babaguhin ang font, laki, o kulay ng teksto?</string>
+    <string name="faq_4_answer">Piliin ang tekstong gusto mong baguhin, pagkatapos gamitin ang editing toolbar para pumili ng ibang font, ayusin ang laki, palitan ang kulay, o mag-apply ng bold, italic, o underline.</string>
+    <string name="faq_5_question">5. Paano ko mai-highlight o mai-annotate ang isang PDF?</string>
+    <string name="faq_5_answer">Buksan ang dokumento at piliin ang Highlight o Annotation tool. Maaari mong i-highlight ang mahahalagang teksto, magdagdag ng komento, mag-drawing nang libre, maglagay ng mga hugis, o maglagay ng sticky notes kahit saan sa pahina.</string>
+    <string name="faq_6_question">6. Maaari ko bang idagdag ang aking lagda sa isang PDF?</string>
+    <string name="faq_6_answer">Oo. Maaari kang gumawa ng lagda sa pamamagitan ng pagguhit gamit ang daliri o stylus, pag-type ng pangalan, o pag-import ng larawan ng lagda. Kapag nagawa na, maaari itong ilagay kahit saan sa dokumento.</string>
+    <string name="faq_7_question">7. Maaari ko bang maglagay ng mga larawan o logo sa isang PDF?</string>
+    <string name="faq_7_answer">Oo. Maaari kang mag-import ng mga larawan mula sa iyong device at iposisyon, baguhin ang laki, o i-rotate ang mga ito sa PDF. Kapaki-pakinabang ito para sa pagdaragdag ng company logo, larawan, stamp, o iba pang graphics.</string>
+    <string name="faq_8_question">8. Anong mga feature sa pamamahala ng pahina ang available?</string>
+    <string name="faq_8_answer">Pinapayagan ka ng app na ayusin muli ang mga pahina, i-rotate, tanggalin ang hindi kailangang pahina, i-duplicate, i-extract ang mga napiling pahina, pagsamahin ang maraming PDF sa isang file, at hatiin ang isang PDF sa hiwalay na mga dokumento.</string>
+    <string name="faq_9_question">9. Sinusuportahan ba ng app ang mga na-scan na PDF?</string>
+    <string name="faq_9_answer">Oo. Maaaring tingnan nang normal ang mga na-scan na PDF. Ang pag-edit ng teksto sa loob ng na-scan na dokumento ay nangangailangan ng OCR technology. Kung walang OCR, annotations o image-based na edits lang ang posible.</string>
+    <string name="faq_10_question">10. Bakit humihingi ng storage o file access permission ang app?</string>
+    <string name="faq_10_answer">Kailangan ang storage o file access permission para mabuksan, ma-edit, ma-save, ma-import, ma-export, at ma-share ng app ang mga PDF na naka-store sa iyong device. Mananatili sa iyong kontrol ang iyong mga file.</string>
+    <string name="faq_11_question">11. Mananatili bang pribado ang aking mga dokumento?</string>
+    <string name="faq_11_answer">Oo. Ang iyong mga PDF file ay pinoproseso nang lokal sa iyong device kung maaari. Hindi ina-upload ng app ang iyong personal na dokumento maliban kung pipiliin mo nang malinaw ang cloud storage o sharing feature.</string>
+    <string name="faq_12_question">12. Maaari ko bang i-share o i-export ang aking na-edit na PDF?</string>
+    <string name="faq_12_answer">Oo. Pagkatapos mag-edit, maaari mong i-save ang dokumento at i-share gamit ang email, messaging apps, cloud storage services, o anumang compatible na app sa iyong device.</string>
+    <string name="faq_13_question">13. Anong mga file format ang sinusuportahan ng app?</string>
+    <string name="faq_13_answer">Pangunahing sinusuportahan ng app ang mga PDF na dokumento at maaari ring mag-import ng mga larawan tulad ng JPG, JPEG, at PNG para i-convert sa PDF o ilagay sa umiiral na PDF files.</string>
+    <string name="faq_14_question">14. Bakit hindi ko ma-edit ang ilang PDF files?</string>
+    <string name="faq_14_answer">Ang ilang PDF ay protektado ng password, digitally secured, corrupted, o ginawa bilang na-scan na mga larawan. Maaaring hadlangan ng mga limitasyong ito ang direktang pag-edit ng teksto hanggang ma-unlock o ma-proseso ng OCR ang dokumento.</string>
+    <string name="faq_15_question">15. Paano ako magre-report ng problema o humiling ng bagong feature?</string>
+    <string name="faq_15_answer">Kung may problema o mungkahi ka, gamitin ang Contact Us o Feedback section sa loob ng app. Isama ang model ng device, bersyon ng Android, at maikling paglalarawan ng isyu para matulungan kaming mapabuti ang iyong karanasan.</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="how_can_we_help">Comment pouvons-nous vous aider ?</string>
+    <string name="find_answers_to_frequently_asked">Trouvez des réponses aux questions fréquentes sur l\'édition, l\'annotation et la gestion de vos documents PDF.</string>
+    <string name="search_faqs">Rechercher dans la FAQ</string>
+    <string name="no_faq_found">Aucune FAQ trouvée</string>
+    <string name="faq_1_question">1. Qu\'est-ce qu\'un éditeur PDF ?</string>
+    <string name="faq_1_answer">Un éditeur PDF vous permet de modifier des documents PDF en éditant le texte, en changeant les polices, en ajoutant des images, en insérant des signatures, en surlignant du contenu, en annotant des pages, en organisant des documents et en enregistrant vos modifications sans recréer le fichier.</string>
+    <string name="faq_2_question">2. Quels outils d\'édition sont disponibles dans l\'application ?</string>
+    <string name="faq_2_answer">L\'application comprend l\'édition de texte, le changement de police, l\'ajustement de la taille, le gras, l\'italique, le soulignement, la couleur du texte, le surlignage, le barré, l\'ajout d\'images, l\'insertion de formes, le dessin au stylet, les commentaires, la signature numérique et la gestion des pages.</string>
+    <string name="faq_3_question">3. Puis-je modifier le texte à l\'intérieur de n\'importe quel PDF ?</string>
+    <string name="faq_3_answer">Vous pouvez modifier le texte dans la plupart des PDF modifiables. Cependant, les PDF numérisés ou basés sur des images ne contiennent pas de texte sélectionnable. Ils doivent d\'abord être convertis en texte modifiable via l\'OCR si la fonction est disponible.</string>
+    <string name="faq_4_question">4. Comment changer la police, la taille ou la couleur du texte ?</string>
+    <string name="faq_4_answer">Sélectionnez le texte à modifier, puis utilisez la barre d\'outils pour choisir une autre police, ajuster la taille, changer la couleur ou appliquer le gras, l\'italique ou le soulignement.</string>
+    <string name="faq_5_question">5. Comment surligner ou annoter un PDF ?</string>
+    <string name="faq_5_answer">Ouvrez le document et sélectionnez l\'outil Surligner ou Annoter. Vous pouvez surligner du texte important, ajouter des commentaires, dessiner à main levée, insérer des formes ou placer des notes autocollantes n\'importe où sur la page.</string>
+    <string name="faq_6_question">6. Puis-je ajouter ma signature à un PDF ?</string>
+    <string name="faq_6_answer">Oui. Vous pouvez créer une signature en la dessinant avec votre doigt ou un stylet, en tapant votre nom ou en important une image de votre signature. Une fois créée, elle peut être placée n\'importe où dans le document.</string>
+    <string name="faq_7_question">7. Puis-je insérer des images ou des logos dans un PDF ?</string>
+    <string name="faq_7_answer">Oui. Vous pouvez importer des images depuis votre appareil et les positionner, redimensionner ou faire pivoter dans le PDF. C\'est utile pour ajouter des logos d\'entreprise, des photos, des tampons ou d\'autres graphiques.</string>
+    <string name="faq_8_question">8. Quelles fonctions de gestion des pages sont disponibles ?</string>
+    <string name="faq_8_answer">L\'application permet de réorganiser, faire pivoter, supprimer, dupliquer et extraire des pages, de fusionner plusieurs PDF en un seul fichier et de diviser un PDF en documents séparés.</string>
+    <string name="faq_9_question">9. L\'application prend-elle en charge les PDF numérisés ?</string>
+    <string name="faq_9_answer">Oui. Les PDF numérisés peuvent être consultés normalement. La modification du texte dans un document numérisé nécessite la technologie OCR. Sans OCR, seules les annotations ou modifications basées sur l\'image sont possibles.</string>
+    <string name="faq_10_question">10. Pourquoi l\'application demande-t-elle l\'accès au stockage ou aux fichiers ?</string>
+    <string name="faq_10_answer">L\'accès au stockage ou aux fichiers est nécessaire pour que l\'application puisse ouvrir, modifier, enregistrer, importer, exporter et partager les documents PDF stockés sur votre appareil. Vos fichiers restent sous votre contrôle.</string>
+    <string name="faq_11_question">11. Mes documents resteront-ils privés ?</string>
+    <string name="faq_11_answer">Oui. Vos fichiers PDF sont traités localement sur votre appareil dans la mesure du possible. L\'application ne télécharge pas vos documents personnels sauf si vous choisissez explicitement le stockage cloud ou le partage.</string>
+    <string name="faq_12_question">12. Puis-je partager ou exporter mon PDF modifié ?</string>
+    <string name="faq_12_answer">Oui. Après modification, vous pouvez enregistrer le document et le partager par e-mail, applications de messagerie, services de stockage cloud ou toute application compatible installée sur votre appareil.</string>
+    <string name="faq_13_question">13. Quels formats de fichiers l\'application prend-elle en charge ?</string>
+    <string name="faq_13_answer">L\'application prend principalement en charge les documents PDF et peut également permettre l\'importation d\'images telles que JPG, JPEG et PNG pour les convertir en PDF ou les insérer dans des fichiers PDF existants.</string>
+    <string name="faq_14_question">14. Pourquoi ne puis-je pas modifier certains fichiers PDF ?</string>
+    <string name="faq_14_answer">Certains PDF sont protégés par mot de passe, sécurisés numériquement, corrompus ou créés sous forme d\'images numérisées. Ces limitations peuvent empêcher l\'édition directe du texte jusqu\'à ce que le document soit déverrouillé ou traité par OCR.</string>
+    <string name="faq_15_question">15. Comment signaler un problème ou demander une nouvelle fonctionnalité ?</string>
+    <string name="faq_15_answer">En cas de problème ou de suggestion, utilisez la section Nous contacter ou Commentaires dans l\'application. Indiquez le modèle de votre appareil, la version Android et une brève description du problème pour nous aider à améliorer votre expérience.</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="how_can_we_help">Come possiamo aiutarti?</string>
+    <string name="find_answers_to_frequently_asked">Trova risposte alle domande frequenti su modifica, annotazione e gestione dei tuoi documenti PDF.</string>
+    <string name="search_faqs">Cerca nelle FAQ</string>
+    <string name="no_faq_found">Nessuna FAQ trovata</string>
+    <string name="faq_1_question">1. Cos\'è un editor PDF?</string>
+    <string name="faq_1_answer">Un editor PDF ti consente di modificare documenti PDF editando testo, cambiando font, aggiungendo immagini, inserendo firme, evidenziando contenuti, annotando pagine, organizzando documenti e salvando le modifiche senza ricreare il file.</string>
+    <string name="faq_2_question">2. Quali strumenti di modifica sono disponibili nell\'app?</string>
+    <string name="faq_2_answer">L\'app include modifica testo, cambio font, regolazione dimensione, grassetto, corsivo, sottolineatura, colore testo, evidenziazione, barrato, aggiunta immagini, inserimento forme, disegno con penna, commenti, firma digitale e gestione pagine.</string>
+    <string name="faq_3_question">3. Posso modificare il testo all\'interno di qualsiasi PDF?</string>
+    <string name="faq_3_answer">Puoi modificare il testo nella maggior parte dei PDF modificabili. Tuttavia, i PDF scansionati o basati su immagini non contengono testo selezionabile. Devono prima essere convertiti in testo modificabile tramite OCR se la funzione è disponibile.</string>
+    <string name="faq_4_question">4. Come cambio font, dimensione o colore del testo?</string>
+    <string name="faq_4_answer">Seleziona il testo da modificare, poi usa la barra degli strumenti per scegliere un font diverso, regolare la dimensione, cambiare il colore o applicare grassetto, corsivo o sottolineatura.</string>
+    <string name="faq_5_question">5. Come posso evidenziare o annotare un PDF?</string>
+    <string name="faq_5_answer">Apri il documento e seleziona lo strumento Evidenzia o Annota. Puoi evidenziare testo importante, aggiungere commenti, disegnare a mano libera, inserire forme o posizionare note adesive ovunque sulla pagina.</string>
+    <string name="faq_6_question">6. Posso aggiungere la mia firma a un PDF?</string>
+    <string name="faq_6_answer">Sì. Puoi creare una firma disegnandola con il dito o uno stilo, digitando il tuo nome o importando un\'immagine della firma. Una volta creata, può essere posizionata ovunque nel documento.</string>
+    <string name="faq_7_question">7. Posso inserire immagini o loghi in un PDF?</string>
+    <string name="faq_7_answer">Sì. Puoi importare immagini dal dispositivo e posizionarle, ridimensionarle o ruotarle nel PDF. Utile per aggiungere loghi aziendali, foto, timbri o altra grafica.</string>
+    <string name="faq_8_question">8. Quali funzioni di gestione pagine sono disponibili?</string>
+    <string name="faq_8_answer">L\'app consente di riordinare, ruotare, eliminare, duplicare ed estrarre pagine, unire più PDF in un file e dividere un PDF in documenti separati.</string>
+    <string name="faq_9_question">9. L\'app supporta documenti PDF scansionati?</string>
+    <string name="faq_9_answer">Sì. I PDF scansionati possono essere visualizzati normalmente. La modifica del testo in un documento scansionato richiede la tecnologia OCR. Senza OCR sono possibili solo annotazioni o modifiche basate su immagini.</string>
+    <string name="faq_10_question">10. Perché l\'app richiede l\'accesso allo storage o ai file?</string>
+    <string name="faq_10_answer">L\'accesso allo storage o ai file è necessario per aprire, modificare, salvare, importare, esportare e condividere documenti PDF sul dispositivo. I tuoi file restano sotto il tuo controllo.</string>
+    <string name="faq_11_question">11. I miei documenti rimarranno privati?</string>
+    <string name="faq_11_answer">Sì. I tuoi file PDF vengono elaborati localmente sul dispositivo quando possibile. L\'app non carica i tuoi documenti personali a meno che tu non scelga esplicitamente cloud storage o condivisione.</string>
+    <string name="faq_12_question">12. Posso condividere o esportare il mio PDF modificato?</string>
+    <string name="faq_12_answer">Sì. Dopo la modifica puoi salvare il documento e condividerlo tramite email, app di messaggistica, servizi cloud o qualsiasi app compatibile installata sul dispositivo.</string>
+    <string name="faq_13_question">13. Quali formati di file supporta l\'app?</string>
+    <string name="faq_13_answer">L\'app supporta principalmente documenti PDF e può anche consentire l\'importazione di immagini come JPG, JPEG e PNG per convertirle in PDF o inserirle in file PDF esistenti.</string>
+    <string name="faq_14_question">14. Perché non riesco a modificare alcuni file PDF?</string>
+    <string name="faq_14_answer">Alcuni PDF sono protetti da password, protetti digitalmente, corrotti o creati come immagini scansionate. Queste limitazioni possono impedire la modifica diretta del testo finché il documento non viene sbloccato o elaborato con OCR.</string>
+    <string name="faq_15_question">15. Come segnalare un problema o richiedere una nuova funzione?</string>
+    <string name="faq_15_answer">In caso di problemi o suggerimenti, usa la sezione Contattaci o Feedback nell\'app. Includi modello del dispositivo, versione Android e una breve descrizione del problema per aiutarci a migliorare la tua esperienza.</string>
+</resources>

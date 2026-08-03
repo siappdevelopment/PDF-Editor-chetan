@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_files"
+        android:icon="@drawable/ic_home"
+        android:title="@string/all_files" />
+
+    <item
+        android:id="@+id/nav_recent"
+        android:icon="@drawable/ic_recent"
+        android:title="@string/recent" />
+
+    <item
+        android:id="@+id/nav_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:title="@string/bookmarks" />
+
+    <item
+        android:id="@+id/nav_tools"
+        android:icon="@drawable/ic_tools"
+        android:title="@string/tools" />
+
+</menu>

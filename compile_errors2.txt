@@ -1,0 +1,751 @@
+﻿Starting a Gradle Daemon, 2 busy and 9 stopped Daemons could not be reused, use --status for details
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:dataBindingTriggerDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:kspDebugKotlin UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+.\gradlew : warning: The following options were not recognized by any processor: 
+'[dagger.hilt.internal.useAggregatingRootProcessor, dagger.fastInit, 
+dagger.hilt.android.internal.disableAndroidSuperclassValidation, dagger.hilt.android.internal.projectType]'
+At C:\Users\codebuzz\AppData\Local\Temp\ps-script-f43d7189-71c1-4897-8f1a-054cf429e236.ps1:79 char:34
++ ... hAndroid\PdfReader"; .\gradlew compileDebugJavaWithJavac 2>&1 | Out-F ...
++                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: The fo...l.projectType]':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\dom4j\tree\DefaultElement.java:727: 
+error: variable z might not have been initialized
+            if (z) {
+                ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:105
+: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                           ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFMemoryInput.java:90:
+ error: cannot find symbol
+            j |= (r1[3 - i] & 255) << (i * 8);
+                  ^
+  symbol:   variable r1
+  location: class TTFMemoryInput
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:37: 
+error: cannot find symbol
+                this.name[readUShort][readUShort4] = new String(bArr, PdfObject.TEXT_UNICODE);
+                                                                      ^
+  symbol:   variable PdfObject
+  location: class TTFNameTable
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:49: 
+error: cannot find symbol
+                this.name[readUShort][readUShort4] = new String(bArr, Profile.DEFAULT_PROFILE_NAME);
+                                                                      ^
+  symbol:   variable Profile
+  location: class TTFNameTable
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:51: 
+error: cannot find symbol
+                this.name[readUShort][readUShort4] = new String(bArr, PdfObject.TEXT_UNICODE);
+                                                                      ^
+  symbol:   variable PdfObject
+  location: class TTFNameTable
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\io\RoutedInputStream.java:11
+7: error: incompatible types: Object cannot be converted to byte[]
+                        for (byte[] bArr7 : this.routes.keySet()) {
+                                                              ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\CharsetDete
+ctor.java:46: error: non-static variable this cannot be referenced from a static context
+        nsdetector.Init(new AnonymousClass1());
+                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVeri
+fier.java:18: error: cannot find symbol
+        cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                    ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsEUCJPVerifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVeri
+fier.java:18: error: cannot find symbol
+        cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                                       
+                                ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsEUCJPVerifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVeri
+fier.java:18: error: cannot find symbol
+        cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                                       
+                                                                        ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsEUCJPVerifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsISO2022KR
+Verifier.java:17: error: package ProfileVerifier does not exist
+        cclass = new int[]{2, 0, 0, 4096, 
+ProfileVerifier.CompilationStatus.RESULT_CODE_ERROR_CANT_WRITE_PROFILE_VERIFICATION_RESULT_CACHE_FILE, 64, 0, 0, 
+20480, 0, 0, 0, 0, 0, 0, 0, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306};
+                                                         ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Verif
+ier.java:17: error: cannot find symbol
+        cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+          ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsUTF8Verifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Verif
+ier.java:17: error: cannot find symbol
+        cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                  ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsUTF8Verifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Verif
+ier.java:17: error: cannot find symbol
+        cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                                                          ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsUTF8Verifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Verif
+ier.java:17: error: cannot find symbol
+        cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+           ^
+  symbol:   variable MinMaxPriorityQueue
+  location: class nsUTF8Verifier
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\ControlKit.java:54: error: 
+method exportImage in class PrintWord cannot be applied to given types;
+                    word.getPrintWord().exportImage(word.getPrintWord().getListView().getCurrentPageView());
+                                       ^
+  required: APageListItem,Bitmap
+  found:    APageListItem
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\PrintWord.java:118: error: 
+method exportImage in class PrintWord cannot be applied to given types;
+        exportImage(this.listView.getCurrentPageView());
+        ^
+  required: APageListItem,Bitmap
+  found:    APageListItem
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\PrintWord.java:419: error: 
+cannot find symbol
+            canvas.drawText(str, width, (int) (r5 - this.paint.ascent()), this.paint);
+                                               ^
+  symbol:   variable r5
+  location: class PrintWord
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPFind.java:48: error: cannot 
+find symbol
+            viewToModel = this.word.viewToModel((int) (r2.getScrollX() / zoom), (int) (this.word.getScrollY() / zoom), 
+false);
+                                                       ^
+  symbol:   variable r2
+  location: class WPFind
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPFind.java:183: error: method 
+exportImage in class PrintWord cannot be applied to given types;
+                    this.word.getPrintWord().exportImage(this.word.getPrintWord().getListView().getCurrentPageView());
+                                            ^
+  required: APageListItem,Bitmap
+  found:    APageListItem
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:67: error: cannot 
+find symbol
+            this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                     ^
+  symbol:   variable r4
+  location: class LeafView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:67: error: cannot 
+find symbol
+            this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                                    ^
+  symbol:   variable r4
+  location: class LeafView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:69: error: cannot 
+find symbol
+            this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                   ^
+  symbol:   variable r4
+  location: class LeafView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:69: error: cannot 
+find symbol
+            this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                                  ^
+  symbol:   variable r4
+  location: class LeafView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:157: error: 
+incompatible types: byte cannot be converted to boolean
+                    r52 = b;
+                          ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:159: error: 
+incompatible types: byte cannot be converted to boolean
+                    r52 = b;
+                          ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:228: error: 
+incompatible types: byte cannot be converted to boolean
+        r5 = b2;
+             ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:383: error: 
+incompatible types: int cannot be converted to boolean
+            bitValue = ViewKit.instance().setBitValue(bitValue, r4, r4);
+                                                                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:384: error: 
+incompatible types: int cannot be converted to boolean
+            z2 = r4;
+                 ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:170: error: 
+incompatible types: byte cannot be converted to boolean
+        z2 = b;
+             ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:182: error: 
+incomparable types: byte and boolean
+            if (paraHorizontalAlign == z2 || paraHorizontalAlign == 2) {
+                                    ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:183: error: 
+incomparable types: byte and boolean
+                if (paraHorizontalAlign == z2) {
+                                        ^
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPPageListItem.java:45: error: 
+method exportImage in class APageListView cannot be applied to given types;
+            this.listView.exportImage(this);
+                         ^
+  required: APageListItem,Bitmap
+  found:    WPPageListItem
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPPageListItem.java:53: error: 
+method exportImage in class APageListView cannot be applied to given types;
+        this.listView.exportImage(this);
+                     ^
+  required: APageListItem,Bitmap
+  found:    WPPageListItem
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\dialog\TXTEncodingDialog.java:125: 
+error: method loadDataWithBaseURL in class WebView cannot be applied to given types;
+                    this.previewText.loadDataWithBaseURL(null, ("<a>" + new String(this.buffer, 0, read) + 
+"</a>").replaceAll("\\r\\n", "<br />"), "text/html", "UTF-8");
+                                    ^
+  required: String,String,String,String,String
+  found:    <null>,String,String,String
+  reason: actual and formal argument lists differ in length
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LineView.java:124: error: cannot 
+find symbol
+                        ceil = Math.ceil(i3 / r3);
+                                              ^
+  symbol:   variable r3
+  location: class LineView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LineView.java:153: error: cannot 
+find symbol
+                ceil = Math.ceil(r7 / f5);
+                                 ^
+  symbol:   variable r7
+  location: class LineView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:67: error: 
+cannot find symbol
+            this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                     ^
+  symbol:   variable r4
+  location: class LeafViewXls
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:67: error: 
+cannot find symbol
+            this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                                    ^
+  symbol:   variable r4
+  location: class LeafViewXls
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:69: error: 
+cannot find symbol
+            this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                   ^
+  symbol:   variable r4
+  location: class LeafViewXls
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:69: error: 
+cannot find symbol
+            this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                                  ^
+  symbol:   variable r4
+  location: class LeafViewXls
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:114: error: cannot 
+find symbol
+            this.rect.set(round, round2, (int) Math.round((this.x * f) + r3 + (bounds.getWidth() * d)), (int) 
+Math.round((this.y * f) + f2 + (bounds.getHeight() * d)));
+                                                                         ^
+  symbol:   variable r3
+  location: class ObjView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:119: error: cannot 
+find symbol
+                float f3 = f2 + ((pageAttr.topMargin + (((i4 - r10) - pageAttr.bottomMargin) / 2.0f)) * f);
+                                                               ^
+  symbol:   variable r10
+  location: class ObjView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:120: error: cannot 
+find symbol
+                PictureKit.instance().drawPicture(canvas, control, getPageNumber(), PictureShape.getPicture(control, 
+((WatermarkShape) this.picShape).getPictureIndex()), Math.round((r3 + ((r6 + (i3 / 2.0f)) * f)) - ((bounds.width * f) 
+/ 2.0f)), Math.round(f3 - ((bounds.height * f) / 2.0f)), f, Math.round(bounds.getWidth() * d), 
+Math.round(bounds.getHeight() * d), ((WatermarkShape) this.picShape).getEffectInfor());
+                                                                                                                       
+                                                               ^
+  symbol:   variable r3
+  location: class ObjView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:120: error: cannot 
+find symbol
+                PictureKit.instance().drawPicture(canvas, control, getPageNumber(), PictureShape.getPicture(control, 
+((WatermarkShape) this.picShape).getPictureIndex()), Math.round((r3 + ((r6 + (i3 / 2.0f)) * f)) - ((bounds.width * f) 
+/ 2.0f)), Math.round(f3 - ((bounds.height * f) / 2.0f)), f, Math.round(bounds.getWidth() * d), 
+Math.round(bounds.getHeight() * d), ((WatermarkShape) this.picShape).getEffectInfor());
+                                                                                                                       
+                                                                      ^
+  symbol:   variable r6
+  location: class ObjView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\PositionLayoutKit.java:34: error: 
+cannot find symbol
+                leafView.setX(pageAttr.leftMargin + Math.round(((pageAttr.pageWidth - r0) - pageAttr.rightMargin) * 
+horRelativeValue));
+                                                                                      ^
+  symbol:   variable r0
+  location: class PositionLayoutKit
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\PositionLayoutKit.java:313: 
+error: cannot find symbol
+                leafView.setY(pageAttr.topMargin + Math.round(((pageAttr.pageHeight - r0) - pageAttr.bottomMargin) * 
+verRelativeValue));
+                                                                                      ^
+  symbol:   variable r0
+  location: class PositionLayoutKit
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ShapeView.java:221: error: cannot 
+find symbol
+                    canvas.translate(i + ((i6 + (i7 / 2.0f)) * f), i2 + ((pageAttr.topMargin + (((i8 - r7) - 
+pageAttr.bottomMargin) / 2.0f)) * f));
+                                                                                                       ^
+  symbol:   variable r7
+  location: class ShapeView
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ViewFactory.java:36: error: no 
+suitable constructor found for ObjView(IElement,IElement)
+                    return new ObjView(iElement2, iElement);
+                           ^
+    constructor ObjView.ObjView() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor ObjView.ObjView(IElement,IElement,WPAutoShape) is not applicable
+      (actual and formal argument lists differ in length)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+49 errors
+2 warnings
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+[Incubating] Problems report is available at: file:///F:/HiteshAndroid/PdfReader/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler output below.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\ControlKit.java:54: error: 
+method exportImage in class PrintWord cannot be applied to given types;
+                      word.getPrintWord().exportImage(word.getPrintWord().getListView().getCurrentPageView());
+                                         ^
+    required: APageListItem,Bitmap
+    found:    APageListItem
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\PrintWord.java:118: error: 
+method exportImage in class PrintWord cannot be applied to given types;
+          exportImage(this.listView.getCurrentPageView());
+          ^
+    required: APageListItem,Bitmap
+    found:    APageListItem
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPFind.java:183: error: 
+method exportImage in class PrintWord cannot be applied to given types;
+                      
+this.word.getPrintWord().exportImage(this.word.getPrintWord().getListView().getCurrentPageView());
+                                              ^
+    required: APageListItem,Bitmap
+    found:    APageListItem
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPPageListItem.java:45: 
+error: method exportImage in class APageListView cannot be applied to given types;
+              this.listView.exportImage(this);
+                           ^
+    required: APageListItem,Bitmap
+    found:    WPPageListItem
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPPageListItem.java:53: 
+error: method exportImage in class APageListView cannot be applied to given types;
+          this.listView.exportImage(this);
+                       ^
+    required: APageListItem,Bitmap
+    found:    WPPageListItem
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\dialog\TXTEncodingDialog.java:125: 
+error: method loadDataWithBaseURL in class WebView cannot be applied to given types;
+                      this.previewText.loadDataWithBaseURL(null, ("<a>" + new String(this.buffer, 0, read) + 
+"</a>").replaceAll("\\r\\n", "<br />"), "text/html", "UTF-8");
+                                      ^
+    required: String,String,String,String,String
+    found:    <null>,String,String,String
+    reason: actual and formal argument lists differ in length
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\ss\format\CellElapsedFormatter.java:1
+05: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+          new Formatter(stringBuffer).format(this.printfFmt, lArr);
+                                                             ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ViewFactory.java:36: error: no 
+suitable constructor found for ObjView(IElement,IElement)
+                      return new ObjView(iElement2, iElement);
+                             ^
+      constructor ObjView.ObjView() is not applicable
+        (actual and formal argument lists differ in length)
+      constructor ObjView.ObjView(IElement,IElement,WPAutoShape) is not applicable
+        (actual and formal argument lists differ in length)
+  Note: Recompile with -Xlint:deprecation for details.
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFMemoryInput.java:9
+0: error: cannot find symbol
+              j |= (r1[3 - i] & 255) << (i * 8);
+                    ^
+    symbol:   variable r1
+    location: class TTFMemoryInput
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:37: 
+error: cannot find symbol
+                  this.name[readUShort][readUShort4] = new String(bArr, PdfObject.TEXT_UNICODE);
+                                                                        ^
+    symbol:   variable PdfObject
+    location: class TTFNameTable
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:49: 
+error: cannot find symbol
+                  this.name[readUShort][readUShort4] = new String(bArr, Profile.DEFAULT_PROFILE_NAME);
+                                                                        ^
+    symbol:   variable Profile
+    location: class TTFNameTable
+  
+F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\font\TTFNameTable.java:51: 
+error: cannot find symbol
+                  this.name[readUShort][readUShort4] = new String(bArr, PdfObject.TEXT_UNICODE);
+                                                                        ^
+    symbol:   variable PdfObject
+    location: class TTFNameTable
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVe
+rifier.java:18: error: cannot find symbol
+          cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                      ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsEUCJPVerifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVe
+rifier.java:18: error: cannot find symbol
+          cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                                       
+                                  ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsEUCJPVerifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsEUCJPVe
+rifier.java:18: error: cannot find symbol
+          cclass = new int[]{1145324612, 1430537284, 1145324612, 1145328708, 1145324612, 1145324612, 1145324612, 
+1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 1145324612, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 827675989, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 572662309, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 0, 0, 0, EventConstant.PG_NOTE_ID};
+                                                                                                                       
+                                                                                                                       
+                                                                          ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsEUCJPVerifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Ver
+ifier.java:17: error: cannot find symbol
+          cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+            ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsUTF8Verifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Ver
+ifier.java:17: error: cannot find symbol
+          cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                    ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsUTF8Verifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Ver
+ifier.java:17: error: cannot find symbol
+          cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                                                            ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsUTF8Verifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsUTF8Ver
+ifier.java:17: error: cannot find symbol
+          cclass = new int[]{286331153, 1118481, 286331153, 286327057, 286331153, 286331153, 286331153, 286331153, 
+286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 286331153, 858989090, 1145324612, 
+1145324612, 1145324612, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 
+MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, MinMaxPriorityQueue.EVEN_POWERS_OF_TWO, 1717986816, 1717986918, 1717986918, 
+1717986918, -2004318073, -2003269496, -1145324614, 16702940};
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+             ^
+    symbol:   variable MinMaxPriorityQueue
+    location: class nsUTF8Verifier
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\PrintWord.java:419: error: 
+cannot find symbol
+              canvas.drawText(str, width, (int) (r5 - this.paint.ascent()), this.paint);
+                                                 ^
+    symbol:   variable r5
+    location: class PrintWord
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\control\WPFind.java:48: error: 
+cannot find symbol
+              viewToModel = this.word.viewToModel((int) (r2.getScrollX() / zoom), (int) (this.word.getScrollY() / 
+zoom), false);
+                                                         ^
+    symbol:   variable r2
+    location: class WPFind
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:67: error: cannot 
+find symbol
+              this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                       ^
+    symbol:   variable r4
+    location: class LeafView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:67: error: cannot 
+find symbol
+              this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                                      ^
+    symbol:   variable r4
+    location: class LeafView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:69: error: cannot 
+find symbol
+              this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                     ^
+    symbol:   variable r4
+    location: class LeafView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafView.java:69: error: cannot 
+find symbol
+              this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                                    ^
+    symbol:   variable r4
+    location: class LeafView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LineView.java:124: error: 
+cannot find symbol
+                          ceil = Math.ceil(i3 / r3);
+                                                ^
+    symbol:   variable r3
+    location: class LineView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LineView.java:153: error: 
+cannot find symbol
+                  ceil = Math.ceil(r7 / f5);
+                                   ^
+    symbol:   variable r7
+    location: class LineView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:67: error: 
+cannot find symbol
+              this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                       ^
+    symbol:   variable r4
+    location: class LeafViewXls
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:67: error: 
+cannot find symbol
+              this.paint.setTextSize(((r4.fontSize * (r4.fontScale / 100.0f)) * 1.8f) / 2.0f);
+                                                      ^
+    symbol:   variable r4
+    location: class LeafViewXls
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:69: error: 
+cannot find symbol
+              this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                     ^
+    symbol:   variable r4
+    location: class LeafViewXls
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\LeafViewXls.java:69: error: 
+cannot find symbol
+              this.paint.setTextSize(r4.fontSize * (r4.fontScale / 100.0f) * 1.8f);
+                                                    ^
+    symbol:   variable r4
+    location: class LeafViewXls
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:114: error: cannot 
+find symbol
+              this.rect.set(round, round2, (int) Math.round((this.x * f) + r3 + (bounds.getWidth() * d)), (int) 
+Math.round((this.y * f) + f2 + (bounds.getHeight() * d)));
+                                                                           ^
+    symbol:   variable r3
+    location: class ObjView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:119: error: cannot 
+find symbol
+                  float f3 = f2 + ((pageAttr.topMargin + (((i4 - r10) - pageAttr.bottomMargin) / 2.0f)) * f);
+                                                                 ^
+    symbol:   variable r10
+    location: class ObjView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:120: error: cannot 
+find symbol
+                  PictureKit.instance().drawPicture(canvas, control, getPageNumber(), PictureShape.getPicture(control, 
+((WatermarkShape) this.picShape).getPictureIndex()), Math.round((r3 + ((r6 + (i3 / 2.0f)) * f)) - ((bounds.width * f) 
+/ 2.0f)), Math.round(f3 - ((bounds.height * f) / 2.0f)), f, Math.round(bounds.getWidth() * d), 
+Math.round(bounds.getHeight() * d), ((WatermarkShape) this.picShape).getEffectInfor());
+                                                                                                                       
+                                                                 ^
+14 actionable tasks: 1 executed, 13 up-to-date
+    symbol:   variable r3
+    location: class ObjView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ObjView.java:120: error: cannot 
+find symbol
+                  PictureKit.instance().drawPicture(canvas, control, getPageNumber(), PictureShape.getPicture(control, 
+((WatermarkShape) this.picShape).getPictureIndex()), Math.round((r3 + ((r6 + (i3 / 2.0f)) * f)) - ((bounds.width * f) 
+/ 2.0f)), Math.round(f3 - ((bounds.height * f) / 2.0f)), f, Math.round(bounds.getWidth() * d), 
+Math.round(bounds.getHeight() * d), ((WatermarkShape) this.picShape).getEffectInfor());
+                                                                                                                       
+                                                                        ^
+    symbol:   variable r6
+    location: class ObjView
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\PositionLayoutKit.java:34: 
+error: cannot find symbol
+                  leafView.setX(pageAttr.leftMargin + Math.round(((pageAttr.pageWidth - r0) - pageAttr.rightMargin) * 
+horRelativeValue));
+                                                                                        ^
+    symbol:   variable r0
+    location: class PositionLayoutKit
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\PositionLayoutKit.java:313: 
+error: cannot find symbol
+                  leafView.setY(pageAttr.topMargin + Math.round(((pageAttr.pageHeight - r0) - pageAttr.bottomMargin) * 
+verRelativeValue));
+                                                                                        ^
+    symbol:   variable r0
+    location: class PositionLayoutKit
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\ShapeView.java:221: error: 
+cannot find symbol
+                      canvas.translate(i + ((i6 + (i7 / 2.0f)) * f), i2 + ((pageAttr.topMargin + (((i8 - r7) - 
+pageAttr.bottomMargin) / 2.0f)) * f));
+                                                                                                         ^
+    symbol:   variable r7
+    location: class ShapeView
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  Note: Some input files use unchecked or unsafe operations.
+  warning: The following options were not recognized by any processor: 
+'[dagger.hilt.internal.useAggregatingRootProcessor, dagger.fastInit, 
+dagger.hilt.android.internal.disableAndroidSuperclassValidation, dagger.hilt.android.internal.projectType]'
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\fc\dom4j\tree\DefaultElement.java:727: 
+error: variable z might not have been initialized
+              if (z) {
+                  ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:182: error: 
+incomparable types: byte and boolean
+              if (paraHorizontalAlign == z2 || paraHorizontalAlign == 2) {
+                                      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:183: error: 
+incomparable types: byte and boolean
+                  if (paraHorizontalAlign == z2) {
+                                          ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\emf\io\RoutedInputStream.java:
+117: error: incompatible types: Object cannot be converted to byte[]
+                          for (byte[] bArr7 : this.routes.keySet()) {
+                                                                ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:157: error: 
+incompatible types: byte cannot be converted to boolean
+                      r52 = b;
+                            ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:159: error: 
+incompatible types: byte cannot be converted to boolean
+                      r52 = b;
+                            ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:228: error: 
+incompatible types: byte cannot be converted to boolean
+          r5 = b2;
+               ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:383: error: 
+incompatible types: int cannot be converted to boolean
+              bitValue = ViewKit.instance().setBitValue(bitValue, r4, r4);
+                                                                      ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\WPLayouter.java:384: error: 
+incompatible types: int cannot be converted to boolean
+              z2 = r4;
+                   ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\wp\view\TableLayoutKit.java:170: error: 
+incompatible types: byte cannot be converted to boolean
+          z2 = b;
+               ^
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\CharsetDe
+tector.java:46: error: non-static variable this cannot be referenced from a static context
+          nsdetector.Init(new AnonymousClass1());
+                          ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  F:\HiteshAndroid\PdfReader\app\src\main\java\com\office\alldocumentreader\xs\thirdpart\mozilla\intl\chardet\nsISO2022
+KRVerifier.java:17: error: package ProfileVerifier does not exist
+          cclass = new int[]{2, 0, 0, 4096, 
+ProfileVerifier.CompilationStatus.RESULT_CODE_ERROR_CANT_WRITE_PROFILE_VERIFICATION_RESULT_CACHE_FILE, 64, 0, 0, 
+20480, 0, 0, 0, 0, 0, 0, 0, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 
+572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306, 572662306};
+                                                           ^
+  49 errors
+  2 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 1m

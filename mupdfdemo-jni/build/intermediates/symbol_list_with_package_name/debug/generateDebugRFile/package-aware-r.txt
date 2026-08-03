@@ -1,0 +1,1 @@
+com.reader.alldocviewer.pdfeditorartifex.mupdfdemo.jni

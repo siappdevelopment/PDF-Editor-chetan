@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_rounded_corner_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextStyle.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_with_stoke"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp">
+
+        <TextView
+            style="@style/TextStyle.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/grey_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/TextStyle.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            style="@style/TextStyle.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/size"
+            android:textColor="@color/grey_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvSize"
+            style="@style/TextStyle.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            style="@style/TextStyle.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/path"
+            android:textColor="@color/grey_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvPath"
+            style="@style/TextStyle.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            style="@style/TextStyle.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/last_modified"
+            android:textColor="@color/grey_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvLastModified"
+            style="@style/TextStyle.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+</LinearLayout>

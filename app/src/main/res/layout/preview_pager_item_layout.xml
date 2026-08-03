@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.artifex.mupdfdemo.PdfPageItem" />
+        <variable
+            name="isDarkMode"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/previewPageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/rounded_ripple_effect_bg"
+        android:minWidth="@dimen/_40sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/previewPageImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60sdp"
+                android:minWidth="@dimen/_40sdp"
+                android:minHeight="@dimen/_60sdp" />
+
+            <RelativeLayout
+                android:id="@+id/reSelectText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_14sdp"
+                android:background="@drawable/im_select"
+                android:gravity="center"
+                android:minWidth="@dimen/_14sdp">
+
+                <TextView
+                    android:id="@+id/tvCount"
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white_"
+                    android:textSize="@dimen/_8sdp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

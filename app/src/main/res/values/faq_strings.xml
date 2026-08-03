@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="faq_1_question">1. What is a PDF Editor?</string>
+    <string name="faq_1_answer">A PDF Editor allows you to modify PDF documents by editing text, changing fonts, adding images, inserting signatures, highlighting content, annotating pages, organizing documents, and saving your changes without recreating the file.</string>
+    <string name="faq_2_question">2. What editing tools are available in the app?</string>
+    <string name="faq_2_answer">The app includes a wide range of editing tools such as Text Edit, Font Change, Font Size Adjustment, Bold, Italic, Underline, Text Color, Highlight, Strike-through, Add Images, Insert Shapes, Draw with Pen, Add Comments, Digital Signature, and Page Management tools.</string>
+    <string name="faq_3_question">3. Can I edit the text inside any PDF?</string>
+    <string name="faq_3_answer">You can edit text in most editable PDF documents. However, scanned or image-based PDFs do not contain selectable text. These documents must first be converted into editable text using OCR (Optical Character Recognition) if the feature is available.</string>
+    <string name="faq_4_question">4. How do I change the font, size, or color of text?</string>
+    <string name="faq_4_answer">Select the text you want to modify, then use the editing toolbar to choose a different font family, adjust the font size, change the text color, or apply formatting such as bold, italic, or underline.</string>
+    <string name="faq_5_question">5. How can I highlight or annotate a PDF?</string>
+    <string name="faq_5_answer">Open the document and select the Highlight or Annotation tool. You can highlight important text, add comments, draw freehand, insert shapes, or place sticky notes anywhere on the page.</string>
+    <string name="faq_6_question">6. Can I add my signature to a PDF?</string>
+    <string name="faq_6_answer">Yes. You can create a signature by drawing it with your finger or stylus, typing your name, or importing an image of your signature. Once created, it can be placed anywhere within the document.</string>
+    <string name="faq_7_question">7. Can I insert images or logos into a PDF?</string>
+    <string name="faq_7_answer">Yes. You can import images from your device and position, resize, or rotate them within the PDF. This is useful for adding company logos, photos, stamps, or other graphics.</string>
+    <string name="faq_8_question">8. What page management features are available?</string>
+    <string name="faq_8_answer">The app allows you to reorder pages, rotate pages, delete unwanted pages, duplicate pages, extract selected pages, merge multiple PDFs into one file, and split a PDF into separate documents.</string>
+    <string name="faq_9_question">9. Does the app support scanned PDF documents?</string>
+    <string name="faq_9_answer">Yes. Scanned PDFs can be viewed normally. Editing the text inside a scanned document requires OCR technology to recognize the text. Without OCR, only annotations or image-based edits are possible.</string>
+    <string name="faq_10_question">10. Why does the app request storage or file access permission?</string>
+    <string name="faq_10_answer">Storage or file access permission is required so the app can open, edit, save, import, export, and share PDF documents stored on your device. Your files remain under your control.</string>
+    <string name="faq_11_question">11. Will my documents remain private?</string>
+    <string name="faq_11_answer">Yes. Your PDF files are processed locally on your device whenever possible. The app does not upload your personal documents unless you explicitly choose a cloud storage or sharing feature.</string>
+    <string name="faq_12_question">12. Can I share or export my edited PDF?</string>
+    <string name="faq_12_answer">Yes. After editing, you can save the document and share it using email, messaging apps, cloud storage services, or any compatible application installed on your device.</string>
+    <string name="faq_13_question">13. Which file formats does the app support?</string>
+    <string name="faq_13_answer">The app primarily supports PDF documents and may also allow importing images such as JPG, JPEG, and PNG for conversion into PDFs or insertion into existing PDF files.</string>
+    <string name="faq_14_question">14. Why can\'t I edit some PDF files?</string>
+    <string name="faq_14_answer">Some PDF files are password-protected, digitally secured, corrupted, or created as scanned images. These limitations may prevent direct text editing until the document is unlocked or processed with OCR.</string>
+    <string name="faq_15_question">15. How can I report a problem or request a new feature?</string>
+    <string name="faq_15_answer">If you experience any issues or have suggestions, please use the Contact Us or Feedback section within the app. Include your device model, Android version, and a brief description of the issue to help us improve your experience.</string>
+</resources>

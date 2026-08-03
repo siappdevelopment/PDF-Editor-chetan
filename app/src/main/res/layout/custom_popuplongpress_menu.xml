@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup"
+    android:orientation="horizontal"
+    android:padding="@dimen/_7sdp">
+
+    <ImageView
+        android:id="@+id/imHighLite"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_highlight_black"
+        app:tint="@color/white_" />
+
+    <ImageView
+        android:id="@+id/imUnderLine"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_underline_black"
+        app:tint="@color/white_" />
+
+    <ImageView
+        android:id="@+id/imStrike"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_strike_black"
+        app:tint="@color/white_" />
+
+    <ImageView
+        android:id="@+id/imCopy"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_copy"
+        app:tint="@color/white_" />
+</LinearLayout>
