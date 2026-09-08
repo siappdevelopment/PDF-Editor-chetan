@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function;
 
-import static com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.AggregateFunction.subtotalInstance;
+import static com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.AggregateFunction.subtotalInstance;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.NotImplementedException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.OperandResolver;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.NotImplementedException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.OperandResolver;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
 
 /**
  * Implementation for the Excel function SUBTOTAL<p>

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.types;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.types;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 /**
  * Hyphenation (HRESI).

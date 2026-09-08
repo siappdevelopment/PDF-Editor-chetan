@@ -102,8 +102,9 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="5dp"
             android:layout_alignParentBottom="true"
-
             android:orientation="vertical">
 
 
@@ -111,8 +112,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                app:cardBackgroundColor="#00000000"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
+                app:cardElevation="0dp">
 
                 <com.facebook.shimmer.ShimmerFrameLayout
                     android:id="@+id/shimmer_container_banner"

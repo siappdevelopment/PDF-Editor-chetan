@@ -1,15 +1,15 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
 
-/* loaded from: classes11.dex */
+
 public class SelectionHandler {
     public static final int UNSELECTED_POSITION = -1;
     @NonNull

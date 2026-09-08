@@ -1,19 +1,19 @@
 // Copyright 2002-2007, FreeHEP.
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
 import android.graphics.Bitmap;
 
 //import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFImageLoader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFTag;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFImageLoader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFTag;
 
 /**
  * StretchDIBits TAG. Encoded as plain RGB rather than the not-yet-working PNG

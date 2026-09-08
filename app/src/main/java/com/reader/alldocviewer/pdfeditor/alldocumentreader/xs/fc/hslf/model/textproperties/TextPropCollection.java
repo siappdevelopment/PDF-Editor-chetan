@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.LinkedList;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 
 /**

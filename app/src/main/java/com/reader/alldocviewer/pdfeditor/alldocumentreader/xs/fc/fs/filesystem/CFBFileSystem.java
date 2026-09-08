@@ -1,5 +1,5 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,10 +8,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.BlockAllocationTableReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.BlockList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.RawDataBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.BlockAllocationTableReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.BlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.RawDataBlock;
 
 /**
  * This is the main class of the POIFS system; it manages the entire

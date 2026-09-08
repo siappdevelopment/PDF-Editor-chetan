@@ -5,25 +5,25 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util;
 
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Attribute;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CDATA;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Comment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Entity;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Namespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.NodeFilter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.QName;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Text;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.XPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.rule.Pattern;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Attribute;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Comment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Entity;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Namespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.NodeFilter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.QName;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Text;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.XPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.rule.Pattern;
 
 
 /**

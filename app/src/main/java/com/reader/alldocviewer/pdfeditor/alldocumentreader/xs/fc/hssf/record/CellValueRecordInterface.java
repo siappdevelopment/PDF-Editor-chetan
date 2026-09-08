@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 
 /**
@@ -26,8 +26,8 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.rec
  * @author Andrew C. Oliver (acoliver at apache dot org)
  * @author Jason Height (jheight at chariot dot net dot au)
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFactory
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFactory
  */
 public interface CellValueRecordInterface {
 

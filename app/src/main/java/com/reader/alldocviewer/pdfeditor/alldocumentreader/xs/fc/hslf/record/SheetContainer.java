@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 /**
  * The superclass of all sheet container records - Slide, Notes, MainMaster, etc.

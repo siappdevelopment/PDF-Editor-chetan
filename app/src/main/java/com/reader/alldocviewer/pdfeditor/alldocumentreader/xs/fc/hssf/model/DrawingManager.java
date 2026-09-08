@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model;
 
 
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDgRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDggRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDgRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDggRecord;
 
 import java.util.HashMap;
 

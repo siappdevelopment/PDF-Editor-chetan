@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.CString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.HeadersFootersAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.CString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.HeadersFootersAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
 
 
 /**

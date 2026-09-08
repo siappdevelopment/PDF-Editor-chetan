@@ -4,27 +4,27 @@
  * 编译器:            android2.2
  * 时间:              下午3:39:55
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control;
 
 import java.util.List;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ISlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.DialogConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.SysKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ISlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.DialogConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.SysKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -224,7 +224,7 @@ public class PGControl extends AbstractControl
                 String text = pgView.getCurrentSlide().getNotes().getNotes();
                 Vector<Object> vector = new Vector<Object>();
                 vector.add(text);
-                new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.dialog.NotesDialog(this, getMainFrame().getActivity(), null, vector, 
+                new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.dialog.NotesDialog(this, getMainFrame().getActivity(), null, vector, 
                     DialogConstant.SHOW_PG_NOTE_ID).show();
                 break;
                 
@@ -635,7 +635,7 @@ public class PGControl extends AbstractControl
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractControl#getActivity()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractControl#getActivity()
      *
      */
     public Activity getActivity()

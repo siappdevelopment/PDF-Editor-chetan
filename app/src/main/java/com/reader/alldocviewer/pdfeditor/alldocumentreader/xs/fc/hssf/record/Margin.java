@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 /**
  * The margin interface is a parent used to define left, right, top and bottom margins.

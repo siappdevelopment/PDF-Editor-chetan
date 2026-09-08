@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
 
 
 

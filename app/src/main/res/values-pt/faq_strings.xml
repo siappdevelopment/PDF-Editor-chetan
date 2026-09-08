@@ -1,37 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="how_can_we_help">Como podemos ajudar?</string>
-    <string name="find_answers_to_frequently_asked">Encontre respostas para perguntas frequentes sobre editar, anotar e gerenciar seus documentos PDF.</string>
-    <string name="search_faqs">Pesquisar FAQs</string>
-    <string name="no_faq_found">Nenhuma FAQ encontrada</string>
-    <string name="faq_1_question">1. O que é um Editor de PDF?</string>
-    <string name="faq_1_answer">Um Editor de PDF permite modificar documentos PDF editando texto, alterando fontes, adicionando imagens, inserindo assinaturas, destacando conteúdo, anotando páginas, organizando documentos e salvando alterações sem recriar o arquivo.</string>
-    <string name="faq_2_question">2. Quais ferramentas de edição estão disponíveis no app?</string>
-    <string name="faq_2_answer">O app inclui edição de texto, alteração de fonte, ajuste de tamanho, negrito, itálico, sublinhado, cor do texto, destaque, tachado, adicionar imagens, inserir formas, desenhar com caneta, comentários, assinatura digital e gerenciamento de páginas.</string>
-    <string name="faq_3_question">3. Posso editar o texto dentro de qualquer PDF?</string>
-    <string name="faq_3_answer">Você pode editar texto na maioria dos PDFs editáveis. Porém, PDFs digitalizados ou baseados em imagem não contêm texto selecionável. Eles devem primeiro ser convertidos em texto editável usando OCR, se o recurso estiver disponível.</string>
-    <string name="faq_4_question">4. Como altero a fonte, o tamanho ou a cor do texto?</string>
-    <string name="faq_4_answer">Selecione o texto que deseja modificar e use a barra de ferramentas para escolher uma fonte diferente, ajustar o tamanho, alterar a cor ou aplicar negrito, itálico ou sublinhado.</string>
-    <string name="faq_5_question">5. Como posso destacar ou anotar um PDF?</string>
-    <string name="faq_5_answer">Abra o documento e selecione a ferramenta Destacar ou Anotar. Você pode destacar texto importante, adicionar comentários, desenhar à mão livre, inserir formas ou colocar notas adesivas em qualquer lugar da página.</string>
-    <string name="faq_6_question">6. Posso adicionar minha assinatura a um PDF?</string>
-    <string name="faq_6_answer">Sim. Você pode criar uma assinatura desenhando com o dedo ou uma caneta, digitando seu nome ou importando uma imagem da assinatura. Depois de criada, pode ser colocada em qualquer lugar do documento.</string>
-    <string name="faq_7_question">7. Posso inserir imagens ou logotipos em um PDF?</string>
-    <string name="faq_7_answer">Sim. Você pode importar imagens do dispositivo e posicioná-las, redimensioná-las ou girá-las no PDF. Isso é útil para adicionar logotipos de empresa, fotos, carimbos ou outros gráficos.</string>
-    <string name="faq_8_question">8. Quais recursos de gerenciamento de páginas estão disponíveis?</string>
-    <string name="faq_8_answer">O app permite reordenar páginas, girar, excluir páginas indesejadas, duplicar, extrair páginas selecionadas, mesclar vários PDFs em um arquivo e dividir um PDF em documentos separados.</string>
-    <string name="faq_9_question">9. O app suporta documentos PDF digitalizados?</string>
-    <string name="faq_9_answer">Sim. PDFs digitalizados podem ser visualizados normalmente. Editar o texto em um documento digitalizado requer tecnologia OCR. Sem OCR, apenas anotações ou edições baseadas em imagem são possíveis.</string>
-    <string name="faq_10_question">10. Por que o app solicita permissão de armazenamento ou acesso a arquivos?</string>
-    <string name="faq_10_answer">A permissão de armazenamento ou acesso a arquivos é necessária para que o app possa abrir, editar, salvar, importar, exportar e compartilhar documentos PDF armazenados no seu dispositivo. Seus arquivos permanecem sob seu controle.</string>
-    <string name="faq_11_question">11. Meus documentos permanecerão privados?</string>
-    <string name="faq_11_answer">Sim. Seus arquivos PDF são processados localmente no dispositivo sempre que possível. O app não envia seus documentos pessoais, a menos que você escolha explicitamente armazenamento em nuvem ou compartilhamento.</string>
-    <string name="faq_12_question">12. Posso compartilhar ou exportar meu PDF editado?</string>
-    <string name="faq_12_answer">Sim. Após editar, você pode salvar o documento e compartilhá-lo por e-mail, apps de mensagens, serviços de nuvem ou qualquer aplicativo compatível instalado no dispositivo.</string>
-    <string name="faq_13_question">13. Quais formatos de arquivo o app suporta?</string>
-    <string name="faq_13_answer">O app suporta principalmente documentos PDF e também pode permitir a importação de imagens como JPG, JPEG e PNG para conversão em PDF ou inserção em arquivos PDF existentes.</string>
-    <string name="faq_14_question">14. Por que não consigo editar alguns arquivos PDF?</string>
-    <string name="faq_14_answer">Alguns PDFs são protegidos por senha, protegidos digitalmente, corrompidos ou criados como imagens digitalizadas. Essas limitações podem impedir a edição direta de texto até que o documento seja desbloqueado ou processado com OCR.</string>
-    <string name="faq_15_question">15. Como reportar um problema ou solicitar um novo recurso?</string>
-    <string name="faq_15_answer">Se tiver problemas ou sugestões, use a seção Fale Conosco ou Feedback no app. Inclua o modelo do dispositivo, a versão do Android e uma breve descrição do problema para nos ajudar a melhorar sua experiência.</string>
-</resources>
+   </resources>

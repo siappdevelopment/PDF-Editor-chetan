@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 
 /**

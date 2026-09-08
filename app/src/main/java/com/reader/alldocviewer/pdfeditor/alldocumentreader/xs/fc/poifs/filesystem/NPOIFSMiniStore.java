@@ -17,19 +17,19 @@
 ==================================================================== */
 
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.RootProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BATBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableWriter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BATBlock.BATBlockAndIndex;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.RootProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BATBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableWriter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BATBlock.BATBlockAndIndex;
 
 
 

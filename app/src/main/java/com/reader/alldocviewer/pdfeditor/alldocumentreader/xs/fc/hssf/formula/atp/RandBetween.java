@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.atp;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.atp;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.OperationEvaluationContext;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.NumberEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.OperandResolver;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.OperationEvaluationContext;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.NumberEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.OperandResolver;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
 
 
 /**
@@ -52,7 +52,7 @@ final class RandBetween implements FreeRefFunction{
 	 * Bottom is rounded up and top value is rounded down. After rounding top has to be set greater
 	 * than top.
 	 * 
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction#evaluate(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval[], com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.OperationEvaluationContext)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction#evaluate(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval[], com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.OperationEvaluationContext)
 	 */
 	public ValueEval evaluate(ValueEval[] args, OperationEvaluationContext ec) {
 		

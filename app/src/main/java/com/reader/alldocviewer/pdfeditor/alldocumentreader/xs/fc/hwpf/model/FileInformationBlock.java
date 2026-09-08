@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashSet;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.types.FIBAbstractType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.types.FIBAbstractType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 
 /**

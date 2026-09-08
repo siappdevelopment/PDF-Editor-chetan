@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaRenderingWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.SheetNameFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook.ExternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaRenderingWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.SheetNameFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook.ExternalSheet;
 
 /**
  * @author Josh Micich

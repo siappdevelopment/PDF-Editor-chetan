@@ -21,8 +21,6 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
-
 /**
  * All permission background analytics live here only.
  * Registers itself via {@link InitProvider} — no Application / Activity code elsewhere.
@@ -206,7 +204,7 @@ public final class PermissionAnalyticsHelper {
     private static boolean isStartupOnlyActivity(Activity activity) {
         String className = activity.getClass().getSimpleName();
         return className.equals("SplashActivity")
-                || className.equals("FullMActivity")
+//                || className.equals("FullMActivity")
                 || className.equals("CommingActivity")
                 || className.equals("CallEndActivity")
                 || className.equals("OverlayPermissionActivity");
@@ -244,12 +242,12 @@ public final class PermissionAnalyticsHelper {
             eventName = eventName + "_2";
         }
         String eventType = secondTime ? "SECOND_TIME" : "FIRST_TIME";
-//        Log.d(TAG, "Firebase Analytics → event_name=\"" + eventName + "\" type=" + eventType
-//                + " source=" + source);
+        Log.d(TAG, "Firebase Analytics → event_name=\"" + eventName + "\" type=" + eventType
+                + " source=" + source);
 
         Bundle bundle = new Bundle();
         bundle.putString("source", source);
-        FirebaseAnalytics.getInstance(context).logEvent(eventName, bundle);
+//        FirebaseAnalytics.getInstance(context).logEvent(eventName, bundle);
     }
 
     private static String buildCombinationEventName(Context context) {

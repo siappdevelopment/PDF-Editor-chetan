@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager;
 
 import android.content.Context;
 import android.util.SparseIntArray;
@@ -8,11 +8,11 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.util.TableViewUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.util.TableViewUtils;
 
-/* loaded from: classes11.dex */
+
 public class ColumnHeaderLayoutManager extends LinearLayoutManager {
     @NonNull
     private final SparseIntArray mCachedWidthList;

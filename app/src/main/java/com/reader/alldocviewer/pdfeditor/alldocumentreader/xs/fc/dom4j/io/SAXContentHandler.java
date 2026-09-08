@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -24,20 +24,20 @@ import org.xml.sax.ext.DeclHandler;
 import org.xml.sax.ext.LexicalHandler;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Branch;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ElementHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Namespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.QName;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dtd.AttributeDecl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dtd.ElementDecl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dtd.ExternalEntityDecl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dtd.InternalEntityDecl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.AbstractElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Branch;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ElementHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Namespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.QName;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dtd.AttributeDecl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dtd.ElementDecl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dtd.ExternalEntityDecl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dtd.InternalEntityDecl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.AbstractElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
 
 
 /**

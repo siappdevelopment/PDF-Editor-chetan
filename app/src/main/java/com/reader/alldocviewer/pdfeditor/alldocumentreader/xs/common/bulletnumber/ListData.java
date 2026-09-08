@@ -4,7 +4,7 @@
  * 锟斤拷锟斤拷锟斤拷:            android2.2
  * 时锟斤拷:              锟斤拷锟斤拷10:49:31
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber;
 
 /**
  * bullet and number object

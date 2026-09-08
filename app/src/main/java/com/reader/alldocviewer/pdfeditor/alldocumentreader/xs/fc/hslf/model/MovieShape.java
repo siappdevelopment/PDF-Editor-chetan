@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 import java.io.ByteArrayOutputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherClientDataRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.*;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherClientDataRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.*;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
 
 
 /**
@@ -120,7 +120,7 @@ public final class MovieShape extends Picture
     /**
      * Assign a movie to this shape
      *
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#addMovie(String, int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#addMovie(String, int)
      * @param idx  the index of the movie
      */
     public void setMovieIndex(int idx)
@@ -174,7 +174,7 @@ public final class MovieShape extends Picture
         if (lst == null)
             return null;
 
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record[] r = lst.getChildRecords();
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record[] r = lst.getChildRecords();
         for (int i = 0; i < r.length; i++)
         {
             if (r[i] instanceof ExMCIMovie)

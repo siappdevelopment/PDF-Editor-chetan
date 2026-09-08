@@ -15,35 +15,35 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.RecordStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.BottomMarginRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ContinueRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FooterRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HCenterRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HeaderFooterRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HeaderRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HorizontalPageBreakRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LeftMarginRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Margin;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PageBreakRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PrintSetupRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordBase;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RightMarginRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.TopMarginRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.UnknownRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.UserSViewBegin;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.VCenterRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.VerticalPageBreakRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.RecordStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.BottomMarginRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ContinueRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FooterRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HCenterRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HeaderFooterRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HeaderRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HorizontalPageBreakRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LeftMarginRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Margin;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PageBreakRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PrintSetupRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordBase;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RightMarginRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.TopMarginRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.UnknownRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.UserSViewBegin;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.VCenterRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.VerticalPageBreakRecord;
 
 
 /**
@@ -111,7 +111,7 @@ public final class PageSettingsBlock extends RecordAggregate {
     /**
      * HeaderFooterRecord records belonging to preceding CustomViewSettingsRecordAggregates.
      * The indicator of such records is a non-zero GUID,
-     *  see {@link  com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HeaderFooterRecord#getGuid()}
+     *  see {@link  com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HeaderFooterRecord#getGuid()}
      */
     private List<HeaderFooterRecord> _sviewHeaderFooters = new ArrayList<HeaderFooterRecord>();
     private Record _printSize;
@@ -345,8 +345,8 @@ public final class PageSettingsBlock extends RecordAggregate {
 
 	/**
 	 * creates the PrintSetup Record and sets it to defaults and marks it invalid
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PrintSetupRecord
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PrintSetupRecord
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record
 	 * @return record containing a PrintSetupRecord
 	 */
 	private static PrintSetupRecord createPrintSetup() {

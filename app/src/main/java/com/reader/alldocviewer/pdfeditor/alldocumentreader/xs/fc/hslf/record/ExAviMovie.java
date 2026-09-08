@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 /**
  * A container record that specifies information about a movie stored externally.

@@ -4,23 +4,23 @@
  * 编译器:             android2.2
  * 时间:               下午4:40:11
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.AutoShapeConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherChildAnchorRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.AutoShapeConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherChildAnchorRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
 
 import android.graphics.Path;
 import android.graphics.PointF;
@@ -402,7 +402,7 @@ public abstract class HWPFShape
     	{
     		int lineWidth = (int)Math.round(getLineWidth() * MainConstant.POINT_TO_PIXEL);
             boolean dash = getLineDashing() > AutoShapeConstant.LINESTYLE_SOLID;
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color lineColor = getLineColor();
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color lineColor = getLineColor();
             if(lineColor != null)
             {            	
             	BackgroundAndFill lineFill = new BackgroundAndFill();

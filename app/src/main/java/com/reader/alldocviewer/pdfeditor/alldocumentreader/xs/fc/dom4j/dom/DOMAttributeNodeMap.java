@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dom;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.DOMException;

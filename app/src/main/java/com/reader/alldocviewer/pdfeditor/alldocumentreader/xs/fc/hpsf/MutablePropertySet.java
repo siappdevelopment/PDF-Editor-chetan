@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -28,10 +28,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.Entry;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianConsts;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.Entry;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianConsts;
 
 
 

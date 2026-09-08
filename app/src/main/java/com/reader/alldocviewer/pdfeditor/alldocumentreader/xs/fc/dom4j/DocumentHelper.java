@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j;
 
 import java.io.StringReader;
 import java.util.List;
@@ -14,8 +14,8 @@ import java.util.StringTokenizer;
 
 import org.xml.sax.InputSource;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.SAXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.rule.Pattern;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.SAXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.rule.Pattern;
 
 
 /**

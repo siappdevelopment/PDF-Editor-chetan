@@ -4,27 +4,27 @@
  * 编译器:            android2.2
  * 时间:              上午9:18:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.BlankRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.BoolErrRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FormulaRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NumberRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.StringRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFDataFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.SectionElementFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.BlankRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.BoolErrRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FormulaRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NumberRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.StringRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFDataFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.SectionElementFactory;
 
 /**
  * 
@@ -164,7 +164,7 @@ public class ACell extends Cell
      * @param row   - the row of this cell
      * @param col   - the column for this cell
      *
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFRow#createCell(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFRow#createCell(short)
      */
     public ACell(AWorkbook book, ASheet sheet, int row, short col)
     {

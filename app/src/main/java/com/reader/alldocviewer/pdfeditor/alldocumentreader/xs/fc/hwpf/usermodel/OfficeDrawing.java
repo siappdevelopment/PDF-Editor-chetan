@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * User-friendly interface to office drawing objects.

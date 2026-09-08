@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FeatRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FeatRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 
 /**

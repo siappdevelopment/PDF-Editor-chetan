@@ -23,13 +23,13 @@
  * have any questions.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.PathIterator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.QuadCurve2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.PathIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.QuadCurve2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 final class Order3 extends Curve {
     private double x0;

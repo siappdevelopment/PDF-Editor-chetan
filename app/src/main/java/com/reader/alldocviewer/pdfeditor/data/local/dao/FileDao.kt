@@ -157,6 +157,10 @@ interface FileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertFile(file: ModelFile)
 
+    /** Inserts a new row without overwriting an existing file (e.g. duplicate copy). */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertFileIfNew(file: ModelFile): Long
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRecyclerFile(files: List<RecyclerMediaFile>)
 

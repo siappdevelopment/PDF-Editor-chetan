@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader;
 
 import android.content.Context;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.Toast;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
-/* loaded from: classes11.dex */
+
 public final class ExtentionFuntionsKt {
     public static final void toasty(@NotNull Context context, @NotNull String message) {
         Intrinsics.checkNotNullParameter(context, "<this>");

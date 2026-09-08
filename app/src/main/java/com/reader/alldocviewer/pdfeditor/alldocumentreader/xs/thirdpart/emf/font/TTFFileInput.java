@@ -1,5 +1,5 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.font;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.font;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

@@ -1,6 +1,6 @@
 package com.reader.alldocviewer.pdfeditor.pdfviewer.util;
 
-/* loaded from: classes11.dex */
+
 public class MathUtils {
     public static final double BIG_ENOUGH_CEIL = 16384.999999999996d;
     public static final double BIG_ENOUGH_FLOOR = 16384.0d;

@@ -11,16 +11,17 @@ data class LanguageModel(
     @DrawableRes val flagRes: Int,
     val name: String,
     val subtitle: String,
-    val localeCode: String = "en"
+    val code: String,
+    var isSelected: Boolean = false
 )
 
 class LanguageAdapter(
     private val items: List<LanguageModel>,
-    private val initialSelectedPosition: Int = 0,
-    private val onItemClick: (Int) -> Unit
+    private val onItemClick: (LanguageModel) -> Unit
 ) : RecyclerView.Adapter<LanguageAdapter.ViewHolder>() {
 
-    private var selectedPosition: Int = initialSelectedPosition
+    private var selectedPosition: Int =
+        items.indexOfFirst { it.isSelected }.takeIf { it >= 0 } ?: -1
 
     inner class ViewHolder(val binding: ItemLanguageBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -29,21 +30,33 @@ class LanguageAdapter(
             binding.ivFlag.setImageResource(item.flagRes)
             binding.tvLanguageName.text = item.name
             binding.tvLanguageSubtitle.text = item.subtitle
-
-            if (isSelected) {
-                binding.ivRadio.setImageResource(R.drawable.ic_language_selected)
-            } else {
-                binding.ivRadio.setImageResource(R.drawable.ic_language_unselect)
-            }
+            binding.ivRadio.setImageResource(
+                if (isSelected) R.drawable.ic_language_selected
+                else R.drawable.ic_language_unselect
+            )
 
             binding.clLanguageItem.setOnClickListener {
-                val previous = selectedPosition
-                selectedPosition = adapterPosition
-                notifyItemChanged(previous)
-                notifyItemChanged(selectedPosition)
-                onItemClick(selectedPosition)
+                val position = bindingAdapterPosition
+                if (position == RecyclerView.NO_POSITION || position == selectedPosition) return@setOnClickListener
+                updateSelection(position)
             }
         }
+    }
+
+    private fun updateSelection(newPosition: Int) {
+        if (newPosition !in items.indices) return
+
+        val previous = selectedPosition
+        selectedPosition = newPosition
+
+        if (previous in items.indices) {
+            items[previous].isSelected = false
+            notifyItemChanged(previous)
+        }
+
+        items[newPosition].isSelected = true
+        notifyItemChanged(newPosition)
+        onItemClick(items[newPosition])
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -60,4 +73,9 @@ class LanguageAdapter(
     override fun getItemCount(): Int = items.size
 
     fun getSelectedPosition(): Int = selectedPosition
+
+    fun getSelectedLanguage(): LanguageModel {
+        require(selectedPosition in items.indices) { "No language selected" }
+        return items[selectedPosition]
+    }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.util;
 
 import java.text.NumberFormat;
 import java.text.ParseException;

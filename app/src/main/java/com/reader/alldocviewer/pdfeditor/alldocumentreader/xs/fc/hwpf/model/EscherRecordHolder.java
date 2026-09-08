@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.DefaultEscherRecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.DefaultEscherRecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 
 /**

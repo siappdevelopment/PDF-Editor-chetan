@@ -4,19 +4,19 @@
  * 编译器:            android2.2
  * 时间:              下午1:51:06
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListLevel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.AttrIDConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPAttrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.CharAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.PageAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ParaAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.TableAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListLevel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.AttrIDConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPAttrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.CharAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.PageAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.TableAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
 
 import android.graphics.Color;
 

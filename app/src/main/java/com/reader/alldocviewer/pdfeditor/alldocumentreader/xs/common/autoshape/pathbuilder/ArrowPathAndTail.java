@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder;
 
 import android.graphics.Path;
 import android.graphics.PointF;

@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDgRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDggRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ColorSchemeAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Comment2000;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideProgTagsContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideShowSlideInfoAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer.ExtendedParaAtomsSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideListWithText.SlideAtomsSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDgRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDggRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ColorSchemeAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Comment2000;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideProgTagsContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideShowSlideInfoAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer.ExtendedParaAtomsSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideListWithText.SlideAtomsSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
 
 
 /**
@@ -61,7 +61,7 @@ public final class Slide extends Sheet
      * @param notes the Notes sheet attached to us
      * @param atomSet the SlideAtomsSet to get the text from
      */
-    public Slide(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide slide, Notes notes, SlideAtomsSet atomSet,
+    public Slide(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide slide, Notes notes, SlideAtomsSet atomSet,
         ExtendedParaAtomsSet[] extendedAtomsSets, int slideIdentifier, int slideNumber)
     {
         super(slide, slideIdentifier);
@@ -131,7 +131,7 @@ public final class Slide extends Sheet
     */
     public Slide(int sheetNumber, int sheetRefId, int slideNumber)
     {
-        super(new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide(), sheetNumber);
+        super(new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide(), sheetNumber);
         _slideNo = slideNumber;
         getSheetContainer().setSheetId(sheetRefId);
     }
@@ -161,7 +161,7 @@ public final class Slide extends Sheet
 
     /**
     * Changes the Slide's (external facing) page number.
-    * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#reorderSlide(int, int)
+    * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#reorderSlide(int, int)
     */
     public void setSlideNumber(int newSlideNumber)
     {
@@ -276,9 +276,9 @@ public final class Slide extends Sheet
     /**
      * Returns the underlying slide record
      */
-    public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide getSlideRecord()
+    public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide getSlideRecord()
     {
-        return (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)getSheetContainer();
+        return (com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)getSheetContainer();
     }
 
     /**

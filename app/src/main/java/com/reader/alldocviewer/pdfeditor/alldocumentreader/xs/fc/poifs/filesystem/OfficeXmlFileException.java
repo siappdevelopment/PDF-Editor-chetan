@@ -18,7 +18,7 @@
         
 
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
 /**
  * This exception is thrown when we try to open a file that's actually

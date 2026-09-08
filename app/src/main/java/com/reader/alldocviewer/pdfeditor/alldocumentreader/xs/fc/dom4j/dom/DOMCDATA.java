@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dom;
 
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
@@ -15,9 +15,9 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.w3c.dom.UserDataHandler;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CDATA;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultCDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultCDATA;
 
 
 /**

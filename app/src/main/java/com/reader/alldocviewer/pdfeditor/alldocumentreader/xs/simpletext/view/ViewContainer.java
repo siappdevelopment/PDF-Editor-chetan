@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              下午2:03:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
 
 /**
  * paragraph view container

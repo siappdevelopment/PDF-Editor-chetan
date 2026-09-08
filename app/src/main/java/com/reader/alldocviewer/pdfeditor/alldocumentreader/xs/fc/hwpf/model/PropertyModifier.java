@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 @ Internal
 public final class PropertyModifier implements Cloneable

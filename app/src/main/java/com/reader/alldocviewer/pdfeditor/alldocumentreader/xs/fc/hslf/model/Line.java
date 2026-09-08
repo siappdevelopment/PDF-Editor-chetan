@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Line2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Line2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 
 /**
@@ -83,7 +83,7 @@ public final class Line extends SimpleShape
         return _escherContainer;
     }
 
-    public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline()
+    public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline()
     {
         Rectangle2D anchor = getLogicalAnchor2D();
         return new Line2D.Double(anchor.getX(), anchor.getY(), anchor.getX() + anchor.getWidth(),

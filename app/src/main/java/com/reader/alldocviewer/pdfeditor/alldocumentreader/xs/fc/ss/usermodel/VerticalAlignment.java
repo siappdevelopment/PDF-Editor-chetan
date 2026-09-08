@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 /**
  * This enumeration value indicates the type of vertical alignment for a cell, i.e.,

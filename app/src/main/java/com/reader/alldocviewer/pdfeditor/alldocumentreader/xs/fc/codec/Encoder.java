@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec;
 
 /**
  * <p>Provides the highest level of abstraction for Encoders.

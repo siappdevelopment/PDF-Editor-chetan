@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
 /**
- * Should be implemented by any {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg} subclass that needs has an extern sheet index <br/>
+ * Should be implemented by any {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg} subclass that needs has an extern sheet index <br/>
  *
  * For POI internal use only
  *

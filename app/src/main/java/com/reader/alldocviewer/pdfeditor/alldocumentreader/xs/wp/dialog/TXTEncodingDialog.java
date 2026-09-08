@@ -4,7 +4,7 @@
  * 编译器:           JDK1.5.0_01
  * 时间:             上午9:06:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.dialog;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.dialog;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,9 +12,9 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IDialogAction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.ADialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IDialogAction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.ADialog;
 
 import android.content.Context;
 import android.content.res.Configuration;

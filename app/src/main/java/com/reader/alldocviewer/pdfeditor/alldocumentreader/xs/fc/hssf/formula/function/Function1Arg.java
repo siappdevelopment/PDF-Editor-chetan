@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
 
 /**
  * Implemented by all functions that can be called with one argument

@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 /**
  * Represents an AutoShape.
@@ -126,7 +126,7 @@ public class AutoShape extends TextShape
         setEscherProperty((short)(EscherProperties.GEOMETRY__ADJUSTVALUE + idx), val);
     }
 
-    public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline()
+    public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline()
     {
         ShapeOutline outline = AutoShapes.getShapeOutline(getShapeType());
         Rectangle2D anchor = getLogicalAnchor2D();
@@ -134,7 +134,7 @@ public class AutoShape extends TextShape
         {
             return anchor;
         }
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape shape = outline.getOutline(this);
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape shape = outline.getOutline(this);
         return AutoShapes.transform(shape, anchor);
     }
     

@@ -15,21 +15,21 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBSERecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBSERecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
 
 
 /**

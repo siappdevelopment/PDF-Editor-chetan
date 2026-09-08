@@ -1,16 +1,16 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public abstract class AbstractRecyclerViewAdapter<T> extends RecyclerView.Adapter<AbstractViewHolder> {
     @NonNull
     protected Context mContext;

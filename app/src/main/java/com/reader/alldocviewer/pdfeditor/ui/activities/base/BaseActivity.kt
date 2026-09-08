@@ -2,7 +2,6 @@ package com.reader.alldocviewer.pdfeditor.ui.activities.base
 
 import android.content.Context
 import android.content.res.Configuration
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,13 +13,25 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.LocaleListCompat
 import com.reader.alldocviewer.pdfeditor.R
-import com.reader.alldocviewer.pdfeditor.utils.LocaleHelper
+import com.reader.alldocviewer.pdfeditor.helper_tool.ActivityPrintContextProvider
+import com.reader.alldocviewer.pdfeditor.launcher.utils.ThemeManager
 
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity(), ActivityPrintContextProvider {
 
     private var currentLanguageCode: String? = null
+    private var knownThemeEpoch = 0
+
+    override lateinit var printServiceContext: Context
+//        private set
+
+    override fun attachBaseContext(newBase: Context) {
+        printServiceContext = newBase
+        super.attachBaseContext(newBase)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        ThemeManager.applyBeforeActivityCreate(this)
+        knownThemeEpoch = ThemeManager.syncThemeEpoch(this)
         val savedLang = com.reader.alldocviewer.pdfeditor.utils.AppPreferences.getAppLanguage(this)
 
         // Sync AppCompatDelegate with saved preference if they don't match
@@ -43,6 +54,17 @@ open class BaseActivity : AppCompatActivity() {
             val appLocale = LocaleListCompat.forLanguageTags(savedLang)
             AppCompatDelegate.setApplicationLocales(appLocale)
         }
+        refreshThemeIfNeeded()
+    }
+
+    protected open fun shouldAutoRefreshTheme(): Boolean = true
+
+    private fun refreshThemeIfNeeded() {
+        if (!shouldAutoRefreshTheme() || isFinishing || isDestroyed) return
+        if (ThemeManager.shouldRecreateForTheme(this, knownThemeEpoch)) {
+            knownThemeEpoch = ThemeManager.syncThemeEpoch(this)
+            recreate()
+        }
     }
 
     protected open fun setCustomStatusBar() {
@@ -52,7 +74,7 @@ open class BaseActivity : AppCompatActivity() {
             2 -> true
             else -> (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
         }
-        val resolvedColor = ContextCompat.getColor(this, R.color.white)
+        val resolvedColor = ContextCompat.getColor(this, R.color.bg_color)
         window.statusBarColor = resolvedColor
         window.navigationBarColor = resolvedColor
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {

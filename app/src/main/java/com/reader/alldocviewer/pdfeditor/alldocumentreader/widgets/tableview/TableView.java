@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,29 +19,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.reader.alldocviewer.pdfeditor.R;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.Filter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ColumnSortHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ColumnWidthHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.FilterHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.PreferencesHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ScrollHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.SelectionHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.VisibilityHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.ITableViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.TableViewLayoutChangeListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.itemclick.ColumnHeaderRecyclerViewItemClickListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.itemclick.RowHeaderRecyclerViewItemClickListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference.SavedState;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.Filter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ColumnSortHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ColumnWidthHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.FilterHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.PreferencesHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ScrollHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.SelectionHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.VisibilityHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.ITableViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.TableViewLayoutChangeListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.itemclick.ColumnHeaderRecyclerViewItemClickListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.itemclick.RowHeaderRecyclerViewItemClickListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference.SavedState;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState;
 
-/* loaded from: classes11.dex */
+
 public class TableView extends FrameLayout implements ITableView {
     private boolean mAllowClickInsideCell;
     private boolean mAllowClickInsideColumnHeader;
@@ -287,7 +287,7 @@ public class TableView extends FrameLayout implements ITableView {
         return cellRecyclerView;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean hasFixedWidth() {
         return this.mHasFixedWidth;
     }
@@ -297,7 +297,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mColumnHeaderRecyclerView.setHasFixedSize(z);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isIgnoreSelectionColors() {
         return this.mIgnoreSelectionColors;
     }
@@ -306,7 +306,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mIgnoreSelectionColors = z;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isShowHorizontalSeparators() {
         return this.mShowHorizontalSeparators;
     }
@@ -315,17 +315,17 @@ public class TableView extends FrameLayout implements ITableView {
         this.mShowHorizontalSeparators = z;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isAllowClickInsideCell() {
         return this.mAllowClickInsideCell;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isSortable() {
         return this.mIsSortable;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isShowVerticalSeparators() {
         return this.mShowVerticalSeparators;
     }
@@ -334,25 +334,25 @@ public class TableView extends FrameLayout implements ITableView {
         this.mShowVerticalSeparators = z;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public CellRecyclerView getCellRecyclerView() {
         return this.mCellRecyclerView;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public CellRecyclerView getColumnHeaderRecyclerView() {
         return this.mColumnHeaderRecyclerView;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public CellRecyclerView getRowHeaderRecyclerView() {
         return this.mRowHeaderRecyclerView;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public ColumnHeaderLayoutManager getColumnHeaderLayoutManager() {
         if (this.mColumnHeaderLayoutManager == null) {
@@ -365,7 +365,7 @@ public class TableView extends FrameLayout implements ITableView {
         return this.mColumnHeaderLayoutManager;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public CellLayoutManager getCellLayoutManager() {
         if (this.mCellLayoutManager == null) {
@@ -374,7 +374,7 @@ public class TableView extends FrameLayout implements ITableView {
         return this.mCellLayoutManager;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public LinearLayoutManager getRowHeaderLayoutManager() {
         if (this.mRowHeaderLayoutManager == null) {
@@ -383,19 +383,19 @@ public class TableView extends FrameLayout implements ITableView {
         return this.mRowHeaderLayoutManager;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public HorizontalRecyclerViewListener getHorizontalRecyclerViewListener() {
         return this.mHorizontalRecyclerViewListener;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public VerticalRecyclerViewListener getVerticalRecyclerViewListener() {
         return this.mVerticalRecyclerListener;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @Nullable
     public ITableViewListener getTableViewListener() {
         return this.mTableViewListener;
@@ -405,25 +405,25 @@ public class TableView extends FrameLayout implements ITableView {
         this.mTableViewListener = iTableViewListener;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void sortColumn(int i, @NonNull SortState sortState) {
         this.mIsSortable = true;
         this.mColumnSortHandler.sort(i, sortState);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void sortRowHeader(@NonNull SortState sortState) {
         this.mIsSortable = true;
         this.mColumnSortHandler.sortByRowHeader(sortState);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void remeasureColumnWidth(int i) {
         getColumnHeaderLayoutManager().removeCachedWidth(i);
         getCellLayoutManager().fitWidthSize(i, false);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @Nullable
     public AbstractTableAdapter getAdapter() {
         return this.mTableAdapter;
@@ -443,101 +443,101 @@ public class TableView extends FrameLayout implements ITableView {
         }
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void filter(@NonNull Filter filter) {
         this.mFilterHandler.filter(filter);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @Nullable
     public FilterHandler getFilterHandler() {
         return this.mFilterHandler;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public SortState getSortingStatus(int i) {
         return this.mColumnSortHandler.getSortingStatus(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @Nullable
     public SortState getRowHeaderSortingStatus() {
         return this.mColumnSortHandler.getRowHeaderSortingStatus();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void scrollToColumnPosition(int i) {
         this.mScrollHandler.scrollToColumnPosition(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void scrollToColumnPosition(int i, int i2) {
         this.mScrollHandler.scrollToColumnPosition(i, i2);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void scrollToRowPosition(int i) {
         this.mScrollHandler.scrollToRowPosition(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void scrollToRowPosition(int i, int i2) {
         this.mScrollHandler.scrollToRowPosition(i, i2);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public ScrollHandler getScrollHandler() {
         return this.mScrollHandler;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void showRow(int i) {
         this.mVisibilityHandler.showRow(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void hideRow(int i) {
         this.mVisibilityHandler.hideRow(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void showAllHiddenRows() {
         this.mVisibilityHandler.showAllHiddenRows();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void clearHiddenRowList() {
         this.mVisibilityHandler.clearHideRowList();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void showColumn(int i) {
         this.mVisibilityHandler.showColumn(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void hideColumn(int i) {
         this.mVisibilityHandler.hideColumn(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isColumnVisible(int i) {
         return this.mVisibilityHandler.isColumnVisible(i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void showAllHiddenColumns() {
         this.mVisibilityHandler.showAllHiddenColumns();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void clearHiddenColumnList() {
         this.mVisibilityHandler.clearHideColumnList();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean isRowVisible(int i) {
         return this.mVisibilityHandler.isRowVisible(i);
     }
@@ -562,25 +562,25 @@ public class TableView extends FrameLayout implements ITableView {
         this.mSelectionHandler.setSelectedCellPositions(getCellLayoutManager().getCellViewHolder(i, i2), i, i2);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public SelectionHandler getSelectionHandler() {
         return this.mSelectionHandler;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @Nullable
     public ColumnSortHandler getColumnSortHandler() {
         return this.mColumnSortHandler;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public VisibilityHandler getVisibilityHandler() {
         return this.mVisibilityHandler;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public DividerItemDecoration getHorizontalItemDecoration() {
         if (this.mHorizontalItemDecoration == null) {
@@ -589,7 +589,7 @@ public class TableView extends FrameLayout implements ITableView {
         return this.mHorizontalItemDecoration;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @NonNull
     public DividerItemDecoration getVerticalItemDecoration() {
         if (this.mVerticalItemDecoration == null) {
@@ -613,7 +613,7 @@ public class TableView extends FrameLayout implements ITableView {
         return dividerItemDecoration;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @ColorInt
     public int getSelectedColor() {
         return this.mSelectedColor;
@@ -623,7 +623,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mSelectedColor = i;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @ColorInt
     public int getSeparatorColor() {
         return this.mSeparatorColor;
@@ -633,7 +633,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mSeparatorColor = i;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @ColorInt
     public int getUnSelectedColor() {
         return this.mUnSelectedColor;
@@ -643,7 +643,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mUnSelectedColor = i;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     @ColorInt
     public int getShadowColor() {
         return this.mShadowColor;
@@ -653,12 +653,12 @@ public class TableView extends FrameLayout implements ITableView {
         this.mShadowColor = i;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public int getRowHeaderWidth() {
         return this.mRowHeaderWidth;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void setRowHeaderWidth(int i) {
         this.mRowHeaderWidth = i;
         ViewGroup.LayoutParams layoutParams = this.mRowHeaderRecyclerView.getLayoutParams();
@@ -693,7 +693,7 @@ public class TableView extends FrameLayout implements ITableView {
         this.mColumnWidthHandler.setColumnWidth(i, i2);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean getShowCornerView() {
         return this.mShowCornerView;
     }
@@ -702,18 +702,18 @@ public class TableView extends FrameLayout implements ITableView {
         this.mShowCornerView = z;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public ITableView.CornerViewLocation getCornerViewLocation() {
         return this.mCornerViewLocation;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void setCornerViewLocation(ITableView.CornerViewLocation cornerViewLocation) {
         this.mCornerViewLocation = cornerViewLocation;
     }
 
-    /* renamed from: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.TableView$1  reason: invalid class name */
-    /* loaded from: classes11.dex */
+    /* renamed from: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.TableView$1  reason: invalid class name */
+    
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$com$office$alldocumentreader$widgets$tableview$ITableView$CornerViewLocation;
 
@@ -739,7 +739,7 @@ public class TableView extends FrameLayout implements ITableView {
         }
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public int getGravity() {
         int i = AnonymousClass1.$SwitchMap$com$office$alldocumentreader$widgets$tableview$ITableView$CornerViewLocation[this.mCornerViewLocation.ordinal()];
         if (i != 1) {
@@ -754,12 +754,12 @@ public class TableView extends FrameLayout implements ITableView {
         return 51;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public boolean getReverseLayout() {
         return this.mReverseLayout;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView
     public void setReverseLayout(boolean z) {
         this.mReverseLayout = z;
     }

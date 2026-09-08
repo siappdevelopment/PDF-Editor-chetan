@@ -15,24 +15,24 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.AutoShapeConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBoolProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRGBProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ObjRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFComment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPolygon;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSimpleShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.AutoShapeConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBoolProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRGBProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ObjRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFComment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPolygon;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSimpleShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
 
 
 /**

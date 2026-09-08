@@ -40,11 +40,11 @@ import com.reader.alldocviewer.pdfeditor.ui.adapters.FileListAdapter
 import com.reader.alldocviewer.pdfeditor.utils.FileDedupe
 import com.reader.alldocviewer.pdfeditor.utils.MoreOptionsSheetGuard
 import com.reader.alldocviewer.pdfeditor.utils.OfficeFileOpenHelper
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.IOffice
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control.ExcelView
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control.Spreadsheet
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control.Word
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.IOffice
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control.ExcelView
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control.Spreadsheet
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control.Word
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.DeleteConfirmationBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.RenameBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.DetailsBottomSheetDialog
@@ -119,7 +119,8 @@ class ViewFilesNewActivity : AppCompatActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.PDF_VIEWER_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -144,7 +145,7 @@ class ViewFilesNewActivity : AppCompatActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getOfficeViewerInterShow())
     }
 
     private fun readIntent() {
@@ -259,7 +260,7 @@ class ViewFilesNewActivity : AppCompatActivity() {
         binding.topBarSearch.visibility = View.GONE
 
         binding.ivBackMain.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            onBack()
         }
         binding.ivDocTheme.setOnClickListener { toggleTheme() }
         binding.ivDocOption.setOnClickListener { showOptionsSheet() }
@@ -785,7 +786,8 @@ class ViewFilesNewActivity : AppCompatActivity() {
                     path = file.path ?: "",
                     size = file.size,
                     time = file.time,
-                    isCheckBoxChecked = true
+                    isCheckBoxChecked = true,
+                    isEncrypted = file.isEncrypted
                 )
             )
             val intent = Intent(

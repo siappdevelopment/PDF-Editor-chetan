@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.charts;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.charts;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.charts.ChartDataFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.DataMarker;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.charts.ChartDataFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.DataMarker;
 
 
 /**

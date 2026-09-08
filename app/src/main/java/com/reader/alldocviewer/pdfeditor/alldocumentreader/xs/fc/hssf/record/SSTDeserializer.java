@@ -17,11 +17,11 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IntMapper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IntMapper;
 
 
 /**

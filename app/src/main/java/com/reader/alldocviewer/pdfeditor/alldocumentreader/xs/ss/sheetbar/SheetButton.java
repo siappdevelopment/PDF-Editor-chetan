@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午6:06:50
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.sheetbar;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.sheetbar;
 
 import android.content.Context;
 import android.graphics.Color;

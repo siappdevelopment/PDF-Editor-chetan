@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,37 +23,37 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.DefaultEscherRecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBoolProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherClientDataRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDgRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherDggRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSerializationListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpgrRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.CommentShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.ConvertAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.DrawingManager2;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.TextboxShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFClientAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPatriarch;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeGroup;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.DefaultEscherRecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBoolProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherClientDataRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDgRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherDggRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSerializationListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpgrRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.CommentShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.ConvertAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.DrawingManager2;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.TextboxShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFClientAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPatriarch;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeGroup;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
 
 /**
  * This class is used to aggregate the MSODRAWING and OBJ record

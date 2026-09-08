@@ -1,6 +1,6 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;

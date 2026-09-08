@@ -14,13 +14,13 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianInput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.StringUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianInput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.StringUtil;
 
 
 /**
@@ -161,7 +161,7 @@ public class LbsDataSubRecord extends SubRecord {
     /**
      *
      * @return a new instance of LbsDataSubRecord to construct auto-filters
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.ComboboxShape#createObjRecord(org.apache.poi.hssf.usermodel.HSSFSimpleShape, int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.ComboboxShape#createObjRecord(org.apache.poi.hssf.usermodel.HSSFSimpleShape, int)
      */
     public static LbsDataSubRecord newAutoFilterInstance(){
         LbsDataSubRecord lbs = new LbsDataSubRecord();

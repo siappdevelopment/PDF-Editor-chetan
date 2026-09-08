@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
@@ -28,26 +29,88 @@ public class ADSBannerAdaptive {
     public static LinearLayout FBAdViewBottom;
     public static NativeAdLayout NativeAdLayout;
 
-    @SuppressLint("MissingPermission")
-    public static void loadAdMobBanner(String adUint, FrameLayout adContainerView, ShimmerFrameLayout shimmerFrameLayout, Activity activity) {
+    private static AdView preloadedAdView;
+    private static String preloadedAdUnitId;
+    private static boolean bannerLoading;
 
-
-        if (TextUtils.isEmpty(adUint)) {
-            if (shimmerFrameLayout.isShimmerStarted()) {
-                shimmerFrameLayout.stopShimmer();
-            }
-            shimmerFrameLayout.setVisibility(View.GONE);
+    public static void preloadAdMobBanner(String adUnit, Activity activity) {
+        if (!ADSMainClass.isBannerPreLoad() || TextUtils.isEmpty(adUnit) || activity == null) {
+            return;
+        }
+        if (bannerLoading) {
+            return;
+        }
+        if (preloadedAdView != null && adUnit.equals(preloadedAdUnitId)) {
             return;
         }
 
+        clearPreloadedBanner();
+        bannerLoading = true;
 
-        //BannerAd
+        AdView adView = new AdView(activity);
+        adView.setAdUnitId(adUnit);
+        adView.setAdSize(getAdaptiveAdSize(activity));
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                bannerLoading = false;
+                preloadedAdView = adView;
+                preloadedAdUnitId = adUnit;
+                ADSUtilitis.trackScreen(activity, "Banner_Preload");
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                bannerLoading = false;
+                clearPreloadedBanner();
+                ADSUtilitis.trackScreen(activity, "Banner_Preload_Fail");
+            }
+        });
+        adView.loadAd(new AdRequest.Builder().build());
+    }
+
+    @SuppressLint("MissingPermission")
+    public static void loadAdMobBanner(String adUint, FrameLayout adContainerView, ShimmerFrameLayout shimmerFrameLayout, Activity activity, String big) {
+//        if (AdPlacement.shouldUseQuizPriority()) {
+//            if (!AdPlacement.showQuizBannerAd(activity, adContainerView, shimmerFrameLayout)) {
+//                hideBannerPlaceholder(adContainerView, shimmerFrameLayout);
+//            }
+//            return;
+//        }
+        if (AdPlacement.shouldUseQuizPriority()) {
+            Activity activity1 = activity instanceof Activity ? (Activity) activity : null;
+            if (!AdPlacement.showQuizNativeAd(activity1, adContainerView, shimmerFrameLayout, big)) {
+                adContainerView.setVisibility(View.GONE);
+                shimmerFrameLayout.setVisibility(View.GONE);
+            }
+            return;
+        }
+        if (TextUtils.isEmpty(adUint)) {
+            hideBannerPlaceholder(adContainerView, shimmerFrameLayout);
+            return;
+        }
+
+        if (ADSMainClass.isBannerPreLoad()
+                && preloadedAdView != null
+                && adUint.equals(preloadedAdUnitId)) {
+            attachPreloadedBanner(adContainerView, shimmerFrameLayout);
+            preloadAdMobBanner(adUint, activity);
+            return;
+        }
+
+        if (ADSMainClass.isBannerLoad()) {
+            showBannerShimmer(shimmerFrameLayout);
+        }
+
         AdView admobManagerAdView = new AdView(activity);
         admobManagerAdView.setAdUnitId(adUint);
         adContainerView.addView(admobManagerAdView);
         AdRequest adRequest = new AdRequest.Builder().build();
         AdSize adSize = getAdaptiveAdSize(activity);
         admobManagerAdView.setAdSize(adSize);
+        if (shimmerFrameLayout != null && !ADSMainClass.isBannerPreLoad()) {
+            showBannerShimmer(shimmerFrameLayout);
+        }
         admobManagerAdView.loadAd(adRequest);
         admobManagerAdView.setAdListener(new AdListener() {
             @Override
@@ -60,27 +123,154 @@ public class ADSBannerAdaptive {
                         ADSUtilitis.logAdRevenue(activity, adValue);
                     }
                 });
-//                Log.d("DDDDDDDDDD", "onAdLoaded:  ");
-                if (shimmerFrameLayout.isShimmerStarted()) {
-                    shimmerFrameLayout.stopShimmer();
-                }
-                shimmerFrameLayout.setVisibility(View.GONE);
+                hideBannerShimmer(shimmerFrameLayout);
                 adContainerView.setVisibility(View.VISIBLE);
+
+                if (ADSMainClass.isBannerPreLoad()) {
+                    preloadAdMobBanner(adUint, activity);
+                }
             }
 
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
                 ADSUtilitis.trackScreen(activity, "Banner_Fail");
-//                Log.d("DDDDDDDDDD", "onAdLoaded:  " + loadAdError);
-                if (shimmerFrameLayout.isShimmerStarted()) {
-                    shimmerFrameLayout.stopShimmer();
+                if (AdPlacement.tryShowQuizBannerOnGoogleFail(activity, adContainerView, shimmerFrameLayout)) {
+                    return;
                 }
-                shimmerFrameLayout.setVisibility(View.GONE);
-                adContainerView.setVisibility(View.VISIBLE);
-
+                hideBannerShimmer(shimmerFrameLayout);
+                adContainerView.setVisibility(View.GONE);
             }
         });
+    }
+
+    @SuppressLint("MissingPermission")
+    public static void loadAdMobBannerWithRefresh(String adUnit, FrameLayout adContainerView,
+                                                  ShimmerFrameLayout shimmerFrameLayout,
+                                                  Activity activity, String big,
+                                                  Runnable onLoadComplete) {
+        Runnable complete = () -> {
+            if (onLoadComplete != null) {
+                onLoadComplete.run();
+            }
+        };
+
+        if (AdPlacement.shouldUseQuizPriority()) {
+            Activity activity1 = activity instanceof Activity ? (Activity) activity : null;
+            if (!AdPlacement.showQuizNativeAd(activity1, adContainerView, shimmerFrameLayout, big)) {
+                adContainerView.setVisibility(View.GONE);
+                shimmerFrameLayout.setVisibility(View.GONE);
+            }
+            complete.run();
+            return;
+        }
+        if (TextUtils.isEmpty(adUnit)) {
+            hideBannerPlaceholder(adContainerView, shimmerFrameLayout);
+            complete.run();
+            return;
+        }
+
+        clearBannerViews(adContainerView);
+        if (ADSMainClass.isBannerLoad()) {
+            showBannerShimmer(shimmerFrameLayout);
+        }
+
+        AdView admobManagerAdView = new AdView(activity);
+        admobManagerAdView.setAdUnitId(adUnit);
+        adContainerView.addView(admobManagerAdView);
+        AdSize adSize = getAdaptiveAdSize(activity);
+        admobManagerAdView.setAdSize(adSize);
+        if (shimmerFrameLayout != null && !ADSMainClass.isBannerPreLoad()) {
+            showBannerShimmer(shimmerFrameLayout);
+        }
+        admobManagerAdView.loadAd(new AdRequest.Builder().build());
+        admobManagerAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                ADSUtilitis.trackScreen(activity, "Banner_Load");
+                admobManagerAdView.setOnPaidEventListener(adValue -> ADSUtilitis.logAdRevenue(activity, adValue));
+                hideBannerShimmer(shimmerFrameLayout);
+                adContainerView.setVisibility(View.VISIBLE);
+                complete.run();
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                ADSUtilitis.trackScreen(activity, "Banner_Fail");
+                if (AdPlacement.tryShowQuizBannerOnGoogleFail(activity, adContainerView, shimmerFrameLayout)) {
+                    complete.run();
+                    return;
+                }
+                hideBannerShimmer(shimmerFrameLayout);
+                adContainerView.setVisibility(View.GONE);
+                complete.run();
+            }
+        });
+    }
+
+    private static void clearBannerViews(FrameLayout adContainerView) {
+        if (adContainerView == null) {
+            return;
+        }
+        for (int i = adContainerView.getChildCount() - 1; i >= 0; i--) {
+            View child = adContainerView.getChildAt(i);
+            if (child instanceof AdView) {
+                ((AdView) child).destroy();
+            }
+        }
+        adContainerView.removeAllViews();
+    }
+
+    private static void attachPreloadedBanner(FrameLayout adContainerView, ShimmerFrameLayout shimmerFrameLayout) {
+        if (preloadedAdView == null) {
+            return;
+        }
+        ViewGroup parent = (ViewGroup) preloadedAdView.getParent();
+        if (parent != null) {
+            parent.removeView(preloadedAdView);
+        }
+        hideBannerShimmer(shimmerFrameLayout);
+        adContainerView.removeAllViews();
+        adContainerView.addView(preloadedAdView);
+        adContainerView.setVisibility(View.VISIBLE);
+        preloadedAdView = null;
+        preloadedAdUnitId = null;
+    }
+
+    private static void clearPreloadedBanner() {
+        if (preloadedAdView != null) {
+            preloadedAdView.destroy();
+            preloadedAdView = null;
+            preloadedAdUnitId = null;
+        }
+    }
+
+    private static void showBannerShimmer(ShimmerFrameLayout shimmerFrameLayout) {
+        if (shimmerFrameLayout == null) {
+            return;
+        }
+        shimmerFrameLayout.setVisibility(View.VISIBLE);
+        shimmerFrameLayout.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        shimmerFrameLayout.post(shimmerFrameLayout::startShimmer);
+    }
+
+    private static void hideBannerShimmer(ShimmerFrameLayout shimmerFrameLayout) {
+        if (shimmerFrameLayout == null) {
+            return;
+        }
+        if (shimmerFrameLayout.isShimmerStarted()) {
+            shimmerFrameLayout.stopShimmer();
+        }
+        shimmerFrameLayout.setVisibility(View.GONE);
+    }
+
+    private static void hideBannerPlaceholder(FrameLayout adContainerView, ShimmerFrameLayout shimmerFrameLayout) {
+        hideBannerShimmer(shimmerFrameLayout);
+        if (adContainerView != null) {
+            adContainerView.setVisibility(View.GONE);
+        }
     }
 
     public static AdSize getAdaptiveAdSize(Activity context) {
@@ -91,5 +281,4 @@ public class ADSBannerAdaptive {
         int adWidth = (int) (outMetrics.widthPixels / density);
         return AdSize.getCurrentOrientationInlineAdaptiveBannerAdSize(context, adWidth);
     }
-
 }

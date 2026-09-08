@@ -4,37 +4,37 @@
  * 编译器:             android2.2
  * 时间:               上午9:20:42
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader;
 
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPAttrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.RunAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectanglef;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableCellBorders;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableCellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.ParagraphElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPAttrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.RunAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectanglef;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableCellBorders;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableCellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.ParagraphElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * 解析table

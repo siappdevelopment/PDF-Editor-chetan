@@ -4,21 +4,21 @@
  * 编译器:            android2.2
  * 时间:              下午3:23:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.CellAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.SheetScroller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.format.NumericFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view.SheetView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.CellAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.SheetScroller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.format.NumericFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view.SheetView;
 
 import android.graphics.Rect;
 import android.graphics.RectF;

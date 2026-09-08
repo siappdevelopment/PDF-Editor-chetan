@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,16 +26,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.io.HWPFFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.io.HWPFOutputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.SprmIterator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.SprmOperation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.io.HWPFFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.io.HWPFOutputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.SprmIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.SprmOperation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 
 /**

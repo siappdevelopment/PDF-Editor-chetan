@@ -15,7 +15,7 @@
   limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
 
 
 /**

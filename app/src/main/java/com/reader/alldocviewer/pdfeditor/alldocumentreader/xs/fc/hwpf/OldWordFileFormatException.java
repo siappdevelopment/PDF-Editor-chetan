@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.OldFileFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.OldFileFormatException;
 
 public class OldWordFileFormatException extends OldFileFormatException {
     public OldWordFileFormatException(String s) {

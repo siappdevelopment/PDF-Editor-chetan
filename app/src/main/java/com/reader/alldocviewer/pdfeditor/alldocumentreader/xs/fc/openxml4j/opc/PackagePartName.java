@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JRuntimeException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JRuntimeException;
 
 
 /**

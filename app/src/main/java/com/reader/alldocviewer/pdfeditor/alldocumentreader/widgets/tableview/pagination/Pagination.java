@@ -1,24 +1,24 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnForRowHeaderSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ISortableModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderForCellSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnForRowHeaderSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ISortableModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderForCellSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class Pagination implements IPagination {
     private static final int DEFAULT_ITEMS_PER_PAGE = 10;
     @NonNull
@@ -41,7 +41,7 @@ public class Pagination implements IPagination {
     private List<ISortableModel> originalRowData;
     private int pageCount;
 
-    /* loaded from: classes11.dex */
+    
     public interface OnTableViewPageTurnedListener {
         void onPageTurned(int i, int i2, int i3);
     }
@@ -55,41 +55,41 @@ public class Pagination implements IPagination {
     }
 
     public Pagination(@NonNull ITableView iTableView, int i, @Nullable OnTableViewPageTurnedListener onTableViewPageTurnedListener) {
-        this.adapterDataSetChangedListener = new AdapterDataSetChangedListener() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.Pagination.1
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
+        this.adapterDataSetChangedListener = new AdapterDataSetChangedListener() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.Pagination.1
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
             public void onRowHeaderItemsChanged(@NonNull List list) {
                 Pagination.this.originalRowData = new ArrayList(list);
                 Pagination.this.reloadPages();
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
             public void onCellItemsChanged(@NonNull List list) {
                 Pagination.this.originalCellData = new ArrayList(list);
                 Pagination.this.reloadPages();
             }
         };
-        this.filterChangedListener = new FilterChangedListener<ISortableModel>() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.Pagination.2
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterChangedListener
+        this.filterChangedListener = new FilterChangedListener<ISortableModel>() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.Pagination.2
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterChangedListener
             public void onFilterChanged(@NonNull List<List<ISortableModel>> list, @NonNull List<ISortableModel> list2) {
                 Pagination.this.originalCellData = new ArrayList(list);
                 Pagination.this.originalRowData = new ArrayList(list2);
                 Pagination.this.reloadPages();
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterChangedListener
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterChangedListener
             public void onFilterCleared(@NonNull List<List<ISortableModel>> list, @NonNull List<ISortableModel> list2) {
                 Pagination.this.originalCellData = new ArrayList(list);
                 Pagination.this.originalRowData = new ArrayList(list2);
                 Pagination.this.reloadPages();
             }
         };
-        this.columnSortStateChangedListener = new ColumnSortStateChangedListener() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.Pagination.3
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener
+        this.columnSortStateChangedListener = new ColumnSortStateChangedListener() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.Pagination.3
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener
             public void onColumnSortStatusChanged(int i2, @NonNull SortState sortState) {
                 Pagination.this.paginateOnColumnSort(i2, sortState);
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener
             public void onRowHeaderSortStatusChanged(@NonNull SortState sortState) {
                 Pagination.this.paginateOnColumnSort(-1, sortState);
             }
@@ -148,7 +148,7 @@ public class Pagination implements IPagination {
         }
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void nextPage() {
         int i = this.currentPage;
         if (i + 1 <= this.pageCount) {
@@ -159,7 +159,7 @@ public class Pagination implements IPagination {
         paginateData();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void previousPage() {
         int i = this.currentPage;
         if (i - 1 != 0) {
@@ -170,7 +170,7 @@ public class Pagination implements IPagination {
         paginateData();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void goToPage(int i) {
         int i2 = this.pageCount;
         if (i > i2 || i < 1) {
@@ -180,39 +180,39 @@ public class Pagination implements IPagination {
         paginateData();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void setOnTableViewPageTurnedListener(@Nullable OnTableViewPageTurnedListener onTableViewPageTurnedListener) {
         this.onTableViewPageTurnedListener = onTableViewPageTurnedListener;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void removeOnTableViewPageTurnedListener() {
         this.onTableViewPageTurnedListener = null;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public int getCurrentPage() {
         return this.currentPage;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public int getItemsPerPage() {
         return this.itemsPerPage;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public void setItemsPerPage(int i) {
         this.itemsPerPage = i;
         this.currentPage = 1;
         paginateData();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public int getPageCount() {
         return this.pageCount;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.IPagination
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.IPagination
     public boolean isPaginated() {
         return this.itemsPerPage > 0;
     }

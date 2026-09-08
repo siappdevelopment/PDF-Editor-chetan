@@ -5,32 +5,32 @@
  * 时间:              下午2:11:03
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.FadeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.Highlight;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IHighlight;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IDialogAction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.SysKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.LayoutKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.NormalRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.WPViewKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.FadeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.Highlight;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IHighlight;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IDialogAction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.SysKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.LayoutKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.NormalRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.WPViewKit;
 
 import android.content.Context;
 import android.graphics.Bitmap;

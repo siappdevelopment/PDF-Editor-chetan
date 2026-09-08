@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
 
 
 public final class WorkbookRecordList implements Iterable<Record> {

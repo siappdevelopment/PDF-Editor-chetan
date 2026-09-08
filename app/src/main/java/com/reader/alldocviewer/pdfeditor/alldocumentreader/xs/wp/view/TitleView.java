@@ -4,15 +4,15 @@
  * 编译器:            android2.2
  * 时间:              下午5:18:40
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.AbstractView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.AbstractView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * header、footer view

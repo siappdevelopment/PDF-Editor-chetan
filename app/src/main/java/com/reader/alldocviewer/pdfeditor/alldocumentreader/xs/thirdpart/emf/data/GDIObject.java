@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
 
 /**
- * A GDIObject uses a {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer}
+ * A GDIObject uses a {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer}
  * to render itself to a Graphics2D object.
  *
  * @author Steffen Greiffenberg

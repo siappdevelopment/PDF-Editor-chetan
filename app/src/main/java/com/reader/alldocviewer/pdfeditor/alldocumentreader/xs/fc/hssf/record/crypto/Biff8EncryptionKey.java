@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.crypto;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.crypto;
 
 import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutputStream;
 
 
 

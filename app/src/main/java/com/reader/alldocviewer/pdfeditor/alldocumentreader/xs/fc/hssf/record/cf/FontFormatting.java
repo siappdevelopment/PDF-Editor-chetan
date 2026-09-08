@@ -16,13 +16,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 
 /**
@@ -191,7 +191,7 @@ public final class FontFormatting
 	 * set the font to be italics or not
 	 *
 	 * @param italic - whether the font is italics or not
-	 * @see #setFontOption(boolean, com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField)
+	 * @see #setFontOption(boolean, com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField)
 	 */
 
 	public void setItalic(boolean italic)
@@ -203,7 +203,7 @@ public final class FontFormatting
 	 * get whether the font is to be italics or not
 	 *
 	 * @return italics - whether the font is italics or not
-	 * @see #getFontOption(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField)
+	 * @see #getFontOption(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField)
 	 */
 
 	public boolean isItalic()
@@ -246,7 +246,7 @@ public final class FontFormatting
 	 * get whether the font is to be stricken out or not
 	 *
 	 * @return strike - whether the font is stricken out or not
-	 * @see #getFontOption(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField)
+	 * @see #getFontOption(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField)
 	 */
 
 	public boolean isStruckout()
@@ -306,9 +306,9 @@ public final class FontFormatting
 	 * get the type of super or subscript for the font
 	 *
 	 * @return super or subscript option
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_NONE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUPER
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUB
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_NONE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUPER
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUB
 	 */
 	public short getEscapementType()
 	{
@@ -319,9 +319,9 @@ public final class FontFormatting
 	 * set the escapement type for the font
 	 *
 	 * @param escapementType  super or subscript option
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_NONE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUPER
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUB
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_NONE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUPER
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#SS_SUB
 	 */
 	public void setEscapementType( short escapementType)
 	{
@@ -333,11 +333,11 @@ public final class FontFormatting
 	 *
 	 * @return font underlining type
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_NONE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE_ACCOUNTING
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE_ACCOUNTING
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_NONE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE_ACCOUNTING
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE_ACCOUNTING
 	 */
 
 	public short getUnderlineType()
@@ -350,11 +350,11 @@ public final class FontFormatting
 	 *
 	 * @param underlineType underline option
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_NONE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE_ACCOUNTING
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE_ACCOUNTING
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_NONE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_SINGLE_ACCOUNTING
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFontFormatting#U_DOUBLE_ACCOUNTING
 	 */
 	public void setUnderlineType( short underlineType)
 	{

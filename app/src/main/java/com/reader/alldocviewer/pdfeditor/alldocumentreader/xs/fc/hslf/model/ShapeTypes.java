@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 
 import java.util.HashMap;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
 
 import java.lang.reflect.Field;
 
@@ -29,7 +29,7 @@ import java.lang.reflect.Field;
  *
  * @author Yegor Kozlov
  */
-public final class ShapeTypes implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes
+public final class ShapeTypes implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes
 {
     /**
      * Return name of the shape by id
@@ -48,7 +48,7 @@ public final class ShapeTypes implements com.reader.alldocviewer.pdfeditoroffice
         types = new HashMap();
         try
         {
-            Field[] f = com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes.class.getFields();
+            Field[] f = com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes.class.getFields();
             for (int i = 0; i < f.length; i++)
             {
                 Object val = f[i].get(null);

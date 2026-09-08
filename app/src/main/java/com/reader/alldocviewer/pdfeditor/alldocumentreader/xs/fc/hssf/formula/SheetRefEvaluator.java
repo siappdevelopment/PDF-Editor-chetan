@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.FuncVarPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.FuncVarPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
 
 
 /**
@@ -62,7 +62,7 @@ final class SheetRefEvaluator {
 
     /**
      * @return  whether cell at rowIndex and columnIndex is a subtotal
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.Subtotal
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.Subtotal
      */
     public boolean isSubTotal(int rowIndex, int columnIndex){
         boolean subtotal = false;

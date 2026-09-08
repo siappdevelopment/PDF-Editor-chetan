@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination;
 
 import androidx.annotation.Nullable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.pagination.Pagination;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.pagination.Pagination;
 
-/* loaded from: classes11.dex */
+
 public interface IPagination {
     int getCurrentPage();
 

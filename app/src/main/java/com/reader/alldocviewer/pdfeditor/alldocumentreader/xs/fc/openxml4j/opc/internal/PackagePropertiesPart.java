@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -24,14 +24,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidOperationException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ContentTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePartName;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.util.Nullable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidOperationException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ContentTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePartName;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.util.Nullable;
 
 
 /**

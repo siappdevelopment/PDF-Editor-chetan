@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format;
 
-import static com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format.CellFormatter.logger;
-import static com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format.CellFormatter.quote;
+import static com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format.CellFormatter.logger;
+import static com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format.CellFormatter.quote;
 
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.HSSFColor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.HSSFColor;
 
 import android.graphics.Color;
 

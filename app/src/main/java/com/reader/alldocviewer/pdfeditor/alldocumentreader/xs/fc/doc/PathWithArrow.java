@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc;
 
 import android.graphics.Path;
 

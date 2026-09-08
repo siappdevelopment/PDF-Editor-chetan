@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExEmbed;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExObjList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.ObjectData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExEmbed;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExObjList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.ObjectData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
 
 
 /**

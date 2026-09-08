@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -23,8 +23,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 
 /**

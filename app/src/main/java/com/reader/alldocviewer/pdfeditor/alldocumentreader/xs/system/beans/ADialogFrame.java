@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午7:35:26
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans;
 
 import android.content.Context;
 import android.content.res.Configuration;

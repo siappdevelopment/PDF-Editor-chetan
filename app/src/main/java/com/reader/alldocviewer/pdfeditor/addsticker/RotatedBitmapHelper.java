@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.Point;
 
-/* loaded from: classes11.dex */
+
 public class RotatedBitmapHelper {
     public static Point getRotatedBoundingBoxSize(int width, int height, float rotationDegrees) {
         double radians = Math.toRadians(rotationDegrees);
@@ -35,7 +35,7 @@ public class RotatedBitmapHelper {
         return new RotatedResult(rotatedBitmap, point);
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class RotatedResult {
         public final Bitmap bitmap;
         public final Point size;

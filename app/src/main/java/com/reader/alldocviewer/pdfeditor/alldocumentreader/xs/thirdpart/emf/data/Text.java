@@ -1,9 +1,9 @@
 // Copyright 2002, FreeHEP.
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFConstants;
 
 import android.graphics.Point;
 

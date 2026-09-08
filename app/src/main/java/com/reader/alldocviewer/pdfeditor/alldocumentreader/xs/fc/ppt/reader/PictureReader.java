@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               下午2:58:22
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader;
 
 import java.io.InputStream;
 import java.util.Hashtable;
@@ -12,16 +12,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.SAXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.AnchorPoint;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.CellAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.SAXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.AnchorPoint;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.CellAnchor;
 
 /**
  * 解析部件中的 picture

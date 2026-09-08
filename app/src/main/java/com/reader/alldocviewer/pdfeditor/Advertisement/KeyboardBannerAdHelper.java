@@ -9,6 +9,7 @@ import android.view.ViewTreeObserver;
 
 import com.reader.alldocviewer.pdfeditor.R;
 
+
 public final class KeyboardBannerAdHelper {
 
     private static final int SHOW_BANNER_DELAY_MS = 250;
@@ -18,11 +19,15 @@ public final class KeyboardBannerAdHelper {
     }
 
     public static void attach(Activity activity) {
-        attach(activity, R.id.banner);
+        attach(activity, R.id.banner, ADSMainClass.getOtherAdsShow());
     }
 
     public static void attach(Activity activity, int bannerContainerId) {
-        if (activity == null || !ADSMainClass.getOtherAdsShow()) {
+        attach(activity, bannerContainerId, ADSMainClass.getOtherAdsShow());
+    }
+
+    public static void attach(Activity activity, int bannerContainerId, boolean adsShow) {
+        if (activity == null || !adsShow) {
             return;
         }
         View bannerContainer = activity.findViewById(bannerContainerId);
@@ -35,7 +40,7 @@ public final class KeyboardBannerAdHelper {
         Runnable showBannerRunnable = new Runnable() {
             @Override
             public void run() {
-                if (!ADSMainClass.getOtherAdsShow()) {
+                if (!adsShow) {
                     bannerContainer.setVisibility(View.GONE);
                     return;
                 }
@@ -48,7 +53,7 @@ public final class KeyboardBannerAdHelper {
         contentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                if (!ADSMainClass.getOtherAdsShow()) {
+                if (!adsShow) {
                     handler.removeCallbacks(showBannerRunnable);
                     bannerContainer.setVisibility(View.GONE);
                     return;

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.UnmarshallContext;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.UnmarshallContext;
 
 
 /**

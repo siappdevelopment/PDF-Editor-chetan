@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              下午3:00:26
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.SheetScroller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.HeaderUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.SheetScroller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.HeaderUtil;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

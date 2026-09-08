@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午9:08:07
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -12,9 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.res.ResKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.res.ResKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -209,7 +209,7 @@ class MacroFrame implements IMainFrame
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame#showProgressBar(boolean)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame#showProgressBar(boolean)
      *
      */
     public void showProgressBar(boolean visible)

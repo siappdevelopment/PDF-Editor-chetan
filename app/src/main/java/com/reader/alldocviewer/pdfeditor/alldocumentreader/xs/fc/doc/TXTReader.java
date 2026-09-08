@@ -4,26 +4,26 @@
  * 编译器:            android2.2
  * 时间:              下午2:57:27
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.LeafElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.ParagraphElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ErrorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.WPDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.LeafElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.ParagraphElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ErrorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.WPDocument;
 
 
 /**

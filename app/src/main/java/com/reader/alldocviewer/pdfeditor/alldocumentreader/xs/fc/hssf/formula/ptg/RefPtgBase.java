@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianInput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianInput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 
 /**
@@ -47,7 +47,7 @@ public abstract class RefPtgBase extends OperandPtg {
      * YK: subclasses of RefPtgBase are used by the FormulaParser and FormulaEvaluator accross HSSF and XSSF.
      * The bit mask should accomodate the maximum number of avaiable columns, i.e. 0x3FFF.
      *
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion
      */
     private static final BitField column = BitFieldFactory.getInstance(0x3FFF);
 

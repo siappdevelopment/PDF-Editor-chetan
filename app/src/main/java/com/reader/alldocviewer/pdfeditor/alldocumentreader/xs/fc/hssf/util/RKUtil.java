@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
 /**
  * Utility class for helping convert RK numbers.
@@ -24,8 +24,8 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.uti
  * @author Glen Stampoultzis (glens at apache.org)
  * @author Rolf-J\u00f6rgen Moll
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.MulRKRecord
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RKRecord
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.MulRKRecord
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RKRecord
  */
 public final class RKUtil {
     private RKUtil() {

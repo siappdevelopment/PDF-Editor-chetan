@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午7:49:30
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model;
 
 /**
  * 合并单元

@@ -213,10 +213,7 @@ class CreatePdfAdapter(
                         setParagraphAlignment(HtmlTags.ALIGN_LEFT)
                         setTextPadding(5, 5, 5, 5)
                         setTextcolor(sticker.textColor)
-                        // Defer setTextSize until the view is laid out so
-                        // AutoResizeTextView has a valid measured width (>0).
-                        // Calling it before layout causes mWidthLimit=0 →
-                        // StaticLayout crash: "Layout: -N < 0"
+
                         val pendingTextSize = sticker.textSizeInSp
                         setBold(sticker.isBold)
                         setItalic(sticker.isItalic)

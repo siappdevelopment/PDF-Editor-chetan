@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              下午1:55:26
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
 
 /**
  * 简单文本Model
@@ -36,7 +36,7 @@ public class STDocument implements IDocument
     
     /**
      * 得到指定的offset的区域
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant
      */
     public long getArea(long offset)
     {
@@ -45,7 +45,7 @@ public class STDocument implements IDocument
 
     /**
      * 得到区域开始位置
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant
      */
     public long getAreaStart(long offset)
     {
@@ -60,7 +60,7 @@ public class STDocument implements IDocument
 
     /**
      * 得到区域结束位置
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant
      */
     public long getAreaEnd(long offset)
     {

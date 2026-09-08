@@ -28,6 +28,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.isVisible
 import com.reader.alldocviewer.pdfeditor.databinding.AlertDialogDesignBinding
+import com.reader.alldocviewer.pdfeditor.databinding.DialogGotoPageDesignBinding
 import com.reader.alldocviewer.pdfeditor.databinding.PdfSaveDialogDesignBinding
 import com.itextpdf.text.pdf.PdfReader
 import com.itextpdf.text.pdf.PdfStamper
@@ -253,6 +254,129 @@ object Utils {
         ).show()
     }
 
+    fun openPdfReader(path: String, password: String = ""): PdfReader {
+        val pwdBytes = password.takeIf { it.isNotEmpty() }?.toByteArray()
+        val file = File(path)
+        if (!file.exists() || !file.isFile) {
+            throw java.io.FileNotFoundException("File not found: $path")
+        }
+
+        openPdfReaderFromPath(path, pwdBytes)?.let { return it }
+        openPdfReaderFromPath(path, pwdBytes, partial = true)?.let { return it }
+        openPdfReaderFromBytes(file.readBytes(), pwdBytes)?.let { return it }
+
+        throw java.io.IOException("Cannot open PDF: ${file.name}")
+    }
+
+    fun isValidPdfForMerge(path: String, password: String = ""): Boolean {
+        return canOpenPdfForMerge(path, password)
+    }
+
+    /** Fast merge pre-check — partial PdfReader only, no full-file byte reads. */
+    fun canOpenPdfForMerge(path: String, password: String = ""): Boolean {
+        if (path.isBlank() || path.startsWith("content://")) return false
+        val file = File(path)
+        if (!file.exists() || !file.isFile || file.length() < 64L) return false
+        if (!hasPdfHeader(file)) return false
+        val pwdBytes = password.takeIf { it.isNotEmpty() }?.toByteArray()
+        return try {
+            val reader = openPdfReaderFromPath(path, pwdBytes, partial = true)
+                ?: openPdfReaderFromPath(path, pwdBytes, partial = false)
+            if (reader == null) return false
+            val valid = reader.numberOfPages > 0
+            reader.close()
+            valid
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    private fun hasPdfHeader(file: File): Boolean {
+        return try {
+            file.inputStream().use { input ->
+                val header = ByteArray(5)
+                input.read(header) == 5 && String(header, Charsets.US_ASCII).startsWith("%PDF-")
+            }
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    private fun openPdfReaderFromPath(
+        path: String,
+        pwdBytes: ByteArray?,
+        partial: Boolean = false,
+    ): PdfReader? {
+        return try {
+            when {
+                pwdBytes != null -> PdfReader(path, pwdBytes, partial)
+                partial -> PdfReader(path, null as ByteArray?, true)
+                else -> PdfReader(path)
+            }
+        } catch (e: com.itextpdf.text.exceptions.BadPasswordException) {
+            if (pwdBytes == null) {
+                try {
+                    PdfReader(path, ByteArray(0), partial)
+                } catch (_: Exception) {
+                    null
+                }
+            } else {
+                throw e
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+
+    private fun openPdfReaderFromBytes(bytes: ByteArray, pwdBytes: ByteArray?): PdfReader? {
+        return try {
+            if (pwdBytes != null) PdfReader(bytes, pwdBytes) else PdfReader(bytes)
+        } catch (e: com.itextpdf.text.exceptions.BadPasswordException) {
+            if (pwdBytes == null) {
+                try {
+                    PdfReader(bytes, ByteArray(0))
+                } catch (_: Exception) {
+                    null
+                }
+            } else {
+                throw e
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+
+    fun verifyPdfPassword(path: String, password: String): Boolean {
+        if (path.isEmpty()) return false
+        return try {
+            val reader = if (password.isNotEmpty()) {
+                PdfReader(path, password.toByteArray())
+            } else {
+                openPdfReader(path)
+            }
+            reader.close()
+            true
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    /** True only when the PDF cannot be opened without a user password. */
+    fun requiresPdfOpenPassword(path: String): Boolean {
+        if (path.isBlank() || path.startsWith("content://")) return false
+        val file = File(path)
+        if (!file.exists() || !file.isFile || file.length() == 0L) return false
+        return try {
+            val reader = PdfReader(path)
+            reader.close()
+            false
+        } catch (e: com.itextpdf.text.exceptions.BadPasswordException) {
+            true
+        } catch (_: Exception) {
+            false
+        }
+    }
+
     fun isPdfPasswordProtected(path: String): Boolean {
         if (isPdfPasswordProtectedFast(path)) return true
         if (path.isEmpty()) return false
@@ -410,6 +534,42 @@ object Utils {
         }
     }
 
+    /** Creates a temporary decrypted copy for one-time use (e.g. printing). Caller must delete. */
+    fun decryptPdfToTempFile(file: File, password: String): File? {
+        val tempFile = File.createTempFile("print_", ".pdf")
+        var reader: PdfReader? = null
+        var stamper: PdfStamper? = null
+        var fos: FileOutputStream? = null
+        return try {
+            reader = PdfReader(file.absolutePath, password.toByteArray())
+            fos = FileOutputStream(tempFile)
+            stamper = PdfStamper(reader, fos)
+            stamper.close()
+            reader.close()
+            fos.close()
+            tempFile
+        } catch (e: Exception) {
+            e.printStackTrace()
+            if (tempFile.exists()) {
+                tempFile.delete()
+            }
+            null
+        } finally {
+            try {
+                stamper?.close()
+            } catch (_: Exception) {
+            }
+            try {
+                reader?.close()
+            } catch (_: Exception) {
+            }
+            try {
+                fos?.close()
+            } catch (_: Exception) {
+            }
+        }
+    }
+
     fun handleDecryptPdf(
         context: Context,
         fragmentManager: androidx.fragment.app.FragmentManager,
@@ -509,6 +669,7 @@ object Utils {
     val positiveButton = "positiveButton"
     val negativeButton = "negativeButton"
 
+    @JvmStatic
     fun hideSystemNavigationBar(activity: Activity) {
         hideSystemNavigationBar(activity.window)
     }
@@ -564,7 +725,7 @@ object Utils {
         image: Int = 0,
         ivClose: Boolean = false,
         onItemClick: (String) -> Unit
-    ) {
+    ): Dialog {
         val dialog = Dialog(context)
         val alertBinding = AlertDialogDesignBinding.inflate(LayoutInflater.from(context))
 
@@ -611,6 +772,7 @@ object Utils {
         }
 
         dialog.show()
+        return dialog
     }
 
 
@@ -649,6 +811,40 @@ object Utils {
         }
 
         alertBinding.tvCancel.setOnClickListener {
+            onItemClick(negativeButton, "")
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    fun gotoPageDialog(
+        context: Context,
+        pageCount: Int,
+        onItemClick: (action: String, pageText: String) -> Unit
+    ) {
+        val dialog = Dialog(context)
+        val binding = DialogGotoPageDesignBinding.inflate(LayoutInflater.from(context))
+        dialog.setContentView(binding.root)
+
+        dialog.window?.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
+        dialog.setCancelable(false)
+
+        val margin = (20 * context.resources.displayMetrics.density).toInt()
+        val screenWidth = context.resources.displayMetrics.widthPixels
+        dialog.window?.setLayout(
+            screenWidth - (margin * 3),
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+
+        binding.tvDescription.text = context.getString(R.string.enter_page_number, pageCount)
+
+        binding.tvOkay.setOnClickListener {
+            onItemClick(positiveButton, binding.etPageNumber.text.toString().trim())
+            dialog.dismiss()
+        }
+
+        binding.tvCancel.setOnClickListener {
             onItemClick(negativeButton, "")
             dialog.dismiss()
         }

@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 
 /**

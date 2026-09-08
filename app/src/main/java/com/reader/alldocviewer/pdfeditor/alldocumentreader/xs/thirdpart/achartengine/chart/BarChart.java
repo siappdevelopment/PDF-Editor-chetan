@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.XYMultipleSeriesDataset;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.XYSeries;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.SimpleSeriesRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.XYMultipleSeriesRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.XYMultipleSeriesDataset;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.XYSeries;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.SimpleSeriesRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.XYMultipleSeriesRenderer;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

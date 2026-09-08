@@ -16,14 +16,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf;
 
 
 import java.io.PrintWriter;
 import java.util.Collections;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 /**
  * The base abstract record from which all escher records are defined.  Subclasses will need

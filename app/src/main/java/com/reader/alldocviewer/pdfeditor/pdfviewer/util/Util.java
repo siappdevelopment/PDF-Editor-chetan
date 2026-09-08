@@ -7,7 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* loaded from: classes11.dex */
+
 public class Util {
     public static final int DEFAULT_BUFFER_SIZE = 4096;
 

@@ -1,8 +1,8 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPAutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.PageAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.PageAttr;
 
 public class PositionLayoutKit 
 {

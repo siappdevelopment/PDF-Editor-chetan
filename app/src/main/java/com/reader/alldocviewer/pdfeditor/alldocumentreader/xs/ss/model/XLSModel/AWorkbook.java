@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午1:48:53
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,32 +14,32 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.OldExcelFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.RecordStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FontRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NameRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PaletteRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFDataFormat;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFName;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.SSReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ColorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ReaderHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.OldExcelFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.RecordStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FontRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NameRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PaletteRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFDataFormat;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFName;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.SSReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ReaderHandler;
 
 import android.os.Message;
 
@@ -59,7 +59,7 @@ import android.os.Message;
  * <p>
  * <p>
  */
-public class AWorkbook extends Workbook implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook
+public class AWorkbook extends Workbook implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook
 {
     
     static class ShapesThread extends Thread
@@ -344,9 +344,9 @@ public class AWorkbook extends Workbook implements com.reader.alldocviewer.pdfed
      *
      * @param records a collection of sheet's records.
      * @param offset the offset to search at 
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelRecord
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SSTRecord
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelRecord
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SSTRecord
      */
 
    private void convertLabelRecords(List records, int offset)

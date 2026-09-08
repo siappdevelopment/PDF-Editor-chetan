@@ -4,18 +4,18 @@
  * 编译器:             android2.2
  * 时间:               下午1:58:09
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
 
 /**
  * ppt find

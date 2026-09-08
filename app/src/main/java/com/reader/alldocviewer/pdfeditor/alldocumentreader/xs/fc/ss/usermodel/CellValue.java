@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
 
 /**
  * Mimics the 'data view' of a cell. This allows formula evaluator

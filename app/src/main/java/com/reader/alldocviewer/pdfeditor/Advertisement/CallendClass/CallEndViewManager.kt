@@ -39,8 +39,7 @@ class CallEndViewManager {
 
         windowManager.addView(floatView,params)
         Handler(Looper.getMainLooper()).postDelayed({
-            //        Log.d(TAG, "openNewActivity: delegated to CallEndLaunchHelper");
-            Log.d("TAG", "onReceive:fgsggdsgdsg     4444444 ")
+            Log.d("TAG", "showCallEnd: TRUE" )
             context.startActivity(intent)
             windowManager.removeView(floatView)
             floatView = null

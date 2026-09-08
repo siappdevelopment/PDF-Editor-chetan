@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import kotlin.jvm.internal.Intrinsics;
 
-/* loaded from: classes11.dex */
+
 public final class MyViewPager extends RtlViewPager {
     public boolean enabled;
 

@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util;
 
 import java.awt.font.TextAttribute;
 import java.text.AttributedString;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.CellValue;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IFont;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.CellValue;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IFont;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Sheet;
 
 
 
@@ -51,7 +51,7 @@ public class SheetUtil {
     /**
      *  Dummy formula evaluator that does nothing.
      *  YK: The only reason of having this class is that
-     *  {@link com.wxiwei.fc.ss.usermodel.DataFormatter#formatCellValue(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell)}
+     *  {@link com.wxiwei.fc.ss.usermodel.DataFormatter#formatCellValue(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell)}
      *  returns formula string for formula cells. Dummy evaluator makes it to format the cached formula result.
      *
      *  See Bugzilla #50021 

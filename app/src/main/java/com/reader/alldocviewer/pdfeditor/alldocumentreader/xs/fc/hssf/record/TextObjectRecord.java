@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.OperandPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecordOutput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.OperandPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecordOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
 
 
 /**

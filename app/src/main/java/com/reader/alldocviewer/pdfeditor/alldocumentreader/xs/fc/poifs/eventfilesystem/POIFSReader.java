@@ -17,23 +17,23 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.eventfilesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.eventfilesystem;
 
 import java.io.*;
 
 import java.util.*;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.DirectoryProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.Property;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.PropertyTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.DirectoryProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.Property;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.PropertyTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableReader;
 
 
 

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
 
 /**
  * Implementation of Excel HYPERLINK function.<p/>
@@ -31,7 +31,7 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.form
  * <b>link_location</b> The URL of the hyperlink <br/>
  * <b>friendly_name</b> (optional) the value to display<p/>
  *
- *  Returns last argument.  Leaves type unchanged (does not convert to {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.StringEval}).
+ *  Returns last argument.  Leaves type unchanged (does not convert to {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.StringEval}).
  *
  * @author Wayne Clingingsmith
  */

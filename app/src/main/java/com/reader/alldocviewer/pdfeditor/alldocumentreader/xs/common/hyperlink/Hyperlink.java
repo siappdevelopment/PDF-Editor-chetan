@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午3:12:13
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink;
 
 /**
  * Hyperlink 类

@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager;
 
 import android.content.Context;
 import android.os.Handler;
@@ -12,13 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.util.TableViewUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.util.TableViewUtils;
 
-/* loaded from: classes11.dex */
+
 public class CellLayoutManager extends LinearLayoutManager {
     private static final int IGNORE_LEFT = -99999;
     private static final String LOG_TAG = "CellLayoutManager";
@@ -86,7 +86,7 @@ public class CellLayoutManager extends LinearLayoutManager {
     public void fitWidthSize(int i, boolean z) {
         fitSize(i, IGNORE_LEFT, false);
         if (this.mNeedSetLeft && z) {
-            new Handler().post(new Runnable() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager$$ExternalSyntheticLambda0
+            new Handler().post(new Runnable() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager$$ExternalSyntheticLambda0
                 @Override // java.lang.Runnable
                 public final void run() {
                     CellLayoutManager.this.lambda$fitWidthSize$0();

@@ -15,33 +15,33 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSpRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.EscherTextboxWrapper;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.InteractiveInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.InteractiveInfoAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.OutlineTextRefAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PPDrawing;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RoundTripHFPlaceholder12;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextCharsAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextRulerAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TxInteractiveInfoAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSpRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.EscherTextboxWrapper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.InteractiveInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.InteractiveInfoAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.OutlineTextRefAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PPDrawing;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RoundTripHFPlaceholder12;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextCharsAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextRulerAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TxInteractiveInfoAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 
 /**
@@ -738,7 +738,7 @@ public abstract class TextShape extends SimpleShape
      * @param linkId    id of the hyperlink, @see arc.fc.hslf.usermodel.SlideShow#addHyperlink(Hyperlink)
      * @param      beginIndex   the beginning index, inclusive.
      * @param      endIndex     the ending index, exclusive.
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#addHyperlink(Hyperlink)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow#addHyperlink(Hyperlink)
      */
     public void setHyperlink(int linkId, int beginIndex, int endIndex)
     {

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -29,27 +29,27 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.DirectoryProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.Property;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.PropertyTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BATBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableWriter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlockConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlockWriter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableWriter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.CloseIgnoringInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IOUtils;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LongField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.DirectoryProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.Property;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.PropertyTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BATBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockAllocationTableWriter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlockConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlockWriter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.SmallBlockTableWriter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.CloseIgnoringInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IOUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LongField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 
 /**

@@ -14,7 +14,7 @@
         * limitations under the License.
         */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans;
 
 
 public class AlertController

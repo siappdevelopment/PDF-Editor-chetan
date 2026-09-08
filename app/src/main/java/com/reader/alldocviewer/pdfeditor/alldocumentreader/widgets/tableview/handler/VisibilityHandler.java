@@ -1,14 +1,14 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import android.util.Log;
 import android.util.SparseArray;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class VisibilityHandler {
     private static final String LOG_TAG = "VisibilityHandler";
     @NonNull
@@ -148,7 +148,7 @@ public class VisibilityHandler {
         this.mHideColumnList = sparseArray;
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class Row {
         @Nullable
         private final List<Object> mCellModelList;
@@ -177,7 +177,7 @@ public class VisibilityHandler {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class Column {
         @NonNull
         private final List<Object> mCellModelList;

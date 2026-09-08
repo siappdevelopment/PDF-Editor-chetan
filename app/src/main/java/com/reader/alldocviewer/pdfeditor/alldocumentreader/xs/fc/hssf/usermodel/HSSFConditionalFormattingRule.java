@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.BorderFormatting;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.FontFormatting;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.BorderFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.FontFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule;
 
 
 /**

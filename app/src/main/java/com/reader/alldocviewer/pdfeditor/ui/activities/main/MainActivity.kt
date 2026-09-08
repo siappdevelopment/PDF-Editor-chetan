@@ -74,7 +74,6 @@ import com.reader.alldocviewer.pdfeditor.databinding.PdfCreateManageDesignBindin
 import com.reader.alldocviewer.pdfeditor.databinding.ThemeDialogDesignBinding
 import com.reader.alldocviewer.pdfeditor.helper_tool.HelperTools
 import com.reader.alldocviewer.pdfeditor.picker.MediaPickerActivity
-import com.reader.alldocviewer.pdfeditor.scan.organize.OrganizeImageActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.base.BaseActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.createPdf.CreatePdfActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity
@@ -87,6 +86,7 @@ import com.reader.alldocviewer.pdfeditor.ui.dialogs.AddWidgetBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.UnlockSavingBehaviorBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.fragments.filesTab.FileTabFragment
 import com.reader.alldocviewer.pdfeditor.ui.fragments.tools.ToolsFragment
+import com.reader.alldocviewer.pdfeditor.launcher.utils.PermissionManager
 import com.reader.alldocviewer.pdfeditor.utils.AppPreferences
 import com.reader.alldocviewer.pdfeditor.utils.BottomNavIconAnimator
 import com.reader.alldocviewer.pdfeditor.utils.Const
@@ -119,6 +119,11 @@ class MainActivity : BaseActivity(), OnClickHandler {
             }
         }
 
+    private val overlaySettingsLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            refreshPermissionBanners()
+        }
+
 
     private val scannerLauncher =
         registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
@@ -126,12 +131,11 @@ class MainActivity : BaseActivity(), OnClickHandler {
             val scanningResult = GmsDocumentScanningResult.fromActivityResultIntent(result.data)
             if (resultCode == RESULT_OK && scanningResult != null) {
                 Log.wtf("Scanner", "Scan Result -> $scanningResult")
-                val uris =
-                    scanningResult.pages?.map { it.imageUri.toString() }?.let { ArrayList(it) }
-                startActivity(Intent(this, OrganizeImageActivity::class.java).apply {
-                    putExtra("main_title", getString(R.string.scan_to_pdf))
-                    putStringArrayListExtra("scanned_page_uris", uris)
-                })
+                HelperTools.launchOrganizeFromScannedPages(
+                    this,
+                    scanningResult.pages,
+                    getString(R.string.scan_to_pdf),
+                )
             } else if (resultCode == RESULT_CANCELED) {
                 Log.wtf("Scanner", "Scan Result -> Cancelled...")
             } else {
@@ -243,7 +247,8 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     ADSMainClass.getStringValue(ADSMainClass.HOME_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -263,6 +268,17 @@ class MainActivity : BaseActivity(), OnClickHandler {
                 override fun onFailure(e: Exception?) {
                 }
             })
+        }
+
+        if (ADSMainClass.getHomeInterShow()
+            && ADSMainClass.getHomeBottomNavInterShow()
+            && ADSMainClass.isInterPreLoad()
+            && ADSUtilitis.IsNetworkConnected(this)
+        ) {
+            ADSInterDisplayClick.preloadInterstitialAd(
+                this,
+                ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME)
+            )
         }
     }
 
@@ -431,7 +447,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
         if (selectTab != -1) {
             intent.removeExtra("select_tab")
             if (::binding.isInitialized) {
-                binding.bottomNav.selectedItemId = selectTab
+                applyBottomNavSection(selectTab)
             }
         }
         val selectFileTab = intent.getIntExtra("select_file_tab", -1)
@@ -461,6 +477,9 @@ class MainActivity : BaseActivity(), OnClickHandler {
             } else {
                 loadFilesIfPermitted()
                 refreshPermissionBanners()
+                binding.root.post {
+                    refreshAllTabFileLists(forceRefresh = true)
+                }
             }
             return
         }
@@ -503,16 +522,27 @@ class MainActivity : BaseActivity(), OnClickHandler {
         }
     }
 
-    private fun loadFilesIfPermitted(force: Boolean = false) {
+    private fun loadFilesIfPermitted() {
         if (!::permissionHelper.isInitialized || !permissionHelper.hasAllFilesAccess()) return
-        val cached = fileViewModel.allFiles.value
-        if (force || cached.isNullOrEmpty()) {
-            fileViewModel.scanInBackground(force = true)
-        }
+        fileViewModel.scanInBackground(force = true)
     }
 
-    private fun switchFileSection(section: String) {
-        fileViewModel.showSection(section)
+    private fun applyBottomNavSection(itemId: Int, force: Boolean = false) {
+        if (binding.bottomNav.selectedItemId == itemId) {
+            when (itemId) {
+                R.id.nav_files -> switchFileSection(FileConst.SECTION_ALL_FILES, force)
+                R.id.nav_bookmark -> switchFileSection(FileConst.SECTION_BOOKMARKS, force)
+                R.id.nav_recent -> switchFileSection(FileConst.SECTION_RECENT, force)
+                R.id.nav_tools -> showToolsSection()
+            }
+            return
+        }
+        binding.bottomNav.selectedItemId = itemId
+    }
+
+    private fun switchFileSection(section: String, force: Boolean = false) {
+        val sectionChanged = fileViewModel.currentSection != section
+        fileViewModel.showSection(section, force)
         binding.allTabs.visibility = View.VISIBLE
         binding.vpContainer.visibility = View.VISIBLE
         binding.fragmentContainer.visibility = View.GONE
@@ -523,6 +553,9 @@ class MainActivity : BaseActivity(), OnClickHandler {
         binding.flSettings.visibility = View.VISIBLE
 
         updateHeaderColor(binding.vpContainer.currentItem)
+        binding.root.post {
+            refreshAllTabFileLists(forceRefresh = true, scrollToTop = sectionChanged || force)
+        }
     }
 
     private fun showToolsSection() {
@@ -582,6 +615,17 @@ class MainActivity : BaseActivity(), OnClickHandler {
         return !hasStorageAccess() && AppPreferences.isStoragePermissionSkip(this)
     }
 
+    fun shouldShowOverlayPermissionBanner(): Boolean {
+        return hasStorageAccess() &&
+            PermissionManager.shouldShowOverlayPermissionBanner(this)
+    }
+
+    fun requestOverlayPermission() {
+        if (PermissionManager.hasOverlayPermission(this)) return
+        PermissionManager.markOverlayPermissionDeclined(this)
+        overlaySettingsLauncher.launch(PermissionManager.getOverlaySettingsIntent(this))
+    }
+
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (
@@ -590,7 +634,6 @@ class MainActivity : BaseActivity(), OnClickHandler {
             !permissionHelper.isManageStorageDialogShowing()
         ) {
             Utils.hideSystemNavigationBar(this)
-            binding.bottomNav.updatePadding(bottom = 0)
         }
     }
 
@@ -604,32 +647,43 @@ class MainActivity : BaseActivity(), OnClickHandler {
         }
         ViewCompat.requestApplyInsets(binding.main)
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNav) { view, _ ->
-            view.updatePadding(bottom = 0)
-            WindowInsetsCompat.CONSUMED
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNav) { view, insets ->
+            insets
         }
     }
 
     private fun initView() {
         binding.onClickHandler = this
-        binding.bottomNav.updatePadding(bottom = 0)
         binding.bottomNav.isItemActiveIndicatorEnabled = false
         binding.bottomNav.itemRippleColor = ColorStateList.valueOf(Color.TRANSPARENT)
         binding.bottomNav.itemIconTintList = null
         binding.bottomNav.selectedItemId = R.id.nav_files
         BottomNavIconAnimator.preloadIcons(binding.bottomNav)
+        BottomNavIconAnimator.applyBottomNavItemGravity(binding.bottomNav)
         BottomNavIconAnimator.updateSelection(binding.bottomNav, R.id.nav_files, animate = false)
 
         binding.bottomNav.setOnItemSelectedListener { item ->
             exitSelectionMode()
             BottomNavIconAnimator.updateSelection(binding.bottomNav, item.itemId)
-            binding.bottomNav.post {
+
+            val switchTab = {
                 when (item.itemId) {
                     R.id.nav_files -> switchFileSection(FileConst.SECTION_ALL_FILES)
                     R.id.nav_bookmark -> switchFileSection(FileConst.SECTION_BOOKMARKS)
                     R.id.nav_recent -> switchFileSection(FileConst.SECTION_RECENT)
                     R.id.nav_tools -> showToolsSection()
                 }
+            }
+
+            if (ADSMainClass.getHomeInterShow() && ADSMainClass.getHomeBottomNavInterShow()) {
+                ADSInterDisplayClick.ADSBottomNavDisplayInterstitial(
+                    this,
+                    ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME)
+                ) { _ ->
+                    switchTab()
+                }
+            } else {
+                switchTab()
             }
             true
         }
@@ -642,6 +696,18 @@ class MainActivity : BaseActivity(), OnClickHandler {
                 forceAnimate = true
             )
         }*/
+        binding.bottomNav.setOnItemReselectedListener { item ->
+            BottomNavIconAnimator.updateSelection(
+                bottomNav = binding.bottomNav,
+                selectedItemId = item.itemId,
+                forceAnimate = true,
+            )
+            when (item.itemId) {
+                R.id.nav_files -> switchFileSection(FileConst.SECTION_ALL_FILES, force = true)
+                R.id.nav_bookmark -> switchFileSection(FileConst.SECTION_BOOKMARKS, force = true)
+                R.id.nav_recent -> switchFileSection(FileConst.SECTION_RECENT, force = true)
+            }
+        }
         setupCreateButton()
 
         titleTextColors(true)
@@ -723,7 +789,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
             ADSInterDisplayClick.ADSInterstitialShowing(
                 this,
                 ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
-                { startActivity(Intent(this@MainActivity, RecycleBinActivity::class.java)) })
+                { startActivity(Intent(this@MainActivity, RecycleBinActivity::class.java)) }, ADSMainClass.getHomeInterShow())
 //            startActivity(Intent(this, RecycleBinActivity::class.java))
         }
 
@@ -855,9 +921,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
             dialogBinding.ivDarkTheme.setImageResource(
                 if (selectedTheme == 2) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck
             )
-            dialogBinding.ivDefaultTheme.setImageResource(
-                if (selectedTheme == 0) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck
-            )
+
         }
 
         // Preselect current theme
@@ -885,15 +949,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
             dialog.dismiss()
         }
 
-        dialogBinding.llDefaultTheme.setOnClickListener {
-            ADSAppManage.isAppOpenBlocked = true
-            ADSAppManage.blockAppOpenAd(3000)
-            updateRadioImages(0)
-            AppPreferences.setAppTheme(this, 0)
-            AppPreferences.applyAppTheme(0)
-            updateThemeText()
-            dialog.dismiss()
-        }
+
 
         dialog.show()
     }
@@ -1148,30 +1204,45 @@ class MainActivity : BaseActivity(), OnClickHandler {
                 startActivity(intent)
             }
 
-            binding.lottiAnim.id -> {
-                if (!AppPreferences.isCreateAnimClicked(this)) {
-                    AppPreferences.setCreateAnimClicked(this, true)
-                    updateCreateButtonVisibility()
-                }
-                showPdfCreateManageDialog()
-            }
+            binding.lottiAnim.id -> onCreateButtonClicked()
 
-            binding.ivCreate.id -> showPdfCreateManageDialog()
+            binding.ivCreate.id -> onCreateButtonClicked()
         }
     }
 
     private fun setupCreateButton() {
+        binding.ivCreate.setOnClickListener { onCreateButtonClicked() }
+        binding.lottiAnim.setOnClickListener { onCreateButtonClicked() }
         updateCreateButtonVisibility()
-        if (binding.lottiAnim.isVisible) {
-            binding.lottiAnim.setAnimation(R.raw.add_anim)
-            binding.lottiAnim.playAnimation()
+    }
+
+    private fun onCreateButtonClicked() {
+        if (!AppPreferences.isCreateAnimClicked(this)) {
+            AppPreferences.setCreateAnimClicked(this, true)
+            updateCreateButtonVisibility()
         }
+        showPdfCreateManageDialog()
     }
 
     private fun updateCreateButtonVisibility() {
+        val onFileSection = binding.fragmentContainer.visibility != View.VISIBLE
+        if (!onFileSection) {
+            binding.lottiAnim.isVisible = false
+            binding.ivCreate.isVisible = false
+            return
+        }
+
         val showLottie = !AppPreferences.isCreateAnimClicked(this)
         binding.lottiAnim.isVisible = showLottie
         binding.ivCreate.isVisible = !showLottie
+
+        if (binding.lottiAnim.isVisible) {
+            binding.lottiAnim.bringToFront()
+            binding.lottiAnim.setAnimation(R.raw.add_anim)
+            binding.lottiAnim.playAnimation()
+        } else if (binding.ivCreate.isVisible) {
+            binding.ivCreate.bringToFront()
+        }
     }
 
     fun launchCreatePdf() {
@@ -1180,7 +1251,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
             ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
             {
                 startActivity(Intent(this, CreatePdfActivity::class.java))
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchImageToPdf() {
@@ -1195,7 +1266,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("singleSelection", false)
                 }
                 imageToPdfLauncher.launch(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
 
     }
 
@@ -1210,7 +1281,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "pdf_to_long_image")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
 
     }
 
@@ -1223,7 +1294,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "pdf_to_image")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchScanToPdf() {
@@ -1261,7 +1332,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "split_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
 
 
     }
@@ -1279,7 +1350,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                 }
                 startActivity(intent)
 
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchImportFiles() {
@@ -1312,7 +1383,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "print_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchSignPdf() {
@@ -1325,7 +1396,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "sign_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
 
 
     }
@@ -1340,7 +1411,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "lock_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchUnlockPdf() {
@@ -1353,7 +1424,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "unlock_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     fun launchCompressPdf() {
@@ -1366,7 +1437,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
                     putExtra("checkFileName", "compress_pdf")
                 }
                 startActivity(intent)
-            })
+            }, ADSMainClass.getHomeInterShow())
     }
 
     private fun showPdfCreateManageDialog() {
@@ -1639,14 +1710,14 @@ class MainActivity : BaseActivity(), OnClickHandler {
         binding.ivSelectAll.setOnClickListener {
             val currentFragment = getCurrentFragment() ?: return@setOnClickListener
             val adapter = currentFragment.adapter
-            val list = adapter.currentList
+            val list = adapter.currentFileList
             if (adapter.selectedFiles.size == list.size) {
                 adapter.selectedFiles.clear()
             } else {
                 adapter.selectedFiles.clear()
                 adapter.selectedFiles.addAll(list)
             }
-            adapter.notifyDataSetChanged()
+            adapter.refreshSelectionState()
             updateSelectionCount()
         }
 
@@ -1717,10 +1788,9 @@ class MainActivity : BaseActivity(), OnClickHandler {
 
         // 1. Update adapter in current fragment
         getCurrentFragment()?.adapter?.let { adapter ->
-            adapter.isSelectionMode = true
             adapter.selectedFiles.clear()
             adapter.selectedFiles.add(firstFile)
-            adapter.notifyDataSetChanged()
+            adapter.isSelectionMode = true
         }
 
         // 2. Hide search, filter, settings icons
@@ -1735,10 +1805,8 @@ class MainActivity : BaseActivity(), OnClickHandler {
         binding.tvSelectionCount.visibility = View.VISIBLE
         binding.llBottomActions.visibility = View.VISIBLE
 
-        // 5. Hide create button and animated lottie button if visible, and hide bottom navigation
-        binding.ivCreate.visibility = View.GONE
-        binding.lottiAnim.visibility = View.GONE
-        binding.bottomNav.visibility = View.GONE
+        // 5. Hide bottom navigation and center create button
+        binding.bottomNavContainer.visibility = View.GONE
 
         // 6. Disable ViewPager2 swiping to prevent page navigation while selecting
         binding.vpContainer.isUserInputEnabled = false
@@ -1758,7 +1826,6 @@ class MainActivity : BaseActivity(), OnClickHandler {
         getCurrentFragment()?.adapter?.let { adapter ->
             adapter.isSelectionMode = false
             adapter.selectedFiles.clear()
-            adapter.notifyDataSetChanged()
         }
 
         // 2. Show search, filter, settings icons
@@ -1783,14 +1850,14 @@ class MainActivity : BaseActivity(), OnClickHandler {
         val currentTab = binding.vpContainer.currentItem
         updateHeaderColor(currentTab)
         updateCreateButtonVisibility()
-        binding.bottomNav.visibility = View.VISIBLE
+        binding.bottomNavContainer.visibility = View.VISIBLE
     }
 
     fun updateSelectionCount() {
         val selectedCount = getCurrentFragment()?.adapter?.selectedFiles?.size ?: 0
         binding.tvSelectionCount.text = getString(R.string.selected, selectedCount)
 
-        val totalCount = getCurrentFragment()?.adapter?.currentList?.size ?: 0
+        val totalCount = getCurrentFragment()?.adapter?.currentFileList?.size ?: 0
         if (selectedCount > 0 && selectedCount == totalCount) {
             binding.ivSelectAll.setImageResource(R.drawable.ic_multi_selected)
         } else {

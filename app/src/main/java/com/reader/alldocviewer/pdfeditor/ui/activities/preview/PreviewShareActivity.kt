@@ -68,6 +68,9 @@ class PreviewShareActivity : BaseActivity() {
                     Const.INSTANCE.toolsPassword = ""
                     HelperTools.selectedItemsImage.clear()
                     HelperTools.savedPathsMultipleBitmap.clear()
+                    if (checkTool == "split_pdf") {
+                        HelperTools.splitModelFile.clear()
+                    }
                     PdfDataManager.imageListLiveData.value = emptyList()
                     PdfDataManager.selectedImagesLiveData.value = emptyList()
                 } catch (_: Exception) {
@@ -85,10 +88,10 @@ class PreviewShareActivity : BaseActivity() {
             }
         })
 
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getSuccessfullyConvertedBottomAdsShow()) {
+            if (ADSMainClass.getSuccessfullyConvertedAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.SUCCESSFULLY_CONVERTED_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -96,10 +99,11 @@ class PreviewShareActivity : BaseActivity() {
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.SUCCESSFULLY_CONVERTED_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -115,7 +119,7 @@ class PreviewShareActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getPreviewShareInterShow())
     }
 
     private fun setupUI() {
@@ -128,6 +132,7 @@ class PreviewShareActivity : BaseActivity() {
         when (checkTool) {
             "ToolsCheck" -> setupToolsCheckView()
             "scan_to_pdf", "image_to_pdf" -> setupScanToPdfView()
+            "split_pdf" -> setupSplitPdfView()
             else -> setupDefaultView()
         }
     }
@@ -171,6 +176,43 @@ class PreviewShareActivity : BaseActivity() {
         }
     }
 
+    private fun setupSplitPdfView() {
+        binding.tvTitle.text = getString(R.string.split_successfully)
+        binding.tvFilePath.visibility = View.VISIBLE
+        binding.llBottomView.visibility = View.GONE
+        binding.btnOpen.text = getString(R.string.open)
+        binding.btnShare.visibility = View.VISIBLE
+        binding.imgPreview.scaleType = ImageView.ScaleType.FIT_CENTER
+        binding.imgPreview.setImageResource(R.drawable.ic_pdf_type)
+
+        val splitPaths = resolveSplitPaths()
+        val totalPages = splitPaths.size
+
+        binding.tvFileName.text = if (totalPages > 1) {
+            "${totalPages} ${getString(R.string.split_pdf)}"
+        } else {
+            splitPaths.firstOrNull()?.substringAfterLast('/').orEmpty()
+                .ifEmpty { path.substringAfterLast('/') }
+        }
+        binding.tvFilePath.maxLines = 20
+        binding.tvFilePath.text = if (splitPaths.size > 1) {
+            splitPaths.mapIndexed { index, splitPath ->
+                "${index + 1}. ${File(splitPath).name}"
+            }.joinToString("\n")
+        } else {
+            splitPaths.firstOrNull() ?: path
+        }
+    }
+
+    private fun resolveSplitPaths(): ArrayList<String> {
+        return when {
+            getAllPaths.isNotEmpty() -> getAllPaths
+            HelperTools.savedPathsMultipleBitmap.isNotEmpty() -> HelperTools.savedPathsMultipleBitmap
+            path.isNotEmpty() -> arrayListOf(path)
+            else -> ArrayList()
+        }
+    }
+
     private fun setupDefaultView() {
         val byteArrayExtra = intent.getByteArrayExtra("image_byte_array")
         val fileName = path.substringAfterLast('/')
@@ -196,19 +238,25 @@ class PreviewShareActivity : BaseActivity() {
 
     private fun setupListeners() {
         binding.btnShare.setOnClickListener {
-            if (imageCheck == "multiImage") {
-                HelperTools.shareMultipleFiles(this, HelperTools.savedPathsMultipleBitmap)
-            } else {
-                shareFile(this, path)
+            val splitPaths = if (checkTool == "split_pdf") resolveSplitPaths() else ArrayList()
+            when {
+                checkTool == "split_pdf" && splitPaths.size > 1 -> {
+                    HelperTools.shareMultipleFiles(this, splitPaths)
+                }
+                imageCheck == "multiImage" -> {
+                    HelperTools.shareMultipleFiles(this, HelperTools.savedPathsMultipleBitmap)
+                }
+                else -> shareFile(this, path)
             }
         }
         binding.ivBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            onBack()
         }
         binding.btnOpen.setOnClickListener {
             when (checkTool) {
                 "ToolsCheck" -> showSuccessToast()
                 "scan_to_pdf", "image_to_pdf" -> openPdfInViewer()
+                "split_pdf" -> openSplitPdfResult()
                 else -> handleOpenFile()
             }
         }
@@ -266,4 +314,15 @@ class PreviewShareActivity : BaseActivity() {
         CreatePdfFileOpener.openFileWithPathExternal(this, path)
     }
 
+    private fun openSplitPdfResult() {
+        val splitPaths = resolveSplitPaths()
+        val openPath = splitPaths.firstOrNull().orEmpty()
+        if (openPath.isEmpty()) {
+            Toast.makeText(this, getString(R.string.file_not_found), Toast.LENGTH_SHORT).show()
+            return
+        }
+        CreatePdfFileOpener.openFileWithPathExternal(this, openPath)
+    }
+
 }
+

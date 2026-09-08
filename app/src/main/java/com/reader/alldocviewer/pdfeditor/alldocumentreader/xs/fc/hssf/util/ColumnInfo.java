@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午4:33:07
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
 /**
  * TODO: column information(width, hidden)

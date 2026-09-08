@@ -4,11 +4,11 @@
  * 编译器:            android2.2
  * 时间:              下午2:32:21
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
 
 /**
  * TODO: 文件注释

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf;
 
 /**
  * <p>This class represents custom properties in the document summary

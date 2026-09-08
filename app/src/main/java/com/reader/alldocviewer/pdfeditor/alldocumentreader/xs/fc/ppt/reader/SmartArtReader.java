@@ -4,44 +4,44 @@
  * 编译器:            android2.2
  * 时间:              下午1:47:12
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader;
 
 import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.ArbitraryPolygonShapePath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.AutoShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.LineShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.SmartArt;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.LineKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.SAXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGLayout;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGPlaceholderUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.ArbitraryPolygonShapePath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.AutoShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.LineShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.SmartArt;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.LineKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.SAXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGLayout;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGPlaceholderUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 
 /**

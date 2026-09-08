@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage;
 
 /**
  * Abstract base class of all POIFS block storage classes. All
@@ -33,8 +33,8 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.st
 import java.io.IOException;
 import java.io.OutputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
 
 
 abstract class BigBlock

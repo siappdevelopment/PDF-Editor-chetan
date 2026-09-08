@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 
 import java.io.FilterInputStream;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
 
 
 /**

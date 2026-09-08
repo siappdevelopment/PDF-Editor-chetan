@@ -9,7 +9,7 @@ import com.shockwave.pdfium.PdfiumCore;
 import java.io.File;
 import java.io.IOException;
 
-/* loaded from: classes11.dex */
+
 public class FileSource implements DocumentSource {
     public File file;
 

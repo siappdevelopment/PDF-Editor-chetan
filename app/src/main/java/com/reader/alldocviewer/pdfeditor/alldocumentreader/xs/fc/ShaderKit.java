@@ -1,19 +1,19 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc;
 
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.AutoShapeDataKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.Gradient;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.LinearGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.RadialGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.AutoShapeDataKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.Gradient;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.LinearGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.RadialGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGMaster;
 
 public class ShaderKit
 {

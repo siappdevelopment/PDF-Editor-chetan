@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ArrayRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FormulaRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.MergeCellsRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SharedFormulaRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.TableRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.MergedCellsTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.SharedValueManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ArrayRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FormulaRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.MergeCellsRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SharedFormulaRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.TableRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.MergedCellsTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.SharedValueManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference;
 
 
 

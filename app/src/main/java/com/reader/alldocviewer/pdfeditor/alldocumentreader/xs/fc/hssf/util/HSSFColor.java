@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Color;
 
 
 

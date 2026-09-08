@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.sl.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.sl.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 public interface Shape
 {

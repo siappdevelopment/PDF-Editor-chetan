@@ -250,9 +250,9 @@
 ## -----------------------------------------------------------------------------
 ## Office document viewer (dom4j reflection, Apache POI internals)
 ## -----------------------------------------------------------------------------
-#-keep class com.reader.alldocviewer.pdfeditoroffice.** { *; }
+#-keep class com.reader.alldocviewer.pdfeditor.** { *; }
 #-keep class org.dom4j.** { *; }
-#-dontwarn com.reader.alldocviewer.pdfeditoroffice.**
+#-dontwarn com.reader.alldocviewer.pdfeditor.**
 #-dontwarn org.dom4j.**
 #
 ## -----------------------------------------------------------------------------
@@ -417,17 +417,17 @@
 # -----------------------------------------------------------------------------
 # Office document viewer (embedded POI/dom4j — heavy reflection; stripped by R8 in release)
 # -----------------------------------------------------------------------------
--keep class com.reader.alldocviewer.pdfeditoroffice.** { *; }
--keepclassmembers class * extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record {
+-keep class com.reader.alldocviewer.pdfeditor.** { *; }
+-keepclassmembers class * extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record {
     <init>(byte[], int, int);
 }
--keepclassmembers class com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.res.ResConstant {
+-keepclassmembers class com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.res.ResConstant {
     public static <fields>;
 }
 -keep class com.reader.alldocviewer.pdfeditor.ui.activities.officeviewer.** { *; }
 -keep class com.reader.alldocviewer.pdfeditor.utils.OfficeFileOpenHelper { *; }
 -keep class com.reader.alldocviewer.pdfeditor.utils.OfficeViewerLauncher { *; }
--dontwarn com.reader.alldocviewer.pdfeditoroffice.**
+-dontwarn com.reader.alldocviewer.pdfeditor.**
 -dontwarn org.dom4j.**
 -dontwarn org.apache.poi.**
 -dontwarn javax.xml.stream.**

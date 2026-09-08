@@ -5,7 +5,7 @@ import android.view.MotionEvent;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.link.LinkHandler;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.model.LinkTapEvent;
 
-/* loaded from: classes11.dex */
+
 public class Callbacks {
     public LinkHandler linkHandler;
     public OnDrawListener onDrawAllListener;

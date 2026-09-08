@@ -1,19 +1,19 @@
 // Copyright 2001, FreeHEP.
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf;
 
 import android.graphics.Point;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.AffineTransform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.ActionHeader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.TagHeader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.TaggedInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.AffineTransform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.ActionHeader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.TagHeader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.TaggedInputStream;
 
 /**
  * This class extends the TaggedInputStream with several methods to read EMF

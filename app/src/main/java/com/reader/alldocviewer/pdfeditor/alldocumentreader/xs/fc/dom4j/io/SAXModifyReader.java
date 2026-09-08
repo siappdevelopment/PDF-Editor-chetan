@@ -5,12 +5,12 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory;
 
 
 /**

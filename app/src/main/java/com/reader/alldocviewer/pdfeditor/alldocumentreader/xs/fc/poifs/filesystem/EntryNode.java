@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.Property;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.Property;
 
 /**
  * Abstract implementation of Entry

@@ -8,7 +8,7 @@ import com.shockwave.pdfium.util.Size;
 
 import java.lang.ref.WeakReference;
 
-/* loaded from: classes11.dex */
+
 public class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
     public boolean cancelled = false;
     public DocumentSource docSource;

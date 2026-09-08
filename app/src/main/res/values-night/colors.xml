@@ -10,6 +10,9 @@
     <color name="filter_color">#363636</color>
     <color name="card_color">#3B3A3A</color>
     <color name="bg_color">#2C2C2C</color>
+    <color name="list_native_ad_bg">#2C2C2C</color>
+    <color name="list_native_ad_bg_light">#E7EAED</color>
+    <color name="list_native_ad_bg_dark">#2C323B</color>
     <color name="pdfviewlight">#2C2C2C</color>
     <color name="bg_view_pager">#2C2C2C</color>
     <color name="navigation_color">#2C2C2C</color>
@@ -32,4 +35,29 @@
     <color name="app_text_color">#FFFFFF</color>
     <color name="circle_border">#FFFFFFFF</color>
     <color name="new_color">#3B3A3A</color>
+    <color name="border_color_light">#2C2C2C</color>
+
+
+    <color name="gray">#AEAEAE</color>
+    <color name="primary">#E30000</color>
+    <color name="text_secondary_light">#9AA0A6</color>
+    <color name="quiz_rating_star_filled">#FFC107</color>
+    <color name="divider">#1A1A1A</color>
+    <color name="shimmer">#333333</color>
+    <color name="shimmer_base">#444444</color>
+
+    <color name="launcher_search_bg">#99000000</color>
+    <color name="launcher_apps_drawer_search_bg">#2A2A2A</color>
+    <color name="launcher_search_hint">#FFFFFFFF</color>
+    <color name="launcher_on_wallpaper">#FFFFFFFF</color>
+    <color name="launcher_folder_bg">#99000000</color>
+    <color name="launcher_surface">#FF121212</color>
+    <color name="bacssss">#151515</color>
+
+
+    <color name="main_color">#E30000</color>
+    <color name="black_color">#FFFFFFFF</color>
+
+
+    <color name="divider_grey">#33FFFFFF</color>
 </resources>

@@ -4,11 +4,11 @@
  * 编译器:            android2.2
  * 时间:              下午9:36:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;

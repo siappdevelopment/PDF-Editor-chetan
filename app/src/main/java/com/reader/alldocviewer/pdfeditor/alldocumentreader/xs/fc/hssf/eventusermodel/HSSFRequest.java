@@ -15,24 +15,24 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFactory;
 
 
 /**
  * An HSSFRequest object should be constructed registering an instance or multiple
  * instances of HSSFListener with each Record.sid you wish to listen for.
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFListener
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFListener
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException
  * @author  Andrew C. Oliver (acoliver at apache dot org)
  * @author Carey Sublette (careysub@earthling.net)
  */

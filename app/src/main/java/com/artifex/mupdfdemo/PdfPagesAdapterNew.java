@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.reader.alldocviewer.pdfeditor.R;
 import com.reader.alldocviewer.pdfeditor.databinding.PreviewPagerItemLayoutBinding;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pdf.PDFView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pdf.PDFView;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util;
 
 import java.lang.ref.WeakReference;
 

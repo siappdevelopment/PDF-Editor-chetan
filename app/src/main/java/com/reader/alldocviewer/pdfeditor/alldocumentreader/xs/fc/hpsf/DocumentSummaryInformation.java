@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf;
 
 import java.util.Iterator;
 import java.util.Map;

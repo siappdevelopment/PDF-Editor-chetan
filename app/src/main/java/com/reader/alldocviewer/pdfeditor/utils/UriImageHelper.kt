@@ -12,11 +12,32 @@ object UriImageHelper {
 
     fun toLoadableSource(path: String?): Any? {
         if (path.isNullOrBlank()) return null
-        return if (path.startsWith("content://")) Uri.parse(path) else path
+        return when {
+            path.startsWith("content://") -> Uri.parse(path)
+            path.startsWith("file://") -> Uri.parse(path).path ?: path
+            else -> path
+        }
+    }
+
+    fun decodeFullBitmap(context: Context, source: String): Bitmap? {
+        toFilesystemPath(source)?.let { filePath ->
+            val decoded = BitmapFactory.decodeFile(filePath) ?: return null
+            return applyExifRotationFromPath(filePath, decoded)
+        }
+        val uri = resolveContentUri(source) ?: run {
+            val decoded = BitmapFactory.decodeFile(source) ?: return null
+            return applyExifRotationFromPath(source, decoded)
+        }
+        val decoded = context.contentResolver.openInputStream(uri)?.use { input ->
+            val bytes = input.readBytes()
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+        } ?: return null
+        return applyExifRotation(context, uri, decoded)
     }
 
     fun decodeSampledBitmap(context: Context, source: String, maxDim: Int): Bitmap? {
-        val uri = resolveUri(source) ?: return decodeSampledBitmapFromPath(source, maxDim)
+        toFilesystemPath(source)?.let { return decodeSampledBitmapFromPath(it, maxDim) }
+        val uri = resolveContentUri(source) ?: return decodeSampledBitmapFromPath(source, maxDim)
         return context.contentResolver.openInputStream(uri)?.use { input ->
             decodeSampledBitmapFromStream(input, maxDim)?.let { bitmap ->
                 applyExifRotation(context, uri, bitmap)
@@ -25,13 +46,14 @@ object UriImageHelper {
     }
 
     fun compressImage(context: Context, source: String, reqWidth: Int, reqHeight: Int): Bitmap? {
-        val uri = resolveUri(source)
+        val filePath = toFilesystemPath(source)
+        val uri = if (filePath == null) resolveContentUri(source) else null
         val decoded = if (uri != null) {
             context.contentResolver.openInputStream(uri)?.use { input ->
                 decodeSampledBitmapFromStream(input, maxOf(reqWidth, reqHeight))
             }
         } else {
-            decodeSampledBitmapFromPath(source, maxOf(reqWidth, reqHeight))
+            decodeSampledBitmapFromPath(filePath ?: source, maxOf(reqWidth, reqHeight))
         } ?: return null
 
         val scaledBitmap = Bitmap.createScaledBitmap(decoded, reqWidth, reqHeight, true)
@@ -42,12 +64,21 @@ object UriImageHelper {
         return if (uri != null) {
             applyExifRotation(context, uri, scaledBitmap)
         } else {
-            applyExifRotationFromPath(source, scaledBitmap)
+            applyExifRotationFromPath(filePath ?: source, scaledBitmap)
         }
     }
 
-    private fun resolveUri(source: String): Uri? {
+    private fun resolveContentUri(source: String): Uri? {
         return if (source.startsWith("content://")) Uri.parse(source) else null
+    }
+
+    private fun toFilesystemPath(source: String): String? {
+        return when {
+            source.startsWith("file://") -> Uri.parse(source).path
+            source.startsWith("content://") -> null
+            source.startsWith("/") -> source
+            else -> null
+        }
     }
 
     private fun decodeSampledBitmapFromPath(path: String, maxDim: Int): Bitmap? {

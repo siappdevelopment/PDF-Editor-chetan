@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.HWPFDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.GenericPropertyNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PlexOfCps;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.SubdocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.HWPFDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.GenericPropertyNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PlexOfCps;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.SubdocumentType;
 
 
 /**

@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.ACell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.ASheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.ACell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.ASheet;
 /**
  * HSSF wrapper for a cell under evaluation
  * 

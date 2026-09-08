@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               下午3:37:58
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape;
 
 /**
  * lineShape
@@ -219,7 +219,7 @@ public class LineShape extends AutoShape
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape#dispose()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape#dispose()
      *
      */
     public void dispose()

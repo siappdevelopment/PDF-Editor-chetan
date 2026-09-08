@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting;
 
 
 /**
@@ -28,7 +28,7 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.reco
  * @author Dmitriy Kumshayev
  *
  */
-public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.PatternFormatting
+public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.PatternFormatting
 {
 	private final CFRuleRecord cfRuleRecord;
 	private final PatternFormatting patternFormatting;
@@ -45,7 +45,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 	}
 
 	/**
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillBackgroundColor()
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillBackgroundColor()
 	 */
 	public short getFillBackgroundColor()
 	{
@@ -53,7 +53,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 	}
 
 	/**
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillForegroundColor()
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillForegroundColor()
 	 */
 	public short getFillForegroundColor()
 	{
@@ -61,7 +61,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 	}
 
 	/**
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillPattern()
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#getFillPattern()
 	 */
 	public short getFillPattern()
 	{
@@ -70,7 +70,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 
 	/**
 	 * @param bg
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillBackgroundColor(int)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillBackgroundColor(int)
 	 */
 	public void setFillBackgroundColor(short bg)
 	{
@@ -83,7 +83,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 
 	/**
 	 * @param fg
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillForegroundColor(int)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillForegroundColor(int)
 	 */
 	public void setFillForegroundColor(short fg)
 	{
@@ -96,7 +96,7 @@ public class HSSFPatternFormatting implements com.reader.alldocviewer.pdfeditoro
 
 	/**
 	 * @param fp
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillPattern(int)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.PatternFormatting#setFillPattern(int)
 	 */
 	public void setFillPattern(short fp)
 	{

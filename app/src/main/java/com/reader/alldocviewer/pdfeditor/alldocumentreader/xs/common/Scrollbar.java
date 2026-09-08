@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              下午2:30:54
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

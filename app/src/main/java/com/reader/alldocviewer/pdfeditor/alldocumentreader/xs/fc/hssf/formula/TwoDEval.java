@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.AreaEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.AreaEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ValueEval;
 
 /**
- * Common interface of {@link AreaEval} and {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.AreaEvalBase}
+ * Common interface of {@link AreaEval} and {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.AreaEvalBase}
  *
  * @author Josh Micich
  */

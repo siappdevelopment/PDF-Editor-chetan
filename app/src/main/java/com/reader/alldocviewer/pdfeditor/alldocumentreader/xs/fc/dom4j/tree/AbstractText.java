@@ -5,13 +5,13 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree;
 
 import java.io.IOException;
 import java.io.Writer;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Text;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Visitor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Text;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Visitor;
 
 
 /**

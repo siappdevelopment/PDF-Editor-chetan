@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.MainMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TxMasterStyleAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.MainMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TxMasterStyleAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
 
 
 /**

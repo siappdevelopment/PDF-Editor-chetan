@@ -4,75 +4,75 @@
  * 编译器:            android2.2
  * 时间:              下午1:55:20
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel;
 
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.ExtendPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.GroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.LineShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.PictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.BlankRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.DefaultRowHeightRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.EscherAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.HyperlinkRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordBase;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RowRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFAutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFChildAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFClientAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFFreeform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFLine;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPatriarch;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPictureData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeGroup;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.ChartConverter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.AnchorPoint;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.CellAnchor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ModelUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.SectionElementFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbortReaderError;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.RoundChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.XYChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.ExtendPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.GroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.LineShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.PictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.BlankRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.DefaultRowHeightRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.EscherAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.HyperlinkRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordBase;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RowRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFChildAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFClientAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFFreeform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFLine;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPatriarch;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPictureData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFRichTextString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFShapeGroup;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFTextbox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.ChartConverter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.AnchorPoint;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.CellAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ModelUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.SectionElementFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbortReaderError;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.RoundChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.XYChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
 
 import android.graphics.Path;
 import android.graphics.PointF;
@@ -93,7 +93,7 @@ import android.graphics.PointF;
  * <p>
  * <p>
  */
-public class ASheet extends Sheet implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Sheet
+public class ASheet extends Sheet implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Sheet
 {
 
     /**
@@ -102,7 +102,7 @@ public class ASheet extends Sheet implements com.reader.alldocviewer.pdfeditorof
      *
      * @param workbook - The HSSF Workbook object associated with the sheet.
      * @param sheet - lowlevel Sheet object this sheet will represent
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected ASheet(AWorkbook workbook, InternalSheet sheet)
     {
@@ -129,14 +129,14 @@ public class ASheet extends Sheet implements com.reader.alldocviewer.pdfeditorof
         
         
         // cloumn width, style, hidden
-        List<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.ColumnInfo> hssfColumnInfoList = sheet.getColumnInfo();
+        List<com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.ColumnInfo> hssfColumnInfoList = sheet.getColumnInfo();
         if(hssfColumnInfoList != null)
         {
-            Iterator<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.ColumnInfo> iter = hssfColumnInfoList.iterator();
+            Iterator<com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.ColumnInfo> iter = hssfColumnInfoList.iterator();
             while(iter.hasNext())
             {
-                com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.ColumnInfo hssfColumnInfo = iter.next();
-                com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo columnInfo = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo(
+                com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.ColumnInfo hssfColumnInfo = iter.next();
+                com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo columnInfo = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo(
                     hssfColumnInfo.getFirstCol(),
                     hssfColumnInfo.getLastCol(),
                     (int)(hssfColumnInfo.getColWidth() / 256.0 * SSConstant.COLUMN_CHAR_WIDTH * MainConstant.POINT_TO_PIXEL),

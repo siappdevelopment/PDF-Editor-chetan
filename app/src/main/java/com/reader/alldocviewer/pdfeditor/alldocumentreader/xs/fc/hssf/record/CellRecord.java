@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 /**
  * Base class for all cell value records (implementors of {@link CellValueRecordInterface}).
@@ -52,7 +52,7 @@ public abstract class CellRecord extends StandardRecord implements CellValueReco
 	/**
 	 * set the index to the ExtendedFormat
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord
 	 * @param xf index to the XF record
 	 */
 	public final void setXFIndex(short xf) {
@@ -70,7 +70,7 @@ public abstract class CellRecord extends StandardRecord implements CellValueReco
 	/**
 	 * get the index to the ExtendedFormat
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord
 	 * @return index to the XF record
 	 */
 	public final short getXFIndex() {

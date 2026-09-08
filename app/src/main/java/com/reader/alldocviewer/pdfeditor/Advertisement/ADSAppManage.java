@@ -19,6 +19,7 @@ import com.google.android.gms.ads.RequestConfiguration;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ADSAppManage extends Application  implements Configuration.Provider{
 
@@ -30,12 +31,103 @@ public class ADSAppManage extends Application  implements Configuration.Provider
     public static boolean dialogboolean = true;
     public static long appOpenBlockUntil = 0;
     public static boolean isAppOpenBlocked = false;
+    public static void preloadSplashAdsIfNeeded(Activity activity) {
+        if (activity == null || ADSMainClass.getAds_Free()) {
+            return;
+        }
+
+        String splashAdType = ADSMainClass.getSplashADType();
+        if (splashAdType == null || splashAdType.isEmpty()) {
+            return;
+        }
+
+        if (splashAdType.equalsIgnoreCase("Appopen") && ADSMainClass.isAppOpenPreLoad()) {
+            preloadAppOpenAdIfNeeded();
+        }
+
+        String interId = ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME);
+        if (interId != null && !interId.isEmpty()
+                && ADSMainClass.isSplashInterPreLoad()
+                && (splashAdType.equalsIgnoreCase("Inter")
+                || splashAdType.equalsIgnoreCase("Interstitial")
+                || splashAdType.equalsIgnoreCase("Appopen"))) {
+            ADSAppStarting.preloadSplashInterstitialAd(activity, interId);
+        }
+
+        if (interId != null && !interId.isEmpty() && ADSMainClass.isInterPreLoad()) {
+            ADSInterDisplay.preloadInterstitialAd(activity, interId);
+            ADSInterDisplayClick.preloadInterstitialAd(activity, interId);
+        }
+
+        if (ADSMainClass.getBottomSplashShow()) {
+            if ("native".equalsIgnoreCase(ADSMainClass.getSplashAdsType()) && ADSMainClass.isNativePreLoad()) {
+                String nativeId = ADSMainClass.getStringValue(ADSMainClass.splash_native_id);
+                if (nativeId != null && !nativeId.isEmpty()) {
+                    ADSNativeDisplay.preloadNativeAd(activity, nativeId);
+                }
+            } else if (!"native".equalsIgnoreCase(ADSMainClass.getSplashAdsType()) && ADSMainClass.isBannerPreLoad()) {
+                String bannerId = ADSMainClass.getStringValue(ADSMainClass.splash_banner_id);
+                if (bannerId != null && !bannerId.isEmpty()) {
+                    ADSBannerSmall.preloadAdMobBanner(bannerId, activity);
+                }
+            }
+        }
+    }
 
     public static ADSAppManage getApp() {
         return EMIControllerOurInstance;
     }
     public static void blockAppOpenAd(long durationMs) {
         appOpenBlockUntil = System.currentTimeMillis() + durationMs;
+    }
+    public static boolean isAppOpenAdCurrentlyBlocked() {
+        return isAppOpenBlocked || System.currentTimeMillis() < appOpenBlockUntil;
+    }
+    private static boolean mobileAdsInitialized = false;
+
+    public static void initializeMobileAdsIfNeeded(Context context, @Nullable Runnable onComplete) {
+        AtomicBoolean completed = new AtomicBoolean(false);
+        Runnable complete = () -> {
+            if (completed.compareAndSet(false, true) && onComplete != null) {
+                onComplete.run();
+            }
+        };
+
+        if (mobileAdsInitialized) {
+            complete.run();
+            return;
+        }
+
+        // Safe point: without WebView the ad SDK never initializes, so never wait for it.
+        if (!AdSdkInitHelper.isWebViewAvailable(context)) {
+            complete.run();
+            return;
+        }
+
+        // Safe point: offline the init callback may never arrive, so start it without waiting.
+        boolean waitForInit = ADSUtilitis.IsNetworkConnected(context);
+
+        try {
+            List<String> testDeviceIds = Arrays.asList("");
+            RequestConfiguration configuration = new RequestConfiguration.Builder()
+                    .setTestDeviceIds(testDeviceIds)
+                    .build();
+            MobileAds.setRequestConfiguration(configuration);
+            MobileAds.initialize(context, initializationStatus -> {
+                mobileAdsInitialized = true;
+                preloadAppOpenAdIfNeeded();
+                complete.run();
+            });
+        } catch (Throwable t) {
+            // Safe point: init threw, so let the caller continue instead of waiting.
+//            Log.w("ADSAppManage", "Ad SDK init failed", t);
+            complete.run();
+            return;
+        }
+
+        if (!waitForInit) {
+            complete.run();
+        }
     }
 
     @Override

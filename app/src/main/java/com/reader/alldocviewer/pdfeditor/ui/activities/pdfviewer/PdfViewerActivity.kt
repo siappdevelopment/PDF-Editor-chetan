@@ -10,7 +10,6 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.os.Build
 import android.os.Bundle
-import android.text.InputType
 import android.transition.ChangeBounds
 import android.transition.Slide
 import android.transition.TransitionManager
@@ -20,7 +19,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.view.WindowManager
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
@@ -39,7 +37,6 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener
 import com.github.barteksc.pdfviewer.util.FitPolicy
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSBannerSmall
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSInterDisplayClick
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
@@ -66,7 +63,6 @@ import com.reader.alldocviewer.pdfeditor.ui.activities.pdfOpen.PdfOpenActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.search.SearchAllFilesActivity
 import com.reader.alldocviewer.pdfeditor.data.local.entity.MediaFile
 import com.reader.alldocviewer.pdfeditor.helper_tool.HelperTools
-import com.reader.alldocviewer.pdfeditor.utils.FileConst
 import com.reader.alldocviewer.pdfeditor.utils.MoreOptionsSheetGuard
 import com.reader.alldocviewer.pdfeditor.utils.Utils
 import com.reader.alldocviewer.pdfeditor.utils.AppPreferences
@@ -164,7 +160,8 @@ class PdfViewerActivity : BaseActivity(),
                     ADSMainClass.getStringValue(ADSMainClass.PDF_VIEWER_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -197,7 +194,7 @@ class PdfViewerActivity : BaseActivity(),
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getPdfViewerInterShow())
     }
 
     private fun loadPdfViewPreferences() {
@@ -307,12 +304,13 @@ class PdfViewerActivity : BaseActivity(),
         binding.rEyeProtect.visibility = if (eyeProtectMode) View.VISIBLE else View.GONE
     }
 
+    private var lastShareClickTime = 0L
+
     private fun setupUi() {
         binding.tvTitle.text = displayName
-        binding.ivBackMain.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+        binding.ivBackMain.setOnClickListener { onBack() }
         binding.ivPdfOption.setOnClickListener { showOptionsSheet() }
         binding.layoutShare.setOnClickListener { sharePdf() }
-        binding.ivShare.setOnClickListener { sharePdf() }
         binding.layoutViewMode.setOnClickListener { showViewModeSheet() }
         binding.layoutManage.setOnClickListener { openManagePages() }
         binding.layoutEdit.setOnClickListener { openPdfEditor() }
@@ -409,24 +407,16 @@ class PdfViewerActivity : BaseActivity(),
         val pageCount = binding.customPdfView.pageCount
         if (pageCount <= 0) return
 
-        val input = EditText(this).apply {
-            hint = getString(R.string.enter_page_number, pageCount)
-            inputType = InputType.TYPE_CLASS_NUMBER
-        }
+        Utils.gotoPageDialog(this, pageCount) { action, pageText ->
+            if (action != Utils.positiveButton) return@gotoPageDialog
 
-        MaterialAlertDialogBuilder(this)
-            .setTitle(R.string.goto_page)
-            .setView(input)
-            .setNegativeButton(R.string.cancel, null)
-            .setPositiveButton(R.string.ok) { _, _ ->
-                val page = input.text.toString().toIntOrNull()
-                if (page == null || page < 1 || page > pageCount) {
-                    Toast.makeText(this, R.string.invalid_page_number, Toast.LENGTH_SHORT).show()
-                } else {
-                    binding.customPdfView.jumpTo(page - 1)
-                }
+            val page = pageText.toIntOrNull()
+            if (page == null || page < 1 || page > pageCount) {
+                Toast.makeText(this, R.string.invalid_page_number, Toast.LENGTH_SHORT).show()
+            } else {
+                binding.customPdfView.jumpTo(page - 1)
             }
-            .show()
+        }
     }
 
     private fun showViewModeSheet() {
@@ -593,8 +583,16 @@ class PdfViewerActivity : BaseActivity(),
             return
         }
 
-        if (nightChanged && binding.customPdfView.pageCount > 0) {
-            binding.customPdfView.setNightMode(nightMode)
+        if (nightChanged) {
+            applyStatusBarAppearance()
+            if (binding.customPdfView.pageCount > 0) {
+                val currentPage = binding.customPdfView.currentPage
+                binding.customPdfView.setNightMode(nightMode)
+                binding.customPdfView.post {
+                    binding.customPdfView.jumpTo(currentPage, false)
+                    binding.customPdfView.invalidate()
+                }
+            }
         }
     }
 
@@ -776,7 +774,9 @@ class PdfViewerActivity : BaseActivity(),
                     path = file.path ?: "",
                     size = file.size,
                     time = file.time,
-                    isCheckBoxChecked = true
+                    isCheckBoxChecked = true,
+                    isEncrypted = file.isEncrypted,
+                    password = filePassword
                 )
             )
             val intent = Intent(
@@ -927,6 +927,10 @@ class PdfViewerActivity : BaseActivity(),
     }
 
     private fun sharePdf() {
+        val now = System.currentTimeMillis()
+        if (now - lastShareClickTime < 600L) return
+        lastShareClickTime = now
+
         val file = File(filePath)
         if (!file.exists()) return
         val shareIntent = Intent(Intent.ACTION_SEND).apply {

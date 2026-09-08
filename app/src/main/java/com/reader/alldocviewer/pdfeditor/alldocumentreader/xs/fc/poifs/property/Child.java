@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property;
 
 /**
  * This interface defines methods for finding and setting sibling

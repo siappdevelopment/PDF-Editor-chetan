@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.atp.AnalysisToolPak;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.atp.AnalysisToolPak;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
 
 
 /**

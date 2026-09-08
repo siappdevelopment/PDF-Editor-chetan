@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 /**
  * Exception internally thrown by the SAX Modification classes. This is a

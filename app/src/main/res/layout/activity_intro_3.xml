@@ -16,8 +16,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            >
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
@@ -25,66 +25,107 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/img_intro_3" />
 
+
         </RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/llIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_24sdp"
-            android:orientation="horizontal" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:fontFamily="@font/fig_tree_semibold"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
-            android:text="@string/intro_3_title"
+            android:text="@string/powerful_pdf_tools"
+            android:layout_marginHorizontal="@dimen/_50sdp"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp" />
+            android:textSize="@dimen/_18sdp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:fontFamily="@font/fig_tree_medium"
-            android:gravity="center"
-            android:maxLines="2"
-            android:text="@string/intro_3_description"
-            android:textColor="@color/gray"
-            android:textSize="@dimen/_10sdp" />
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_16sdp"
 
-        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/fig_tree_medium"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:text="@string/convert_merge_split_sign_and_manage_pdfs_with_ease"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp" />
+        <LinearLayout
+            android:id="@+id/indicatorContainer"
+            android:layout_marginVertical="@dimen/_12sdp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnNext"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_38sdp"
+            android:layout_gravity="bottom"
             android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_12sdp"
-            app:shimmer_base_alpha="1"
-            app:shimmer_duration="1500"
-            app:shimmer_highlight_alpha="0.4">
+            android:background="@drawable/bg_continue_icon"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/fig_tree_medium"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/continue_"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_12sdp" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvNext"
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_container_banner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/custom_button"
-                android:fontFamily="@font/fig_tree_medium"
-                android:gravity="center"
-                android:text="@string/next"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:shimmer_auto_start="true"
+                app:shimmer_base_color="#ccc">
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
+                <include layout="@layout/ad_unifiled_small" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flNativeSmallPlaceholder"
+                style="@style/NativeAdsView" />
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/flBannerSmallPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 

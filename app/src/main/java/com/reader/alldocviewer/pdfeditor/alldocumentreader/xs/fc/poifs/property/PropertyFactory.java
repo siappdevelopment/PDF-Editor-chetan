@@ -17,14 +17,14 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property;
 
 import java.io.IOException;
 
 import java.util.*;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.ListManagedBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.ListManagedBlock;
 
 
 

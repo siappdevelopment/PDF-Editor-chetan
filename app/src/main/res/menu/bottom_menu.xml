@@ -12,6 +12,12 @@
         android:title="@string/recent" />
 
     <item
+        android:id="@+id/nav_add"
+        android:enabled="false"
+        android:icon="@drawable/ic_nav_spacer"
+        android:title="" />
+
+    <item
         android:id="@+id/nav_bookmark"
         android:icon="@drawable/ic_bookmark"
         android:title="@string/bookmarks" />

@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.TableSprmUncompressor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.TableSprmUncompressor;
 
 import android.util.Log;
 

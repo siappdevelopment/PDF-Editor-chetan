@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.CategorySeries;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.DialRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.DialRenderer.Type;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.util.MathHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.CategorySeries;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.DialRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.DialRenderer.Type;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.util.MathHelper;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

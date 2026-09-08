@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.itextpdf.text.html.HtmlTags;
 
-/* loaded from: classes11.dex */
+
 public class StickerTextView extends StickerView {
     private AutoResizeTextView textView;
 

@@ -5,7 +5,7 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.util;
 
 import java.lang.reflect.Array;
 import java.util.AbstractList;

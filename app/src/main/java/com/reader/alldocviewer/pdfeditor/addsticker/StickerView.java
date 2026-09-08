@@ -21,7 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.reader.alldocviewer.pdfeditor.R;
 
-/* loaded from: classes11.dex */
+
 public abstract class StickerView extends FrameLayout {
     private static final int BUTTON_SIZE_DP = 25;
     private static final int SELF_SIZE_DP = 100;
@@ -60,7 +60,7 @@ public abstract class StickerView extends FrameLayout {
     private float this_orgY;
     double vAngle;
 
-    /* loaded from: classes11.dex */
+    
     public interface OnStickerOperationListener {
         void onStickerAdded();
 
@@ -491,7 +491,7 @@ public abstract class StickerView extends FrameLayout {
         super.onDraw(canvas);
     }
 
-    /* loaded from: classes11.dex */
+    
     public class BorderView extends View {
         public BorderView(Context context) {
             super(context);

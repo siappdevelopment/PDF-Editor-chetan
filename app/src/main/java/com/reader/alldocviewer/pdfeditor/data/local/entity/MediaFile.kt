@@ -19,4 +19,5 @@ data class MediaFile(
     var recentType: Int = 0,
     var lastOpenTime: Long = 0,
     var isEncrypted: Boolean = false,
+    var password: String? = null,
 ) : Serializable

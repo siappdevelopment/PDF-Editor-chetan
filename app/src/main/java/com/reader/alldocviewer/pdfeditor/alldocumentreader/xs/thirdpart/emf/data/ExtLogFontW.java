@@ -1,13 +1,13 @@
 // Copyright 2002, FreeHEP.
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
 
 /**
  * EMF ExtLogFontW

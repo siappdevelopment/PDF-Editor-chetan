@@ -2,13 +2,9 @@ package com.reader.alldocviewer.pdfeditor.launcher.common;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -16,45 +12,27 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.cardview.widget.CardView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdValue;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.appopen.AppOpenAd;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-import com.google.android.gms.ads.nativead.MediaView;
-import com.google.android.gms.ads.nativead.NativeAd;
-import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 public class AdPlacement {
     public static InterstitialAd interstitialAd;
@@ -132,10 +110,6 @@ public class AdPlacement {
     public static boolean launcherAppNativeAdShow = false;
     public static int launcherAppNativeAdShowPerDay;
     public static String launcherAppNativeId = "";
-
-    public static boolean newsNativeAdShow = false;
-    public static String newsNativeId1 = "";
-    public static String newsNativeId2 = "";
 
     public static boolean messageAdShow = false;
     public static String messageAdType = "";
@@ -663,40 +637,8 @@ public class AdPlacement {
         AdPlacement.launcherAppNativeId = launcherAppNativeId;
     }
 
-    public static boolean getNewsNativeAdShow() {
-        return newsNativeAdShow;
-    }
-
-    public static void setNewsNativeAdShow(boolean newsNativeAdShow) {
-        AdPlacement.newsNativeAdShow = newsNativeAdShow;
-    }
-
-    public static boolean shouldShowNewsNativeAd1() {
-        return getNewsNativeAdShow() && isValidAdId(getNewsNativeId1());
-    }
-
-    public static boolean shouldShowNewsNativeAd2() {
-        return getNewsNativeAdShow() && isValidAdId(getNewsNativeId2());
-    }
-
     private static boolean isValidAdId(String adId) {
         return adId != null && !adId.trim().isEmpty();
-    }
-
-    public static String getNewsNativeId1() {
-        return newsNativeId1;
-    }
-
-    public static void setNewsNativeId1(String newsNativeId1) {
-        AdPlacement.newsNativeId1 = newsNativeId1;
-    }
-
-    public static String getNewsNativeId2() {
-        return newsNativeId2;
-    }
-
-    public static void setNewsNativeId2(String newsNativeId2) {
-        AdPlacement.newsNativeId2 = newsNativeId2;
     }
 
     public static boolean getMessageAdShow() {

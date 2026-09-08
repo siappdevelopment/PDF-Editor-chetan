@@ -11,6 +11,7 @@
         style="@style/TextStyle.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:layout_marginBottom="@dimen/_4sdp"
         android:paddingHorizontal="@dimen/_16sdp"
         android:paddingTop="@dimen/_16sdp"
@@ -23,6 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_16sdp"
+        android:singleLine="true"
+
         android:paddingHorizontal="@dimen/_16sdp"
         android:text="@string/choose_a_style_for_the_shortcut_icon"
         android:textColor="@color/grey_color"
@@ -73,6 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/classic_red"
+                        android:singleLine="true"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_10sdp" />
 
@@ -108,6 +112,8 @@
                         android:id="@+id/tvStyle1"
                         style="@style/TextStyle.Bold"
                         android:layout_width="wrap_content"
+                        android:singleLine="true"
+
                         android:layout_height="wrap_content"
                         android:text="@string/premium"
                         android:textColor="@color/black"
@@ -145,6 +151,8 @@
                         android:id="@+id/tvStyle2"
                         style="@style/TextStyle.Bold"
                         android:layout_width="wrap_content"
+                        android:singleLine="true"
+
                         android:layout_height="wrap_content"
                         android:text="@string/sleek_blue"
                         android:textColor="@color/black"
@@ -182,6 +190,8 @@
                         android:id="@+id/tvStyle3"
                         style="@style/TextStyle.Bold"
                         android:layout_width="wrap_content"
+                        android:singleLine="true"
+
                         android:layout_height="wrap_content"
                         android:text="@string/gradient"
                         android:textColor="@color/black"

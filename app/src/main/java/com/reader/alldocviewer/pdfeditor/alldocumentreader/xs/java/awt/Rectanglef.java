@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
 /*
  * Copyright (c) 2002-2004 LWJGL Project All rights reserved.

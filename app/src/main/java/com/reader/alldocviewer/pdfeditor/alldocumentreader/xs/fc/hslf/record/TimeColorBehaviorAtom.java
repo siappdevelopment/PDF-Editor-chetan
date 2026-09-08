@@ -4,11 +4,11 @@
  * 编译器:            android2.2
  * 时间:              下午7:10:06
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 import java.util.Hashtable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordAtom;
 
 /**
  * TODO: An atom record that specifies the information for an animation that changes the color of an object

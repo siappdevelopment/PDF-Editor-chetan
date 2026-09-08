@@ -5,7 +5,7 @@
  * 时间:              下午5:07:21
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,10 +13,10 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.OldFileFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.OfficeXmlFileException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.OldFileFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.OfficeXmlFileException;
 
 import android.app.Activity;
 import android.app.AlertDialog;

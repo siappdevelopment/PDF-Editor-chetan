@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.BorderCode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.SectionProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.BorderCode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.SectionProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 
 @Internal

@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 import java.io.*;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.CorruptPowerPointFileException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.EncryptedPowerPointFileException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.OldPowerPointFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.OldWordFileFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.*;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.StringUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.CorruptPowerPointFileException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.EncryptedPowerPointFileException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.OldPowerPointFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.OldWordFileFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.*;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.StringUtil;
 
 
 /**

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IFont;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.RichTextString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IFont;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.RichTextString;
 
 
 /**
@@ -204,7 +204,7 @@ public final class HSSFRichTextString implements Comparable<HSSFRichTextString>,
      * get the index to the string in the SSTRecord
      *
      * @return index of string in the SST Table
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SSTRecord
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SSTRecord
      */
     public int getSSTIndex()
     {

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
 
 /**
  * Implementation of the cell range address lists,like is described
@@ -30,11 +30,11 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.reco
  * range address (called an ADDR structure) contains 4 16-bit-values.
  * </p>
  * 
- * @deprecated use {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellRangeAddressList}
+ * @deprecated use {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellRangeAddressList}
  * 
  * @author Dragos Buleandra (dragos.buleandra@trade2b.ro)
  */
-public class CellRangeAddressList extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellRangeAddressList {
+public class CellRangeAddressList extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellRangeAddressList {
 	public CellRangeAddressList(int firstRow, int lastRow, int firstCol, int lastCol) {
 		super(firstRow,lastRow,firstCol,lastCol);
 	}

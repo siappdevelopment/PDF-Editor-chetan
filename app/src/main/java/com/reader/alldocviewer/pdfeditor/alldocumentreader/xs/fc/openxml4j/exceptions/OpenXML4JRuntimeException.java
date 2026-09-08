@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions;
 
 /**
  * Global exception throws when a critical error occurs (this exception is

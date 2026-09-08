@@ -16,17 +16,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
 
 /**
  * Interface for use with the HSSFRequest and HSSFEventFactory.  Users should create
  * a listener supporting this interface and register it with the HSSFRequest (associating
  * it with Record SID's).
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFRequest
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFRequest
  * @author  acoliver@apache.org
  */
 

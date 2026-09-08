@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午2:51:12
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other;
 
 /**
  * TODO: 这个类主要是管理单个Cell（或者合并单元格中的其中一个单元格）的信息，滚动后可见部分的宽和高

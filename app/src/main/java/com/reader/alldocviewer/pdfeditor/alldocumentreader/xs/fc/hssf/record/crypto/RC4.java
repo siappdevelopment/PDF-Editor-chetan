@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.crypto;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.crypto;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
 
 /**
  * Simple implementation of the alleged RC4 algorithm.

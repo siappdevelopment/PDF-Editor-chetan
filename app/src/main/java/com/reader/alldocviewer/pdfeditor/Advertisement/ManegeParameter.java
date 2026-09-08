@@ -17,9 +17,12 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class ManegeParameter {
 
+
+
+
     static int jas = 256;
     static int sjdh = 128;
-    static String sdjbf = "AES/CBC/PKCS5Padding";
+    static String sdjbf = "AES/CBC/PKCS7Padding";
     static String ushdd = "U2F";
 
     public static String cipherSignatureSpace(String password, String cipherText) throws UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {

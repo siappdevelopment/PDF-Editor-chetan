@@ -1,13 +1,13 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf;
 
 
 //import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data.BitmapInfoHeader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data.BlendFunction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data.BitmapInfoHeader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data.BlendFunction;
 
 import android.graphics.Bitmap;
 
@@ -115,7 +115,7 @@ public class EMFImageLoader {
                 java.awt.BorderLayout.CENTER,
                 new javax.swing.JLabel(
                     new javax.swing.ImageIcon(result)));
-            f.setSize(new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension(width + 20, height + 20));
+            f.setSize(new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension(width + 20, height + 20));
             f.setVisible(true);*/
 
             return result;
@@ -472,7 +472,7 @@ public class EMFImageLoader {
                 java.awt.BorderLayout.CENTER,
                 new javax.swing.JLabel(
                     new javax.swing.ImageIcon(result)));
-            f.setSize(new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension(width + 20, height + 20));
+            f.setSize(new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension(width + 20, height + 20));
             f.setVisible(true);*/
             
             return result;

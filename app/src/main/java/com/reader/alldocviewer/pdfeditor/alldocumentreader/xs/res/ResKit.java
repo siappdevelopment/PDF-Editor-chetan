@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.res;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.res;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

@@ -1,16 +1,16 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview;
 
 import android.content.Context;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter;
 
-/* loaded from: classes11.dex */
+
 public class CellRowRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
     private final ITableAdapter mTableAdapter;
     @NonNull
@@ -42,7 +42,7 @@ public class CellRowRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C
         this.mYPosition = i;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter, androidx.recyclerview.widget.RecyclerView.Adapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter, androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemViewType(int i) {
         return this.mTableAdapter.getCellItemViewType(i);
     }

@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format;
 
 
 import java.text.DecimalFormat;
@@ -30,7 +30,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format.CellFormatPart.PartHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format.CellFormatPart.PartHandler;
 
 /**
  * This class implements printing out a value using a number format.

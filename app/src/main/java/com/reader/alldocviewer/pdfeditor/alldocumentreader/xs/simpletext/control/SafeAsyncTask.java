@@ -4,13 +4,13 @@
  * 编译器:            android2.2
  * 时间:              下午9:36:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control;
 
 import android.os.AsyncTask;
 import java.util.concurrent.RejectedExecutionException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ErrorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ErrorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
 /**
  * PDF document rending
  * <p>

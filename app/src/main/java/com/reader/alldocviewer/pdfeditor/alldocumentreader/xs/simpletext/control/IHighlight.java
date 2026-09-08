@@ -5,9 +5,9 @@
  * 时间:              上午9:57:12
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
 
 import android.graphics.Canvas;
 

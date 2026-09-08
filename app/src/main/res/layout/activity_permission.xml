@@ -34,7 +34,7 @@
                 <ImageView
                     android:id="@+id/ivPermission"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_140sdp"
+                    android:layout_height="@dimen/_120sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/iv_permission" />
@@ -55,12 +55,12 @@
                     style="@style/TextStyle.Medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:layout_marginHorizontal="@dimen/_50sdp"
                     android:layout_marginTop="@dimen/_6sdp"
                     android:gravity="center"
                     android:text="@string/allow_access_to_continue"
                     android:textColor="@color/grey_color"
-                    android:textSize="@dimen/_11sdp" />
+                    android:textSize="@dimen/_10sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,18 +69,14 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:orientation="vertical">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardNotification"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="@dimen/_12sdp"
-                        app:cardElevation="2dp"
-                        app:cardUseCompatPadding="true">
 
                         <LinearLayout
+                            android:id="@+id/cardNotification"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+
+                            android:background="@drawable/bg_border_layout"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:padding="@dimen/_10sdp">
@@ -99,15 +95,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/TextStyle.Bold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/fig_tree_semibold"
                                     android:text="@string/notification"
                                     android:textColor="@color/black"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:textSize="@dimen/_13sdp" />
 
                                 <TextView
-                                    style="@style/TextStyle.Medium"
+                                    android:fontFamily="@font/fig_tree_medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_3sdp"
@@ -116,21 +112,16 @@
                                     android:textSize="@dimen/_10sdp" />
                             </LinearLayout>
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardCall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="@dimen/_12sdp"
-                        app:cardElevation="2dp"
-                        app:cardUseCompatPadding="true">
 
                         <LinearLayout
+                            android:id="@+id/cardCall"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@drawable/bg_border_layout"
+
                             android:orientation="horizontal"
                             android:padding="@dimen/_10sdp">
 
@@ -148,15 +139,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/TextStyle.Bold"
+                                    android:fontFamily="@font/fig_tree_semibold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/call"
                                     android:textColor="@color/black"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:textSize="@dimen/_13sdp" />
 
                                 <TextView
-                                    style="@style/TextStyle.Medium"
+                                    android:fontFamily="@font/fig_tree_medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_3sdp"
@@ -165,21 +156,17 @@
                                     android:textSize="@dimen/_10sdp" />
                             </LinearLayout>
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardDisplayOver"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="@dimen/_12sdp"
-                        app:cardElevation="2dp"
-                        app:cardUseCompatPadding="true">
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
+                            android:layout_marginVertical="@dimen/_5sdp"
+
+                            android:background="@drawable/bg_border_layout"
+
                             android:orientation="horizontal"
                             android:padding="@dimen/_10sdp">
 
@@ -197,15 +184,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/TextStyle.Bold"
+                                    android:fontFamily="@font/fig_tree_semibold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/display_over_other_apps"
                                     android:textColor="@color/black"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:textSize="@dimen/_13sdp" />
 
                                 <TextView
-                                    style="@style/TextStyle.Medium"
+                                    android:fontFamily="@font/fig_tree_medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_3sdp"
@@ -214,7 +201,6 @@
                                     android:textSize="@dimen/_10sdp" />
                             </LinearLayout>
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -238,6 +224,7 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/bg_pill_button_red"
+                android:backgroundTint="@color/app_color"
                 android:gravity="center"
                 android:text="@string/allow_permission"
                 android:textAllCaps="false"
@@ -247,6 +234,8 @@
             <LinearLayout
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginVertical="5dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -255,11 +244,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/nestest_scroll_view">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
 
                     <com.facebook.shimmer.ShimmerFrameLayout
                         android:id="@+id/shimmer_container_banner"

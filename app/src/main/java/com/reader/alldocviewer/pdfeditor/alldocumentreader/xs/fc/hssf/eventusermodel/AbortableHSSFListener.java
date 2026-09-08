@@ -16,11 +16,11 @@
 ==================================================================== */
 
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
 
 
 /**
@@ -32,9 +32,9 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.reco
  * This should then be registered with the HSSFRequest (associating
  * it with Record SID's) as usual.
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFRequest
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFRequest
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFUserException
  *
  * @author Carey Sublette (careysub@earthling.net)
  */

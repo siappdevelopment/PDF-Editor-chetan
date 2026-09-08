@@ -5,10 +5,10 @@
  * 时间:              下午2:00:00
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.DocAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.DocAttr;
 
 
 

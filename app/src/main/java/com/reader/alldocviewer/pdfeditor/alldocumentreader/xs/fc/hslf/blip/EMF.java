@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -23,11 +23,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.InflaterInputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
 
 
 /**

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 /**
- * Common base class of {@link Record} and {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.RecordAggregate}
+ * Common base class of {@link Record} and {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.RecordAggregate}
  * 
  * @author Josh Micich
  */

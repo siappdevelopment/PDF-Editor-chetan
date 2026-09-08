@@ -15,39 +15,51 @@ object PDFSplitter {
     ) {
         val outputPaths = mutableListOf<String>()
         try {
-            for ((index, model) in splitModels.withIndex()) {
-                val reader = if (model.password.isNullOrEmpty()) {
-                    PdfReader(model.path)
-                } else {
-                    PdfReader(model.path, model.password!!.toByteArray())
-                }
+            if (splitModels.isEmpty()) {
+                callback.onError("No pages selected")
+                return
+            }
 
+            for ((index, model) in splitModels.withIndex()) {
                 val pagesToExtract = model.selectedPages
                 if (pagesToExtract.isEmpty()) {
-                    reader.close()
                     continue
                 }
 
+                val reader = openReader(model.path, model.password)
                 val destFile = PdfFileNameGenerator.uniqueFile(outputDir, PdfFileNameGenerator.Type.SPLIT)
-                
-                val document = Document(reader.getPageSizeWithRotation(1))
+
+                val document = Document(reader.getPageSizeWithRotation(pagesToExtract.first()))
                 val copy = PdfCopy(document, FileOutputStream(destFile))
                 document.open()
 
                 for (page in pagesToExtract) {
                     copy.addPage(copy.getImportedPage(reader, page))
                 }
-                
+
                 document.close()
                 reader.close()
-                
+
                 outputPaths.add(destFile.absolutePath)
                 callback.onProgress(((index + 1) * 100) / splitModels.size)
+            }
+
+            if (outputPaths.isEmpty()) {
+                callback.onError("No pages selected")
+                return
             }
             callback.onSuccess(outputPaths)
         } catch (e: Exception) {
             e.printStackTrace()
             callback.onError(e.message ?: "Unknown error")
+        }
+    }
+
+    private fun openReader(path: String, password: String?): PdfReader {
+        return if (password.isNullOrEmpty()) {
+            PdfReader(path)
+        } else {
+            PdfReader(path, password.toByteArray())
         }
     }
 }

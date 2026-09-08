@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              上午11:21:00
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.sheetbar.SheetBar;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view.SheetView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.sheetbar.SheetBar;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view.SheetView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.content.Context;
 import android.widget.RelativeLayout;

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -23,21 +23,21 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.DocumentSummaryInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySetFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.SummaryInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.Entry;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.NPOIFSFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POIUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.DocumentSummaryInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySetFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.SummaryInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.Entry;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.NPOIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POIUtils;
 
 
 /**
@@ -204,7 +204,7 @@ public abstract class POIDocument
             logger.log(POILogger.WARN, "Error creating property set with name " + setName + "\n"
                 + ie);
         }
-        catch(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.HPSFException he)
+        catch(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.HPSFException he)
         {
             // Oh well, doesn't exist
             logger.log(POILogger.WARN, "Error creating property set with name " + setName + "\n"
@@ -271,7 +271,7 @@ public abstract class POIDocument
 
             logger.log(POILogger.INFO, "Wrote property set " + name + " of size " + data.length);
         }
-        catch(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.WritingNotSupportedException wnse)
+        catch(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.WritingNotSupportedException wnse)
         {
             System.err.println("Couldn't write property set with name " + name
                 + " as not supported by HPSF yet");

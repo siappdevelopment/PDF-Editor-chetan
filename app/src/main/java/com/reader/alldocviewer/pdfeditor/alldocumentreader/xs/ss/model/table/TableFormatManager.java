@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
 
 public class TableFormatManager 
 {

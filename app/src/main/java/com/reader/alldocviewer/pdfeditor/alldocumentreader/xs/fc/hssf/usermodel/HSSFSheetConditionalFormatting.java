@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.CFRecordsAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.ConditionalFormattingTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormatting;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.Region;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.CFRecordsAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.ConditionalFormattingTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ConditionalFormattingRule;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.SheetConditionalFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.Region;
 
 
 /**
@@ -50,7 +50,7 @@ public final class HSSFSheetConditionalFormatting implements SheetConditionalFor
 	 * TODO - formulas containing cell references are currently not parsed properly
 	 *
 	 * @param comparisonOperation - a constant value from
-	 *		 <tt>{@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator}</tt>: <p>
+	 *		 <tt>{@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator}</tt>: <p>
 	 * <ul>
 	 *		 <li>BETWEEN</li>
 	 *		 <li>NOT_BETWEEN</li>
@@ -64,8 +64,8 @@ public final class HSSFSheetConditionalFormatting implements SheetConditionalFor
 	 * </p>
 	 * @param formula1 - formula for the valued, compared with the cell
 	 * @param formula2 - second formula (only used with
-	 * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator#BETWEEN}) and
-	 * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator#NOT_BETWEEN} operations)
+	 * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator#BETWEEN}) and
+	 * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord.ComparisonOperator#NOT_BETWEEN} operations)
 	 */
 	public HSSFConditionalFormattingRule createConditionalFormattingRule(
 			byte comparisonOperation,

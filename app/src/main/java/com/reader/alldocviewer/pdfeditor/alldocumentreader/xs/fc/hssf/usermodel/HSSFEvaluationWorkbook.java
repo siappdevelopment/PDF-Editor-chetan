@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationName;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaParseException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaParsingWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaRenderingWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.NamePtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.NameXPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NameRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.ACell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.ASheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationName;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaParseException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaParsingWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaRenderingWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.NamePtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.NameXPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NameRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.ACell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.ASheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview;
 
 import android.content.Context;
 import android.view.ViewGroup;
@@ -6,14 +6,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderSortHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderSortHelper;
 
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class RowHeaderRecyclerViewAdapter<RH> extends AbstractRecyclerViewAdapter<RH> {
     private RowHeaderSortHelper mRowHeaderSortHelper;
     @NonNull
@@ -37,7 +37,7 @@ public class RowHeaderRecyclerViewAdapter<RH> extends AbstractRecyclerViewAdapte
         this.mTableAdapter.onBindRowHeaderViewHolder(abstractViewHolder, getItem(i), i);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter, androidx.recyclerview.widget.RecyclerView.Adapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.AbstractRecyclerViewAdapter, androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemViewType(int i) {
         return this.mTableAdapter.getRowHeaderItemViewType(i);
     }

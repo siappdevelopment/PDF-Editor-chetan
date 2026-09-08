@@ -15,25 +15,25 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 import java.util.LinkedList;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.AutoNumberTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextBytesAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextCharsAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextRulerAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextSpecInfoAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.StringUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.AutoNumberTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.StyleTextPropAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextBytesAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextCharsAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextRulerAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextSpecInfoAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.StringUtil;
 
 
 /**
@@ -669,7 +669,7 @@ public final class TextRun
     /**
     * Returns the type of the text, from the TextHeaderAtom.
     * Possible values can be seen from TextHeaderAtom
-    * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom
+    * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom
     */
     public int getRunType()
     {
@@ -680,7 +680,7 @@ public final class TextRun
     * Changes the type of the text. Values should be taken
     *  from TextHeaderAtom. No checking is done to ensure you
     *  set this to a valid value!
-    * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom
+    * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom
     */
     public void setRunType(int type)
     {

@@ -4,22 +4,22 @@
  * 编译器:            android2.2
  * 时间:              下午1:33:41
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader;
 
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ElementHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ElementPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.SAXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableCellBorders;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableCellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle.TableStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttributeSetImpl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ElementHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ElementPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.SAXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableCellBorders;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableCellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle.TableStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttributeSetImpl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
 
 /**
  * TODO: 文件注释

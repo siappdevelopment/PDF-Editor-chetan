@@ -1,10 +1,10 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.Date;
 
-/* loaded from: classes11.dex */
+
 public abstract class AbstractSortComparator {
     @NonNull
     protected SortState mSortState;

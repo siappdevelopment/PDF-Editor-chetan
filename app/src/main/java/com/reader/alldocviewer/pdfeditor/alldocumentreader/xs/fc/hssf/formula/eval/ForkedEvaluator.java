@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.CollaboratingWorkbooksEnvironment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.IStabilityClassifier;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.WorkbookEvaluator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFEvaluationWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.CollaboratingWorkbooksEnvironment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.EvaluationWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.IStabilityClassifier;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.WorkbookEvaluator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFEvaluationWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
 
 
 /**

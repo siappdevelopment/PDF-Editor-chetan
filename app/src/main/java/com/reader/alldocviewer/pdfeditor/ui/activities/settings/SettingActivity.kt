@@ -8,6 +8,7 @@ import android.provider.OpenableColumns
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
@@ -23,6 +24,9 @@ import com.reader.alldocviewer.pdfeditor.R
 import com.reader.alldocviewer.pdfeditor.data.local.entity.ModelFile
 import com.reader.alldocviewer.pdfeditor.databinding.ActivitySettingBinding
 import com.reader.alldocviewer.pdfeditor.databinding.ThemeDialogDesignBinding
+import com.reader.alldocviewer.pdfeditor.launcher.common.Utils
+import com.reader.alldocviewer.pdfeditor.launcher.utils.ThemeManager
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowManager
 import com.reader.alldocviewer.pdfeditor.ui.activities.base.BaseActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.recycleBin.RecycleBinActivity
@@ -135,7 +139,8 @@ class SettingActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.SETTING_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -149,17 +154,41 @@ class SettingActivity : BaseActivity() {
         super.onResume()
         binding.switchKeepScreenOn.isChecked = AppPreferences.getPdfKeepScreenOn(this)
         updateLanguageText()
+        updateAddWidgetVisibility()
+    }
+    fun onBack() {
+            ADSInterDisplayClick.ADSBackDisplayInterstitial(
+                this@SettingActivity,
+                ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
+                { _ -> finish() },
+                ADSMainClass.getSettingInterShow()
+            )
+            return
+
     }
 
     private fun initView() {
-        binding.ivBack.setOnClickListener {
-            finish()
-        }
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                onBack()
+            }
+        })
+        binding.ivBack.setOnClickListener{
+            onBack()
 
+        }
         binding.rlLanguage.setOnClickListener {
-            val intentData = Intent(this, LanguageActivity::class.java)
-            intentData.putExtra("language", true)
-            startActivity(intentData)
+
+
+            ADSInterDisplayClick.ADSInterstitialShowing(
+                this,
+                ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                {
+                    val intentData = Intent(this, LanguageActivity::class.java)
+                    intentData.putExtra("language", true)
+                    startActivity(intentData)
+                },
+                ADSMainClass.getLanguageInterShow())
         }
 
         binding.rlTheme.setOnClickListener {
@@ -184,11 +213,16 @@ class SettingActivity : BaseActivity() {
             ADSInterDisplayClick.ADSInterstitialShowing(
                 this,
                 ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
-                { startActivity(Intent(this@SettingActivity, RecycleBinActivity::class.java)) })
+                { startActivity(Intent(this@SettingActivity, RecycleBinActivity::class.java)) },
+                ADSMainClass.getSettingInterShow())
         }
 
         binding.rlFAQ.setOnClickListener {
-            startActivity(Intent(this, GiftFAQActivity::class.java))
+            ADSInterDisplayClick.ADSInterstitialShowing(
+                this,
+                ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                { startActivity(Intent(this@SettingActivity, GiftFAQActivity::class.java)) },
+                ADSMainClass.getFaqInterShow())
         }
 
         binding.rlTermsOfUse.setOnClickListener {
@@ -273,6 +307,15 @@ class SettingActivity : BaseActivity() {
 
         updateThemeText()
         updateLanguageText()
+        updateAddWidgetVisibility()
+    }
+
+    private fun updateAddWidgetVisibility() {
+        binding.rlAddWidget.visibility = if (Utils.isDefaultHomeApp(this)) {
+            View.GONE
+        } else {
+            View.VISIBLE
+        }
     }
 
     private fun updateLanguageText() {
@@ -324,9 +367,7 @@ class SettingActivity : BaseActivity() {
             dialogBinding.ivDarkTheme.setImageResource(
                 if (selectedTheme == 2) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck
             )
-            dialogBinding.ivDefaultTheme.setImageResource(
-                if (selectedTheme == 0) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck
-            )
+
         }
 
         // Preselect current theme
@@ -336,33 +377,21 @@ class SettingActivity : BaseActivity() {
         // Apply immediately upon selecting any option
         dialogBinding.llLightTheme.setOnClickListener {
             ADSAppManage.isAppOpenBlocked = true
-            ADSAppManage.blockAppOpenAd(3000)
             updateRadioImages(1)
-            AppPreferences.setAppTheme(this, 1)
-            AppPreferences.applyAppTheme(1)
-            updateThemeText()
+            ThemeManager.setAndApplyTheme(this, 1)
             dialog.dismiss()
+
         }
 
         dialogBinding.llDarkTheme.setOnClickListener {
             ADSAppManage.isAppOpenBlocked = true
-            ADSAppManage.blockAppOpenAd(3000)
             updateRadioImages(2)
-            AppPreferences.setAppTheme(this, 2)
-            AppPreferences.applyAppTheme(2)
-            updateThemeText()
+            ThemeManager.setAndApplyTheme(this, 2)
             dialog.dismiss()
+
         }
 
-        dialogBinding.llDefaultTheme.setOnClickListener {
-            ADSAppManage.isAppOpenBlocked = true
-            ADSAppManage.blockAppOpenAd(3000)
-            updateRadioImages(0)
-            AppPreferences.setAppTheme(this, 0)
-            AppPreferences.applyAppTheme(0)
-            updateThemeText()
-            dialog.dismiss()
-        }
+
 
         dialog.show()
     }

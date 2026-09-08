@@ -7,7 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* loaded from: classes11.dex */
+
 public class FileUtils {
     public static File fileFromAsset(Context context, String assetName) throws IOException {
         File cacheDir = context.getCacheDir();

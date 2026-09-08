@@ -8,7 +8,7 @@ import android.util.Log;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.PDFView;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.model.LinkTapEvent;
 
-/* loaded from: classes11.dex */
+
 public class DefaultLinkHandler implements LinkHandler {
     public static final String TAG = "DefaultLinkHandler";
     public PDFView pdfView;

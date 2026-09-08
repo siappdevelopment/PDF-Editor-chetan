@@ -1,8 +1,8 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort;
 
 import androidx.annotation.Nullable;
 
-/* loaded from: classes11.dex */
+
 public class RowHeaderSortHelper {
     @Nullable
     private SortState mSortState;

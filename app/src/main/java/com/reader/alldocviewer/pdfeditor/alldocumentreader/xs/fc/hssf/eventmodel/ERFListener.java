@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventmodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventmodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
 
 /**
  * An ERFListener is registered with the EventRecordFactory.

@@ -5,19 +5,19 @@
  * 时间:              下午3:10:23
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system;
 
 import java.io.File;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bookmark.BookmarkManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.BordersManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.HyperlinkManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.AnimationManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGBulletText;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control.WPShapeManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bookmark.BookmarkManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.BordersManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.HyperlinkManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.AnimationManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGBulletText;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control.WPShapeManage;
 
 import android.app.Activity;
 import android.content.Context;

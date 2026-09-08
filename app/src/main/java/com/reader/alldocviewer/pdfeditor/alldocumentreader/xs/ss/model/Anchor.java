@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model;
 
 /**
  * An anchor is what specifics the position of a shape within a client object

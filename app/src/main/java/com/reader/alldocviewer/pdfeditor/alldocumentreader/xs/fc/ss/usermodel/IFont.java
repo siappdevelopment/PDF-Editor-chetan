@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 public interface IFont
 {
@@ -196,7 +196,7 @@ public interface IFont
      * @return color to use
      * @see #COLOR_NORMAL
      * @see #COLOR_RED
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      */
     short getColor();
 

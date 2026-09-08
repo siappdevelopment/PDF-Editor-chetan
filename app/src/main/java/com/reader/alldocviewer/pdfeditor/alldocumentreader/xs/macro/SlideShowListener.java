@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              上午9:19:37
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ISlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ISlideShow;
 
 /**
  * TODO: 文件注释

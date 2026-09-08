@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,10 +24,10 @@ import java.util.Iterator;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
 
 
 /**
@@ -43,8 +43,8 @@ public class ImageUtils
      * Return the dimension of this image
      *
      * @param is the stream containing the image data
-     * @param type type of the picture: {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_JPEG},
-     * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_PNG} or {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_DIB}
+     * @param type type of the picture: {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_JPEG},
+     * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_PNG} or {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#PICTURE_TYPE_DIB}
      *
      * @return image dimension in pixels
      */

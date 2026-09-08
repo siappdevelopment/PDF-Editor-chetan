@@ -15,27 +15,27 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.HWPFDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.HWPFDocumentCore;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.CHPX;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.ListTables;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PAPX;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PropertyNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.SEPX;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.StyleSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.SubdocumentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.TextPieceTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.CharacterSprmCompressor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.ParagraphSprmCompressor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.HWPFDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.HWPFDocumentCore;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.CHPX;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.ListTables;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PAPX;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PropertyNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.SEPX;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.StyleSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.SubdocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.TextPieceTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.CharacterSprmCompressor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.ParagraphSprmCompressor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.sprm.SprmBuffer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 
 /**

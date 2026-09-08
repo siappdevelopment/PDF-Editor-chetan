@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry;
 
 
 /**
@@ -186,7 +186,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#addSection(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.Section)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#addSection(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.Section)
      */
     public void addSection(final Section section)
     {
@@ -196,7 +196,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#clearSections()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#clearSections()
      */
     public void clearSections()
     {
@@ -206,7 +206,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setByteOrder(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setByteOrder(int)
      */
     public void setByteOrder(final int byteOrder)
     {
@@ -216,7 +216,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setClassID(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.ClassID)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setClassID(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.ClassID)
      */
     public void setClassID(final ClassID classID)
     {
@@ -226,7 +226,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setFormat(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setFormat(int)
      */
     public void setFormat(final int format)
     {
@@ -236,7 +236,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setOSVersion(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#setOSVersion(int)
      */
     public void setOSVersion(final int osVersion)
     {
@@ -246,7 +246,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#toInputStream()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#toInputStream()
      */
     public InputStream toInputStream() throws IOException, WritingNotSupportedException
     {
@@ -256,7 +256,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#write(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry, java.lang.String)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#write(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryEntry, java.lang.String)
      */
     public void write(final DirectoryEntry dir, final String name) throws WritingNotSupportedException, IOException
     {
@@ -266,7 +266,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.MutablePropertySet#write(java.io.OutputStream)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.MutablePropertySet#write(java.io.OutputStream)
      */
     public void write(final OutputStream out) throws WritingNotSupportedException, IOException
     {
@@ -276,7 +276,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#equals(java.lang.Object)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#equals(java.lang.Object)
      */
     public boolean equals(final Object o)
     {
@@ -286,7 +286,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#getProperties()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#getProperties()
      */
     public Property[] getProperties() throws NoSingleSectionException
     {
@@ -296,7 +296,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#getProperty(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#getProperty(int)
      */
     protected Object getProperty(final int id) throws NoSingleSectionException
     {
@@ -306,7 +306,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#getPropertyBooleanValue(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#getPropertyBooleanValue(int)
      */
     protected boolean getPropertyBooleanValue(final int id) throws NoSingleSectionException
     {
@@ -316,7 +316,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#getPropertyIntValue(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#getPropertyIntValue(int)
      */
     protected int getPropertyIntValue(final int id) throws NoSingleSectionException
     {
@@ -326,7 +326,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#hashCode()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#hashCode()
      */
     public int hashCode()
     {
@@ -336,7 +336,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#toString()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#toString()
      */
     public String toString()
     {
@@ -346,7 +346,7 @@ public abstract class SpecialPropertySet extends MutablePropertySet
 
 
     /**
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.PropertySet#wasNull()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.PropertySet#wasNull()
      */
     public boolean wasNull() throws NoSingleSectionException
     {

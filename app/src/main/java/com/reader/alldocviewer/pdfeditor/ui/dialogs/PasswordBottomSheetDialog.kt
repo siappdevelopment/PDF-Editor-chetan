@@ -46,6 +46,8 @@ class PasswordBottomSheetDialog(
 
         if (checkType == "lock") {
             binding.tvTitle.setText(R.string.set_password)
+        } else if (checkType == "unlock") {
+            binding.tvTitle.setText(R.string.unlock_pdf)
         } else {
             binding.tvTitle.setText(R.string.enter_password)
         }

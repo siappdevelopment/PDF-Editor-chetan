@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes11.dex */
+
 public interface ITableViewListener {
     void onCellClicked(@NonNull RecyclerView.ViewHolder viewHolder, int i, int i2);
 

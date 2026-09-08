@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.CreationHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.CreationHelper;
 
 public class HSSFCreationHelper implements CreationHelper {
 	private HSSFWorkbook workbook;
@@ -56,7 +56,7 @@ public class HSSFCreationHelper implements CreationHelper {
 	 * Creates a HSSFClientAnchor. Use this object to position drawing object in a sheet
 	 *
 	 * @return a HSSFClientAnchor instance
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Drawing
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Drawing
 	 */
 	public HSSFClientAnchor createClientAnchor(){
 		return new HSSFClientAnchor();

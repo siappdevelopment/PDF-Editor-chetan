@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions;
 
 /**
  * This exception is thrown when we try to open a PowerPoint file, and

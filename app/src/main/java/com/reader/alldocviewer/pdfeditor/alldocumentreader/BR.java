@@ -1,6 +1,6 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader;
 
-/* loaded from: classes11.dex */
+
 public class BR {
     public static final int _all = 0;
     public static final int imageRes = 1;

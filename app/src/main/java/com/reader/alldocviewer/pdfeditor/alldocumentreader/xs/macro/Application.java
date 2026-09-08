@@ -4,16 +4,16 @@
  * 锟斤拷锟斤拷锟斤拷:            android2.2
  * 时锟斤拷:              锟斤拷锟斤拷1:31:04
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.FileKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.FileKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

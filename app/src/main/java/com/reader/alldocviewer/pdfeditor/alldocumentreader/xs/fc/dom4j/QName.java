@@ -5,15 +5,15 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.QNameCache;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util.SingletonStrategy;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.QNameCache;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util.SingletonStrategy;
 
 
 /**

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,17 +26,17 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.DocumentProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.Property;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.DataInputBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.DocumentBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.ListManagedBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.RawDataBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.SmallDocumentBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.DocumentProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.Property;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.DataInputBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.DocumentBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.ListManagedBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.RawDataBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.SmallDocumentBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
 
 
 

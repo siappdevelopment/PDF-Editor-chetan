@@ -1,6 +1,6 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
 
 public class Line extends Border
 {

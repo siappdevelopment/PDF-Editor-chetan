@@ -4,12 +4,12 @@
  * 编译器:            android2.2
  * 时间:              下午2:06:58
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table;
 
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SchemeClrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SchemeClrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ColorUtil;
 
 /**
  * TODO: 文件注释

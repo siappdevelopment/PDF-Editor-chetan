@@ -4,13 +4,13 @@
  * 编译器:            android2.2
  * 时间:              下午2:05:04
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
 
 /**
  * WP管理器

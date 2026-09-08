@@ -15,32 +15,32 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.Gradient;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.LinearGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.RadialGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.AutoShapeConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBSERecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBlipRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherChildAnchorRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.Gradient;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.LinearGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.RadialGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.AutoShapeConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBSERecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBlipRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherChildAnchorRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherClientAnchorRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.XLSModel.AWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * An abstract shape.
@@ -476,9 +476,9 @@ public abstract class HSSFShape
     		}
         	
         	int focus = ShapeKit.getFillFocus(escherContainer);
-        	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillColor = 
+        	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillColor = 
         			ShapeKit.getForegroundColor(escherContainer, workbook, MainConstant.APPLICATION_TYPE_SS);
-        	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillbackColor = 
+        	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillbackColor = 
         			ShapeKit.getFillbackColor(escherContainer, workbook, MainConstant.APPLICATION_TYPE_SS);
         	
         	int[] colors = null;

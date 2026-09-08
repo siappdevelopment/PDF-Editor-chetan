@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.types.SEPAbstractType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.types.SEPAbstractType;
 
 
 public final class SectionProperties extends SEPAbstractType

@@ -5,7 +5,7 @@
  * 时间:              下午2:57:34
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,90 +15,90 @@ import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.ExtendPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.Gradient;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.LinearGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.RadialGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bookmark.Bookmark;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Border;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Borders;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListLevel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.GroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.LineShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.PictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPAbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPAutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPGroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPPictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPAttrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.FCKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.HWPFDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FieldsDocumentPart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.ListFormatOverride;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.ListTables;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.POIListData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.POIListLevel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PicturesTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Bookmarks;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.BorderCode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.CharacterRun;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Field;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.HWPFAutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.HWPFShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.HWPFShapeGroup;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.HeaderStories;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.InlineWordArt;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.LineSpacingDescriptor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.OfficeDrawing;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.OfficeDrawings;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.POIBookmark;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Paragraph;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.PictureType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Range;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Section;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Table;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.TableCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.TableRow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.util.Arrays;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.LeafElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.ParagraphElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.PageAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ModelUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.CellElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.HFElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.RowElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.TableElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.WPDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.ExtendPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.Gradient;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.LinearGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.RadialGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bookmark.Bookmark;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Border;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Borders;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListLevel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.GroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.LineShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.PictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPAbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPGroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPPictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPAttrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.FCKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherContainerRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherTextboxRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.HWPFDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FieldsDocumentPart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.ListFormatOverride;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.ListTables;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.POIListData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.POIListLevel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PicturesTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Bookmarks;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.BorderCode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.CharacterRun;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Field;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.HWPFAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.HWPFShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.HWPFShapeGroup;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.HeaderStories;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.InlineWordArt;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.LineSpacingDescriptor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.OfficeDrawing;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.OfficeDrawings;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.POIBookmark;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Paragraph;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.PictureType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Range;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Section;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Table;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.TableCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.TableRow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.util.Arrays;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.LeafElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.ParagraphElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.PageAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ModelUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.CellElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.HFElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.RowElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.TableElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.WPDocument;
 
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -1293,8 +1293,8 @@ public class DOCReader extends AbstractReader
         				break;
         		}
             	int focus = shape.getFillFocus();
-            	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillColor = shape.getForegroundColor();
-            	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillbackColor = shape.getFillbackColor();
+            	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillColor = shape.getForegroundColor();
+            	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillbackColor = shape.getFillbackColor();
             	
             	int[] colors = null;
             	float[] positions = null; 
@@ -2027,7 +2027,7 @@ public class DOCReader extends AbstractReader
             // 字号
             AttrManage.instance().setFontSize(leafAttr, (int)((fontsize - 1) * MainConstant.PIXEL_TO_POINT));            
             // 字符颜色
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color = ShapeKit.getForegroundColor(escherContainer, null, MainConstant.APPLICATION_TYPE_PPT);
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color = ShapeKit.getForegroundColor(escherContainer, null, MainConstant.APPLICATION_TYPE_PPT);
             if(color != null)
             {
             	AttrManage.instance().setFontColor(leafAttr, color.getRGB());
@@ -2218,7 +2218,7 @@ public class DOCReader extends AbstractReader
         {
             // Picture
             PicturesTable pictureTable = poiDoc.getPicturesTable();
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Picture pic = pictureTable.extractPicture(control.getSysKit().getPictureManage().getPicTempPath(),
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Picture pic = pictureTable.extractPicture(control.getSysKit().getPictureManage().getPicTempPath(),
                 run, false);
 
             if (pic != null && isSupportPicture(pic.suggestPictureType()))

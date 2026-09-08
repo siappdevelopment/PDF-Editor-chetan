@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
 /**
  * Used to help optimise cell evaluation result caching by allowing applications to specify which
@@ -47,7 +47,7 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.for
  * <li>To retain freedom to change any cell definition at any time, an application may classify all
  * cells as 'not final'.  This freedom comes at the expense of greater memory consumption.</li>
  * <li>For the purpose of these classifications, setting the cached formula result of a cell (for 
- * example in {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator#evaluateFormulaCell(org.apache.poi.ss.usermodel.Cell)})
+ * example in {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator#evaluateFormulaCell(org.apache.poi.ss.usermodel.Cell)})
  * does not constitute changing the definition of the cell.</li>
  * <li>Updating cells which have been classified as 'final' will cause the evaluator to behave 
  * unpredictably (typically ignoring the update).</li> 

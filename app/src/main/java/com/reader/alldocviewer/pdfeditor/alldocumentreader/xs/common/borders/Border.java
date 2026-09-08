@@ -5,7 +5,7 @@
  * 时间:              上午9:40:44
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders;
 
 /**
  * border

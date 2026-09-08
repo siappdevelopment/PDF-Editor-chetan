@@ -1,6 +1,6 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
 
 public class WPChartShape extends WPAutoShape
 {

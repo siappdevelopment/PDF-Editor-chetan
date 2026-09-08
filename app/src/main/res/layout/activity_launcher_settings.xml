@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -24,10 +23,9 @@
                 android:layout_width="@dimen/_26sdp"
                 android:layout_height="@dimen/_26sdp"
                 android:layout_marginStart="@dimen/_12sdp"
-                android:background="@drawable/custom_black_border"
+                android:background="@drawable/ic_back"
                 android:padding="@dimen/_5sdp"
-                android:rotation="180"
-                android:src="@drawable/ic_arrow" />
+                />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitle"
@@ -150,7 +148,7 @@
                     android:layout_height="@dimen/_46sdp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_app_icon" />
+                    android:src="@drawable/image_round_logo_icons" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvAppName1"
@@ -181,7 +179,7 @@
                     android:layout_height="@dimen/_46sdp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_app_icon" />
+                    android:src="@drawable/image_round_logo_icons" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvAppName2"
@@ -212,7 +210,7 @@
                     android:layout_height="@dimen/_46sdp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_app_icon" />
+                    android:src="@drawable/image_round_logo_icons" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvAppName3"
@@ -243,7 +241,7 @@
                     android:layout_height="@dimen/_46sdp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_app_icon" />
+                    android:src="@drawable/image_round_logo_icons" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvAppName4"
@@ -426,6 +424,7 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="@dimen/_18sdp"
+                        android:tint="@color/black"
                         android:layout_height="@dimen/_18sdp"
                         android:src="@drawable/ic_app_label_size" />
 
@@ -454,6 +453,50 @@
             </LinearLayout>
 
         </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_container_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:shimmer_auto_start="true"
+                app:shimmer_base_color="#ccc">
+
+                <include layout="@layout/ad_unifiled_small" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flNativeSmallPlaceholder"
+                style="@style/NativeAdsView" />
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/flBannerSmallPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 

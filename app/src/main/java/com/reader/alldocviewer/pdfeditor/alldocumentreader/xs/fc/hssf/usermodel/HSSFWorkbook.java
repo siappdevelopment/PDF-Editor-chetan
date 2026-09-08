@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
@@ -29,51 +29,51 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.POIDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.DigestUtils;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBSERecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBitmapBlip;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherBlipRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.OldExcelFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaShifter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.SheetNameFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Area3DPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.MemFuncPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.UnionPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf.AggregatingUDFFinder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.DrawingManager2;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.RecordStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.AbstractEscherHolderRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.BackupRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.DrawingGroupRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.EmbeddedObjectRefSubRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FontRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NameRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ObjRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecalcIdRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordBase;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SSTRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SubRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.UnknownRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.RecordAggregate.RecordVisitor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.CellReference;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.WorkbookUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.POIDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.DigestUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBSERecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBitmapBlip;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherBlipRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.OldExcelFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaShifter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.SheetNameFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Area3DPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.MemFuncPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.UnionPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf.AggregatingUDFFinder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf.UDFFinder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.DrawingManager2;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.HSSFFormulaParser;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.RecordStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.AbstractEscherHolderRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.BackupRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.DrawingGroupRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.EmbeddedObjectRefSubRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FontRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NameRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ObjRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecalcIdRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordBase;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SSTRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SubRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.UnknownRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.RecordAggregate.RecordVisitor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.WorkbookUtil;
 
 
 /**
@@ -81,13 +81,13 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.W
  * will construct whether they are reading or writing a workbook.  It is also the
  * top level object for creating new sheets/etc.
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet
  * @author  Andrew C. Oliver (acoliver at apache dot org)
  * @author  Glen Stampoultzis (glens at apache.org)
  * @author  Shawn Laubach (slaubach at apache dot org)
  */
-public final class HSSFWorkbook extends POIDocument implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook
+public final class HSSFWorkbook extends POIDocument implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook
 {
     private static final Pattern COMMA_PATTERN = Pattern.compile(",");
     private static final int MAX_ROW = 0xFFFF;
@@ -206,7 +206,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      *        macros.  This takes more memory, so only say yes if you
      *        need to. If set, will store all of the POIFSFileSystem
      *        in memory
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
      * @exception IOException if the stream cannot be read
      */
     public HSSFWorkbook(POIFSFileSystem fs, boolean preserveNodes) throws IOException
@@ -268,7 +268,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      *        macros.  This takes more memory, so only say yes if you
      *        need to. If set, will store all of the POIFSFileSystem
      *        in memory
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
      * @exception IOException if the stream cannot be read
      */
     public HSSFWorkbook(DirectoryNode directory, POIFSFileSystem fs, boolean preserveNodes)
@@ -287,7 +287,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      *        macros.  This takes more memory, so only say yes if you
      *        need to. If set, will store all of the POIFSFileSystem
      *        in memory
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
      * @exception IOException if the stream cannot be read
      */
     public HSSFWorkbook(DirectoryNode directory, boolean preserveNodes) throws IOException
@@ -348,7 +348,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * @param preserveNodes whether to preseve other nodes, such as
      *        macros.  This takes more memory, so only say yes if you
      *        need to.
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
      * @see #HSSFWorkbook(POIFSFileSystem)
      * @exception IOException if the stream cannot be read
      */
@@ -381,9 +381,9 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
       *
       * @param records a collection of sheet's records.
       * @param offset the offset to search at 
-      * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelRecord
-      * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
-      * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SSTRecord
+      * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelRecord
+      * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
+      * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SSTRecord
       */
 
     private void convertLabelRecords(List records, int offset)
@@ -544,7 +544,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * This may be different from the "selected sheet" since excel seems to
      * allow you to show the data of one sheet when another is seen "selected"
      * in the tabs (at the bottom).
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#setSelected(boolean)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#setSelected(boolean)
      */
     public int getActiveSheetIndex()
     {
@@ -603,7 +603,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
      * @see {@link #createSheet(String)}
-     * @see {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
+     * @see {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
      *      for a safe way to create valid names
      */
     public void setSheetName(int sheetIx, String name)
@@ -679,7 +679,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * @param sheet the sheet to look up
      * @return index of the sheet (0 based). <tt>-1</tt> if not found
      */
-    public int getSheetIndex(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Sheet sheet)
+    public int getSheetIndex(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Sheet sheet)
     {
         for (int i = 0; i < _sheets.size(); i++)
         {
@@ -865,7 +865,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * @return Sheet representing the new sheet.
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
-     * @see {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
+     * @see {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
      *      for a safe way to create valid names
      */
     public HSSFSheet createSheet(String sheetname)
@@ -1332,7 +1332,7 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
      * @param stream - the java OutputStream you wish to write the XLS to
      *
      * @exception IOException if anything can't be written.
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem
      */
 
     public void write(OutputStream stream) throws IOException
@@ -1667,8 +1667,8 @@ public final class HSSFWorkbook extends POIDocument implements com.reader.alldoc
     /**
      * Returns the instance of HSSFDataFormat for this workbook.
      * @return the HSSFDataFormat object
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FormatRecord
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FormatRecord
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record
      */
     public HSSFDataFormat createDataFormat()
     {

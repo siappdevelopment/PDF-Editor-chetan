@@ -248,7 +248,7 @@
                         android:layout_height="@dimen/_10sdp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_done_bold"
-                        app:tint="@color/black_color" />
+                        app:tint="#000000" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -269,7 +269,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/ic_done_bold"
                         android:visibility="gone"
-                        app:tint="@color/black_color" />
+                        app:tint="#000000" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -290,7 +290,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/ic_done_bold"
                         android:visibility="gone"
-                        app:tint="@color/black_color" />
+                        app:tint="#000000" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -312,7 +312,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/ic_done_bold"
                         android:visibility="gone"
-                        app:tint="@color/black_color" />
+                        app:tint="#000000" />
                 </FrameLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -471,6 +471,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -479,8 +481,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                app:cardBackgroundColor="#00000000"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
+                app:cardElevation="0dp">
 
                 <com.facebook.shimmer.ShimmerFrameLayout
                     android:id="@+id/shimmer_container_banner"

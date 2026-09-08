@@ -5,23 +5,23 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 import java.util.List;
 
 import org.w3c.dom.DOMImplementation;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Attribute;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CDATA;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Comment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Entity;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Namespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Text;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Attribute;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Comment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Entity;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Namespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Text;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
 
 
 /**

@@ -5,9 +5,9 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Dimension2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Dimension2D;
 
 /**
  * The <code>Dimension</code> class encapsulates the width and 
@@ -144,7 +144,7 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      *
      * @return   the size of this dimension, a new instance of 
      *           <code>Dimension</code> with the same width and height
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension#setSize
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension#setSize
      * @see      java.awt.Component#getSize
      * @since    1.1
      */
@@ -157,7 +157,7 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      * This method is included for completeness, to parallel the
      * <code>setSize</code> method defined by <code>Component</code>.
      * @param    d  the new size for this <code>Dimension</code> object
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension#getSize
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension#getSize
      * @see      java.awt.Component#setSize
      * @since    1.1
      */
@@ -173,7 +173,7 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      *
      * @param    width   the new width for this <code>Dimension</code> object
      * @param    height  the new height for this <code>Dimension</code> object
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension#getSize
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension#getSize
      * @see      java.awt.Component#setSize
      * @since    1.1
      */

@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 /**
  * Common definition of a HSSF or XSSF page header.
  * For a list of all the different fields that can be
  *  placed into a header, such as page number,
  *  bold, underline etc, see 
- *  {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.HeaderFooter}.
+ *  {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.HeaderFooter}.
  */
 public interface Header extends HeaderFooter {
     /**

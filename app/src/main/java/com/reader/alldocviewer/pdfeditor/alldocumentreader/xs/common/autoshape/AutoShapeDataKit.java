@@ -4,34 +4,34 @@
  * 编译器:             android2.2
  * 时间:               下午4:36:49
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape;
 
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureStretchInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.LineShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.PictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPAutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.LineKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShaderKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ColorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureStretchInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.LineShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.PictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.LineKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShaderKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Color;
 

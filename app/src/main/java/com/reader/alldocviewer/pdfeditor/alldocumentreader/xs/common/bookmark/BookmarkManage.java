@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:             	下午5:05:13
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bookmark;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bookmark;
 
 import java.util.HashMap;
 import java.util.Map;

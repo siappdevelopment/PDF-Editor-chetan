@@ -1,25 +1,25 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf;
 
 import java.io.IOException;
 import java.util.Stack;
 import java.util.Vector;
 import java.util.logging.Logger;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Image;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Stroke;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.AffineTransform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Area;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.GeneralPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.IllegalPathStateException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.PathIterator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data.BasicStroke;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data.GDIObject;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.Tag;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Image;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Stroke;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.AffineTransform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Area;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.GeneralPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.IllegalPathStateException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.PathIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data.BasicStroke;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data.GDIObject;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.Tag;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -43,7 +43,7 @@ import android.graphics.Typeface;
  */
 public class EMFRenderer
 {
-    private static final Logger logger = Logger.getLogger("com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf");
+    private static final Logger logger = Logger.getLogger("com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf");
 
     /**
      * Header read from the EMFInputStream

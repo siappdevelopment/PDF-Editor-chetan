@@ -4,15 +4,15 @@
  * 编译器:            android2.2
  * 时间:              下午9:36:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pdf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pdf;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.PDFConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.SafeAsyncTask;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListItem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.PDFConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.SafeAsyncTask;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListItem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListView;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

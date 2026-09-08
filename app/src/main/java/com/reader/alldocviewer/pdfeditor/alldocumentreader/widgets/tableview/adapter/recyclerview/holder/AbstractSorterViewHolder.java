@@ -1,10 +1,10 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder;
 
 import android.view.View;
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState;
 
-/* loaded from: classes11.dex */
+
 public class AbstractSorterViewHolder extends AbstractViewHolder {
     @NonNull
     private SortState mSortState;

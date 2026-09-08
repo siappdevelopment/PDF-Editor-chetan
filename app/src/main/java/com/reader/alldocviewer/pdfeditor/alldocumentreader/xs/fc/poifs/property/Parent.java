@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property;
 
 import java.util.Iterator;
 

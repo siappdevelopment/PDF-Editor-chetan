@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午9:59:09
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.Reader.drawing;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.Reader.drawing;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -12,32 +12,32 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.AutoShapeDataKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SchemeClrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.LineKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.SAXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing.TextParagraph;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ColorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.ChartFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.PointStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.RoundChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.XYChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.ColumnBarChart.Type;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.CategorySeries;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.XYMultipleSeriesDataset;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.model.XYSeries;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.SimpleSeriesRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.XYMultipleSeriesRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.XYSeriesRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.AutoShapeDataKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SchemeClrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.LineKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.SAXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing.TextParagraph;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.ChartFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.AbstractChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.PointStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.RoundChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.XYChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.ColumnBarChart.Type;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.CategorySeries;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.XYMultipleSeriesDataset;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.model.XYSeries;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.DefaultRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.SimpleSeriesRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.XYMultipleSeriesRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.XYSeriesRenderer;
 
 /**
  * TODO: 文件注释

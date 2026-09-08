@@ -15,26 +15,26 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PushbackInputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.EncryptedDocumentException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.CHPBinTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FontTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.ListTables;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PAPBinTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.SectionTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.StyleSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.TextPieceTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.ObjectPoolImpl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.ObjectsPool;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Range;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Internal;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.EncryptedDocumentException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.CHPBinTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FileInformationBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FontTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.ListTables;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PAPBinTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.SectionTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.StyleSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.TextPieceTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.ObjectPoolImpl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.ObjectsPool;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Range;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.Internal;
 
 
 /**

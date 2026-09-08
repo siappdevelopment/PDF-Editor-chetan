@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideAtom;
 
 
 /**
@@ -34,7 +34,7 @@ public final class TitleMaster extends MasterSheet
      * Constructs a TitleMaster
      *
      */
-    public TitleMaster(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide record, int sheetNo)
+    public TitleMaster(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide record, int sheetNo)
     {
         super(record, sheetNo);
 
@@ -66,7 +66,7 @@ public final class TitleMaster extends MasterSheet
     public MasterSheet getMasterSheet()
     {
         SlideMaster[] master = getSlideShow().getSlidesMasters();
-        SlideAtom sa = ((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)getSheetContainer()).getSlideAtom();
+        SlideAtom sa = ((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)getSheetContainer()).getSlideAtom();
         int masterId = sa.getMasterID();
         for (int i = 0; i < master.length; i++)
         {

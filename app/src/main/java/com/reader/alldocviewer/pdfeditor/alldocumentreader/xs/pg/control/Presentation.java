@@ -4,28 +4,28 @@
  * 编译器:            android2.2
  * 时间:              下午3:49:28
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control;
 
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ISlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.ShapeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGNotes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.view.SlideDrawKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.view.SlideShowView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.SysKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ISlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.ShapeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGNotes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.view.SlideDrawKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.view.SlideShowView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.SysKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
 
 import android.app.Activity;
 import android.content.res.Configuration;

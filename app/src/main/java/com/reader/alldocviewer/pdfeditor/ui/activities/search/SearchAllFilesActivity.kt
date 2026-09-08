@@ -92,10 +92,10 @@ class SearchAllFilesActivity : BaseActivity() {
             }
         })
 
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getSearchAllFilesBottomAdsShow()) {
+            if (ADSMainClass.getSearchAllFilesAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.SEARCH_ALL_FILES_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -103,10 +103,11 @@ class SearchAllFilesActivity : BaseActivity() {
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.SEARCH_ALL_FILES_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -204,8 +205,10 @@ class SearchAllFilesActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getSearchInterShow())
     }
+
+    private fun isToolFilePicker(): Boolean = checkFileName.isNotEmpty()
 
     private fun initView() {
         binding.rvFile.layoutManager = LinearLayoutManager(this)
@@ -223,7 +226,7 @@ class SearchAllFilesActivity : BaseActivity() {
                 } else if (checkFileName == "pdf_to_long_image" || checkFileName == "pdf_to_image" || checkFileName == "split_pdf") {
                     HelperTools.handlePdfToImageConvert(this, file, checkFileName)
                 } else if (checkFileName == "print_pdf") {
-                    HelperTools.printPdfFile(this, file.path.orEmpty(), file.name)
+                    HelperTools.handlePrintPdf(this, file)
                 } else if (checkFileName == "edit_pdf") {
                     val intent = EditActivity.createIntent(
                         context = this,
@@ -409,8 +412,12 @@ class SearchAllFilesActivity : BaseActivity() {
             },
             checkFileName = checkFileName,
             onFavoriteClick = { file -> viewModel.toggleFavorite(file) },
-            onItemLongClick = { file -> showFileOptions(file) },
-            onMoreClick = { file -> showFileOptions(file) }
+            onItemLongClick = { file ->
+                if (!isToolFilePicker()) showFileOptions(file)
+            },
+            onMoreClick = { file ->
+                if (!isToolFilePicker()) showFileOptions(file)
+            }
         )
 
         binding.rvFile.adapter = fileListAdapter
@@ -469,6 +476,10 @@ class SearchAllFilesActivity : BaseActivity() {
                 !showLoading &&
                 lastFilteredList.isEmpty()
         binding.llNoData.visibility = if (showNoData) View.VISIBLE else View.GONE
+        // Hide list while empty so stale RecyclerView rows don't overlap the no-data state
+        // (submitList applies asynchronously).
+        binding.rvFile.visibility =
+            if (lastFilteredList.isNotEmpty()) View.VISIBLE else View.GONE
         if (showNoData) {
             if (searchQuery.isNotEmpty()) {
                 binding.tvNoData.text = getString(R.string.no_search_found)
@@ -481,25 +492,37 @@ class SearchAllFilesActivity : BaseActivity() {
     private fun filterAndSubmitList() {
         val hasAccess = hasStorageAccess()
         if (!hasAccess) {
-            fileListAdapter.submitList(emptyList())
+            fileListAdapter.submitList(FileListAdapter.filesOnlyRows(emptyList()))
             lastFilteredList = emptyList()
             updateLoadingUi()
             return
         }
-        // First filter by type if checkFileName matches converting tools
-        var filteredList = allFiles
-        if (checkFileName == "pdf_to_long_image" || checkFileName == "pdf_to_image" || checkFileName == "print_pdf" || checkFileName == "split_pdf" || checkFileName == "sign_pdf" || checkFileName == "compress_pdf") {
-            filteredList = allFiles.filter { it.fileType == FileConst.PDF_FILE }
-        } else if (checkFileName == "merge_pdf") {
-            filteredList = allFiles.filter {
-                it.fileType == FileConst.PDF_FILE && !it.isEncrypted
+        // Detect password-protected PDFs that may not have isEncrypted set in DB yet.
+        val filesWithEncryption = allFiles.map { file ->
+            if (file.fileType == FileConst.PDF_FILE && !file.isEncrypted) {
+                val path = file.path.orEmpty()
+                if (path.isNotEmpty() && Utils.isPdfPasswordProtectedFast(path)) {
+                    file.copy(isEncrypted = true)
+                } else {
+                    file
+                }
+            } else {
+                file
             }
+        }
+
+        // First filter by type if checkFileName matches converting tools
+        var filteredList = filesWithEncryption
+        if (checkFileName == "pdf_to_long_image" || checkFileName == "pdf_to_image" || checkFileName == "print_pdf" || checkFileName == "split_pdf" || checkFileName == "sign_pdf" || checkFileName == "compress_pdf") {
+            filteredList = filesWithEncryption.filter { it.fileType == FileConst.PDF_FILE }
+        } else if (checkFileName == "merge_pdf") {
+            filteredList = filesWithEncryption.filter { it.fileType == FileConst.PDF_FILE }
         } else if (checkFileName == "lock_pdf") {
-            filteredList = allFiles.filter {
+            filteredList = filesWithEncryption.filter {
                 it.fileType == FileConst.PDF_FILE && !it.isEncrypted
             }
         } else if (checkFileName == "unlock_pdf") {
-            filteredList = allFiles.filter {
+            filteredList = filesWithEncryption.filter {
                 it.fileType == FileConst.PDF_FILE && it.isEncrypted
             }
         }
@@ -511,8 +534,12 @@ class SearchAllFilesActivity : BaseActivity() {
             }
         }
 
-        fileListAdapter.submitList(filteredList)
         lastFilteredList = filteredList
+        fileListAdapter.submitList(FileListAdapter.filesOnlyRows(filteredList)) {
+            if (!isDestroyed) {
+                updateLoadingUi()
+            }
+        }
         updateLoadingUi()
     }
 
@@ -542,26 +569,36 @@ class SearchAllFilesActivity : BaseActivity() {
             return
         }
 
+        val existingByPath = HelperTools.selectedMediaFile.associateBy { it.path }
         HelperTools.selectedMediaFile.clear()
         val mediaFiles = selectedFiles.map { modelFile ->
+            val path = modelFile.path.orEmpty()
+            val existing = existingByPath[path]
             MediaFile(
                 id = modelFile.id,
                 name = modelFile.name ?: "",
-                path = modelFile.path ?: "",
+                path = path,
                 size = modelFile.size,
                 time = modelFile.time,
-                isCheckBoxChecked = true
+                isCheckBoxChecked = true,
+                isEncrypted = modelFile.isEncrypted ||
+                    (path.isNotEmpty() && Utils.isPdfPasswordProtectedFast(path)),
+                password = existing?.password
             )
         }
         HelperTools.selectedMediaFile.addAll(mediaFiles)
 
+        if (intent.getBooleanExtra("returnToMerge", false)) {
+            finish()
+            return
+        }
         startActivity(Intent(this, MergePdfActivity::class.java))
         finish()
     }
 
     private fun initListener() {
         binding.ivBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            onBack()
         }
 
         binding.ivClose.setOnClickListener {
@@ -665,7 +702,7 @@ class SearchAllFilesActivity : BaseActivity() {
         sheetBinding.cvPrint.setOnClickListener {
             bottomSheet.dismiss()
             if (file.fileType == FileConst.PDF_FILE) {
-                HelperTools.printPdfFile(this, file.path.orEmpty(), file.name)
+                HelperTools.handlePrintPdf(this, file)
             } else {
                 Toast.makeText(
                     this,
@@ -744,7 +781,8 @@ class SearchAllFilesActivity : BaseActivity() {
                     path = file.path ?: "",
                     size = file.size,
                     time = file.time,
-                    isCheckBoxChecked = true
+                    isCheckBoxChecked = true,
+                    isEncrypted = file.isEncrypted
                 )
             )
             val intent = Intent(this, SearchAllFilesActivity::class.java).apply {

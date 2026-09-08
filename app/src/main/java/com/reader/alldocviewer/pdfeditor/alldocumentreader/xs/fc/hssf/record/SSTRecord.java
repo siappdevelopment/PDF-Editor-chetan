@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecordOutput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IntMapper;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianConsts;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.common.UnicodeString;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cont.ContinuableRecordOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IntMapper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianConsts;
 
 
 
@@ -39,8 +39,8 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Litt
  * @author Marc Johnson (mjohnson at apache dot org)
  * @author Glen Stampoultzis (glens at apache.org)
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ContinueRecord
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.LabelSSTRecord
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ContinueRecord
  */
 public final class SSTRecord extends ContinuableRecord {
     public static final short sid = 0x00FC;

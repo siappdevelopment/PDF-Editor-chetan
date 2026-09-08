@@ -1,22 +1,28 @@
 package com.reader.alldocviewer.pdfeditor.Advertisement;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.google.android.gms.ads.AdValue;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.reader.alldocviewer.pdfeditor.BuildConfig;
 import com.reader.alldocviewer.pdfeditor.R;
+
 
 public class ADSUtilitis {
 
@@ -28,29 +34,55 @@ public class ADSUtilitis {
     public static Dialog MassageBox;
 
     public static void MassageBoxFull(Context context) {
-        try {
-            if (MassageBoxFull != null)
-                if (MassageBoxFull.isShowing())
+        if (context == null) {
+            return;
+        }
+        Runnable showDialog = () -> {
+            try {
+                Context dialogContext = context;
+                if (context instanceof Activity) {
+                    Activity activity = (Activity) context;
+                    if (activity.isFinishing()
+                            || (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && activity.isDestroyed())) {
+                        return;
+                    }
+                    dialogContext = activity;
+                }
+                if (MassageBoxFull != null && MassageBoxFull.isShowing()) {
                     return;
-
-            MassageBoxFull = new Dialog(context);
-            MassageBoxFull.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            MassageBoxFull.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            MassageBoxFull.setContentView(R.layout.loader_progressbar_massage_box);
-            MassageBoxFull.getWindow().setLayout(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-            MassageBoxFull.setCancelable(false);
-            MassageBoxFull.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+                }
+                MassageBoxFull = new Dialog(dialogContext);
+                MassageBoxFull.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                MassageBoxFull.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                MassageBoxFull.setContentView(R.layout.loader_progressbar_massage_box);
+                MassageBoxFull.getWindow().setLayout(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                MassageBoxFull.setCancelable(false);
+                MassageBoxFull.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            showDialog.run();
+        } else {
+            new Handler(Looper.getMainLooper()).post(showDialog);
         }
     }
 
     public static void MassageBoxFullDismiss() {
-        try {
-            if (MassageBoxFull != null && MassageBoxFull.isShowing())
-                MassageBoxFull.dismiss();
-        } catch (Exception e) {
-            e.printStackTrace();
+        Runnable dismissDialog = () -> {
+            try {
+                if (MassageBoxFull != null && MassageBoxFull.isShowing()) {
+                    MassageBoxFull.dismiss();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            dismissDialog.run();
+        } else {
+            new Handler(Looper.getMainLooper()).post(dismissDialog);
         }
     }
 
@@ -116,43 +148,24 @@ public class ADSUtilitis {
         });
     }
 
-    public static void GetDeveloperMassageBox(final Context context) {
-        if (WarningMassageBox == null || !WarningMassageBox.isShowing()) {
-            WarningMassageBox = new Dialog(context);
-            WarningMassageBox.requestWindowFeature(1);
-            WarningMassageBox.getWindow().setBackgroundDrawable(new ColorDrawable(0));
-            WarningMassageBox.setContentView(R.layout.daveloper_option_massage_box);
-            int width = -1;
-            WarningMassageBox.getWindow().setLayout(width, -2);
-            WarningMassageBox.setCancelable(false);
-            WarningMassageBox.show();
-            TextView btn_recheck = (TextView) WarningMassageBox.findViewById(R.id.Recheck);
-            TextView btn_turnoff = (TextView) WarningMassageBox.findViewById(R.id.TurnOff);
-            btn_recheck.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!ADSUtilitis.IsDibugg(context)) {
-                        ADSUtilitis.NoDebug.no_debug();
-                    }
-
-                }
-            });
-            btn_turnoff.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (ADSUtilitis.IsDibugg(context)) {
-                        ADSUtilitis.SendDeveloperIntent(context);
-                    } else {
-                        ADSUtilitis.NoDebug.no_debug();
-                    }
-
-                }
-            });
-        }
-    }
     public interface no_internet {
         void no_internet();
     }
 
-
+    public static void trackPermissionAllowOnce(Context context, String eventName) {
+        try {
+            String prefKey = "allow_event_" + eventName;
+            android.content.SharedPreferences prefs = context.getSharedPreferences(
+                    "permission_allow_events", Context.MODE_PRIVATE);
+            if (prefs.getBoolean(prefKey, false)) {
+                return;
+            }
+            prefs.edit().putBoolean(prefKey, true).commit();
+            trackScreen(context, eventName);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     public interface No_debug {
         void no_debug();
     }
@@ -165,7 +178,6 @@ public class ADSUtilitis {
         adRevenueParams.putString(FirebaseAnalytics.Param.AD_PLATFORM, "Google Ad Manager");
         adRevenueParams.putString(FirebaseAnalytics.Param.CURRENCY, currency);
         adRevenueParams.putDouble(FirebaseAnalytics.Param.VALUE, revenue);
-//        Log.e("TAG11111", "logAdRevenue: " + revenue);
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.AD_IMPRESSION, adRevenueParams);
     }
 }

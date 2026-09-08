@@ -5,11 +5,11 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.AbstractNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultNamespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.NamespaceCache;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.AbstractNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultNamespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.NamespaceCache;
 
 /**
  * <p>

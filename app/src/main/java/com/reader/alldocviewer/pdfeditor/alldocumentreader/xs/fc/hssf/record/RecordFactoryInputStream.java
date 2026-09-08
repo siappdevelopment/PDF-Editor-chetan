@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.EncryptedDocumentException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.crypto.Biff8EncryptionKey;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.EncryptedDocumentException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFEventFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel.HSSFListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.crypto.Biff8EncryptionKey;
 
 
 

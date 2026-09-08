@@ -4,17 +4,17 @@
  * 编译器:            android2.2
  * 时间:              上午11:03:08
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageView;
 
 /**
  * find feature

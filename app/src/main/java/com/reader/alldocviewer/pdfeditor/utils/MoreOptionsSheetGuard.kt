@@ -13,18 +13,28 @@ object MoreOptionsSheetGuard {
         return true
     }
 
-    fun show(dialog: BottomSheetDialog) {
+    fun show(dialog: BottomSheetDialog, onDismiss: (() -> Unit)? = null) {
         pendingOpen = false
         activeDialog = dialog
         dialog.setOnDismissListener {
             if (activeDialog === dialog) {
                 activeDialog = null
             }
+            onDismiss?.invoke()
         }
         dialog.show()
     }
 
     fun abort() {
         pendingOpen = false
+    }
+
+    fun dismiss() {
+        pendingOpen = false
+        val dialog = activeDialog
+        activeDialog = null
+        if (dialog?.isShowing == true) {
+            dialog.dismiss()
+        }
     }
 }

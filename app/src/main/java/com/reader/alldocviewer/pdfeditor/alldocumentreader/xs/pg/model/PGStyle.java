@@ -4,14 +4,14 @@
  * 编译器:             android2.2
  * 时间:               上午9:41:27
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model;
 
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
 
 /**
  * 一个 shape 的 style 数据

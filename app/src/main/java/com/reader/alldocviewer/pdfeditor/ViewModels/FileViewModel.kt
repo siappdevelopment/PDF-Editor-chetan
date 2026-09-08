@@ -92,11 +92,9 @@ class FileViewModel @Inject constructor(
                     }
                     invalidateTabCache()
                     _allFiles.postValue(list)
-                    if (list.isNotEmpty()) {
-                        markContentStateResolved()
-                        if (_isScanning.value == true) {
-                            _isScanning.postValue(false)
-                        }
+                    markContentStateResolved()
+                    if (list.isNotEmpty() && _isScanning.value == true) {
+                        _isScanning.postValue(false)
                     }
                 }
         }
@@ -113,8 +111,9 @@ class FileViewModel @Inject constructor(
         currentTabType = fileType
     }
 
-    fun showSection(section: String) {
-        if (currentSection == section) return
+    fun showSection(section: String, force: Boolean = false) {
+        val sectionChanged = currentSection != section
+        if (!sectionChanged && !force) return
         currentSection = section
         invalidateTabCache()
         _sectionTick.value = (_sectionTick.value ?: 0) + 1
@@ -182,7 +181,8 @@ class FileViewModel @Inject constructor(
     private suspend fun publishFilesFromDbAndEndScan() {
         val fresh = repository.getActiveFilesSnapshot()
         withContext(Dispatchers.Main.immediate) {
-            pushAllFiles(fresh)
+            invalidateTabCache()
+            _allFiles.value = fresh
             _isScanning.value = false
             _scanComplete.value = true
             markContentStateResolved()

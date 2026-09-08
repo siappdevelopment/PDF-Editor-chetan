@@ -1,5 +1,5 @@
 // Copyright FreeHEP, 2009
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io;
 
 import java.io.IOException;
 import java.io.InputStream;

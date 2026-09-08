@@ -16,7 +16,7 @@ import com.shockwave.pdfium.util.SizeF;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class PdfFile {
     public static final Object lock = new Object();
     public boolean autoSpacing;

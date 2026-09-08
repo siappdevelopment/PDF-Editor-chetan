@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.Reader.shared;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.Reader.shared;
 
 /**
  * Parses OOXML attribute values that may be booleans ("true"/"false") or numbers ("0"/"1").

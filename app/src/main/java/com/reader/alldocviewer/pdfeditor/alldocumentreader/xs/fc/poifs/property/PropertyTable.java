@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.PropertyBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSBigBlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.BlockWritable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.PropertyBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.RawDataBlockList;
 
 
 

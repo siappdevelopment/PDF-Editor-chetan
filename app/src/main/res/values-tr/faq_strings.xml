@@ -1,37 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="how_can_we_help">Size nasıl yardımcı olabiliriz?</string>
-    <string name="find_answers_to_frequently_asked">PDF belgelerinizi düzenleme, not ekleme ve yönetme hakkında sık sorulan soruların yanıtlarını bulun.</string>
-    <string name="search_faqs">SSS Ara</string>
-    <string name="no_faq_found">SSS bulunamadı</string>
-    <string name="faq_1_question">1. PDF Düzenleyici nedir?</string>
-    <string name="faq_1_answer">PDF Düzenleyici, metni düzenleyerek, yazı tiplerini değiştirerek, görsel ekleyerek, imza ekleyerek, içeriği vurgulayarak, sayfalara not ekleyerek, belgeleri düzenleyerek ve dosyayı yeniden oluşturmadan değişiklikleri kaydederek PDF belgelerini değiştirmenizi sağlar.</string>
-    <string name="faq_2_question">2. Uygulamada hangi düzenleme araçları mevcut?</string>
-    <string name="faq_2_answer">Uygulama; Metin Düzenleme, Yazı Tipi Değiştirme, Yazı Boyutu Ayarı, Kalın, İtalik, Altı Çizili, Metin Rengi, Vurgulama, Üstü Çizili, Görsel Ekleme, Şekil Ekleme, Kalemle Çizim, Yorum Ekleme, Dijital İmza ve Sayfa Yönetimi araçlarını içerir.</string>
-    <string name="faq_3_question">3. Herhangi bir PDF\'in içindeki metni düzenleyebilir miyim?</string>
-    <string name="faq_3_answer">Çoğu düzenlenebilir PDF belgesinde metni düzenleyebilirsiniz. Ancak taranmış veya görüntü tabanlı PDF\'lerde seçilebilir metin bulunmaz. Özellik mevcutsa önce OCR ile düzenlenebilir metne dönüştürülmeleri gerekir.</string>
-    <string name="faq_4_question">4. Metnin yazı tipini, boyutunu veya rengini nasıl değiştiririm?</string>
-    <string name="faq_4_answer">Değiştirmek istediğiniz metni seçin, ardından düzenleme araç çubuğunu kullanarak farklı bir yazı tipi seçin, boyutu ayarlayın, rengi değiştirin veya kalın, italik, altı çizili gibi biçimlendirmeler uygulayın.</string>
-    <string name="faq_5_question">5. Bir PDF\'i nasıl vurgular veya not eklerim?</string>
-    <string name="faq_5_answer">Belgeyi açın ve Vurgula veya Not Ekle aracını seçin. Önemli metni vurgulayabilir, yorum ekleyebilir, serbest çizim yapabilir, şekiller ekleyebilir veya sayfanın herhangi bir yerine yapışkan notlar yerleştirebilirsiniz.</string>
-    <string name="faq_6_question">6. PDF\'e imzamı ekleyebilir miyim?</string>
-    <string name="faq_6_answer">Evet. Parmağınız veya kalemle çizerek, adınızı yazarak veya imza görselinizi içe aktararak imza oluşturabilirsiniz. Oluşturulduktan sonra belgenin herhangi bir yerine yerleştirilebilir.</string>
-    <string name="faq_7_question">7. PDF\'e görsel veya logo ekleyebilir miyim?</string>
-    <string name="faq_7_answer">Evet. Cihazınızdan görselleri içe aktarabilir ve PDF içinde konumlandırabilir, yeniden boyutlandırabilir veya döndürebilirsiniz. Şirket logoları, fotoğraflar, damgalar veya diğer grafikler eklemek için kullanışlıdır.</string>
-    <string name="faq_8_question">8. Hangi sayfa yönetimi özellikleri mevcut?</string>
-    <string name="faq_8_answer">Uygulama sayfaları yeniden sıralamanıza, döndürmenize, istenmeyen sayfaları silmenize, kopyalamanıza, seçili sayfaları çıkarmanıza, birden fazla PDF\'i tek dosyada birleştirmenize ve bir PDF\'i ayrı belgelere bölmenize olanak tanır.</string>
-    <string name="faq_9_question">9. Uygulama taranmış PDF belgelerini destekliyor mu?</string>
-    <string name="faq_9_answer">Evet. Taranmış PDF\'ler normal şekilde görüntülenebilir. Taranmış bir belgedeki metni düzenlemek OCR teknolojisi gerektirir. OCR olmadan yalnızca notlar veya görüntü tabanlı düzenlemeler mümkündür.</string>
-    <string name="faq_10_question">10. Uygulama neden depolama veya dosya erişim izni istiyor?</string>
-    <string name="faq_10_answer">Uygulamanın cihazınızda depolanan PDF belgelerini açabilmesi, düzenleyebilmesi, kaydedebilmesi, içe/dışa aktarabilmesi ve paylaşabilmesi için depolama veya dosya erişim izni gereklidir. Dosyalarınız sizin kontrolünüzde kalır.</string>
-    <string name="faq_11_question">11. Belgelerim gizli kalacak mı?</string>
-    <string name="faq_11_answer">Evet. PDF dosyalarınız mümkün olduğunda cihazınızda yerel olarak işlenir. Bulut depolama veya paylaşım özelliğini açıkça seçmediğiniz sürece uygulama kişisel belgelerinizi yüklemez.</string>
-    <string name="faq_12_question">12. Düzenlediğim PDF\'i paylaşabilir veya dışa aktarabilir miyim?</string>
-    <string name="faq_12_answer">Evet. Düzenlemeden sonra belgeyi kaydedebilir ve e-posta, mesajlaşma uygulamaları, bulut depolama hizmetleri veya cihazınızdaki uyumlu herhangi bir uygulama ile paylaşabilirsiniz.</string>
-    <string name="faq_13_question">13. Uygulama hangi dosya formatlarını destekliyor?</string>
-    <string name="faq_13_answer">Uygulama öncelikle PDF belgelerini destekler ve ayrıca JPG, JPEG ve PNG gibi görselleri PDF\'e dönüştürmek veya mevcut PDF dosyalarına eklemek için içe aktarmaya izin verebilir.</string>
-    <string name="faq_14_question">14. Neden bazı PDF dosyalarını düzenleyemiyorum?</string>
-    <string name="faq_14_answer">Bazı PDF\'ler parola korumalı, dijital olarak güvenli, bozuk veya taranmış görüntüler olarak oluşturulmuş olabilir. Belge kilidi açılana veya OCR ile işlenene kadar doğrudan metin düzenlemesi engellenebilir.</string>
-    <string name="faq_15_question">15. Sorun bildirmek veya yeni özellik istemek için ne yapmalıyım?</string>
-    <string name="faq_15_answer">Sorun yaşarsanız veya öneriniz varsa uygulama içindeki Bize Ulaşın veya Geri Bildirim bölümünü kullanın. Deneyiminizi iyileştirmemize yardımcı olmak için cihaz modelinizi, Android sürümünüzü ve sorunun kısa açıklamasını ekleyin.</string>
-</resources>
+   </resources>

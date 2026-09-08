@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
 
-public final class AreaReference extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.AreaReference {
+public final class AreaReference extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.AreaReference {
     /**
      * Create an area ref from a string representation.  Sheet names containing special characters should be
      * delimited and escaped as per normal syntax rules for formulas.<br/> 

@@ -1,16 +1,16 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
 
 
-/* loaded from: classes11.dex */
+
 public interface ITableAdapter<CH, RH, C> {
-    void addAdapterDataSetChangedListener(@NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener);
+    void addAdapterDataSetChangedListener(@NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener);
 
     int getCellItemViewType(int i);
 

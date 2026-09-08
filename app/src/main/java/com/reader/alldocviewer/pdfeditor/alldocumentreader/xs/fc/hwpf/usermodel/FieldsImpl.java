@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,10 +24,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FieldDescriptor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FieldsDocumentPart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.FieldsTables;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.PlexOfField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FieldDescriptor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FieldsDocumentPart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.FieldsTables;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.PlexOfField;
 
 
 /**

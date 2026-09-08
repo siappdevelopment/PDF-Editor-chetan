@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 import java.util.Iterator;
 
@@ -78,12 +78,12 @@ public interface IRow extends Iterable<ICell> {
      *
      * @param cellnum  0 based column number
      * @return Cell representing that column or null if undefined.
-     * @see #getCell(int, com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy)
+     * @see #getCell(int, com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy)
      */
     ICell getCell(int cellnum);
     
     /**
-     * Returns the cell at the given (0 based) index, with the specified {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy}
+     * Returns the cell at the given (0 based) index, with the specified {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy}
      *
      * @return the cell at the given (0 based) index
      * @throws IllegalArgumentException if cellnum < 0 or the specified MissingCellPolicy is invalid

@@ -1,37 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="how_can_we_help">Wie können wir helfen?</string>
-    <string name="find_answers_to_frequently_asked">Finden Sie Antworten auf häufig gestellte Fragen zum Bearbeiten, Kommentieren und Verwalten Ihrer PDF-Dokumente.</string>
-    <string name="search_faqs">FAQs durchsuchen</string>
-    <string name="no_faq_found">Keine FAQ gefunden</string>
-    <string name="faq_1_question">1. Was ist ein PDF-Editor?</string>
-    <string name="faq_1_answer">Ein PDF-Editor ermöglicht es Ihnen, PDF-Dokumente zu ändern, indem Sie Text bearbeiten, Schriftarten ändern, Bilder hinzufügen, Signaturen einfügen, Inhalte hervorheben, Seiten kommentieren, Dokumente organisieren und Änderungen speichern, ohne die Datei neu zu erstellen.</string>
-    <string name="faq_2_question">2. Welche Bearbeitungswerkzeuge sind in der App verfügbar?</string>
-    <string name="faq_2_answer">Die App umfasst Textbearbeitung, Schriftart ändern, Schriftgröße anpassen, Fett, Kursiv, Unterstreichen, Textfarbe, Hervorheben, Durchstreichen, Bilder hinzufügen, Formen einfügen, mit Stift zeichnen, Kommentare, digitale Signatur und Seitenverwaltung.</string>
-    <string name="faq_3_question">3. Kann ich den Text in jedem PDF bearbeiten?</string>
-    <string name="faq_3_answer">Sie können Text in den meisten bearbeitbaren PDF-Dokumenten ändern. Gescannte oder bildbasierte PDFs enthalten jedoch keinen auswählbaren Text. Diese müssen zuerst mit OCR in bearbeitbaren Text umgewandelt werden, falls die Funktion verfügbar ist.</string>
-    <string name="faq_4_question">4. Wie ändere ich Schriftart, Größe oder Farbe des Textes?</string>
-    <string name="faq_4_answer">Wählen Sie den zu ändernden Text und nutzen Sie die Bearbeitungsleiste, um eine andere Schriftart zu wählen, die Größe anzupassen, die Textfarbe zu ändern oder Formatierungen wie fett, kursiv oder unterstrichen anzuwenden.</string>
-    <string name="faq_5_question">5. Wie kann ich ein PDF hervorheben oder kommentieren?</string>
-    <string name="faq_5_answer">Öffnen Sie das Dokument und wählen Sie das Werkzeug Hervorheben oder Kommentieren. Sie können wichtigen Text markieren, Kommentare hinzufügen, freihand zeichnen, Formen einfügen oder Haftnotizen auf der Seite platzieren.</string>
-    <string name="faq_6_question">6. Kann ich meine Signatur zu einem PDF hinzufügen?</string>
-    <string name="faq_6_answer">Ja. Sie können eine Signatur erstellen, indem Sie sie mit dem Finger oder Stift zeichnen, Ihren Namen eingeben oder ein Bild Ihrer Signatur importieren. Anschließend kann sie überall im Dokument platziert werden.</string>
-    <string name="faq_7_question">7. Kann ich Bilder oder Logos in ein PDF einfügen?</string>
-    <string name="faq_7_answer">Ja. Sie können Bilder von Ihrem Gerät importieren und im PDF positionieren, skalieren oder drehen. Dies ist nützlich für Firmenlogos, Fotos, Stempel oder andere Grafiken.</string>
-    <string name="faq_8_question">8. Welche Seitenverwaltungsfunktionen sind verfügbar?</string>
-    <string name="faq_8_answer">Die App ermöglicht das Neuordnen, Drehen und Löschen von Seiten, Duplizieren, Extrahieren ausgewählter Seiten, Zusammenführen mehrerer PDFs zu einer Datei und Aufteilen eines PDFs in separate Dokumente.</string>
-    <string name="faq_9_question">9. Unterstützt die App gescannte PDF-Dokumente?</string>
-    <string name="faq_9_answer">Ja. Gescannte PDFs können normal angezeigt werden. Zum Bearbeiten von Text in gescannten Dokumenten ist OCR-Technologie erforderlich. Ohne OCR sind nur Anmerkungen oder bildbasierte Bearbeitungen möglich.</string>
-    <string name="faq_10_question">10. Warum fordert die App Speicher- oder Dateizugriffsberechtigung an?</string>
-    <string name="faq_10_answer">Speicher- oder Dateizugriff ist erforderlich, damit die App PDF-Dokumente auf Ihrem Gerät öffnen, bearbeiten, speichern, importieren, exportieren und teilen kann. Ihre Dateien bleiben unter Ihrer Kontrolle.</string>
-    <string name="faq_11_question">11. Bleiben meine Dokumente privat?</string>
-    <string name="faq_11_answer">Ja. Ihre PDF-Dateien werden nach Möglichkeit lokal auf Ihrem Gerät verarbeitet. Die App lädt Ihre persönlichen Dokumente nicht hoch, es sei denn, Sie wählen ausdrücklich Cloud-Speicher oder Freigabe.</string>
-    <string name="faq_12_question">12. Kann ich mein bearbeitetes PDF teilen oder exportieren?</string>
-    <string name="faq_12_answer">Ja. Nach der Bearbeitung können Sie das Dokument speichern und per E-Mail, Messaging-Apps, Cloud-Speicher oder jeder kompatiblen App auf Ihrem Gerät teilen.</string>
-    <string name="faq_13_question">13. Welche Dateiformate unterstützt die App?</string>
-    <string name="faq_13_answer">Die App unterstützt hauptsächlich PDF-Dokumente und kann auch Bilder wie JPG, JPEG und PNG importieren, um sie in PDFs umzuwandeln oder in bestehende PDF-Dateien einzufügen.</string>
-    <string name="faq_14_question">14. Warum kann ich einige PDF-Dateien nicht bearbeiten?</string>
-    <string name="faq_14_answer">Einige PDFs sind passwortgeschützt, digital gesichert, beschädigt oder als gescannte Bilder erstellt. Diese Einschränkungen können die direkte Textbearbeitung verhindern, bis das Dokument entsperrt oder mit OCR verarbeitet wird.</string>
-    <string name="faq_15_question">15. Wie kann ich ein Problem melden oder eine neue Funktion anfordern?</string>
-    <string name="faq_15_answer">Bei Problemen oder Vorschlägen nutzen Sie den Bereich Kontakt oder Feedback in der App. Geben Sie Gerätemodell, Android-Version und eine kurze Problembeschreibung an, um uns bei der Verbesserung zu helfen.</string>
-</resources>
+   </resources>

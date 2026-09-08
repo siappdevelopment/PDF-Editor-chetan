@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc;
 
 
 public final class StreamHelper

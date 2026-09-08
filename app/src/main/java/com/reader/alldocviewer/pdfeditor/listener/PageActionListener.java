@@ -2,7 +2,7 @@ package com.reader.alldocviewer.pdfeditor.listener;
 
 import android.view.View;
 
-/* loaded from: classes11.dex */
+
 public interface PageActionListener {
     void onDeleteSelectedAnnotation();
 

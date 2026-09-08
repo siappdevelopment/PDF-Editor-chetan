@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午4:43:39
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model;
 
 
 /**
@@ -180,7 +180,7 @@ public class ElementCollectionImpl implements IElementCollection
     
     /** 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElementCollection#dispose()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElementCollection#dispose()
      * 
      */
     @ Override

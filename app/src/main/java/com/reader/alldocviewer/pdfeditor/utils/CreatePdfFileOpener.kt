@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.core.content.FileProvider
 import com.reader.alldocviewer.pdfeditor.ui.activities.openPdf.OpenCreatePdfActivity
 import com.reader.alldocviewer.pdfeditor.data.local.entity.ModelFile
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant
 import com.reader.alldocviewer.pdfeditor.ui.activities.pdfviewer.PdfViewerActivity
 import java.io.File
 

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.chart.PointStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.chart.PointStyle;
 
 import android.graphics.Color;
 

@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               下午1:33:12
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties;
 
 /**
  * a kind of auto number data

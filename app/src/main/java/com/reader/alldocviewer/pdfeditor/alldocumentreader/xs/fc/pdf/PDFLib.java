@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午4:32:43
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;

@@ -5,11 +5,8 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Bitmap
-import android.graphics.Paint
-import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
 import android.provider.OpenableColumns
 import android.view.View
 import android.view.ViewGroup
@@ -44,8 +41,6 @@ import com.reader.alldocviewer.pdfeditor.utils.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.File
-import java.io.FileOutputStream
 
 class MediaPickerActivity : BaseActivity() {
 
@@ -103,10 +98,10 @@ class MediaPickerActivity : BaseActivity() {
     }
 
     private fun loadAds() {
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getPdfSelectionBottomAdsShow()) {
+            if (ADSMainClass.getPdfSelectionAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.PDF_SELECTION_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -114,10 +109,11 @@ class MediaPickerActivity : BaseActivity() {
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.PDF_SELECTION_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     this,
+                    "small",
                 )
             }
         } else {
@@ -133,7 +129,7 @@ class MediaPickerActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            },
+            }, ADSMainClass.getMediaPickerInterShow()
         )
     }
 
@@ -192,7 +188,7 @@ class MediaPickerActivity : BaseActivity() {
 
     private fun initListeners() {
         binding.ivClose.setOnClickListener {
-            finish()
+            onBack()
         }
 
         binding.llPermission.setOnClickListener {
@@ -211,12 +207,22 @@ class MediaPickerActivity : BaseActivity() {
         binding.btnDone.setOnClickListener {
             if (selectedMedia.isNotEmpty()) {
                 if (checkFileName == "scan_to_pdf" || checkFileName == "image_to_pdf") {
-                    startScanToPdfFlow()
+
+
+                            startScanToPdfFlow()
+
+
                 } else {
-                    showRenameDialog()
+
+                            showRenameDialog()
+
+
                 }
             } else {
-                launchPhotoPicker()
+
+                        launchPhotoPicker()
+
+
             }
         }
     }
@@ -358,36 +364,14 @@ class MediaPickerActivity : BaseActivity() {
             show()
         }
 
+        val sources = selectedMedia.mapNotNull { it.path }
         lifecycleScope.launch(Dispatchers.IO) {
             try {
-                val externalDir = File(
-                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS),
-                    "PdfReader",
+                val outputPath = HelperTools.createPdfFromImageSources(
+                    this@MediaPickerActivity,
+                    sources,
+                    outputFileName = fileName,
                 )
-                if (!externalDir.exists()) {
-                    externalDir.mkdirs()
-                }
-                val outputFile = File(externalDir, fileName)
-                val fileOutputStream = FileOutputStream(outputFile)
-                val pdfDocument = PdfDocument()
-
-                selectedMedia.forEachIndexed { index, mediaFile ->
-                    val source = mediaFile.path ?: return@forEachIndexed
-                    val bitmap = UriImageHelper.compressImage(this@MediaPickerActivity, source, 1080, 1920)
-                    if (bitmap != null) {
-                        val pageInfo =
-                            PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, index + 1)
-                                .create()
-                        val page = pdfDocument.startPage(pageInfo)
-                        page.canvas.drawBitmap(bitmap, 0f, 0f, Paint())
-                        pdfDocument.finishPage(page)
-                        bitmap.recycle()
-                    }
-                }
-
-                pdfDocument.writeTo(fileOutputStream)
-                pdfDocument.close()
-                fileOutputStream.close()
 
                 withContext(Dispatchers.Main) {
                     progressDialog.dismiss()
@@ -440,13 +424,14 @@ class MediaPickerActivity : BaseActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             try {
                 val bitmaps = ArrayList<Bitmap>()
+                val sources = ArrayList<String>()
                 selectedMedia.forEach { mediaFile ->
                     val path = mediaFile.path
                     if (path != null) {
-                        val bitmap = UriImageHelper.decodeSampledBitmap(
+                        sources.add(path)
+                        val bitmap = UriImageHelper.decodeFullBitmap(
                             this@MediaPickerActivity,
                             path,
-                            2048,
                         )
                         if (bitmap != null) {
                             bitmaps.add(bitmap)
@@ -458,6 +443,9 @@ class MediaPickerActivity : BaseActivity() {
                     if (bitmaps.isNotEmpty()) {
                         HelperTools.selectedBitmap.clear()
                         HelperTools.selectedBitmap.addAll(bitmaps)
+                        HelperTools.selectedImageSources.clear()
+                        HelperTools.selectedImageSources.addAll(sources)
+                        HelperTools.imagesWereEdited = false
                         val intent =
                             Intent(this@MediaPickerActivity, ViewPagerActivity::class.java).apply {
                                 val title = if (checkFileName == "scan_to_pdf") {
@@ -495,3 +483,4 @@ class MediaPickerActivity : BaseActivity() {
         }
     }
 }
+

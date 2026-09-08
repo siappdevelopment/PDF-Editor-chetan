@@ -107,25 +107,50 @@ class MediaStoreScanner @Inject constructor(
             .takeIf { it.exists() }?.let { folders.add(it) }
 
         folders.forEach { folder ->
-            scanFolderOneLevel(folder, output, identityToKey, dirtyKeys, onBatchReady, depth = 2)
+            val maxDepth = if (folder.name.equals("Download", ignoreCase = true) ||
+                folder.name.equals("Downloads", ignoreCase = true)
+            ) {
+                DOWNLOAD_SCAN_MAX_DEPTH
+            } else {
+                DEFAULT_SCAN_MAX_DEPTH
+            }
+            scanFolderRecursive(
+                folder,
+                output,
+                identityToKey,
+                dirtyKeys,
+                onBatchReady,
+                maxDepth = maxDepth,
+            )
         }
     }
 
-    private suspend fun scanFolderOneLevel(
+    private suspend fun scanFolderRecursive(
         folder: File,
         output: LinkedHashMap<String, ModelFile>,
         identityToKey: HashMap<String, String>,
         dirtyKeys: LinkedHashSet<String>,
         onBatchReady: suspend () -> Unit,
-        depth: Int,
+        maxDepth: Int,
+        currentDepth: Int = 0,
     ) {
-        if (!folder.exists() || !folder.canRead()) return
+        if (!folder.exists() || !folder.canRead() || currentDepth > maxDepth) return
         try {
             collectFilesInDir(folder, output, identityToKey, dirtyKeys, onBatchReady)
-            if (depth >= 2) {
-                folder.listFiles()?.filter { it.isDirectory && !shouldSkipDir(it) }?.forEach { sub ->
-                    collectFilesInDir(sub, output, identityToKey, dirtyKeys, onBatchReady)
-                }
+            if (currentDepth < maxDepth) {
+                folder.listFiles()
+                    ?.filter { it.isDirectory && !shouldSkipDir(it) }
+                    ?.forEach { sub ->
+                        scanFolderRecursive(
+                            sub,
+                            output,
+                            identityToKey,
+                            dirtyKeys,
+                            onBatchReady,
+                            maxDepth,
+                            currentDepth + 1,
+                        )
+                    }
             }
         } catch (e: Exception) {
             Log.w(TAG, "Folder skip: ${folder.absolutePath}", e)
@@ -345,5 +370,7 @@ class MediaStoreScanner @Inject constructor(
     companion object {
         private const val TAG = "MediaStoreScanner"
         private const val FLUSH_BATCH_SIZE = 120
+        private const val DEFAULT_SCAN_MAX_DEPTH = 2
+        private const val DOWNLOAD_SCAN_MAX_DEPTH = 5
     }
 }

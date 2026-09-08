@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function;
 
 /**
  * Holds information about Excel built-in functions.
@@ -29,7 +29,7 @@ public final class FunctionMetadata {
 	 * from the SpreadsheetVersion enum.
 	 * Perhaps a value like 'M' should be used instead of '30' in functionMetadata.txt
 	 * to make that file more version neutral.
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaParser#validateNumArgs(int, FunctionMetadata)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaParser#validateNumArgs(int, FunctionMetadata)
 	 */
 	private static final short FUNCTION_MAX_PARAMS = 30;
 
@@ -75,7 +75,7 @@ public final class FunctionMetadata {
 	 * can be passed.  Other functions (like SUM) don't have such a limit.  For those functions,
 	 * the spreadsheet version determines the maximum number of arguments that can be passed.
 	 * @return <code>true</code> if this function can the maximum number of arguments allowable by
-	 * the {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion}
+	 * the {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion}
 	 */
 	public boolean hasUnlimitedVarags() {
 		return FUNCTION_MAX_PARAMS == _maxParams;

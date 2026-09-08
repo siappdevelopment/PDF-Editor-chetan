@@ -19,7 +19,7 @@
  *
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval;
 
 /**
  * @author Amol S. Deshmukh &lt; amolweb at ya hoo dot com &gt;

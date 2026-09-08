@@ -4,22 +4,22 @@
  * 编译器:            android2.2
  * 时间:              下午5:16:41
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc;
 
 import java.io.FileInputStream;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.DialogConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ErrorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.FileReaderThread;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IDialogAction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.mozilla.intl.chardet.CharsetDetector;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.dialog.TXTEncodingDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.DialogConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ErrorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.FileReaderThread;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IDialogAction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.mozilla.intl.chardet.CharsetDetector;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.dialog.TXTEncodingDialog;
 
 import android.os.Handler;
 

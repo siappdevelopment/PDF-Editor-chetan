@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
 /**
  * This class represents a slide's notes in a PowerPoint Document. It
@@ -35,7 +35,7 @@ public final class Notes extends Sheet
      *
      * @param notes the Notes record to read from
      */
-    public Notes(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes notes)
+    public Notes(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes notes)
     {
         super(notes, notes.getNotesAtom().getSlideID());
 

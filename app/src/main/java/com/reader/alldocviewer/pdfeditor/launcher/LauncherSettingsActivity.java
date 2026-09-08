@@ -18,38 +18,34 @@ import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.SwitchCompat;
 
-import com.facebook.shimmer.ShimmerFrameLayout;
+
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSBannerSmall;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay;
 import com.reader.alldocviewer.pdfeditor.R;
 import com.reader.alldocviewer.pdfeditor.launcher.adapter.SerializeDropdownAdapter;
-import com.reader.alldocviewer.pdfeditor.launcher.common.Utils;
-
+import com.reader.alldocviewer.pdfeditor.launcher.utils.LocaleAwareAppCompatActivity;
+import com.reader.alldocviewer.pdfeditor.launcher.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LauncherSettingsActivity extends AppCompatActivity {
+public class LauncherSettingsActivity extends LocaleAwareAppCompatActivity {
     private AppCompatImageView ivBack, ivArrow, ivAppIcon1, ivAppIcon2, ivAppIcon3, ivAppIcon4;
     private LinearLayout llDropdown;
     private AppCompatTextView tvTitle, tvSerialize, tvSelectedSerialize, tvPreview, tvLabelVisibility, tvHideAppName, tvAppIconSize, tvAppLabelSize, tvAppName1, tvAppName2, tvAppName3, tvAppName4, tvAppIconSizePercentage, tvAppLabelSizePercentage;
     private SwitchCompat scLabelVisibility;
     private AppCompatSeekBar sbAppIconSize, sbAppLabelSize;
-//    private RelativeLayout rlAdView, rlBannerAdView, rlNativeAdView;
-//    private ShimmerFrameLayout slBannerShimmer, slNativeShimmer;
-//    public LinearLayout llBannerAd;
-//    private FrameLayout flNativeAd;
 
     private final List<String> arraySerialize = new ArrayList<>();
 
@@ -99,14 +95,29 @@ public class LauncherSettingsActivity extends AppCompatActivity {
 
         sbAppLabelSize = findViewById(R.id.sbAppLabelSize);
         tvAppLabelSizePercentage = findViewById(R.id.tvAppLabelSizePercentage);
+        if (ADSMainClass.getLauncherHomeBottomAdsShow()) {
+            if (ADSMainClass.getLauncherHomeAdsType().equals("native")) {
+                ADSNativeDisplay.loadAdmobNativeAdBig(
+                        ADSMainClass.getStringValue(ADSMainClass.LAUNCHER_HOME_SCREEN_NATIVE),
+                        findViewById(R.id.flNativeSmallPlaceholder),
+                        findViewById(R.id.shimmer_container_banner),
+                        "small",
+                        this
+                );
+            } else {
+                ADSBannerSmall.loadAdMobBanner(
+                        ADSMainClass.getStringValue(ADSMainClass.LAUNCHER_HOME_SCREEN_BANNER),
+                        findViewById(R.id.flBannerSmallPlaceholder),
+                        findViewById(R.id.shimmer_container_banner),
+                        this,
+                        "small");
+            }
+        } else {
+            findViewById(R.id.shimmer_container_banner).setVisibility(View.GONE);
+            findViewById(R.id.flNativeSmallPlaceholder).setVisibility(View.GONE);
+            findViewById(R.id.flBannerSmallPlaceholder).setVisibility(View.GONE);
+        }
 
-//        rlAdView = findViewById(R.id.rlAdView);
-//        rlBannerAdView = findViewById(R.id.rlBannerAdView);
-//        slBannerShimmer = findViewById(R.id.slBannerShimmer);
-//        llBannerAd = findViewById(R.id.llBannerAd);
-//        rlNativeAdView = findViewById(R.id.rlNativeAdView);
-//        slNativeShimmer = findViewById(R.id.slNativeShimmer);
-//        flNativeAd = findViewById(R.id.flNativeAd);
 
         clickEvents();
     }
@@ -114,21 +125,7 @@ public class LauncherSettingsActivity extends AppCompatActivity {
     private void clickEvents() {
         Utils.setLocale(this, Utils.getAppLanguageNew(getApplicationContext()));
 
-//        if (!AdPlacement.getLauncherSettingAdShow()) {
-//            rlAdView.setVisibility(View.GONE);
-//        } else {
-//            rlAdView.setVisibility(View.VISIBLE);
-//
-//            if ("banner".equalsIgnoreCase(AdPlacement.getLauncherSettingAdType())) {
-//                rlBannerAdView.setVisibility(View.VISIBLE);
-//                rlNativeAdView.setVisibility(View.GONE);
-//                AdPlacement.loadBannerAd(this, AdPlacement.getLauncherSettingBannerId(), rlBannerAdView, slBannerShimmer, llBannerAd);
-//            } else {
-//                rlBannerAdView.setVisibility(View.GONE);
-//                rlNativeAdView.setVisibility(View.VISIBLE);
-//                AdPlacement.loadNativeAd(this, AdPlacement.getLauncherSettingNativeId(), rlNativeAdView, slNativeShimmer, flNativeAd, "large");
-//            }
-//        }
+
 
         updateSerializeList();
         updateSelectedSerializeText();
@@ -353,7 +350,6 @@ public class LauncherSettingsActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Utils.setLocale(this, Utils.getAppLanguageNew(this));
 
         if (tvTitle != null) {
             tvTitle.setText(getString(R.string.launcher_settings));

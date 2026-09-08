@@ -1,74 +1,33 @@
 package com.reader.alldocviewer.pdfeditor.launcher.interfaces;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.view.View;
-import android.widget.LinearLayout;
 
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.core.content.ContextCompat;
-
-
-import com.reader.alldocviewer.pdfeditor.R;
-import com.reader.alldocviewer.pdfeditor.launcher.activity.DefaultAppActivity;
-import com.reader.alldocviewer.pdfeditor.launcher.common.AdPlacement;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
 import com.reader.alldocviewer.pdfeditor.launcher.common.Utils;
 import com.reader.alldocviewer.pdfeditor.launcher.intro.Intro1Activity;
 import com.reader.alldocviewer.pdfeditor.launcher.intro.Intro2Activity;
 import com.reader.alldocviewer.pdfeditor.launcher.intro.Intro3Activity;
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowManager;
+import com.reader.alldocviewer.pdfeditor.ui.activities.permission.PermissionActivity;
 
 public class IntroNavigation {
-    private static final int MAX_INTRO_BUTTON_SCREENS = 4;
-
-    public static int getEffectiveIntroButtonScreenCount() {
-        int count = AdPlacement.getIntroButtonScreen();
-        if (count <= 0) {
-            return 0;
-        }
-        return Math.min(count, MAX_INTRO_BUTTON_SCREENS);
-    }
-
-    public static void setupIntroButtonIndicators(Context context, LinearLayout llIndicator, int activeScreen) {
-        int pageCount = getEffectiveIntroButtonScreenCount();
-        llIndicator.removeAllViews();
-
-        if (pageCount <= 0) {
-            llIndicator.setVisibility(View.GONE);
-            return;
-        }
-
-        llIndicator.setVisibility(View.VISIBLE);
-        int activeWidth = Utils.dpToPx(context, 18);
-        int inactiveWidth = Utils.dpToPx(context, 6);
-        int dotHeight = Utils.dpToPx(context, 6);
-        int margin = Utils.dpToPx(context, 2);
-
-        for (int i = 1; i <= pageCount; i++) {
-            AppCompatImageView dot = new AppCompatImageView(context);
-            boolean isActive = i == activeScreen;
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(isActive ? activeWidth : inactiveWidth, dotHeight);
-            params.setMargins(margin, 0, margin, 0);
-            dot.setLayoutParams(params);
-            dot.setAdjustViewBounds(true);
-            dot.setImageResource(isActive ? R.drawable.custom_button_round : R.drawable.custom_cirlce);
-            dot.setColorFilter(ContextCompat.getColor(context, isActive ? R.color.primary : R.color.gray));
-            llIndicator.addView(dot);
-        }
-    }
 
     public static void openIntroButtonFlow(Activity activity) {
-        if (getEffectiveIntroButtonScreenCount() == 0) {
-            completeIntroAndOpenDefaultApp(activity);
-            return;
+        int count = ADSMainClass.getOnboardingCountShow();
+        if (count > 0) {
+            activity.startActivity(new Intent(activity, Intro1Activity.class));
+        } else {
+            completeIntroAndOpenPermission(activity);
         }
-        activity.startActivity(new Intent(activity, Intro1Activity.class));
         activity.finish();
     }
 
     public static void goToNextIntroButtonScreen(Activity activity, int currentScreen) {
-        if (currentScreen >= getEffectiveIntroButtonScreenCount()) {
-            completeIntroAndOpenDefaultApp(activity);
+        int onboardingCount = ADSMainClass.getOnboardingCountShow();
+
+        if (currentScreen >= onboardingCount) {
+            completeIntroAndOpenPermission(activity);
             return;
         }
 
@@ -80,9 +39,8 @@ public class IntroNavigation {
             case 3:
                 nextClass = Intro3Activity.class;
                 break;
-
             default:
-                completeIntroAndOpenDefaultApp(activity);
+                completeIntroAndOpenPermission(activity);
                 return;
         }
 
@@ -90,14 +48,15 @@ public class IntroNavigation {
         activity.finish();
     }
 
-    public static void completeIntroAndOpenDefaultApp(Activity activity) {
-        Utils.setIntroCompleted(activity.getApplicationContext(), true);
-        if (AdPlacement.getLanguageScreenShowFirst()) {
-            Utils.trackScreenOnce(activity, "LANGUAGE_TO_DEFAULT_FLOW_A");
-        } else {
-            Utils.trackScreenOnce(activity, "SPLASH_TO_DEFAULT_FLOW_B");
+    public static void completeIntroAndOpenPermission(Activity activity) {
+        // Use startup flow so Permission is opened only when it is the next step
+        // (avoids opening Permission twice when flow already showed it before OnBoarding).
+        if (StartupFlowManager.isStartupFlowActive(activity)) {
+            StartupFlowManager.completeOnboarding(activity);
+            return;
         }
-        activity.startActivity(new Intent(activity, DefaultAppActivity.class));
+        Utils.setIntroCompleted(activity.getApplicationContext(), true);
+        activity.startActivity(new Intent(activity, PermissionActivity.class));
         activity.finish();
     }
 }

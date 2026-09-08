@@ -5,7 +5,7 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
 
 /**
@@ -636,7 +636,7 @@ public class Color implements java.io.Serializable
      * because of rounding errors. 
      * @return     a new <code>Color</code> object that is  
      *                 a brighter version of this <code>Color</code>.
-     * @see        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#darker
+     * @see        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#darker
      * @since      JDK1.0
      */
     public Color brighter()
@@ -678,7 +678,7 @@ public class Color implements java.io.Serializable
      * of rounding errors. 
      * @return  a new <code>Color</code> object that is 
      *                    a darker version of this <code>Color</code>.
-     * @see        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#brighter
+     * @see        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#brighter
      * @since      JDK1.0
      */
     public Color darker()
@@ -765,7 +765,7 @@ public class Color implements java.io.Serializable
      * 		property.
      * @see      java.lang.System#getProperty(java.lang.String)
      * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#Color(int)
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm)
@@ -790,7 +790,7 @@ public class Color implements java.io.Serializable
      *		property, or the specified <code>Color</code>.
      * @see      java.lang.System#getProperty(java.lang.String)
      * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#Color(int)
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm, Color v)
@@ -822,7 +822,7 @@ public class Color implements java.io.Serializable
      *		the specified integer.
      * @see      java.lang.System#getProperty(java.lang.String)
      * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#Color(int)
+     * @see      com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm, int v)
@@ -854,8 +854,8 @@ public class Color implements java.io.Serializable
      * @param     brightness   the brightness of the color
      * @return    the RGB value of the color with the indicated hue, 
      *                            saturation, and brightness.
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#getRGB()
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#Color(int)
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#getRGB()
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#Color(int)
      * @see       java.awt.image.ColorModel#getRGBdefault()
      * @since     JDK1.0
      */
@@ -927,8 +927,8 @@ public class Color implements java.io.Serializable
      * @return    an array of three elements containing the hue, saturation, 
      *                     and brightness (in that order), of the color with 
      *                     the indicated red, green, and blue components.
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#getRGB()
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color#Color(int)
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#getRGB()
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color#Color(int)
      * @see       java.awt.image.ColorModel#getRGBdefault()
      * @since     JDK1.0
      */

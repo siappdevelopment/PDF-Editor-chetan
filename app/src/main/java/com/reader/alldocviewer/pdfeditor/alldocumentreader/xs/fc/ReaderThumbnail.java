@@ -4,26 +4,26 @@
  * 编译器:            android2.2
  * 时间:              下午4:18:41
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc;
 
 import java.io.File;
 import java.io.FileInputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.Property;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.PPTReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control.PGEditor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.view.SlideDrawKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.Property;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationship;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackageRelationshipTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.ZipPackage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.PPTReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control.PGEditor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.view.SlideDrawKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;

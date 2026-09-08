@@ -65,7 +65,10 @@
                                 android:id="@+id/iv_horizontal"
                                 android:layout_width="@dimen/_19sdp"
                                 android:layout_height="@dimen/_19sdp"
-                                android:src="@drawable/ic_horizontal" />
+                                android:src="@drawable/ic_vertical"
+                                app:tint="#ffffff"
+
+                                />
 
                             <TextView
                                 android:id="@+id/tv_grid"
@@ -105,8 +108,9 @@
                                 android:id="@+id/iv_vertical"
                                 android:layout_width="@dimen/_19sdp"
                                 android:layout_height="@dimen/_19sdp"
-                                android:src="@drawable/ic_vertical"
-                                app:tint="@color/grey_color" />
+                                android:src="@drawable/ic_horizontal"
+                                app:tint="@color/grey_color"
+                                />
 
                             <TextView
                                 android:id="@+id/tv_list"

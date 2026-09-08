@@ -21,7 +21,7 @@ import java.io.InputStream;
 
 import kotlin.jvm.internal.Intrinsics;
 
-/* loaded from: classes11.dex */
+
 public final class PDFPrintDocumentAdapter extends PrintDocumentAdapter {
     @NotNull
     private final Context context;
@@ -29,14 +29,20 @@ public final class PDFPrintDocumentAdapter extends PrintDocumentAdapter {
     private final String documentName;
     @NotNull
     private final String pdfFilePath;
+    private final boolean deleteSourceAfterWrite;
 
     public PDFPrintDocumentAdapter(@NotNull Context context, @NotNull String pdfFilePath, @NotNull String documentName) {
+        this(context, pdfFilePath, documentName, false);
+    }
+
+    public PDFPrintDocumentAdapter(@NotNull Context context, @NotNull String pdfFilePath, @NotNull String documentName, boolean deleteSourceAfterWrite) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(pdfFilePath, "pdfFilePath");
         Intrinsics.checkNotNullParameter(documentName, "documentName");
         this.context = context;
         this.pdfFilePath = pdfFilePath;
         this.documentName = documentName;
+        this.deleteSourceAfterWrite = deleteSourceAfterWrite;
     }
 
     @Override // android.print.PrintDocumentAdapter
@@ -51,27 +57,42 @@ public final class PDFPrintDocumentAdapter extends PrintDocumentAdapter {
 
     @Override // android.print.PrintDocumentAdapter
     public void onWrite(@Nullable PageRange[] pageRangeArr, @Nullable ParcelFileDescriptor parcelFileDescriptor, @Nullable CancellationSignal cancellationSignal, @Nullable PrintDocumentAdapter.WriteResultCallback writeResultCallback) {
-        InputStream fileInputStream;
+        InputStream fileInputStream = null;
+        FileOutputStream fileOutputStream = null;
         try {
             if (this.pdfFilePath.startsWith("content://")) {
                 fileInputStream = this.context.getContentResolver().openInputStream(Uri.parse(this.pdfFilePath));
             } else {
                 fileInputStream = new FileInputStream(new File(this.pdfFilePath));
             }
-            FileOutputStream fileOutputStream = new FileOutputStream(parcelFileDescriptor != null ? parcelFileDescriptor.getFileDescriptor() : null);
+            fileOutputStream = new FileOutputStream(parcelFileDescriptor != null ? parcelFileDescriptor.getFileDescriptor() : null);
             byte[] bArr = new byte[1024];
             Intrinsics.checkNotNull(fileInputStream);
             for (int read = fileInputStream.read(bArr); read > 0; read = fileInputStream.read(bArr)) {
                 fileOutputStream.write(bArr, 0, read);
             }
-            fileInputStream.close();
-            fileOutputStream.close();
             if (writeResultCallback != null) {
                 writeResultCallback.onWriteFinished(new PageRange[]{PageRange.ALL_PAGES});
             }
         } catch (IOException e) {
             if (writeResultCallback != null) {
                 writeResultCallback.onWriteFailed(e.getLocalizedMessage());
+            }
+        } finally {
+            try {
+                if (fileInputStream != null) {
+                    fileInputStream.close();
+                }
+            } catch (IOException ignored) {
+            }
+            try {
+                if (fileOutputStream != null) {
+                    fileOutputStream.close();
+                }
+            } catch (IOException ignored) {
+            }
+            if (this.deleteSourceAfterWrite && !this.pdfFilePath.startsWith("content://")) {
+                new File(this.pdfFilePath).delete();
             }
         }
     }

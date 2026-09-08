@@ -6,7 +6,7 @@
  *
  * Alle Rechte vorbehalten
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
 import android.graphics.Bitmap;
 import android.text.TextPaint;
@@ -14,11 +14,11 @@ import android.text.TextPaint;
 //import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFImageLoader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFTag;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFImageLoader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFTag;
 
 /**
  * @author Steffen Greiffenberg

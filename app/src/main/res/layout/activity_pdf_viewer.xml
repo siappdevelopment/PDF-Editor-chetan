@@ -193,6 +193,8 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -200,6 +202,8 @@
                             android:id="@+id/ivShare"
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
+                            android:clickable="false"
+                            android:focusable="false"
                             android:src="@drawable/ic_share"
                             app:tint="@color/black" />
 
@@ -209,7 +213,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/_4sdp"
+                            android:clickable="false"
                             android:ellipsize="end"
+                            android:focusable="false"
                             android:gravity="center"
                             android:singleLine="true"
                             android:text="@string/share"
@@ -232,6 +238,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -241,8 +249,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                app:cardBackgroundColor="#00000000"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
+                app:cardElevation="0dp">
 
                 <com.facebook.shimmer.ShimmerFrameLayout
                     android:id="@+id/shimmer_container_banner"

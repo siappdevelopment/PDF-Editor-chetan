@@ -5,20 +5,20 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.io.Writer;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Node;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.NodeFilter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.XPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.rule.Pattern;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Node;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.NodeFilter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.XPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.rule.Pattern;
 
 
 /**

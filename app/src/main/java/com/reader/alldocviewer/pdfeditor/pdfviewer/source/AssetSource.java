@@ -10,7 +10,7 @@ import com.shockwave.pdfium.PdfiumCore;
 
 import java.io.IOException;
 
-/* loaded from: classes11.dex */
+
 public class AssetSource implements DocumentSource {
     public final String assetName;
 

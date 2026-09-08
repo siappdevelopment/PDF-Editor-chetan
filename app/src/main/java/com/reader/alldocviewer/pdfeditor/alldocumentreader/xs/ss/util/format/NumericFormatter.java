@@ -4,7 +4,7 @@
  * 缂傛牞鐦ч崳?            android2.2
  * 閺冨爼妫�:              娑撳﹤宕�10:20:18
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.format;
 
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
@@ -18,11 +18,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.DataFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.Palette;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.DataFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.Palette;
 
 import android.graphics.Color;
 

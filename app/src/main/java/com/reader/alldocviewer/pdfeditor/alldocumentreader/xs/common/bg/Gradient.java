@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg;
 
 
 public abstract class Gradient extends AShader

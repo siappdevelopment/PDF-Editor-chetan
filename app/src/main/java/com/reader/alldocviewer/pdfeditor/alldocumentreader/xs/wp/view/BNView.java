@@ -4,23 +4,23 @@
  * 编译器:            android2.2
  * 时间:              上午9:33:36
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bulletnumber.ListLevel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.Style;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.StyleManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.AbstractView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.CharAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.DocAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.PageAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bulletnumber.ListLevel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.Style;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.StyleManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.AbstractView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.CharAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.DocAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.PageAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ParaAttr;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

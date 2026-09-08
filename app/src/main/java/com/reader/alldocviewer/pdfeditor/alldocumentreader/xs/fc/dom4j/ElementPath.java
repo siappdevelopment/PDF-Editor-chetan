@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j;
 
 /**
  * This interface is used by {@link ElementHandler}instances to retrieve

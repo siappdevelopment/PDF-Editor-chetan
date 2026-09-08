@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
 import java.util.Arrays;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.ExpPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.TblPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianByteArrayInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianInput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.ExpPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.TblPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianByteArrayInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianInput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 
 
@@ -164,8 +164,8 @@ public class Formula {
 	}
 
 	/**
-	 * Gets the locator for the corresponding {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SharedFormulaRecord},
-     * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ArrayRecord} or {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.TableRecord}
+	 * Gets the locator for the corresponding {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SharedFormulaRecord},
+     * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ArrayRecord} or {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.TableRecord}
      * if this formula belongs to such a grouping.  The {@link CellReference}
 	 * returned by this method will  match the top left corner of the range of that grouping.
 	 * The return value is usually not the same as the location of the cell containing this formula.

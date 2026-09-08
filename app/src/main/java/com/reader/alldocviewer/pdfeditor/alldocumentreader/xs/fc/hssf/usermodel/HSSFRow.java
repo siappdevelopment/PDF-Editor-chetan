@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RowRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RowRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow;
 
 
 
@@ -70,7 +70,7 @@ public final class HSSFRow implements IRow {
      * @param book low-level Workbook object containing the sheet that contains this row
      * @param sheet low-level Sheet object that contains this Row
      * @param rowNum the row number of this row (0 based)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#createRow(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#createRow(int)
      */
     HSSFRow(HSSFWorkbook book, HSSFSheet sheet, int rowNum) {
         this(book, sheet, new RowRecord(rowNum));
@@ -83,7 +83,7 @@ public final class HSSFRow implements IRow {
      * @param book low-level Workbook object containing the sheet that contains this row
      * @param sheet low-level Sheet object that contains this Row
      * @param record the low level api object this row should represent
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#createRow(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet#createRow(int)
      */
     HSSFRow(HSSFWorkbook book, HSSFSheet sheet, RowRecord record) {
         this.book = book;
@@ -360,7 +360,7 @@ public final class HSSFRow implements IRow {
      * Get the hssfcell representing a given column (logical cell)
      *  0-based.  If you ask for a cell that is not defined then
      *  you get a null, unless you have set a different
-     *  {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy} on the base workbook.
+     *  {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy} on the base workbook.
      *
      * @param cellnum  0 based column number
      * @return HSSFCell representing that column or null if undefined.
@@ -623,7 +623,7 @@ public final class HSSFRow implements IRow {
      *  will not return un-defined (null) cells.
      * Call getCellNum() on the returned cells to know which cell they are.
      * As this only ever works on physically defined cells,
-     *  the {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy} has no effect.
+     *  the {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow.MissingCellPolicy} has no effect.
      */
     public Iterator<ICell> cellIterator()
     {

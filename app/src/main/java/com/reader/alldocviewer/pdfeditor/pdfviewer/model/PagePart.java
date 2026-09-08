@@ -3,7 +3,7 @@ package com.reader.alldocviewer.pdfeditor.pdfviewer.model;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 
-/* loaded from: classes11.dex */
+
 public class PagePart {
     public int cacheOrder;
     public int page;

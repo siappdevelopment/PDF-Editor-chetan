@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              上午10:36:30
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.CellElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.CellElement;
 
 /**
  * 布局过程记录跨页的单元格

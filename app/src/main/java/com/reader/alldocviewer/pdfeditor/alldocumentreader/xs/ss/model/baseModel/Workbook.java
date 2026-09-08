@@ -4,21 +4,21 @@
  * 编译器:            android2.2
  * 时间:              下午3:07:27
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.TableFormatManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ReaderHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.TableFormatManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ReaderHandler;
 
 import android.graphics.Color;
 import android.os.Message;

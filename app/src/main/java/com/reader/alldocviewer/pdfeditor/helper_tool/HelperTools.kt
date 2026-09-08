@@ -14,20 +14,22 @@ import android.graphics.pdf.PdfDocument
 import android.media.ExifInterface
 import android.net.Uri
 import android.os.Environment
-import android.os.Handler
-import android.os.Looper
 import android.print.PrintAttributes
 import android.print.PrintManager
 import android.util.Log
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import com.reader.alldocviewer.pdfeditor.R
 import com.reader.alldocviewer.pdfeditor.data.local.entity.MediaFile
 import com.reader.alldocviewer.pdfeditor.utils.PdfFileNameGenerator
+import com.reader.alldocviewer.pdfeditor.utils.UriImageHelper
+import com.reader.alldocviewer.pdfeditor.utils.Utils
 import com.reader.alldocviewer.pdfeditor.data.local.entity.ModelFile
 import com.reader.alldocviewer.pdfeditor.listener.OnPdfPasswordInterface
 import com.reader.alldocviewer.pdfeditor.splitPdf.SplitModel
+import com.reader.alldocviewer.pdfeditor.scan.organize.OrganizeImageActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.pdfToImage.PDFToImageActivity
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.PasswordBottomSheetDialog
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
@@ -54,62 +56,47 @@ object HelperTools {
 
     val selectedBitmap: ArrayList<Bitmap> = ArrayList()
     val selectedBitmapOrganizePage: ArrayList<Bitmap> = ArrayList()
+    val selectedImageSources: ArrayList<String> = ArrayList()
+    var imagesWereEdited: Boolean = false
 
-    private var printLock = false
-
-    fun printPdfFile(context: Context, filePath: String, documentName: String?): Boolean {
-        if (printLock) {
-            Log.w("printPdfFile", "Print is already in progress.")
+    fun printPdfFile(
+        activity: Activity,
+        filePath: String,
+        documentName: String?,
+        deleteAfterPrint: Boolean = false,
+    ): Boolean {
+        if (activity.isFinishing || activity.isDestroyed) {
             return false
         }
-        printLock = true
-        val printManager =
-            context.getSystemService(Context.PRINT_SERVICE) as? PrintManager
-        if (printManager == null) {
-            printLock = false
-            return false
-        }
+        val printManager = resolvePrintManager(activity) ?: return false
         return try {
-            val adapter = PDFPrintDocumentAdapter(context, filePath, documentName ?: "Document")
-            printManager.print(
-                documentName ?: "Document",
-                adapter,
-                PrintAttributes.Builder().build()
+            val jobName = documentName?.takeIf { it.isNotBlank() } ?: "Document"
+            val adapter = PDFPrintDocumentAdapter(
+                activity,
+                filePath,
+                jobName,
+                deleteAfterPrint,
             )
-            Handler(Looper.getMainLooper()).postDelayed({
-                printLock = false
-            }, 1000)
+            printManager.print(
+                jobName,
+                adapter,
+                PrintAttributes.Builder().build(),
+            )
             true
         } catch (e: Exception) {
-            printLock = false
             Log.e("printPdfFile", "Exception: $e")
             false
         }
     }
 
-    private const val PDF_BITMAP_MAX_WIDTH = 1080
-    private const val PDF_BITMAP_MAX_HEIGHT = 1920
-
-    fun scaleBitmapForPdf(bitmap: Bitmap, maxWidth: Int, maxHeight: Int): Bitmap {
-        if (bitmap.isRecycled) {
-            throw IOException("Bitmap is recycled")
-        }
-        val width = bitmap.width
-        val height = bitmap.height
-        if (width <= maxWidth && height <= maxHeight) {
-            return bitmap
-        }
-        val scale = minOf(maxWidth.toFloat() / width, maxHeight.toFloat() / height)
-        val newWidth = (width * scale).toInt().coerceAtLeast(1)
-        val newHeight = (height * scale).toInt().coerceAtLeast(1)
-        return Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true)
+    private fun resolvePrintManager(activity: Activity): PrintManager? {
+        val serviceContext = (activity as? ActivityPrintContextProvider)?.printServiceContext ?: activity
+        return serviceContext.getSystemService(Context.PRINT_SERVICE) as? PrintManager
     }
 
     suspend fun createPdfFromBitmaps(
         bitmaps: List<Bitmap>,
         recycleSources: Boolean = false,
-        maxWidth: Int = PDF_BITMAP_MAX_WIDTH,
-        maxHeight: Int = PDF_BITMAP_MAX_HEIGHT,
         pdfNameType: PdfFileNameGenerator.Type = PdfFileNameGenerator.Type.READER,
     ): String = withContext(Dispatchers.IO) {
         val externalDir = File(
@@ -117,25 +104,35 @@ object HelperTools {
             "PdfReader"
         )
         val outputFile = PdfFileNameGenerator.uniqueFile(externalDir, pdfNameType)
+        writeBitmapsToPdfDocument(bitmaps, pdfDocument = PdfDocument(), outputFile, recycleSources)
+    }
+
+    suspend fun createPdfFromImageSources(
+        context: Context,
+        sources: List<String>,
+        pdfNameType: PdfFileNameGenerator.Type = PdfFileNameGenerator.Type.READER,
+        outputFileName: String? = null,
+    ): String = withContext(Dispatchers.IO) {
+        val externalDir = File(
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS),
+            "PdfReader"
+        )
+        if (!externalDir.exists()) {
+            externalDir.mkdirs()
+        }
+        val outputFile = if (!outputFileName.isNullOrBlank()) {
+            File(externalDir, outputFileName)
+        } else {
+            PdfFileNameGenerator.uniqueFile(externalDir, pdfNameType)
+        }
         val pdfDocument = PdfDocument()
         try {
-            bitmaps.forEachIndexed { index, bitmap ->
-                if (bitmap.isRecycled) return@forEachIndexed
-                val scaledBitmap = scaleBitmapForPdf(bitmap, maxWidth, maxHeight)
+            sources.forEachIndexed { index, source ->
+                val bitmap = UriImageHelper.decodeFullBitmap(context, source) ?: return@forEachIndexed
                 try {
-                    val pageInfo = PdfDocument.PageInfo.Builder(
-                        scaledBitmap.width,
-                        scaledBitmap.height,
-                        index + 1
-                    ).create()
-                    val page = pdfDocument.startPage(pageInfo)
-                    page.canvas.drawBitmap(scaledBitmap, 0f, 0f, Paint())
-                    pdfDocument.finishPage(page)
+                    addBitmapPage(pdfDocument, bitmap, index + 1)
                 } finally {
-                    if (scaledBitmap !== bitmap && !scaledBitmap.isRecycled) {
-                        scaledBitmap.recycle()
-                    }
-                    if (recycleSources && !bitmap.isRecycled) {
+                    if (!bitmap.isRecycled) {
                         bitmap.recycle()
                     }
                 }
@@ -147,6 +144,43 @@ object HelperTools {
             pdfDocument.close()
         }
         outputFile.absolutePath
+    }
+
+    private fun addBitmapPage(pdfDocument: PdfDocument, bitmap: Bitmap, pageNumber: Int) {
+        val pageInfo = PdfDocument.PageInfo.Builder(
+            bitmap.width,
+            bitmap.height,
+            pageNumber,
+        ).create()
+        val page = pdfDocument.startPage(pageInfo)
+        page.canvas.drawBitmap(bitmap, 0f, 0f, Paint())
+        pdfDocument.finishPage(page)
+    }
+
+    private fun writeBitmapsToPdfDocument(
+        bitmaps: List<Bitmap>,
+        pdfDocument: PdfDocument,
+        outputFile: File,
+        recycleSources: Boolean,
+    ): String {
+        try {
+            bitmaps.forEachIndexed { index, bitmap ->
+                if (bitmap.isRecycled) return@forEachIndexed
+                try {
+                    addBitmapPage(pdfDocument, bitmap, index + 1)
+                } finally {
+                    if (recycleSources && !bitmap.isRecycled) {
+                        bitmap.recycle()
+                    }
+                }
+            }
+            FileOutputStream(outputFile).use { fileOutputStream ->
+                pdfDocument.writeTo(fileOutputStream)
+            }
+        } finally {
+            pdfDocument.close()
+        }
+        return outputFile.absolutePath
     }
 
     fun convertImageToPDF(
@@ -193,11 +227,139 @@ object HelperTools {
         }
     }
 
+    fun handlePrintPdf(
+        activity: Activity,
+        file: ModelFile,
+        fragmentManager: FragmentManager? = null,
+    ) {
+        if (activity.isFinishing || activity.isDestroyed) return
+
+        val filePath = file.path.orEmpty()
+        if (filePath.isBlank()) {
+            Toast.makeText(
+                activity,
+                activity.getString(R.string.file_path_is_empty),
+                Toast.LENGTH_SHORT,
+            ).show()
+            return
+        }
+        if (!filePath.startsWith("content://")) {
+            val pdfFile = File(filePath)
+            if (!pdfFile.exists() || !pdfFile.isFile) {
+                Toast.makeText(
+                    activity,
+                    activity.getString(R.string.file_not_found),
+                    Toast.LENGTH_SHORT,
+                ).show()
+                return
+            }
+        }
+
+        if (!file.isEncrypted) {
+            launchPrintJob(activity, filePath, file.name)
+            return
+        }
+
+        CoroutineScope(Dispatchers.Main).launch {
+            val needsPassword = withContext(Dispatchers.IO) {
+                Utils.requiresPdfOpenPassword(filePath)
+            }
+            if (activity.isFinishing || activity.isDestroyed) return@launch
+            if (needsPassword) {
+                showPrintPasswordDialog(activity, file, filePath, fragmentManager)
+            } else {
+                launchPrintJob(activity, filePath, file.name)
+            }
+        }
+    }
+
+    private fun launchPrintJob(
+        activity: Activity,
+        filePath: String,
+        documentName: String?,
+        deleteAfterPrint: Boolean = false,
+    ) {
+        if (activity.isFinishing || activity.isDestroyed) return
+        if (!printPdfFile(activity, filePath, documentName, deleteAfterPrint)) {
+            Log.e("handlePrintPdf", "printPdfFile failed for path=$filePath")
+        }
+    }
+
+    private fun showPrintPasswordDialog(
+        activity: Activity,
+        file: ModelFile,
+        filePath: String,
+        fragmentManager: FragmentManager?,
+    ) {
+        val dialog = PasswordBottomSheetDialog(
+            checkType = "unlock",
+            modelFile = file,
+            viewModel = null,
+            listener = object : OnPdfPasswordInterface {
+                override fun onOpenPasswordClick(password: String) {
+                    printUnlockedPdf(activity, filePath, file.name, password)
+                }
+            }
+        )
+        val manager = fragmentManager
+            ?: (activity as? FragmentActivity)?.supportFragmentManager
+        if (manager == null) {
+            Log.e("handlePrintPdf", "Unable to show password dialog: FragmentManager unavailable")
+            launchPrintJob(activity, filePath, file.name)
+            return
+        }
+        val tag = "print_password_dialog"
+        if (manager.findFragmentByTag(tag) != null) return
+        try {
+            dialog.show(manager, tag)
+        } catch (e: IllegalStateException) {
+            manager.beginTransaction()
+                .add(dialog, tag)
+                .commitAllowingStateLoss()
+        }
+    }
+
+    private fun printUnlockedPdf(
+        activity: Activity,
+        filePath: String,
+        documentName: String?,
+        password: String,
+    ) {
+        val progressDialog = ProgressDialog(activity).apply {
+            setMessage(activity.getString(R.string.please_wait))
+            setCancelable(false)
+            show()
+        }
+        CoroutineScope(Dispatchers.IO).launch {
+            val decryptedFile = Utils.decryptPdfToTempFile(File(filePath), password)
+            withContext(Dispatchers.Main) {
+                progressDialog.dismiss()
+                if (decryptedFile != null) {
+                    printPdfFile(
+                        activity,
+                        decryptedFile.absolutePath,
+                        documentName,
+                        deleteAfterPrint = true,
+                    )
+                } else {
+                    Toast.makeText(
+                        activity,
+                        activity.getString(R.string.failed_to_unlock_pdf),
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                }
+            }
+        }
+    }
+
     fun handlePdfToImageConvert(
         activity: Activity,
         file: ModelFile,
         checkFileName: String
     ) {
+        if (checkFileName == "split_pdf") {
+            splitModelFile.clear()
+        }
         if (file.isEncrypted) {
             val dialog = PasswordBottomSheetDialog(
                 "PasswordCheckTools",
@@ -492,10 +654,112 @@ object HelperTools {
 
     fun getBitmapFromUri(context: Context, uri: Uri): Bitmap? {
         return try {
-            BitmapFactory.decodeStream(context.contentResolver.openInputStream(uri))
+            UriImageHelper.decodeFullBitmap(context, uri.toString())
         } catch (e: Exception) {
             e.printStackTrace()
             null
+        }
+    }
+
+    /**
+     * ML Kit scanner URIs are only readable by the activity that received the
+     * scan result. Copy them into app cache before launching OrganizeImageActivity.
+     */
+    fun persistScannedPageUris(
+        context: Context,
+        pages: List<GmsDocumentScanningResult.Page>?,
+    ): ArrayList<String> {
+        val persisted = ArrayList<String>()
+        if (pages.isNullOrEmpty()) return persisted
+
+        val dir = File(context.cacheDir, "scan_to_pdf")
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+
+        pages.forEachIndexed { index, page ->
+            val dest = File(dir, "scan_${System.currentTimeMillis()}_$index.jpg")
+            val savedPath = copyScanUriToFile(context, page.imageUri, dest)
+            if (!savedPath.isNullOrBlank()) {
+                persisted.add(savedPath)
+            } else {
+                Log.e("Scanner", "Failed to persist scanned page: ${page.imageUri}")
+            }
+        }
+        return persisted
+    }
+
+    fun launchOrganizeFromScannedPages(
+        context: Context,
+        pages: List<GmsDocumentScanningResult.Page>?,
+        title: String,
+    ) {
+        val progressDialog = ProgressDialog(context).apply {
+            setMessage(context.getString(R.string.please_wait))
+            setCancelable(false)
+            show()
+        }
+        CoroutineScope(Dispatchers.IO).launch {
+            val localPaths = persistScannedPageUris(context, pages)
+            withContext(Dispatchers.Main) {
+                try {
+                    if (progressDialog.isShowing) {
+                        progressDialog.dismiss()
+                    }
+                } catch (_: Exception) {
+                }
+                if (context is Activity && (context.isFinishing || context.isDestroyed)) {
+                    return@withContext
+                }
+                if (localPaths.isEmpty()) {
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.failed_to_load_images),
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                    return@withContext
+                }
+                val intent = Intent(context, OrganizeImageActivity::class.java).apply {
+                    putExtra("main_title", title)
+                    putStringArrayListExtra("scanned_page_uris", localPaths)
+                }
+                if (context !is Activity) {
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }
+                context.startActivity(intent)
+            }
+        }
+    }
+
+    private fun copyScanUriToFile(context: Context, uri: Uri, dest: File): String? {
+        try {
+            val copied = context.contentResolver.openInputStream(uri)?.use { input ->
+                FileOutputStream(dest).use { output ->
+                    input.copyTo(output)
+                }
+                dest.exists() && dest.length() > 0L
+            } ?: false
+            if (copied) {
+                return dest.absolutePath
+            }
+        } catch (e: Exception) {
+            Log.e("Scanner", "openInputStream failed for $uri", e)
+        }
+
+        val sourcePath = when (uri.scheme) {
+            "file", null -> uri.path
+            else -> null
+        } ?: return null
+        val sourceFile = File(sourcePath)
+        if (!sourceFile.exists() || !sourceFile.canRead()) {
+            return null
+        }
+        return try {
+            sourceFile.copyTo(dest, overwrite = true)
+            dest.absolutePath
+        } catch (e: Exception) {
+            Log.e("Scanner", "copyTo failed for $sourcePath", e)
+            if (sourceFile.canRead()) sourceFile.absolutePath else null
         }
     }
 

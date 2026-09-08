@@ -42,10 +42,10 @@ class RecycleBinActivity : AppCompatActivity() {
         initView()
         observeViewModel()
 
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getRecycleBinBottomAdsShow()) {
+            if (ADSMainClass.getRecycleBinAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.RECYCLE_BIN_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -53,10 +53,11 @@ class RecycleBinActivity : AppCompatActivity() {
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.RECYCLE_BIN_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -78,8 +79,7 @@ class RecycleBinActivity : AppCompatActivity() {
     private fun initView() {
         binding.tvTitle.text = getString(R.string.recycle_bin)
         binding.ivBackMain.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+onBack()        }
 
         recycleBinAdapter = RecyclerBinAdapter(
             onSelectionChanged = {
@@ -204,6 +204,6 @@ class RecycleBinActivity : AppCompatActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getRecycleBinInterShow())
     }
 }

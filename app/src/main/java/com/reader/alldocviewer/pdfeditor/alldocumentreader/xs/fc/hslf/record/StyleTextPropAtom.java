@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -24,13 +24,13 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.AlignmentTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.CharFlagsTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.ParagraphFlagsTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.AlignmentTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.CharFlagsTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.ParagraphFlagsTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 
 /**

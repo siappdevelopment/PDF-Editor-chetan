@@ -14,7 +14,7 @@ import com.reader.alldocviewer.pdfeditor.pdfviewer.util.Constants;
 import com.shockwave.pdfium.PdfDocument;
 import com.shockwave.pdfium.util.SizeF;
 
-/* loaded from: classes11.dex */
+
 public class DragPinchManager implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {
     public AnimationManager animationManager;
     public GestureDetector gestureDetector;

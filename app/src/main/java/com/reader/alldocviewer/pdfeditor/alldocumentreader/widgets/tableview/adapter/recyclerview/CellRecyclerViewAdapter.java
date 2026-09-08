@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview;
 
 import android.content.Context;
 import android.view.View;
@@ -8,21 +8,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.itemclick.CellRecyclerViewItemClickListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.itemclick.CellRecyclerViewItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
     @NonNull
     private final RecyclerView.RecycledViewPool mRecycledViewPool;
     private int mRecyclerViewId;
     @NonNull
-    private final com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView mTableView;
+    private final com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView mTableView;
 
-    public CellRecyclerViewAdapter(@NonNull Context context, @Nullable List<C> list, @NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView iTableView) {
+    public CellRecyclerViewAdapter(@NonNull Context context, @Nullable List<C> list, @NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView iTableView) {
         super(context, list);
         this.mRecyclerViewId = 0;
         this.mTableView = iTableView;
@@ -42,12 +42,12 @@ public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
         if (this.mTableView.isAllowClickInsideCell()) {
             cellRecyclerView.addOnItemTouchListener(new CellRecyclerViewItemClickListener(cellRecyclerView, this.mTableView));
         }
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager columnLayoutManager = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager(this.mContext, this.mTableView);
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager columnLayoutManager = new com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager(this.mContext, this.mTableView);
         if (this.mTableView.getReverseLayout()) {
             columnLayoutManager.setReverseLayout(true);
         }
         cellRecyclerView.setLayoutManager(columnLayoutManager);
-        cellRecyclerView.setAdapter(new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter(this.mContext, this.mTableView));
+        cellRecyclerView.setAdapter(new com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter(this.mContext, this.mTableView));
         cellRecyclerView.setId(this.mRecyclerViewId);
         this.mRecyclerViewId++;
         return new CellRowViewHolder(cellRecyclerView);
@@ -55,7 +55,7 @@ public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(@NonNull AbstractViewHolder abstractViewHolder, int i) {
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter cellRowRecyclerViewAdapter = (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter) ((CellRowViewHolder) abstractViewHolder).recyclerView.getAdapter();
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter cellRowRecyclerViewAdapter = (com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRowRecyclerViewAdapter) ((CellRowViewHolder) abstractViewHolder).recyclerView.getAdapter();
         cellRowRecyclerViewAdapter.setYPosition(i);
         cellRowRecyclerViewAdapter.setItems((List) this.mItemList.get(i));
     }
@@ -64,9 +64,9 @@ public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
     public void onViewAttachedToWindow(@NonNull AbstractViewHolder abstractViewHolder) {
         super.onViewAttachedToWindow(abstractViewHolder);
         CellRowViewHolder cellRowViewHolder = (CellRowViewHolder) abstractViewHolder;
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ScrollHandler scrollHandler = this.mTableView.getScrollHandler();
-        ((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager) cellRowViewHolder.recyclerView.getLayoutManager()).scrollToPositionWithOffset(scrollHandler.getColumnPosition(), scrollHandler.getColumnPositionOffset());
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.SelectionHandler selectionHandler = this.mTableView.getSelectionHandler();
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ScrollHandler scrollHandler = this.mTableView.getScrollHandler();
+        ((com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager) cellRowViewHolder.recyclerView.getLayoutManager()).scrollToPositionWithOffset(scrollHandler.getColumnPosition(), scrollHandler.getColumnPositionOffset());
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.SelectionHandler selectionHandler = this.mTableView.getSelectionHandler();
         if (selectionHandler.isAnyColumnSelected()) {
             AbstractViewHolder abstractViewHolder2 = (AbstractViewHolder) cellRowViewHolder.recyclerView.findViewHolderForAdapterPosition(selectionHandler.getSelectedColumnPosition());
             if (abstractViewHolder2 != null) {
@@ -141,7 +141,7 @@ public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
         if (list.size() != this.mItemList.size() || list.contains(null)) {
             return;
         }
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager cellLayoutManager = this.mTableView.getCellLayoutManager();
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager cellLayoutManager = this.mTableView.getCellLayoutManager();
         for (int findFirstVisibleItemPosition = cellLayoutManager.findFirstVisibleItemPosition(); findFirstVisibleItemPosition < cellLayoutManager.findLastVisibleItemPosition() + 1; findFirstVisibleItemPosition++) {
             ((AbstractRecyclerViewAdapter) ((RecyclerView) cellLayoutManager.findViewByPosition(findFirstVisibleItemPosition)).getAdapter()).addItem(i, list.get(findFirstVisibleItemPosition));
         }
@@ -156,7 +156,7 @@ public class CellRecyclerViewAdapter<C> extends AbstractRecyclerViewAdapter<C> {
         setItems(arrayList, false);
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class CellRowViewHolder extends AbstractViewHolder {
         final CellRecyclerView recyclerView;
 

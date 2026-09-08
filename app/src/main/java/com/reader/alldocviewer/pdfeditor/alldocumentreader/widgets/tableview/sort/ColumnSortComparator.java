@@ -1,10 +1,10 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort;
 
 import androidx.annotation.NonNull;
 import java.util.Comparator;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class ColumnSortComparator extends AbstractSortComparator implements Comparator<List<ISortableModel>> {
     private final int mXPosition;
 

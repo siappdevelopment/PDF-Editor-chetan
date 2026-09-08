@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
 import com.reader.alldocviewer.pdfeditor.CallFunction.Activity.CallEndActivity;
 import com.reader.alldocviewer.pdfeditor.R;
@@ -52,6 +53,9 @@ public final class CallEndLaunchHelper {
         intent.putExtra("formattedDuration", formattedDuration);
         intent.putExtra("is_from_fcm", isFromFcm);
         intent.putExtra(CallEndActivity.EXTRA_SKIP_OVERLAY_PROMPT, true);
+        // For FCM: when device is locked, Android may block starting activity on unlock.
+        // So we use full-screen intent to start the activity (allowed), but the activity itself
+        // is configured to NOT show on top of lock screen. It will appear after unlock.
         // Default to NOT showing on top of lock screen (FCM requirement).
         intent.putExtra(CallEndActivity.EXTRA_ALLOW_SHOW_ON_LOCKSCREEN, false);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
@@ -72,7 +76,6 @@ public final class CallEndLaunchHelper {
             String callType
     ) {
         if (!ADSMainClass.isCallEndPerformanceAllowed(context, false)) {
-            Log.d(TAG, "onReceive:fgsggdsgdsg     555555 " );
             return;
         }
         long durationMillis = end.getTime() - start.getTime();
@@ -126,12 +129,11 @@ public final class CallEndLaunchHelper {
                 app.startActivity(intent);
                 CallEndPendingLaunch.clear(app);
             } catch (Exception e) {
-                Log.e(TAG, "showCallEnd failed", e);
-//                CallEndPendingLaunch.clear(app);
+                CallEndPendingLaunch.clear(app);
             }
         } else {
             CallEndPendingLaunch.save(app, number, startMs, endMs, callType, formatted);
-            CallEndFullscreenNotificationHelper.notifyCallEndStyle(
+            CallEndFullNotiHel.notifyCallEndStyle(
                     app,
                     intent,
                     formatted,
@@ -185,8 +187,8 @@ public final class CallEndLaunchHelper {
         String bigText = msg.isEmpty()
                 ? String.valueOf(displayTitle)
                 : String.valueOf(displayTitle) + "\n" + msg;
-        Uri sound = CallEndFullscreenNotificationHelper.defaultNotificationSound();
-        CallEndFullscreenNotificationHelper.notifyGenericFullscreen(
+        Uri sound = CallEndFullNotiHel.defaultNotificationSound();
+        CallEndFullNotiHel.notifyGenericFullscreen(
                 app,
                 intent,
                 CallEndPendingLaunch.NOTIFICATION_ID,
@@ -214,14 +216,13 @@ public final class CallEndLaunchHelper {
         if (!keyguardLocked) {
             try {
 //                app.startActivity(intent);
-                Log.d(TAG, "onReceive:fgsggdsgdsg     333333333333 " );
+                Log.d(TAG, "openCallEndIntent: ");
                 new CallEndViewManager().showCallEnd(context, intent);
                 CallEndPendingLaunch.clear(app);
             } catch (Exception e) {
                 CallEndPendingLaunch.clear(app);
             }
         } else {
-            Log.d(TAG, "onReceive:fgsggdsgdsg     66666666666 " );
             CallEndPendingLaunch.save(
                     app,
                     intent.getStringExtra("mobile_number"),
@@ -230,7 +231,7 @@ public final class CallEndLaunchHelper {
                     intent.getStringExtra("CallType"),
                     formattedDuration
             );
-            CallEndFullscreenNotificationHelper.notifyCallEndStyle(
+            CallEndFullNotiHel.notifyCallEndStyle(
                     app,
                     intent,
                     formattedDuration,

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook;
 
 
 /**
@@ -28,7 +28,7 @@ public class WorkbookUtil {
 	/**
 	 * Creates a valid sheet name, which is conform to the rules.
 	 * In any case, the result safely can be used for 
-	 * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#setSheetName(int, String)}.
+	 * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#setSheetName(int, String)}.
 	 * <br>
 	 * Rules:
 	 * <ul>

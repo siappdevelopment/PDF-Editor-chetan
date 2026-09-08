@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.MasterSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextRun;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.BitMaskTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.CharFlagsTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.ParagraphFlagsTextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ColorSchemeAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.MasterSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextRun;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.BitMaskTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.CharFlagsTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.ParagraphFlagsTextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextProp;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties.TextPropCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ColorSchemeAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color;
 
 
 /**
@@ -567,7 +567,7 @@ public final class RichTextRun
 
     /**
      * @return font color as RGB value
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color
      */
     public Color getFontColor()
     {
@@ -588,7 +588,7 @@ public final class RichTextRun
      * Sets color of the text, as a int bgr.
      * (PowerPoint stores as BlueGreenRed, not the more
      *  usual RedGreenBlue)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color
      */
     public void setFontColor(int bgr)
     {

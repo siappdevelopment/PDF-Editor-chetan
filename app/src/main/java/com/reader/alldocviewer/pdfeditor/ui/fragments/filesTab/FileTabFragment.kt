@@ -34,18 +34,22 @@ import com.reader.alldocviewer.pdfeditor.ui.activities.pdfOpen.PdfOpenActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.pdfviewer.PdfViewerActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.search.SearchAllFilesActivity
 import com.reader.alldocviewer.pdfeditor.ui.adapters.FileListAdapter
+import com.reader.alldocviewer.pdfeditor.ui.adapters.FileListRow
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.DeleteConfirmationBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.DetailsBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.DuplicateBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.PasswordBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.RenameBottomSheetDialog
 import com.reader.alldocviewer.pdfeditor.ui.dialogs.WidgetBottomSheetDialog
+import com.reader.alldocviewer.pdfeditor.launcher.HomeLauncherFragment
+import com.reader.alldocviewer.pdfeditor.launcher.utils.PermissionManager
 import com.reader.alldocviewer.pdfeditor.utils.AppPreferences
 import com.reader.alldocviewer.pdfeditor.utils.BottomNavIconAnimator
 import com.reader.alldocviewer.pdfeditor.utils.FileConst
 import com.reader.alldocviewer.pdfeditor.utils.MoreOptionsSheetGuard
 import com.reader.alldocviewer.pdfeditor.utils.OfficeViewerLauncher
 import com.reader.alldocviewer.pdfeditor.utils.OnClickHandler
+import com.reader.alldocviewer.pdfeditor.utils.StoragePermissionHelper
 import com.reader.alldocviewer.pdfeditor.utils.PdfViewerLauncher
 import com.reader.alldocviewer.pdfeditor.utils.Utils
 import com.reader.alldocviewer.pdfeditor.utils.resolveFileType
@@ -57,7 +61,7 @@ import kotlinx.coroutines.withContext
 import java.io.File
 
 @AndroidEntryPoint
-class FileTabFragment : Fragment(), OnClickHandler {
+class  FileTabFragment : Fragment(), OnClickHandler {
     private val tabFileType: String
         get() = requireArguments().getString(
             ARG_TAB_FILE_TYPE,
@@ -91,6 +95,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.onClickHandler = this
+
         setupRecycler()
         setupSwipeRefresh()
         observeViewModel()
@@ -114,6 +119,18 @@ class FileTabFragment : Fragment(), OnClickHandler {
             adapter.notifyDataSetChanged()
         }
         refreshPermissionBanner()
+        if (isActiveTab()) {
+            refreshNativeAdRows()
+        }
+    }
+
+    private fun refreshNativeAdRows() {
+        if (!::adapter.isInitialized) return
+        adapter.currentList.forEachIndexed { index, row ->
+            if (row is FileListRow.NativeAdItem) {
+                adapter.notifyItemChanged(index)
+            }
+        }
     }
 
     override fun onPause() {
@@ -173,7 +190,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
                                 ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
                                 {
                                     PdfViewerLauncher.open(requireContext(), file)
-                                })
+                                }, ADSMainClass.getHomeInterShow())
 
                         }
                     }
@@ -187,7 +204,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
                             ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
                             {
                                 OfficeViewerLauncher.open(requireContext(), file)
-                            })
+                            }, ADSMainClass.getHomeInterShow())
                     }
 
                     else -> Toast.makeText(
@@ -198,12 +215,26 @@ class FileTabFragment : Fragment(), OnClickHandler {
                 }
             },
             onFavoriteClick = { file -> fileViewModel.toggleFavorite(file) },
-            onItemLongClick = { file -> (activity as? MainActivity)?.startSelectionMode(file) },
+            onItemLongClick = { file ->
+                (activity as? MainActivity)?.startSelectionMode(file)
+                    ?: (parentFragment as? HomeLauncherFragment)?.startSelectionMode(file)
+            },
             onMoreClick = { file -> showFileOptions(file) },
         )
         adapter.onSelectionChangedListener = {
             (activity as? MainActivity)?.updateSelectionCount()
+                ?: (parentFragment as? HomeLauncherFragment)?.updateSelectionCount()
         }
+        adapter.onEmptyStateChanged = { isEmpty ->
+            if (isAdded && ::binding.isInitialized) {
+                updateLoadingUi(
+                    if (isEmpty) emptyList() else lastSubmittedList
+                )
+            }
+        }
+        adapter.listAdTabKey = FileListAdapter.SHARED_LIST_NATIVE_AD_KEY
+        adapter.canBindListNativeAds = { isActiveTab() }
+        adapter.hostActivity = activity
         binding.rvFiles.apply {
             adapter = this@FileTabFragment.adapter
             setHasFixedSize(true)
@@ -232,7 +263,18 @@ class FileTabFragment : Fragment(), OnClickHandler {
         adapter.viewMode = mode
         binding.rvFiles.setHasFixedSize(mode != FileConst.VIEW_MODE_GRID)
         binding.rvFiles.layoutManager = if (mode == FileConst.VIEW_MODE_GRID) {
-            GridLayoutManager(requireContext(), FileConst.GRID_SPAN_COUNT)
+            GridLayoutManager(requireContext(), FileConst.GRID_SPAN_COUNT).apply {
+                spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+                    override fun getSpanSize(position: Int): Int {
+                        val viewType = adapter.getItemViewType(position)
+                        return if (viewType == FileListAdapter.VIEW_TYPE_NATIVE) {
+                            FileConst.GRID_SPAN_COUNT
+                        } else {
+                            1
+                        }
+                    }
+                }
+            }
         } else {
             LinearLayoutManager(requireContext())
         }
@@ -297,8 +339,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
             !ViewCompat.canScrollVertically(binding.rvFiles, -1)
         }
         binding.swipeLayout.setOnRefreshListener {
-            val main = activity as? MainActivity
-            if (main?.hasStorageAccess() != true) {
+            if (hostHasStorageAccess() != true) {
                 binding.swipeLayout.refreshComplete()
                 return@setOnRefreshListener
             }
@@ -319,8 +360,8 @@ class FileTabFragment : Fragment(), OnClickHandler {
             if (!isAdded || !::binding.isInitialized) return@postDelayed
             binding.swipeLayout.refreshComplete()
             deferListRefreshUntilSwipeEnds = false
-            if (listDirty && isActiveTab()) {
-                refreshFileList()
+            if (isActiveTab()) {
+                refreshFileList(forceRefresh = true)
             } else {
                 updateLoadingUi()
             }
@@ -339,16 +380,46 @@ class FileTabFragment : Fragment(), OnClickHandler {
     }
 
     private fun isActiveTab(): Boolean {
-        val main = activity as? MainActivity ?: return isResumed
-        return main.currentTabFileType() == tabFileType
+        val currentTab = currentTabFileType() ?: return isResumed
+        return currentTab == tabFileType
+    }
+
+    private fun currentTabFileType(): String? {
+        (activity as? MainActivity)?.currentTabFileType()?.let { return it }
+        (parentFragment as? HomeLauncherFragment)?.currentTabFileType()?.let { return it }
+        return null
+    }
+
+    private fun hostHasStorageAccess(): Boolean? {
+        (activity as? MainActivity)?.hasStorageAccess()?.let { return it }
+        (parentFragment as? HomeLauncherFragment)?.hasStorageAccess()?.let { return it }
+        return null
+    }
+
+    private fun shouldShowStoragePermissionBanner(): Boolean {
+        (activity as? MainActivity)?.shouldShowStoragePermissionBanner()?.let { return it }
+        (parentFragment as? HomeLauncherFragment)?.shouldShowStoragePermissionBanner()?.let { return it }
+        return !StoragePermissionHelper.hasStorageAccess(requireContext()) &&
+            AppPreferences.isStoragePermissionSkip(requireContext())
+    }
+
+    private fun shouldShowOverlayPermissionBanner(): Boolean {
+        (activity as? MainActivity)?.shouldShowOverlayPermissionBanner()?.let { return it }
+        (parentFragment as? HomeLauncherFragment)?.shouldShowOverlayPermissionBanner()?.let { return it }
+        return StoragePermissionHelper.hasStorageAccess(requireContext()) &&
+            PermissionManager.shouldShowOverlayPermissionBanner(requireContext())
     }
 
     fun refreshPermissionBanner() {
         if (!::binding.isInitialized) return
-        val mainActivity = activity as? MainActivity
-        val showBanner = mainActivity?.shouldShowStoragePermissionBanner() == true
+        val hasStorageAccess = hostHasStorageAccess()
+            ?: StoragePermissionHelper.hasStorageAccess(requireContext())
+        val showStorageBanner = !hasStorageAccess && shouldShowStoragePermissionBanner()
+        val showOverlayBanner = hasStorageAccess && shouldShowOverlayPermissionBanner()
         binding.cvPermissionNotAllow.visibility =
-            if (showBanner) View.VISIBLE else View.GONE
+            if (showStorageBanner) View.VISIBLE else View.GONE
+        binding.cvOverlayPermission.visibility =
+            if (showOverlayBanner) View.VISIBLE else View.GONE
         updateLoadingUi()
     }
 
@@ -380,11 +451,8 @@ class FileTabFragment : Fragment(), OnClickHandler {
 
     fun refreshFileList(forceRefresh: Boolean = false, scrollToTop: Boolean = false) {
         if (!::binding.isInitialized) return
-        val main = activity as? MainActivity
-        val hasAccess = main?.hasStorageAccess()
-            ?: com.reader.alldocviewer.pdfeditor.utils.StoragePermissionHelper.hasStorageAccess(
-                requireContext()
-            )
+        val hasAccess = hostHasStorageAccess()
+            ?: StoragePermissionHelper.hasStorageAccess(requireContext())
         if (!hasAccess) {
             applyListToRecycler(emptyList(), scrollToTop)
             return
@@ -421,7 +489,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
         if (scrollToTop) {
             binding.rvFiles.itemAnimator = null
         }
-        adapter.submitList(list) {
+        adapter.submitList(FileListAdapter.buildDisplayRows(list)) {
             if (!isAdded || !::binding.isInitialized) return@submitList
             binding.rvFiles.itemAnimator = itemAnimator
             if (scrollToTop) {
@@ -452,32 +520,32 @@ class FileTabFragment : Fragment(), OnClickHandler {
         val list = precomputedList ?: lastSubmittedList ?: emptyList()
         val scanning = fileViewModel.isScanning.value == true
         val contentResolved = fileViewModel.contentStateResolved.value == true
-        val bannerVisible = binding.cvPermissionNotAllow.isVisible
-        val hasStorageAccess = (activity as? MainActivity)?.hasStorageAccess() == true
+        val bannerVisible =
+            binding.cvPermissionNotAllow.isVisible || binding.cvOverlayPermission.isVisible
+        val hasStorageAccess = hostHasStorageAccess()
+            ?: StoragePermissionHelper.hasStorageAccess(requireContext())
         val isListRefreshing = precomputedList == null && listRefreshJob?.isActive == true
+        val isEmpty = list.isEmpty()
         val showLoading =
             hasStorageAccess &&
                     !bannerVisible &&
                     !isSwipeRefreshing() &&
-                    list.isEmpty() &&
-                    (!contentResolved || scanning || isListRefreshing || listDirty)
+                    isEmpty &&
+                    (!contentResolved || scanning || isListRefreshing)
         val showNoData =
             hasStorageAccess &&
                     !bannerVisible &&
                     !isSwipeRefreshing() &&
-                    contentResolved &&
-                    !scanning &&
-                    !isListRefreshing &&
-                    !listDirty &&
-                    list.isEmpty()
+                    !showLoading &&
+                    isEmpty
 
         binding.progressLoading.visibility =
             if (showLoading) View.VISIBLE else View.GONE
         binding.llNoData.visibility =
             if (showNoData) View.VISIBLE else View.GONE
         binding.rvFiles.visibility =
-            if (list.isNotEmpty()) View.VISIBLE else View.GONE
-        binding.swipeLayout.isEnabled = list.isNotEmpty()
+            if (!isEmpty) View.VISIBLE else View.GONE
+        binding.swipeLayout.isEnabled = !isEmpty
     }
 
     private fun showFileOptions(file: ModelFile) {
@@ -602,7 +670,7 @@ class FileTabFragment : Fragment(), OnClickHandler {
         sheetBinding.cvPrint.setOnClickListener {
             bottomSheet.dismiss()
             if (file.fileType == FileConst.PDF_FILE) {
-                HelperTools.printPdfFile(requireContext(), file.path.orEmpty(), file.name)
+                HelperTools.printPdfFile(requireActivity(), file.path.orEmpty(), file.name)
             } else {
                 Toast.makeText(
                     requireContext(),
@@ -852,7 +920,15 @@ class FileTabFragment : Fragment(), OnClickHandler {
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.cv_allow -> (activity as? MainActivity)?.requestStorageAccess()
+            R.id.cv_allow -> {
+                (activity as? MainActivity)?.requestStorageAccess()
+                    ?: (parentFragment as? HomeLauncherFragment)?.requestStorageAccess()
+            }
+
+            R.id.cv_overlay_allow -> {
+                (activity as? MainActivity)?.requestOverlayPermission()
+                    ?: (parentFragment as? HomeLauncherFragment)?.requestOverlayPermission()
+            }
         }
     }
 

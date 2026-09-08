@@ -16,16 +16,16 @@
    limitations under the License.
 ==================================================================== */
         
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 
 
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
 
 /**
  * Dump out the aggregated escher records

@@ -22,12 +22,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class AESHelper {
 
-    /**
-     *
-     * Conforming with CryptoJS AES method
-     * **** YOU NEED TO ADD "JCE policy" to have ability to DEC/ENC 256 key-lenght with AES Cipher ****
-     *
-     */
+
 
 
     static int KEY_SIZE = 256;
@@ -41,11 +36,7 @@ public class AESHelper {
     // Seriously crypto-js, what's wrong with you?
     static String APPEND = "Salted__";
 
-    /**
-     * Encrypt
-     * @param password passphrase
-     * @param plainText plain string
-     */
+
     public static String encrypt(String password,String plainText) throws UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         byte[] saltBytes = generateSalt(8);
         byte[] key = new byte[KEY_SIZE/8];
@@ -74,12 +65,6 @@ public class AESHelper {
         return new String(bEncode);
     }
 
-    /**
-     * Decrypt
-     * Thanks Artjom B. for this: http://stackoverflow.com/a/29152379/4405051
-     * @param password passphrase
-     * @param cipherText encrypted string
-     */
     public static String decrypt(String password,String cipherText) throws UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         byte[] ctBytes = Base64.decode(cipherText.getBytes(CHARSET_TYPE));
         byte[] saltBytes = Arrays.copyOfRange(ctBytes, 8, 16);

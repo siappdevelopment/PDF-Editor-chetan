@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.nio;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.nio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,7 +27,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.channels.WritableByteChannel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IOUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IOUtils;
 
 
 /**

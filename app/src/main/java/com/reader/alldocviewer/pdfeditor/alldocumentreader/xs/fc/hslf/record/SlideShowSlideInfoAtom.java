@@ -4,11 +4,11 @@
  * 缂栬瘧鍣�:            android2.2
  * 鏃堕棿:              涓婂崍10:43:23
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 import java.util.Hashtable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 /**
  * TODO: An atom record that specifies what transition effect to perform 

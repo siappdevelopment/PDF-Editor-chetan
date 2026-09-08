@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util;
 
-import static com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.IEEEDouble.*;
+import static com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.IEEEDouble.*;
 
 /**
  * Excel compares numbers using different rules to those of java, so

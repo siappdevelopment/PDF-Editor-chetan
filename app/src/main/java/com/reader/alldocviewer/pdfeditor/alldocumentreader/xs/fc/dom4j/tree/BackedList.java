@@ -5,15 +5,15 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.IllegalAddException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Node;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.IllegalAddException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Node;
 
 
 /**

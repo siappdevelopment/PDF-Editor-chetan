@@ -17,10 +17,10 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.eventfilesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.eventfilesystem;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
 
 /**
  * Class POIFSReaderEvent

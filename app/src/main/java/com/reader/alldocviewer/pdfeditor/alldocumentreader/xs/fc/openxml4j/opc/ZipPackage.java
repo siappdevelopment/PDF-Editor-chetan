@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
@@ -41,28 +41,28 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.EncryptedDocumentException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidOperationException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JRuntimeException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.ContentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.ContentTypeManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.FileHelper;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.PackagePropertiesPart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.PartMarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.PartUnmarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.ZipHelper;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.DefaultMarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.ZipPackagePropertiesMarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.ZipPartMarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.PackagePropertiesUnmarshaller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.UnmarshallContext;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.util.ZipEntrySource;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.util.ZipFileZipEntrySource;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.util.ZipInputStreamZipEntrySource;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.EncryptedDocumentException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.HeaderBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidFormatException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.InvalidOperationException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.exceptions.OpenXML4JRuntimeException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.ContentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.ContentTypeManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.FileHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.PackagePropertiesPart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.PartMarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.PartUnmarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.ZipHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.DefaultMarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.ZipPackagePropertiesMarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.marshallers.ZipPartMarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.PackagePropertiesUnmarshaller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.internal.unmarshallers.UnmarshallContext;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.util.ZipEntrySource;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.util.ZipFileZipEntrySource;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.util.ZipInputStreamZipEntrySource;
 
 
 /**

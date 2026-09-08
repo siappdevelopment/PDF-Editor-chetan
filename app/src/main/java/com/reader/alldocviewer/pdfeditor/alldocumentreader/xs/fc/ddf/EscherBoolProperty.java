@@ -16,7 +16,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf;
 
 /**
  * Represents a boolean property.  The actual utility of this property is in doubt because many

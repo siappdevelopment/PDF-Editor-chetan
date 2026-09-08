@@ -1,10 +1,10 @@
 // Copyright 2001, FreeHEP.
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf;
 
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
 
 /**
  * EMF File Header.

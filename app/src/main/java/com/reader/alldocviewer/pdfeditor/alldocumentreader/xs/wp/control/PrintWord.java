@@ -4,25 +4,25 @@
  * 编译器:            android2.2
  * 时间:              上午10:53:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro.TouchEventListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.SysKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListItem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.PageView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro.TouchEventListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.SysKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListItem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.IPageListViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.PageView;
 
 import android.content.Context;
 import android.graphics.Bitmap;

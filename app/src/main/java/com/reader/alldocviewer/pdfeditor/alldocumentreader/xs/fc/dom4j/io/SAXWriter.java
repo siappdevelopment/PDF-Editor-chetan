@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -27,20 +27,20 @@ import org.xml.sax.ext.LexicalHandler;
 import org.xml.sax.helpers.AttributesImpl;
 import org.xml.sax.helpers.LocatorImpl;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Attribute;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Branch;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CDATA;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CharacterData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Comment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Entity;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Namespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Node;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Text;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Attribute;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Branch;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CharacterData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Comment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Entity;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Namespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Node;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Text;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.NamespaceStack;
 
 
 /**

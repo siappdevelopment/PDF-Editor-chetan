@@ -4,29 +4,29 @@
  * 编译器:            android2.2
  * 时间:              下午9:21:56
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.AbstractView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ViewContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control.Word;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.AbstractView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ViewContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control.Word;
 
 import android.graphics.Canvas;
 import android.os.SystemClock;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view.LayoutKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view.LayoutKit;
 
 /**
  * 页面视图根视图

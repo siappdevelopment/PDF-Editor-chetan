@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Retention;

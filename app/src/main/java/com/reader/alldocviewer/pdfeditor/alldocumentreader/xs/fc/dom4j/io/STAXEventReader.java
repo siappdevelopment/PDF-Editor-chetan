@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io;
 
 import java.io.InputStream;
 import java.io.Reader;
@@ -15,16 +15,16 @@ import javax.xml.namespace.QName;
 
 import org.w3c.dom.EntityReference;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Attribute;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.CharacterData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Comment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Entity;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Namespace;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Node;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Attribute;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.CharacterData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Comment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Entity;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Namespace;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Node;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.ProcessingInstruction;
 
 
 /**

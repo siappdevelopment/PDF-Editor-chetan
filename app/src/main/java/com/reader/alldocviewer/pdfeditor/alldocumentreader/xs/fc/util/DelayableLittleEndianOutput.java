@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 /**
  * Implementors of this interface allow client code to 'delay' writing to a certain section of a
  * data output stream.<br/>

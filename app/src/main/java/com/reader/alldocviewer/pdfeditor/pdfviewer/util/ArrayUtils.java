@@ -4,7 +4,7 @@ import com.tom_roush.fontbox.cmap.CMapParser;
 
 import java.util.ArrayList;
 
-/* loaded from: classes11.dex */
+
 public class ArrayUtils {
     public static int[] deleteDuplicatedPages(int[] pages) {
         ArrayList arrayList = new ArrayList();

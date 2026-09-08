@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model;
 
 public final class ChildAnchor extends Anchor
 {

@@ -4,31 +4,31 @@
  * 编译器:            android2.2
  * 时间:              上午11:09:58
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.BackgroundDrawer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.AutoShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AChart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.GroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.PictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.SmartArt;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.STDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.STRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.BackgroundDrawer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.AutoShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AChart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.GroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.PictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.SmartArt;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.STDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.STRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;

@@ -1,11 +1,11 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort;
 
 import androidx.annotation.NonNull;
 import androidx.core.util.ObjectsCompat;
 import androidx.recyclerview.widget.DiffUtil;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class ColumnSortCallback extends DiffUtil.Callback {
     private final int mColumnPosition;
     @NonNull

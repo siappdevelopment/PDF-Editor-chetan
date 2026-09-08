@@ -4,16 +4,16 @@
  * Compiler:        JDK1.5.0_01
  * Time:            上午8:40:52
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTableCellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTableCellStyle;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

@@ -4,16 +4,16 @@
  * 编译器:            android2.2
  * 时间:              上午9:08:14
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect;
 
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherOptRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherOptRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherSimpleProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
 
 import android.graphics.Color;
 
@@ -303,7 +303,7 @@ public class PictureEffectInfoFactory
         return null;
     }
     
-    public static PictureEffectInfo getPictureEffectInfor(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Picture pic)
+    public static PictureEffectInfo getPictureEffectInfor(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Picture pic)
     {
     	if(pic == null)
         {

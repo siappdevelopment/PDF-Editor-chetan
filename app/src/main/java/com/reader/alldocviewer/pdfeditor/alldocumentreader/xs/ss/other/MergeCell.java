@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午11:09:52
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other;
 
 /**
  * TODO: 这个类主要管理合并单元格完全不可见部分的宽度和高度，配合ScrolledCell类决定了当前合并单元格的可见部分

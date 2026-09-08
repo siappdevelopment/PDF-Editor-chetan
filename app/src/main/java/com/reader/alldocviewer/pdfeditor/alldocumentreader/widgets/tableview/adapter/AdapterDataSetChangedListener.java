@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter;
 
 import androidx.annotation.NonNull;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public abstract class AdapterDataSetChangedListener<CH, RH, C> {
     public void onCellItemsChanged(@NonNull List<List<C>> list) {
     }

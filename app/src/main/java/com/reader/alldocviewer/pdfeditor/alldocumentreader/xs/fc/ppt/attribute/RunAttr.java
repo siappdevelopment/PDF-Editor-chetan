@@ -4,32 +4,32 @@
  * 编译器:             android2.2
  * 时间:               下午2:21:14
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute;
 
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.AttrIDConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader.HyperlinkReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.Reader.SchemeColorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.LeafElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.ParagraphElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.Style;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.StyleManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ColorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.format.NumericFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.AttrIDConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader.HyperlinkReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader.ReaderKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.Reader.SchemeColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.LeafElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.ParagraphElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.Style;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.StyleManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ColorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.format.NumericFormatter;
 
 import android.graphics.Color;
 

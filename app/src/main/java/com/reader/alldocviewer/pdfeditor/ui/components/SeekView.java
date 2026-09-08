@@ -13,7 +13,7 @@ import com.reader.alldocviewer.pdfeditor.R;
 import android.graphics.Color;
 import java.lang.reflect.Method;
 
-/* loaded from: classes11.dex */
+
 public class SeekView extends View {
     private static final int LONG_PRESS = 500;
     public static final float MAX_PROGRESS = 100.0f;
@@ -48,7 +48,7 @@ public class SeekView extends View {
     private boolean touchEnable;
     private boolean unPerformLongClick;
 
-    /* loaded from: classes11.dex */
+    
     public interface SVBaseCallback {
         void end();
 

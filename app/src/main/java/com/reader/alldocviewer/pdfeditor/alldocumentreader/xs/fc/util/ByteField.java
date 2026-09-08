@@ -17,13 +17,13 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 
 
 import java.io.*;
 import java.nio.BufferUnderflowException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian.BufferUnderrunException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian.BufferUnderrunException;
 
 /**
  * representation of a byte (8-bit) field at a fixed location within a

@@ -4,13 +4,13 @@
  * 编译器:            android2.2
  * 时间:              上午10:19:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.DialogConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IDialogAction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.DialogConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IDialogAction;
 
 
 /**

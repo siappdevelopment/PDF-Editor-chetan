@@ -4,21 +4,21 @@
  * 编译器:             android2.2
  * 时间:               上午9:07:18
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.reader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.reader;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.RunAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.bulletnumber.BulletNumberManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttributeSetImpl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.Style;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.StyleManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.RunAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.attribute.SectionAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.bulletnumber.BulletNumberManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttributeSetImpl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.Style;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.StyleManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * shape layout, margin, text style

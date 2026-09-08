@@ -4,7 +4,6 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,6 +37,7 @@ import com.reader.alldocviewer.pdfeditor.utils.Const
 import com.reader.alldocviewer.pdfeditor.utils.FileConst
 import com.reader.alldocviewer.pdfeditor.utils.FileDedupe
 import com.reader.alldocviewer.pdfeditor.utils.PrefUtils
+import com.reader.alldocviewer.pdfeditor.utils.UriImageHelper
 import com.reader.alldocviewer.pdfeditor.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -75,22 +75,31 @@ class OrganizeImageActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val bitmapList = ArrayList<Bitmap>()
                 withContext(Dispatchers.IO) {
+                    HelperTools.selectedImageSources.clear()
+                    HelperTools.selectedImageSources.addAll(uris)
+                    HelperTools.imagesWereEdited = false
                     for (uriStr in uris) {
                         try {
-                            val uri = Uri.parse(uriStr)
-                            val bitmap =
-                                HelperTools.getBitmapFromUri(this@OrganizeImageActivity, uri)
+                            val bitmap = UriImageHelper.decodeFullBitmap(
+                                this@OrganizeImageActivity,
+                                uriStr,
+                            )
                             if (bitmap != null) {
                                 bitmapList.add(bitmap)
+                            } else {
+                                Log.e("Scanner", "Failed to decode scanned page: $uriStr")
                             }
                         } catch (e: Exception) {
-                            e.printStackTrace()
+                            Log.e("Scanner", "Failed to load scanned page: $uriStr", e)
                         }
                     }
                 }
                 HelperTools.selectedBitmap.clear()
                 HelperTools.selectedBitmap.addAll(bitmapList)
                 progressDialog.dismiss()
+                if (uris.isNotEmpty() && bitmapList.isEmpty()) {
+                    toast(this@OrganizeImageActivity, getString(R.string.failed_to_load_images))
+                }
                 setSelectAdapter(HelperTools.selectedBitmap)
             }
         } else {
@@ -107,8 +116,7 @@ class OrganizeImageActivity : AppCompatActivity() {
         }
 
         binding.ivBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+onBack()        }
 
         beVisibleIf(binding.frameNote, !PrefUtils.getBoolean(this, "note_closed"))
         binding.ivNoteClose.setOnClickListener {
@@ -120,7 +128,15 @@ class OrganizeImageActivity : AppCompatActivity() {
             if (listPdfPages.isEmpty()) {
                 toast(this, getString(R.string.no_image_found))
             } else {
-                saveModule()
+
+                ADSInterDisplayClick.ADSInterstitialShowing(
+                    this,
+                    ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                    {
+                        saveModule()
+
+                    },
+                    ADSMainClass.getOrganizeImageInterShow())
             }
         }
 
@@ -138,7 +154,8 @@ class OrganizeImageActivity : AppCompatActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -163,7 +180,7 @@ class OrganizeImageActivity : AppCompatActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getOrganizeImageInterShow())
     }
 
     private fun saveModule() {
@@ -210,8 +227,12 @@ class OrganizeImageActivity : AppCompatActivity() {
 
                 progressDialog.setMessage(getString(R.string.generating_pdf_from_images))
                 val outPath = withContext(Dispatchers.IO) {
+                    // Use in-memory bitmaps — content:// URIs from the photo picker lose
+                    // read permission once earlier activities finish.
                     HelperTools.createPdfFromBitmaps(arrayList, recycleSources = true)
                 }
+                HelperTools.selectedImageSources.clear()
+                HelperTools.imagesWereEdited = false
                 listPdfPages.clear()
                 dismissProgressDialog(progressDialog)
                 binding.btnDone.isEnabled = true
@@ -309,7 +330,8 @@ class OrganizeImageActivity : AppCompatActivity() {
     private fun setSelectAdapter(arrayList: ArrayList<Bitmap>) {
         val size = arrayList.size
         for (i in 0 until size) {
-            listPdfPages.add(OrganizedPage(i + 1, arrayList[i], false))
+            val sourceUri = HelperTools.selectedImageSources.getOrNull(i)
+            listPdfPages.add(OrganizedPage(i + 1, arrayList[i], false, sourceUri))
         }
         organizeImageAdapter = OrganizeImageAdapter(this, listPdfPages) { position ->
             listPdfPages.removeAt(position)

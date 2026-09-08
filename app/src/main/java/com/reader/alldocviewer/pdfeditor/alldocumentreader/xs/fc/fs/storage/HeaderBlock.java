@@ -1,14 +1,14 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.BlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.OfficeXmlFileException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.BlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.OfficeXmlFileException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
 
 /**
  * The block containing the archive header

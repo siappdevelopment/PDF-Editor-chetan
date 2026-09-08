@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty;
 
 import java.util.ArrayList;
 import java.util.List;

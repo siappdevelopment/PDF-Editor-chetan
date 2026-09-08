@@ -80,15 +80,15 @@ class CreatePdfActivity : BaseActivity() {
         setupFileNamePicker()
         setupPageStyleGrid()
         setupPageCountControls()
-        binding.ivBack.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+        binding.ivBack.setOnClickListener { onBack() }
         binding.tvCreate.setOnClickListener { createPdf() }
         updateMinusAlpha()
 
 
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getCreatePdfBottomAdsShow()) {
+            if (ADSMainClass.getCreatePdfAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.CREATE_PDF_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -96,10 +96,11 @@ class CreatePdfActivity : BaseActivity() {
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.CREATE_PDF_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -124,7 +125,7 @@ class CreatePdfActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getCreatePdfInterShow())
     }
 
     private fun setupPageStyleGrid() {
@@ -277,6 +278,8 @@ class CreatePdfActivity : BaseActivity() {
                     originalFolderPath = file.parent,
                     isDeleted = 0,
                     isEncrypted = isEnc,
+                    recent = 1,
+                    lastOpenTime = System.currentTimeMillis(),
                 )
                 withContext(Dispatchers.IO) {
                     fileDao.insertFile(modelFile)

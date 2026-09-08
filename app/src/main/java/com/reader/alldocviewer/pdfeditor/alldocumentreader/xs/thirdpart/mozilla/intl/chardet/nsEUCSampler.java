@@ -32,7 +32,7 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.mozilla.intl.chardet;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.mozilla.intl.chardet;
 import java.lang.* ;
 
 public class nsEUCSampler {

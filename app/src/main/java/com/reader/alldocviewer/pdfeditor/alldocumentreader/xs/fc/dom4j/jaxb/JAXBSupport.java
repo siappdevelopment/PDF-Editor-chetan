@@ -5,15 +5,15 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.jaxb;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.jaxb;
 
 import java.io.StringReader;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.dom.DOMDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.dom.DOMDocument;
 
 
 /**

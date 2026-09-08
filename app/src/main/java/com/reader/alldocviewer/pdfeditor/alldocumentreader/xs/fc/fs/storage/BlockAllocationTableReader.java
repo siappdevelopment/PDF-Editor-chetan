@@ -1,12 +1,12 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.BlockSize;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.BlockSize;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
 
 /**
  * This class manages and creates the Block Allocation Table, which is

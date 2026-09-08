@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.udf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.udf;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.function.FreeRefFunction;
 
 /**
  * Collects add-in libraries and VB macro functions together into one UDF finder

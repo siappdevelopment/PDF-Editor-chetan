@@ -49,6 +49,7 @@ class PDFToImageActivity : BaseActivity() {
     private var totalPageCount: Int = 0
     private var path: String = ""
     private var checkFileName: String = ""
+    private var addToExistingSplit: Boolean = false
     private var previewAdapter: PdfToImageViewPagerAdapter? = null
     private var currentPreviewPosition: Int = 0
 
@@ -70,6 +71,7 @@ class PDFToImageActivity : BaseActivity() {
 
         path = intent.getStringExtra("path").orEmpty()
         checkFileName = intent.getStringExtra("checkFileName").orEmpty()
+        addToExistingSplit = intent.getBooleanExtra("addToExistingSplit", false)
 
         setupUI()
         initializeAdapter()
@@ -105,7 +107,8 @@ class PDFToImageActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -121,7 +124,7 @@ class PDFToImageActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getPdfToImageInterShow())
     }
 
     private fun setupUI() {
@@ -163,16 +166,40 @@ class PDFToImageActivity : BaseActivity() {
                     val selectedPositions = adapter.getSelectedPagePositions()
 
                     if (checkFileName == "split_pdf") {
-                        val splitModel = SplitModel(
-                            name = File(path).name,
-                            path = path,
-                            selectedPages = selectedPositions.map { it + 1 }, // 1-indexed for iText
-                            password = Const.INSTANCE.toolsPassword
-                        )
-                        HelperTools.splitModelFile.add(splitModel)
+                        val selectedPages = selectedPositions.map { it + 1 } // 1-indexed for iText
 
-                        startActivity(Intent(this@PDFToImageActivity, SplitPdfActivity::class.java))
-                        finish()
+                        if (addToExistingSplit) {
+                            setResult(
+                                RESULT_OK,
+                                Intent().apply {
+                                    putIntegerArrayListExtra(
+                                        SplitPdfActivity.EXTRA_SELECTED_PAGES,
+                                        ArrayList(selectedPages)
+                                    )
+                                    putExtra(SplitPdfActivity.EXTRA_PDF_PATH, path)
+                                    putExtra(SplitPdfActivity.EXTRA_PDF_NAME, File(path).name)
+                                    putExtra(
+                                        SplitPdfActivity.EXTRA_PDF_PASSWORD,
+                                        Const.INSTANCE.toolsPassword
+                                    )
+                                }
+                            )
+                            finish()
+                        } else {
+                            HelperTools.splitModelFile.clear()
+                            HelperTools.splitModelFile.add(
+                                SplitModel(
+                                    name = File(path).name,
+                                    path = path,
+                                    selectedPages = selectedPages,
+                                    password = Const.INSTANCE.toolsPassword
+                                )
+                            )
+                            startActivity(Intent(this@PDFToImageActivity, SplitPdfActivity::class.java).apply {
+                                putExtra("sessionStartSplitCount", 0)
+                            })
+                            finish()
+                        }
                         return@launch
                     }
 

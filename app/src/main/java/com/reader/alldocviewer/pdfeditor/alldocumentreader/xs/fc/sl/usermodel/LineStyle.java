@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.sl.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.sl.usermodel;
 
-public interface LineStyle extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.usermodel.LineStyle {
+public interface LineStyle extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.usermodel.LineStyle {
 }

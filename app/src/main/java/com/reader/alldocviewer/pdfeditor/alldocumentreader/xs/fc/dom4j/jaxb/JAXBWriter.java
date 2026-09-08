@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.jaxb;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.jaxb;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,9 +15,9 @@ import java.io.Writer;
 
 import org.xml.sax.SAXException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.OutputFormat;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.io.XMLWriter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.OutputFormat;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.io.XMLWriter;
 
 
 /**

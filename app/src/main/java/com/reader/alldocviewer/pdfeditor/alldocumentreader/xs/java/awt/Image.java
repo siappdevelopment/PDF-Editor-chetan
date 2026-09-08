@@ -4,14 +4,14 @@
  * Copyright (c) 2006, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.ImageProducer;
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.ImageObserver;
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.ImageFilter;
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.FilteredImageSource;
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.AreaAveragingScaleFilter;
-//import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.image.ReplicateScaleFilter;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.ImageProducer;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.ImageObserver;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.ImageFilter;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.FilteredImageSource;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.AreaAveragingScaleFilter;
+//import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.image.ReplicateScaleFilter;
 //
 //import sun.awt.image.SurfaceManager;
 

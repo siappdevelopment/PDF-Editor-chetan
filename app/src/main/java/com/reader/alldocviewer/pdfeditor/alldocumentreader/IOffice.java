@@ -1,156 +1,156 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.view.MotionEvent;
 import android.view.View;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.res.ResKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.res.ResKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public abstract class IOffice implements IMainFrame {
     private MainControl control;
     private String tempFilePath;
     private boolean writeLog = true;
     private final Object bg = -3355444;
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void changePage() {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void changeZoom() {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void completeLayout() {
     }
 
     public void destroyEngine() {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void error(int i) {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public abstract Activity getActivity();
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public abstract String getAppName();
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public int getBottomBarHeight() {
         return 0;
     }
 
     public abstract int getMovingOrientation();
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public abstract File getTemporaryDirectory();
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public int getTopBarHeight() {
         return 0;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public byte getWordDefaultView() {
         return (byte) 0;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isChangePage() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isDrawPageNumber() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isIgnoreOriginalSize() {
         return false;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isPopUpErrorDlg() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isShowFindDlg() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isShowPasswordDlg() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isShowProgressBar() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isShowTXTEncodeDlg() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isShowZoomingMsg() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isThumbnail() {
         return false;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isTouchZoom() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isZoomAfterLayoutForWord() {
         return true;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean onEventMethod(View view, MotionEvent motionEvent, MotionEvent motionEvent2, float f, float f2, byte b) {
         return false;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void setFindBackForwardState(boolean z) {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void setIgnoreOriginalSize(boolean z) {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void setThumbnail(boolean z) {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void showProgressBar(boolean z) {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void updateToolsbarStatus() {
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void updateViewImages(List<Integer> list) {
     }
 
@@ -196,28 +196,28 @@ public abstract class IOffice implements IMainFrame {
     private void initControl() {
         MainControl mainControl = new MainControl(this);
         this.control = mainControl;
-        mainControl.setOffictToPicture(new IOfficeToPicture() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.IOffice.1
+        mainControl.setOffictToPicture(new IOfficeToPicture() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.IOffice.1
             private Bitmap bitmap;
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public void dispose() {
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public byte getModeType() {
                 return (byte) 1;
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public boolean isZoom() {
                 return false;
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public void setModeType(byte b) {
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public Bitmap getBitmap(int i, int i2) {
                 if (i == 0 || i2 == 0) {
                     return null;
@@ -233,7 +233,7 @@ public abstract class IOffice implements IMainFrame {
                 return this.bitmap;
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture
             public void callBack(Bitmap bitmap) {
                 IOffice.this.saveBitmapToFile(bitmap);
             }
@@ -276,7 +276,7 @@ public abstract class IOffice implements IMainFrame {
         getControl().openFile(str);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean doActionEvent(int i, Object obj) {
         try {
         } catch (Exception e) {
@@ -299,37 +299,37 @@ public abstract class IOffice implements IMainFrame {
         return this.control;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public String getLocalString(String str) {
         return ResKit.instance().getLocalString(str);
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public String getTXTDefaultEncode() {
         return "GBK";
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void setWriteLog(boolean z) {
         this.writeLog = z;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public boolean isWriteLog() {
         return this.writeLog;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public Object getViewBackground() {
         return this.bg;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public byte getPageListViewMovingPosition() {
         return (byte) getMovingOrientation();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame
     public void dispose() {
         MainControl mainControl = this.control;
         if (mainControl != null) {

@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               下午4:23:51
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,96 +14,96 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.ExtendPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.Gradient;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.LinearGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.RadialGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.Arrow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.GroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.LineShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.PictureShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TextBox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.AutoShapeConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPAttrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.FCKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.HSLFSlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Fill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.HeadersFooters;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Line;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.MasterSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Notes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Shape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.ShapeGroup;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.SimpleShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Slide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.SlideMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TitleMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.BinaryTagDataBlob;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ClientVisualElementContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.DocumentAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideProgBinaryTagContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideProgTagsContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideShowSlideInfoAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeAnimateBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeColorBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeCommandBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeEffectBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeMotionBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeNodeAttributeContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeNodeContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeRotationBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeScaleBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeSetBehaviorContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TimeVariant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.VisualShapeAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideAtom.SSlideLayoutAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.bulletnumber.BulletNumberManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Textbox;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectanglef;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.ShapeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGNotes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.LeafElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.ParagraphElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.format.NumericFormatter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.BackReaderThread;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.ExtendPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.Gradient;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.LinearGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.RadialGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfoFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ArbitraryPolygonShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.Arrow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.GroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.LineShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.PictureShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TextBox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.AutoShapeConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPAttrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.FCKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.HSLFSlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Fill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.HeadersFooters;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Line;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.MasterSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Notes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Shape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.ShapeGroup;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.SimpleShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Slide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.SlideMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TitleMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.BinaryTagDataBlob;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ClientVisualElementContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.DocumentAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.OEPlaceholderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideProgBinaryTagContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideProgTagsContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideShowSlideInfoAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeAnimateBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeColorBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeCommandBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeEffectBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeMotionBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeNodeAttributeContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeNodeContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeRotationBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeScaleBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeSetBehaviorContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TimeVariant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.VisualShapeAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideAtom.SSlideLayoutAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.RichTextRun;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.SlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.bulletnumber.BulletNumberManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Textbox;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectanglef;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.ShapeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGNotes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.FontTypefaceManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.LeafElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.ParagraphElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.format.NumericFormatter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.BackReaderThread;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -875,23 +875,23 @@ public class PPTReader extends AbstractReader
         }
     }
     
-    private com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line getShapeLine(SimpleShape shape)
+    private com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line getShapeLine(SimpleShape shape)
     {
     	return getShapeLine(shape, false);
     }
     
-    private com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line getShapeLine(SimpleShape shape, boolean isTableCellLine)
+    private com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line getShapeLine(SimpleShape shape, boolean isTableCellLine)
     {
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line line = null;
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line line = null;
         if(shape != null && shape.hasLine())
         {
         	 int lineWidth = (int)Math.round(((SimpleShape)shape).getLineWidth() * MainConstant.POINT_TO_PIXEL);
              boolean dash = ((SimpleShape)shape).getLineDashing() > AutoShapeConstant.LINESTYLE_SOLID;
-             com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
+             com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
              
              if(color != null)
              {
-            	 line = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line();
+            	 line = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line();
              	 BackgroundAndFill lineFill = new BackgroundAndFill();
                  lineFill.setForegroundColor(converterColor(color));
                  
@@ -902,7 +902,7 @@ public class PPTReader extends AbstractReader
         }
         else if(isTableCellLine)
         {
-        	line = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line();
+        	line = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line();
         	 BackgroundAndFill lineFill = new BackgroundAndFill();
             lineFill.setForegroundColor(0xFF000000);
             
@@ -957,8 +957,8 @@ public class PPTReader extends AbstractReader
         				break;
         		}
             	int focus = fill.getFillFocus();
-            	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillColor = fill.getForegroundColor();
-            	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillbackColor = fill.getFillbackColor();
+            	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillColor = fill.getForegroundColor();
+            	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillbackColor = fill.getFillbackColor();
             	
             	int[] colors = null;
             	float[] positions = null; 
@@ -1057,8 +1057,8 @@ public class PPTReader extends AbstractReader
                 {
                     break;
                 }
-                if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
-                    || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
+                if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
+                    || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
                 {
                     OEPlaceholderAtom phAtom = ((TextShape)shape).getPlaceholderAtom();
                     if (phAtom != null && phAtom.getPlaceholderId() == OEPlaceholderAtom.NotesBody)
@@ -1138,7 +1138,7 @@ public class PPTReader extends AbstractReader
         rect.height = (int)(rect2D.getHeight() * MainConstant.POINT_TO_PIXEL);
         
         BackgroundAndFill fill = null;
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line line = null;
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line line = null;
         if(shape instanceof SimpleShape)
         {
         	IShape masterShape = null;
@@ -1178,10 +1178,10 @@ public class PPTReader extends AbstractReader
         }
         
         if (shape instanceof Line
-            || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Freeform
-            || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.AutoShape
-            || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextBox
-            || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture)
+            || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Freeform
+            || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.AutoShape
+            || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextBox
+            || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture)
         {  
             if (shape instanceof Line)
             {
@@ -1232,7 +1232,7 @@ public class PPTReader extends AbstractReader
                     }
                 }
             }
-            else if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Freeform)
+            else if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Freeform)
             {              
                 if (fill != null || line != null)
                 {
@@ -1246,7 +1246,7 @@ public class PPTReader extends AbstractReader
                     int startArrowType = shape.getStartArrowType();
                     if (startArrowType > 0)
                     {
-                    	ArrowPathAndTail arrowPathAndTail = ((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getStartArrowPathAndTail(rect);
+                    	ArrowPathAndTail arrowPathAndTail = ((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getStartArrowPathAndTail(rect);
                         if(arrowPathAndTail != null && arrowPathAndTail.getArrowPath() != null)
                         {
                         	startArrowTailCenter = arrowPathAndTail.getArrowTailCenter();
@@ -1257,7 +1257,7 @@ public class PPTReader extends AbstractReader
                             {
                                 if(line == null || line.getBackgroundAndFill() == null)
                                 {
-                                	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
+                                	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
                                 	if(color != null)
                                 	{
                                 		BackgroundAndFill arrowFill = new BackgroundAndFill();
@@ -1283,7 +1283,7 @@ public class PPTReader extends AbstractReader
                     int endArrowType = shape.getEndArrowType();                    
                     if (endArrowType > 0)
                     {                        
-                    	ArrowPathAndTail arrowPathAndTail = ((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getEndArrowPathAndTail(rect);
+                    	ArrowPathAndTail arrowPathAndTail = ((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getEndArrowPathAndTail(rect);
                     	if(arrowPathAndTail != null && arrowPathAndTail.getArrowPath() != null)
                         {
                         	endArrowTailCenter = arrowPathAndTail.getArrowTailCenter();
@@ -1295,7 +1295,7 @@ public class PPTReader extends AbstractReader
                             {
                             	if(line == null || line.getBackgroundAndFill() == null)
                                 {
-                            		com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
+                            		com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color = ((SimpleShape)shape).getLineColor();
                                 	if(color != null)
                                 	{
                                 		BackgroundAndFill arrowFill = new BackgroundAndFill();
@@ -1318,7 +1318,7 @@ public class PPTReader extends AbstractReader
                         }                        
                     }
                     
-                    Path[] paths = ((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getFreeformPath(rect, 
+                    Path[] paths = ((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Freeform)shape).getFreeformPath(rect, 
                     		startArrowTailCenter, (byte)startArrowType, endArrowTailCenter, (byte)endArrowType);
                     for (int i = 0; paths != null && i < paths.length; i++)
                     {
@@ -1347,8 +1347,8 @@ public class PPTReader extends AbstractReader
                     }    
                 }
             }
-            else if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.AutoShape
-                    || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextBox)
+            else if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.AutoShape
+                    || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextBox)
             {
                 // autoShape
             	placeHolderID = ((TextShape)shape).getPlaceholderId();
@@ -1477,9 +1477,9 @@ public class PPTReader extends AbstractReader
                 }
             }
             // 图片
-            else if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture)
+            else if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture)
             {   
-                com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture poiPic = (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture)shape;
+                com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture poiPic = (com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture)shape;
                 PictureData pData = poiPic.getPictureData();
                 if (pData != null)
                 {
@@ -1521,9 +1521,9 @@ public class PPTReader extends AbstractReader
                 }
             }
         }
-        else if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Table)
+        else if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Table)
         {
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Table poiTable = (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Table)shape;
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Table poiTable = (com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Table)shape;
             if (poiTable != null)
             {
                 processTable(pgSlide, poiTable, parent, slideType);
@@ -1563,7 +1563,7 @@ public class PPTReader extends AbstractReader
      * 
      * @param pgSlide
      */
-    private void processTable(PGSlide pgSlide, com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Table poiTable, GroupShape parent, int slideType)
+    private void processTable(PGSlide pgSlide, com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Table poiTable, GroupShape parent, int slideType)
     {
         Rectangle2D clientAnchor = poiTable.getClientAnchor2D(poiTable);
         Rectangle2D spgrAnchor = poiTable.getCoordinates();
@@ -1581,7 +1581,7 @@ public class PPTReader extends AbstractReader
                 {
                     return;
                 }
-                com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TableCell poiCell = poiTable.getCell(i, j);
+                com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TableCell poiCell = poiTable.getCell(i, j);
                 if (poiCell != null)
                 {
                     Rectangle2D anchor = poiCell.getLogicalAnchor2D();
@@ -1638,7 +1638,7 @@ public class PPTReader extends AbstractReader
         Line[] borders = poiTable.getTableBorders();
         for(Line line : borders)
         {
-        	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.borders.Line aLine = getShapeLine(line, true);
+        	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.borders.Line aLine = getShapeLine(line, true);
             if (aLine != null)
             {
                 Rectangle2D rect2D = line.getLogicalAnchor2D();
@@ -1705,7 +1705,7 @@ public class PPTReader extends AbstractReader
     {
         if (line != null)
         {
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color = line.getLineColor();
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color = line.getLineColor();
             if (color != null)
             {
                 return converterColor(color);
@@ -1826,10 +1826,10 @@ public class PPTReader extends AbstractReader
             offset = 0;
             secElem.setStartOffset(offset);
             int len = text.length();
-            com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Hyperlink[] links = ts.getTextRun().getHyperlinks();
+            com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Hyperlink[] links = ts.getTextRun().getHyperlinks();
             int start = 0;
             // title type just a paragraph needs be processed specially
-            if (ts.getTextRun().getRunType() != com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom.TITLE_TYPE)
+            if (ts.getTextRun().getRunType() != com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom.TITLE_TYPE)
             {
                 for (int i = 0; i < len; i++)
                 {
@@ -1939,7 +1939,7 @@ public class PPTReader extends AbstractReader
         		|| type == BackgroundAndFill.FILL_SHADE_RECT 
                 || type == BackgroundAndFill.FILL_SHADE_SHAPE)
         {
-        	com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color fillColor = fill.getForegroundColor();
+        	com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color fillColor = fill.getForegroundColor();
         	
         	int[] colors = null;
         	if(fill.isShaderPreset())
@@ -1972,7 +1972,7 @@ public class PPTReader extends AbstractReader
      * @param end
      */
     private void processParagraph(SectionElement secElem, TextShape ts, String text,
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Hyperlink[] links, int start, int end, int placeHolderID)
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Hyperlink[] links, int start, int end, int placeHolderID)
     {
         ParagraphElement paraElem = new ParagraphElement();
         paraElem.setStartOffset(offset);
@@ -2018,7 +2018,7 @@ public class PPTReader extends AbstractReader
         int bulletOffset = (int)(rt.getTextOffset() * MainConstant.POINT_TO_TWIPS);
         int textOffset = (int)(rt.getBulletOffset() * MainConstant.POINT_TO_TWIPS);
         int indent = rt.getIndentLevel();
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextRulerAtom ruler = ts.getTextRun().getTextRuler();
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextRulerAtom ruler = ts.getTextRun().getTextRuler();
         if (ruler != null)
         {
             temp = ruler.getBulletOffsets()[indent];
@@ -2060,7 +2060,7 @@ public class PPTReader extends AbstractReader
         
         // '\n' of title type needs be processed specially
         boolean handleReturn = false;
-        if (ts.getTextRun().getRunType() == com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom.TITLE_TYPE)
+        if (ts.getTextRun().getRunType() == com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.TextHeaderAtom.TITLE_TYPE)
         {
             handleReturn = true;
         }
@@ -2396,8 +2396,8 @@ public class PPTReader extends AbstractReader
             {
                 for (Shape shape : notes.getShapes())
                 {
-                    if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
-                        || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
+                    if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
+                        || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
                     {
                         OEPlaceholderAtom phAtom = ((TextShape)shape).getPlaceholderAtom();
                         if (phAtom != null && phAtom.getPlaceholderId() == OEPlaceholderAtom.NotesBody
@@ -2421,8 +2421,8 @@ public class PPTReader extends AbstractReader
     public boolean searchShape(Shape shape, String key)
     {
         StringBuilder sb = new StringBuilder();
-        if(shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
-            || shape instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
+        if(shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.AutoShape  // 文本框 
+            || shape instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TextBox)  // 占位符
         {
             sb.append(((TextShape)shape).getText());
             if (sb.indexOf(key) >= 0)
@@ -2448,7 +2448,7 @@ public class PPTReader extends AbstractReader
     /**
      * 
      */
-    private int converterColor(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Color color)
+    private int converterColor(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Color color)
     {
 //        if(color.getAlpha() == 0)
 //        {

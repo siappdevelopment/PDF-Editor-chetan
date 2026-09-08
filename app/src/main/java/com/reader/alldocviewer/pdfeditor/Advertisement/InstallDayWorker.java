@@ -8,6 +8,7 @@ import androidx.work.WorkerParameters;
 
 import com.reader.alldocviewer.pdfeditor.R;
 
+
 public class InstallDayWorker extends Worker {
 
     public InstallDayWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
@@ -17,7 +18,6 @@ public class InstallDayWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        // દિવસો ગણો
         long days = ADSMainClass.getDaysSinceInstall();
         // Log.d("InstallDayWorker", "બેકગ્રાઉન્ડમાં દિવસ ચેક કર્યા: " + days);
 

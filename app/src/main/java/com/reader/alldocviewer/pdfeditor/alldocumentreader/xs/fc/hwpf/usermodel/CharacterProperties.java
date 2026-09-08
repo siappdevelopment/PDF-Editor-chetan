@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.Colorref;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.types.CHPAbstractType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.Colorref;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.types.CHPAbstractType;
 
 
 /**

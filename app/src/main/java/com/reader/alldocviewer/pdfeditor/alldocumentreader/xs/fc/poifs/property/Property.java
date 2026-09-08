@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -23,12 +23,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hpsf.ClassID;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.ByteField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IntegerField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianConsts;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.ShortField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hpsf.ClassID;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.ByteField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IntegerField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianConsts;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.ShortField;
 
 
 /**

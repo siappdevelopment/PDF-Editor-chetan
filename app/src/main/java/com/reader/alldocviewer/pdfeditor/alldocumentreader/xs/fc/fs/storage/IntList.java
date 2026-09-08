@@ -1,7 +1,7 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem.CFBConstants;
 
 /**
  * A List of int's; as full an implementation of the java.util.List

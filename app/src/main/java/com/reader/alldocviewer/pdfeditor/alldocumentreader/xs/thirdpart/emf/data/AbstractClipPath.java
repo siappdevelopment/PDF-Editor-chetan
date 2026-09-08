@@ -1,20 +1,20 @@
 // Copyright 2007, FreeHEP.
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.AffineTransform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Area;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.GeneralPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFTag;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.AffineTransform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Area;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.GeneralPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFTag;
 
 import android.graphics.Matrix;
 
 /**
  * base class for all tags that change the
- * clipping area of the {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.EMFRenderer}
+ * clipping area of the {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.EMFRenderer}
  *
  * @author Steffen Greiffenberg
  * @version $Id$

@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader;
 
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class DataBinderMapperImpl extends DataBinderMapper {
     private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(0);
 
@@ -51,7 +51,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         return arrayList;
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class InnerBrLookup {
         static final SparseArray<String> sKeys;
 
@@ -65,7 +65,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class InnerLayoutIdLookup {
         static final HashMap<String, Integer> sKeys = new HashMap<>(0);
 

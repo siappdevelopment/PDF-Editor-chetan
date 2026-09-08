@@ -4,6 +4,9 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -19,49 +22,90 @@ public class IPAddressHelper {
             "https://pro.ip-api.com/json/?key=RrtTUs6AdrbN4q0&fields=status,countryCode,city,query,proxy,hosting,regionName,country";
     private static final String TAG = "IPAddressHelper";
 
+    public static final class LocationInfo {
+        public final String city;
+        public final String state;
+        public final String country;
+
+        public LocationInfo(String city, String state, String country) {
+            this.city = city == null ? "" : city.trim();
+            this.state = state == null ? "" : state.trim();
+            this.country = country == null ? "" : country.trim();
+        }
+    }
+
     public interface IPCallback {
         void onResponse(String countryName);
+
         void onFailure(Exception e);
     }
 
-    public static void getCountryName(Context context, IPCallback callback) {
+    public interface LocationCallback {
+        void onResponse(@NonNull LocationInfo locationInfo);
+
+        void onFailure(Exception e);
+    }
+
+    public static void getLocationInfo(@Nullable String apiUrl, @NonNull LocationCallback callback) {
+        String requestUrl = apiUrl == null || apiUrl.trim().isEmpty() ? API_URL : apiUrl.trim();
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.getMainLooper());
-
         executor.execute(() -> {
+            HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL(API_URL);
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection = (HttpURLConnection) new URL(requestUrl).openConnection();
                 urlConnection.setRequestMethod("GET");
                 urlConnection.setConnectTimeout(10000);
                 urlConnection.setReadTimeout(10000);
 
                 int responseCode = urlConnection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                    StringBuilder response = new StringBuilder();
-                    String inputLine;
-
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-
-                    JSONObject jsonObject = new JSONObject(response.toString());
-                    if ("success".equalsIgnoreCase(jsonObject.optString("status"))
-                            && jsonObject.has("country")) {
-                        String countryName = jsonObject.optString("country", "");
-                        handler.post(() -> callback.onResponse(countryName));
-                    } else {
-                        handler.post(() -> callback.onFailure(new Exception("Country data not found in response")));
-                    }
-                } else {
-                    handler.post(() -> callback.onFailure(new Exception("HTTP error code: " + responseCode)));
+                if (responseCode != HttpURLConnection.HTTP_OK) {
+                    throw new Exception("HTTP error code: " + responseCode);
                 }
-                urlConnection.disconnect();
+
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String inputLine;
+                while ((inputLine = bufferedReader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                bufferedReader.close();
+
+                JSONObject jsonObject = new JSONObject(response.toString());
+                if (!"success".equalsIgnoreCase(jsonObject.optString("status"))) {
+                    throw new Exception("Location lookup failed");
+                }
+
+                LocationInfo locationInfo = new LocationInfo(
+                        jsonObject.optString("city", ""),
+                        jsonObject.optString("regionName", ""),
+                        jsonObject.optString("country", "")
+                );
+                handler.post(() -> callback.onResponse(locationInfo));
             } catch (Exception e) {
-//                Log.e(TAG, "Error fetching IP data: " + e.getMessage());
                 handler.post(() -> callback.onFailure(e));
+            } finally {
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
+            }
+        });
+    }
+
+    public static void getCountryName(Context context, IPCallback callback) {
+        getLocationInfo(API_URL, new LocationCallback() {
+            @Override
+            public void onResponse(@NonNull LocationInfo locationInfo) {
+                if (locationInfo.country.isEmpty()) {
+                    callback.onFailure(new Exception("Country data not found in response"));
+                    return;
+                }
+                callback.onResponse(locationInfo.country);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                callback.onFailure(e);
             }
         });
     }

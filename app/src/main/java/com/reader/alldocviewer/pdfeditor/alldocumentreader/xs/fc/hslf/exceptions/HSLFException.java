@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions;
 
 /**
  * A generic exception that can be thrown by HSLF classes

@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ public class SmallDocumentBlockList
 
     public SmallDocumentBlockList(final List blocks)
     {
-        setBlocks((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage.SmallDocumentBlock [] ) blocks
+        setBlocks((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage.SmallDocumentBlock [] ) blocks
             .toArray(new SmallDocumentBlock[ blocks.size() ]));
     }
 }   // end public class SmallDocumentBlockList

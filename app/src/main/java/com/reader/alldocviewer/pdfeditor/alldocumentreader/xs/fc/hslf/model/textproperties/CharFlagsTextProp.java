@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.textproperties;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.textproperties;
 
 /** 
  * Definition for the common character text property bitset, which

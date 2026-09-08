@@ -24,6 +24,7 @@ import com.reader.alldocviewer.pdfeditor.ui.ProgressDialogFragment
 import com.reader.alldocviewer.pdfeditor.ui.activities.base.BaseActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.preview.PreviewShareActivity
 import com.reader.alldocviewer.pdfeditor.ui.adapters.SelectedImagesAdapter
+import com.reader.alldocviewer.pdfeditor.ui.dialogs.NoWatermarkRewardDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -41,6 +42,9 @@ class CheckWatermarkActivity : BaseActivity() {
     private var checkWaterMark: Boolean = true
     private var checkFileName: String = ""
     private var path: String = ""
+    private var hasUnlockedNoWatermark: Boolean = false
+    private var selectedLongBitmap: List<Bitmap> = emptyList()
+    private var watermarkedBitmaps: List<Bitmap> = emptyList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,10 +53,14 @@ class CheckWatermarkActivity : BaseActivity() {
 
         checkFileName = intent.getStringExtra("checkFileName").orEmpty()
         path = intent.getStringExtra("path").orEmpty()
+        hasUnlockedNoWatermark =
+            savedInstanceState?.getBoolean(KEY_UNLOCKED_NO_WATERMARK, false) == true
+
+        reattachRewardDialogListener()
 
         binding.recyclerBitmap.layoutManager = GridLayoutManager(this, 2)
 
-        val selectedLongBitmap = HelperTools.selectedLongBitmap
+        selectedLongBitmap = HelperTools.selectedLongBitmap
         val logoDrawable = ContextCompat.getDrawable(this, R.mipmap.ic_launcher)
         val watermarkBitmap = if (logoDrawable != null) {
             val size = (resources.displayMetrics.density * 60).toInt()
@@ -76,7 +84,7 @@ class CheckWatermarkActivity : BaseActivity() {
             bitmap
         }
 
-        val watermarkedBitmaps =
+        watermarkedBitmaps =
             HelperTools.addImageWatermarkToList(selectedLongBitmap, watermarkBitmap)
         adapter = SelectedImagesAdapter(watermarkedBitmaps)
         binding.recyclerBitmap.adapter = adapter
@@ -86,25 +94,18 @@ class CheckWatermarkActivity : BaseActivity() {
         }
 
         binding.llNoWatermark.setOnClickListener {
-            checkWaterMark = false
-            adapter?.toggleWaterMark(false)
-            binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_selector)
-            binding.llWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+            selectNoWatermarkOption()
         }
 
         binding.llWatermark.setOnClickListener {
-            checkWaterMark = true
-            adapter?.toggleWaterMark(true)
-            binding.llWatermark.setBackgroundResource(R.drawable.radio_button_selector)
-            binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+            selectWatermarkOption()
         }
 
         binding.btnConvert.setOnClickListener {
-            val bitmaps = if (checkWaterMark) watermarkedBitmaps else selectedLongBitmap
-            if (checkFileName == "pdf_to_long_image") {
-                convertLongImages(bitmaps, "JPG")
+            if (checkWaterMark) {
+                startConvert(watermarkedBitmaps)
             } else {
-                convertAllImages(bitmaps, "JPG")
+                onNoWatermarkSelected()
             }
         }
 
@@ -122,7 +123,8 @@ class CheckWatermarkActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -147,7 +149,66 @@ class CheckWatermarkActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getWatermarkInterShow())
+    }
+
+    private fun onNoWatermarkSelected() {
+        if (hasUnlockedNoWatermark ||
+            ADSMainClass.getAds_Free() ||
+            !ADSMainClass.getWatermarkDialogShow()
+        ) {
+            startConvert(selectedLongBitmap)
+            return
+        }
+        if (supportFragmentManager.findFragmentByTag(NoWatermarkRewardDialogFragment.TAG) != null) {
+            return
+        }
+        NoWatermarkRewardDialogFragment.show(
+            supportFragmentManager,
+            rewardUnlockListener(),
+        )
+    }
+
+    private fun startConvert(bitmaps: List<Bitmap>) {
+        if (checkFileName == "pdf_to_long_image") {
+            convertLongImages(bitmaps, "JPG")
+        } else {
+            convertAllImages(bitmaps, "JPG")
+        }
+    }
+
+    private fun reattachRewardDialogListener() {
+        (supportFragmentManager.findFragmentByTag(NoWatermarkRewardDialogFragment.TAG)
+                as? NoWatermarkRewardDialogFragment)
+            ?.setListener(rewardUnlockListener())
+    }
+
+    private fun rewardUnlockListener(): NoWatermarkRewardDialogFragment.Listener {
+        return NoWatermarkRewardDialogFragment.Listener {
+            if (!isFinishing) {
+                hasUnlockedNoWatermark = true
+                startConvert(selectedLongBitmap)
+            }
+        }
+    }
+
+    private fun selectNoWatermarkOption() {
+        checkWaterMark = false
+        adapter?.toggleWaterMark(false)
+        binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_selector)
+        binding.llWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+    }
+
+    private fun selectWatermarkOption() {
+        checkWaterMark = true
+        adapter?.toggleWaterMark(true)
+        binding.llWatermark.setBackgroundResource(R.drawable.radio_button_selector)
+        binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean(KEY_UNLOCKED_NO_WATERMARK, hasUnlockedNoWatermark)
     }
 
     private fun convertLongImages(bitmaps: List<Bitmap>, format: String) {
@@ -266,5 +327,9 @@ class CheckWatermarkActivity : BaseActivity() {
     override fun onDestroy() {
         mergeJob?.cancel()
         super.onDestroy()
+    }
+
+    companion object {
+        private const val KEY_UNLOCKED_NO_WATERMARK = "unlocked_no_watermark"
     }
 }

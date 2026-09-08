@@ -17,7 +17,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-/* loaded from: classes11.dex */
+
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {
     public static final int DEFAULT_TEXT_SIZE = 0;
     public static final int HANDLE_LONG = 39;

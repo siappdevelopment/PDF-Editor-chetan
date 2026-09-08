@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="onboarding_dot_size">12dp</dimen>
+    <dimen name="onboarding_dot_active_width">28dp</dimen>
+    <dimen name="onboarding_dot_spacing">12dp</dimen>
+</resources>

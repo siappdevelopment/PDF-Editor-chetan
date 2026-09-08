@@ -1,12 +1,12 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener;
 
 import android.view.View;
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
 
-/* loaded from: classes11.dex */
+
 public class TableViewLayoutChangeListener implements View.OnLayoutChangeListener {
     @NonNull
     private final CellLayoutManager mCellLayoutManager;

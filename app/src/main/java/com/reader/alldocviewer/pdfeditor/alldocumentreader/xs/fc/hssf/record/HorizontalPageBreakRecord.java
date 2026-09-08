@@ -15,11 +15,11 @@
  limitations under the License.
  ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PageBreakRecord.Break;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PageBreakRecord.Break;
 
 /**
  * HorizontalPageBreak (0x001B) record that stores page breaks at rows <p/>

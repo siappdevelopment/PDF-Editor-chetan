@@ -10,7 +10,7 @@ import android.view.animation.Interpolator;
 import androidx.core.view.ViewCompat;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* loaded from: classes11.dex */
+
 public final class CustomSwipeProgressBar {
     private static final int ANIMATION_DURATION_MS = 2000;
     private static final int COLOR1 = -1291845632;
@@ -170,7 +170,7 @@ public final class CustomSwipeProgressBar {
         rect.bottom = bottom;
     }
 
-    /* loaded from: classes11.dex */
+    
     public static final class CustomInterpolator implements Interpolator {
         private static final CustomInterpolator INSTANCE = new CustomInterpolator();
         private static final float STEP_SIZE;

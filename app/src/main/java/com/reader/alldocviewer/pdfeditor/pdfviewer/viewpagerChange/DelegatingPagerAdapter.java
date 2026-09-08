@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-/* loaded from: classes11.dex */
+
 public class DelegatingPagerAdapter extends PagerAdapter {
     @NonNull
     public final PagerAdapter mDelegate;
@@ -132,7 +132,7 @@ public class DelegatingPagerAdapter extends PagerAdapter {
         return this.mDelegate.getPageWidth(position);
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class MyDataSetObserver extends DataSetObserver {
         public final DelegatingPagerAdapter mParent;
 

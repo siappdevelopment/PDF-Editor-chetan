@@ -4,16 +4,16 @@
  * 编译器:            android2.2
  * 时间:             	上午4:13:44
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.IAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IHighlight;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.IAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IHighlight;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 /**
  * TODO: 文件注释

@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:singleLine="true"
         android:text="@string/add_to_home_screen"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp" />
@@ -23,6 +24,8 @@
         style="@style/TextStyle.SemiBold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lines="2"
+        android:maxLines="2"
         android:layout_marginTop="@dimen/_8sdp"
         android:gravity="center"
         android:text="@string/touch_and_hold_the_widget"
@@ -93,6 +96,8 @@
             android:background="@drawable/bg_rounded_button"
             android:clickable="true"
             android:focusable="true"
+            android:singleLine="true"
+
             android:gravity="center"
             android:padding="@dimen/_10sdp"
             android:text="@string/cancel"
@@ -108,6 +113,7 @@
             android:layout_weight="1"
             android:background="@drawable/bg_rounded_button_blue"
             android:clickable="true"
+            android:singleLine="true"
             android:focusable="true"
             android:gravity="center"
             android:padding="@dimen/_10sdp"

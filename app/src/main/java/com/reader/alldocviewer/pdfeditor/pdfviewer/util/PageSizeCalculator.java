@@ -3,7 +3,7 @@ package com.reader.alldocviewer.pdfeditor.pdfviewer.util;
 import com.shockwave.pdfium.util.Size;
 import com.shockwave.pdfium.util.SizeF;
 
-/* loaded from: classes11.dex */
+
 public class PageSizeCalculator {
     public boolean fitEachPage;
     public FitPolicy fitPolicy;
@@ -41,7 +41,7 @@ public class PageSizeCalculator {
     }
 
     /* renamed from: com.reader.alldocviewer.pdfeditorpdfviewer.util.PageSizeCalculator$1  reason: invalid class name */
-    /* loaded from: classes11.dex */
+    
     public static /* synthetic */ class AnonymousClass1 {
         public static final /* synthetic */ int[] $SwitchMap$com$pdfviewer$util$FitPolicy;
 

@@ -4,7 +4,7 @@
  * 编译器:           JDK1.5.0_01
  * 时间:             上午10:14:58
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant;
 
 /**
  * Dialog ID

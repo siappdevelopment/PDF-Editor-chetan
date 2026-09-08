@@ -9,10 +9,10 @@ import android.content.Intent
 import android.os.Build
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
-import com.alarmclock.reminder.clock.Advertisement.Overlay.DailyNotificationUtils
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
 import com.reader.alldocviewer.pdfeditor.R
 import com.reader.alldocviewer.pdfeditor.ui.activities.splash.SplashActivity
+
 import kotlin.apply
 import kotlin.jvm.java
 

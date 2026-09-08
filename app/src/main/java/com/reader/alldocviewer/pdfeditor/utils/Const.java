@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.SourceDebugExtension;
 
 @SourceDebugExtension({"SMAP\nConst.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Const.kt\ncom/office/allreader/utils/Const\n+ 2 Bitmap.kt\nandroidx/core/graphics/BitmapKt\n*L\n1#1,656:1\n84#2,6:657\n*S KotlinDebug\n*F\n+ 1 Const.kt\ncom/office/allreader/utils/Const\n*L\n466#1:657,6\n*E\n"})
-/* loaded from: classes11.dex */
+
 public final class Const {
     @NotNull
     public static final String ADD_PASSWORD = "AddPassword";
@@ -279,7 +279,7 @@ public final class Const {
     @NotNull
     private static String privacyPolicyUrl = "https://sites.google.com/gameadzone.com/pdf-reader-editor";
 
-    /* loaded from: classes11.dex *//*
+    /*
     public *//* synthetic *//* class WhenMappings {
         public static final *//* synthetic *//* int[] $EnumSwitchMapping$0;
 
@@ -305,7 +305,7 @@ public final class Const {
         }
     }*/
 
-    /* loaded from: classes11.dex */
+    
     public static final class WhenMappings {
 
         public static final int[] $EnumSwitchMapping$0;

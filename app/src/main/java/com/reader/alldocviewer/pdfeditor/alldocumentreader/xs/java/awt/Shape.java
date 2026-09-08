@@ -5,12 +5,12 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.AffineTransform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.PathIterator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Point2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.AffineTransform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.PathIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Point2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 /**
  * The <code>Shape</code> interface provides definitions for objects 

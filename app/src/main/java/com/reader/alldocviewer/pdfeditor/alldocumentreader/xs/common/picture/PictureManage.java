@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               上午10:40:46
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,9 +16,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.InflaterInputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.openxml4j.opc.PackagePart;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Bitmap;
 import android.os.Environment;

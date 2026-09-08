@@ -6,6 +6,7 @@
     <string name="recent">Recent</string>
     <string name="bookmarks">Bookmarks</string>
     <string name="tools">Tools</string>
+    <string name="google" translatable="false">Google</string>
     <string name="pdf">PDF</string>
     <string name="editor">Editor</string>
     <string name="pdf_editor_format">%1$s %2$s</string>
@@ -21,7 +22,6 @@
     <string name="nav_pdf_tools">PDF Tools</string>
     <string name="nav_language_default">Default</string>
     <string name="nav_theme_system_default">System Default</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_files_found">No files found</string>
     <string name="option_bookmark">Bookmark</string>
     <string name="option_recycle_bin">Move to recycle bin</string>
@@ -203,7 +203,6 @@
     <string name="label_import">Import</string>
     <string name="there_is_no_document">No files found</string>
     <string name="select_more_files_or">Select media files or</string>
-    <string name="tap_to_add_more_images">Tap to add more images</string>
     <string name="enter_name_for_the_pdf_file">Enter name for the PDF file.</string>
     <string name="save_pdf">Save PDF</string>
     <string name="next">Next</string>
@@ -269,6 +268,22 @@
     <string name="unlock_file_saving_behavior">Unlock - file saving behavior</string>
     <string name="watermark">Watermark</string>
     <string name="no_watermark">No watermark</string>
+    <string name="unlock_no_watermark_title">Unlock No Watermark!</string>
+    <string name="unlock_no_watermark_title_prefix">Unlock</string>
+    <string name="unlock_no_watermark_title_highlight">No Watermark!</string>
+    <string name="unlock_no_watermark_subtitle">Watch a short ad and get</string>
+    <string name="unlock_no_watermark_subtitle_highlight">watermark-free PDFs</string>
+    <string name="unlock_no_watermark_subtitle_full">Watch a short ad to convert your PDF without any watermark.</string>
+    <string name="reward_benefit_clean_title">Clean Exports</string>
+    <string name="reward_benefit_clean_desc">Save &amp; share PDFs with no watermark.</string>
+    <string name="reward_benefit_quality_title">Full Quality</string>
+    <string name="reward_benefit_quality_desc">Original resolution, unlimited edits.</string>
+    <string name="reward_benefit_no_watermark">No Watermark</string>
+    <string name="reward_benefit_professional">Clean &amp; Professional Output</string>
+    <string name="watch_ad_and_unlock">Watch Ad &amp; Unlock</string>
+    <string name="maybe_later">Maybe Later</string>
+    <string name="reward_free_badge">FREE</string>
+    <string name="ad_not_available_try_again">Ad not available, please try again</string>
     <string name="light_theme">Light Theme</string>
     <string name="dark_theme">Dark Theme</string>
     <string name="default_theme">Default Theme</string>
@@ -305,6 +320,7 @@
     <string name="failed_to_create_pdf">Failed to create PDF: %1$s</string>
     <string name="generating_pdf_from_images">Generating PDF from images...</string>
     <string name="merge_failed">Merge failed: %1$s</string>
+    <string name="merge_skipped_invalid_pdfs">Skipped invalid PDF(s): %1$s</string>
     <string name="please_select_at_least_one_image">Please select at least 1 image</string>
     <string name="permission_denied">Permission denied</string>
     <string name="name_cannot_be_empty">Name cannot be empty</string>
@@ -344,6 +360,11 @@
     <string name="duplicate_file">Duplicate File</string>
     <string name="name_must_be_different_from_original">Name must be different from original</string>
     <string name="incorrect_password">Incorrect password</string>
+    <string name="password">Password</string>
+    <string name="password_required_files">Password required (%1$d files)</string>
+    <string name="is_password_protected_suffix"> is password protected.</string>
+    <string name="enter_password_to_open_file">Enter the password to open the file</string>
+    <string name="wrong_password">Wrong password</string>
     <string name="save_as_pdf">Save as PDF</string>
     <string name="open_gallery">Open Gallery</string>
     <string name="continue_">Continue</string>
@@ -360,6 +381,8 @@
     <string name="call">Call</string>
     <string name="experience_high_quality_voice">Experience high-quality voice calls wherever you are.</string>
     <string name="display_over_other_apps">Display Over Other Apps</string>
+    <string name="overlay_permission_required_title">Overlay Permission Required</string>
+    <string name="overlay_permission_required_message">This app needs overlay permission to show pop-up windows. Please enable it in settings.</string>
     <string name="allow_displaying_call_screen_on_top_of">Allow displaying call screen on top of other apps.</string>
     <string name="allow_permission">Allow Permission</string>
     <string name="how_can_we_help">How can we help?</string>
@@ -389,4 +412,86 @@
     <string name="intro_2_description">Connect instantly through fast, reliable, and seamless real-time conversations daily.</string>
     <string name="intro_3_title">Contact Management</string>
     <string name="intro_3_description">Organize contacts effortlessly for faster communication and improved accessibility anytime.</string>
-  </resources>
+    <string name="set_contacts_as_your_home_app">Set Contacts as Your Home App</string>
+    <string name="set_contacts_home_launcher_as_your_default_home_app_to_quickly_access_contacts_calls_and_your_personalized_home_screen_experience">Set Contacts Home Launcher as your default Home app to quickly access contacts, calls, and your personalized home screen experience.</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="we_don_t_collect_personal">We don’t collect personal or sensitive data. Your data stays private. %1$s and %2$s</string>
+    <string name="search_for_apps_or_content">Search for apps or content</string>
+    <string name="privacy_data_title">A quick note about your data</string>
+    <string name="privacy_data_intro_1">We use a little information from your device to keep this app fast and reliable, to show ads that keep it free, and to send you useful notifications.</string>
+    <string name="privacy_data_intro_2">The information we use does not include your contacts, call history, or messages — those stay on your device.</string>
+    <string name="privacy_data_what_we_use">What we use and why:</string>
+    <string name="privacy_data_bullet_usage">How you use the app — the screens you open and how long you spend — to measure and improve performance</string>
+    <string name="privacy_data_bullet_identifiers">Device and app identifiers — to group analytics correctly, keep your preferences in sync, and deliver notifications</string>
+    <string name="privacy_data_bullet_region">A general region from your network — to understand usage trends and show relevant content</string>
+    <string name="privacy_data_bullet_ads">An advertising identifier — to show and measure ads that keep this app free</string>
+    <string name="privacy_data_footer">By tapping Agree &amp; Continue you accept our %1$s and confirm you\'re okay with this. This usage, device, and advertising data is processed by the analytics and ad services we use. See our %2$s for details.</string>
+    <string name="privacy_terms_short">Terms</string>
+    <string name="privacy_agree_checkbox">I agree to this data collection</string>
+    <string name="privacy_agree_continue">Agree &amp; Continue</string>
+    <string name="privacy_please_agree">Please agree to data collection to continue</string>
+    <string name="markrting_converter1">gclid</string>
+    <string name="utm_source_apps_facebook_com">utm_source=apps.facebook.com</string>
+    <string name="utm_source_apps_instagram_com">utm_source=apps.instagram.com</string>
+    <string name="utm_source_marketing">utm_source=marketing</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="suggested_for_now">Suggested for now</string>
+    <string name="recent_apps">Recent Apps</string>
+    <string name="app_usage_stats">App Usage stats</string>
+    <string name="most_used_app">Most used app:</string>
+    <string name="top_5_apps">Top 5 apps:</string>
+    <string name="screen_time_value">Screen time : %1$s</string>
+    <string name="no_usage_data">No usage data yet</string>
+    <string name="light_mode_app">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="please_select_language">Please select language</string>
+    <string name="set_pdf_editor_amp_reader_as_your_home_app"><![CDATA[Set PDF Editor & Reader as Your Home App]]></string>
+    <string name="default_home_app_to_quickly_access_and_manage_your_pdf_files_from_one_convenient_place">default Home app to quickly access and manage your PDF files from one convenient place.</string>
+    <string name="all_your_documents_in_one_place">All Your Documents in One Place</string>
+    <string name="quickly_access_view_and_manage_pdf_word_excel_ppt_and_more_in_one_organized_app">Quickly access, view, and manage PDF, Word, Excel, PPT, and more in one organized app</string>
+    <string name="edit_pdfs_with_ease">Edit PDFs with Ease</string>
+    <string name="edit_pdfs_your_way_with_highlights_underlines_drawings_notes_and_signatures">Edit PDFs your way with highlights, underlines, drawings, notes, and signatures</string>
+    <string name="app_usage_to_understand_which_screens_and_features_are_used_and_improve_app_performance">App Usage — to understand which screens and features are used and improve app performance.</string>
+    <string name="device_amp_app_information_to_diagnose_errors_improve_stability_and_deliver_notifications_or_app_updates"><![CDATA[Device & App Information — to diagnose errors, improve stability, and deliver notifications or app updates.]]></string>
+    <string name="faq_1_question">1. What is a PDF Editor?</string>
+    <string name="faq_1_answer">A PDF Editor allows you to modify PDF documents by editing text, changing fonts, adding images, inserting signatures, highlighting content, annotating pages, organizing documents, and saving your changes without recreating the file.</string>
+    <string name="faq_2_question">2. What editing tools are available in the app?</string>
+    <string name="faq_2_answer">The app includes a wide range of editing tools such as Text Edit, Font Change, Font Size Adjustment, Bold, Italic, Underline, Text Color, Highlight, Strike-through, Add Images, Insert Shapes, Draw with Pen, Add Comments, Digital Signature, and Page Management tools.</string>
+    <string name="faq_3_question">3. Can I edit the text inside any PDF?</string>
+    <string name="faq_3_answer">You can edit text in most editable PDF documents. However, scanned or image-based PDFs do not contain selectable text. These documents must first be converted into editable text using OCR (Optical Character Recognition) if the feature is available.</string>
+    <string name="faq_4_question">4. How do I change the font, size, or color of text?</string>
+    <string name="faq_4_answer">Select the text you want to modify, then use the editing toolbar to choose a different font family, adjust the font size, change the text color, or apply formatting such as bold, italic, or underline.</string>
+    <string name="faq_5_question">5. How can I highlight or annotate a PDF?</string>
+    <string name="faq_5_answer">Open the document and select the Highlight or Annotation tool. You can highlight important text, add comments, draw freehand, insert shapes, or place sticky notes anywhere on the page.</string>
+    <string name="faq_6_question">6. Can I add my signature to a PDF?</string>
+    <string name="faq_6_answer">Yes. You can create a signature by drawing it with your finger or stylus, typing your name, or importing an image of your signature. Once created, it can be placed anywhere within the document.</string>
+    <string name="faq_7_question">7. Can I insert images or logos into a PDF?</string>
+    <string name="faq_7_answer">Yes. You can import images from your device and position, resize, or rotate them within the PDF. This is useful for adding company logos, photos, stamps, or other graphics.</string>
+    <string name="faq_8_question">8. What page management features are available?</string>
+    <string name="faq_8_answer">The app allows you to reorder pages, rotate pages, delete unwanted pages, duplicate pages, extract selected pages, merge multiple PDFs into one file, and split a PDF into separate documents.</string>
+    <string name="faq_9_question">9. Does the app support scanned PDF documents?</string>
+    <string name="faq_9_answer">Yes. Scanned PDFs can be viewed normally. Editing the text inside a scanned document requires OCR technology to recognize the text. Without OCR, only annotations or image-based edits are possible.</string>
+    <string name="faq_10_question">10. Why does the app request storage or file access permission?</string>
+    <string name="faq_10_answer">Storage or file access permission is required so the app can open, edit, save, import, export, and share PDF documents stored on your device. Your files remain under your control.</string>
+    <string name="faq_11_question">11. Will my documents remain private?</string>
+    <string name="faq_11_answer">Yes. Your PDF files are processed locally on your device whenever possible. The app does not upload your personal documents unless you explicitly choose a cloud storage or sharing feature.</string>
+    <string name="faq_12_question">12. Can I share or export my edited PDF?</string>
+    <string name="faq_12_answer">Yes. After editing, you can save the document and share it using email, messaging apps, cloud storage services, or any compatible application installed on your device.</string>
+    <string name="faq_13_question">13. Which file formats does the app support?</string>
+    <string name="faq_13_answer">The app primarily supports PDF documents and may also allow importing images such as JPG, JPEG, and PNG for conversion into PDFs or insertion into existing PDF files.</string>
+    <string name="faq_14_question">14. Why can\'t I edit some PDF files?</string>
+    <string name="faq_14_answer">Some PDF files are password-protected, digitally secured, corrupted, or created as scanned images. These limitations may prevent direct text editing until the document is unlocked or processed with OCR.</string>
+    <string name="faq_15_question">15. How can I report a problem or request a new feature?</string>
+    <string name="faq_15_answer">If you experience any issues or have suggestions, please use the Contact Us or Feedback section within the app. Include your device model, Android version, and a brief description of the issue to help us improve your experience.</string>
+    <string name="pdf_amp_file_access_to_find_open_edit_create_save_rename_move_and_manage_pdf_documents_on_your_device"><![CDATA[PDF & File Access — to find, open, edit, create, save, rename, move, and manage PDF documents on your device.]]></string>
+    <string name="manage_external_storage_required_for_document_management_features_that_need_access_to_files_stored_on_your_device">Manage External Storage — required for document-management features that need access to files stored on your device.</string>
+    <string name="advertising_id_may_be_used_to_display_and_measure_advertisements_where_applicable">Advertising ID — may be used to display and measure advertisements, where applicable.</string>
+    <string name="by_tapping_agree_continue_you_accept_our_terms_and_confirm_you_re_okay_with_this_this_usage_device_and_advertising_data_is_processed_by_the_analytics_and_ad_services_we_use_see_our_privacy_policy_for_details"><![CDATA[By tapping Agree & Continue you accept our Terms and confirm you\'re okay with this. This usage, device, and advertising data is processed by the analytics and ad services we use. See our Privacy Policy for details.]]></string>
+    <string name="tap_to_add_more_images">Tap to add more images</string>
+    <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">Convert, merge, split, sign, and manage PDFs with ease</string>
+    <string name="powerful_pdf_tools">Powerful PDF Tools</string>
+    <string name="make_pdf_your_default">Make PDF Your Default</string>
+    <string name="set_our_pdf_app_as_your_default_to_easily_view_manage_edit_and_organize_all_your_pdf_documents">Set our PDF app as your default to easily view, manage, edit, and organize all your PDF documents.</string>
+
+</resources>

@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               下午5:11:07
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape;
 
 /**
  * Represents a table

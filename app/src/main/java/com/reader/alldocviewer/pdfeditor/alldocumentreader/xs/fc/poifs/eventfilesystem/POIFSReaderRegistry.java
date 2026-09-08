@@ -17,12 +17,12 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.eventfilesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.eventfilesystem;
 
 import java.util.*;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DocumentDescriptor;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DocumentDescriptor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSDocumentPath;
 
 
 /**

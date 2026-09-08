@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Google Quick Search Box (Pixel style) -->
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bg_google_qsb"
+        android:elevation="@dimen/_2sdp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <!-- Auto-sliding logo in search bar -->
+        <ViewFlipper
+            android:id="@+id/vfLogoSlider"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/search"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_google_icons" />
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:contentDescription="@string/search"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/splash_logos" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:contentDescription="@string/search"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@mipmap/ic_launcher" />-->
+
+        </ViewFlipper>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVoice"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/search"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_google_voice" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLens"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/search"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_google_lens" />
+
+    </LinearLayout>
+
+    <!-- Pixel-style clock + date -->
+    <LinearLayout
+        android:id="@+id/llClockWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llSearch"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClockTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fig_tree_semibold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white_"
+            android:textSize="@dimen/_45sdp"
+            tools:text="16:31" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClockDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/fig_tree_medium"
+            android:includeFontPadding="false"
+            android:textColor="@color/white_"
+            android:textSize="@dimen/_12sdp"
+            tools:text="Wed 05 August" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlMiddleSection"
+        android:layout_below="@+id/llClockWidget"
+        android:layout_above="@+id/llBottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <LinearLayout
+            android:id="@+id/llEdgeCallSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_edge_call_slider"
+            android:elevation="@dimen/_4sdp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_22sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdgeCall"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:contentDescription="@string/call"
+                android:src="@drawable/image_round_logo_icons" />
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_below="@+id/llEdgeCallSlider"
+            android:backgroundTint="@color/launcher_folder_bg"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/llDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_5sdp"
+          >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:src="@drawable/ic_logo_radius_icons" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_bold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="@string/make_pdf_your_default"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:lines="2"
+                            android:fontFamily="@font/mulish_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/set_our_pdf_app_as_your_default_to_easily_view_manage_edit_and_organize_all_your_pdf_documents"
+                            android:textColor="@color/grey_color"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                        android:id="@+id/btnSetDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_minus8sdp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        android:background="@drawable/custom_button"
+                        android:duplicateParentState="true"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:fontFamily="@font/mulish_semibold"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:text="@string/set_as_default"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ic_arrow"
+                            android:textColor="#ffffff"
+                            />
+
+                    </LinearLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lavSetAsDefaultTap"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginStart="@dimen/_minus12sdp"
+                        android:clickable="false"
+                        android:elevation="0dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:importantForAccessibility="no"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/launcher_tap_animation" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_80sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_default" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llGoogleFolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvGoogleFolder"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:backgroundTint="@color/launcher_folder_bg"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp">
+
+                    <GridLayout
+                        android:id="@+id/gvGoogleApps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:columnCount="3"
+                        android:padding="@dimen/_2sdp"
+                        android:rowCount="3" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/fig_tree_medium"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/google"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="Google" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llToolsFolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvToolsFolder"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:backgroundTint="@color/launcher_folder_bg"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp">
+
+                    <GridLayout
+                        android:id="@+id/gvToolsApps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:columnCount="3"
+                        android:padding="@dimen/_2sdp"
+                        android:rowCount="3" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/fig_tree_medium"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/tools"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="Tools" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llContacts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTopAppIcon1"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ivTopAppName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/fig_tree_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTopAppIcon2"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ivTopAppName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/fig_tree_medium"
+                    android:singleLine="true"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom app/content search bar (Pixel style) -->
+        <LinearLayout
+            android:id="@+id/llAppSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:background="@drawable/bg_launcher_app_search"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_14sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAppSearch"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_search_white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/fig_tree_medium"
+                android:singleLine="true"
+                android:text="@string/search_for_apps_or_content"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <!-- Page indicator: Phone | Active pill | More apps -->
+        <LinearLayout
+            android:id="@+id/llPageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_page_indicator_pill"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPageIndicatorMessages"
+                android:layout_width="@dimen/_12sdp"
+                android:padding="@dimen/_2sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/call"
+                android:src="@drawable/ic_page_indiacator_phone" />
+
+            <View
+                android:id="@+id/vPageIndicatorActive"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_page_indicator_active" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPageIndicatorApps"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/search_for_apps_or_content"
+                android:src="@drawable/ic_page_indicator_apps" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAppIcon1"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAppIcon2"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAppIcon3"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAppIcon4"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlRightSwipeTutorial"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#CC000000"-->
+<!--        android:clickable="true"-->
+<!--        android:elevation="@dimen/_10sdp"-->
+<!--        android:focusable="true"-->
+<!--        android:visibility="gone">-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="@dimen/_100sdp"-->
+<!--            android:fontFamily="@font/fig_tree_medium"-->
+<!--            android:singleLine="true"-->
+<!--            android:text="Swipe Right"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_15sdp"-->
+<!--            tools:ignore="HardcodedText" />-->
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_120sdp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_fileName="right_swipe_animation.json"-->
+<!--            app:lottie_loop="true" />-->
+
+<!--    </RelativeLayout>-->
+    <LinearLayout
+        android:id="@+id/rlRightSwipeTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSearch"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:clickable="false"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavRightSwipe"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_minus30sdp"
+            android:layout_marginTop="@dimen/_minus15sdp"
+            android:clickable="false"
+            android:focusable="false"
+            android:rotation="-90"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/right_swipe_animation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:fontFamily="@font/fig_tree_semibold"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Swipe Right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,16 +1,16 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder;
 
 import android.view.View;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes11.dex */
+
 public abstract class AbstractViewHolder extends RecyclerView.ViewHolder {
     @NonNull
     private SelectionState m_eState;
 
-    /* loaded from: classes11.dex */
+    
     public enum SelectionState {
         SELECTED,
         UNSELECTED,

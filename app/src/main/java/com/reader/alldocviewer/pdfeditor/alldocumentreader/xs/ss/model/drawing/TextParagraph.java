@@ -4,10 +4,10 @@
  * 编译器:            android2.2
  * 时间:              上午9:10:21
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.drawing;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.drawing;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.Font;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.Alignment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.Font;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.Alignment;
 
 
 /**

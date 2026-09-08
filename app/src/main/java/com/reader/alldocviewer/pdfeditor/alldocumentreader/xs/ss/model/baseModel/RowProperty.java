@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午10:10:46
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
 
 /**
  * TODO: 文件注释

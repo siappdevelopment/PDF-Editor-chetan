@@ -5,11 +5,11 @@
  * 时间:              下午4:05:31
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist;
 
 import java.util.NoSuchElementException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
 
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -68,7 +68,7 @@ public class APageListEventManage implements
 
     /**
      * 
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage#zoom(android.view.MotionEvent)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage#zoom(android.view.MotionEvent)
      *
      */
     protected boolean zoom(MotionEvent event)
@@ -152,7 +152,7 @@ public class APageListEventManage implements
     
     /**
      * 
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage#onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage#onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)
      *
      */
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)

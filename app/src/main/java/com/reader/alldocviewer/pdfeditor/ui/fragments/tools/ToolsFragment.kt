@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSAppManage
 import com.reader.alldocviewer.pdfeditor.databinding.FragmentToolsBinding
+import com.reader.alldocviewer.pdfeditor.launcher.HomeLauncherFragment
 import com.reader.alldocviewer.pdfeditor.ui.activities.main.MainActivity
 
 class ToolsFragment : Fragment() {
@@ -24,45 +25,62 @@ class ToolsFragment : Fragment() {
     private fun initView() {
         binding.apply {
             llImageToPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchImageToPdf()
+                runOnToolsHost({ launchImageToPdf() }, { launchImageToPdf() })
             }
             llPdfToLongImage.setOnClickListener {
-                (activity as? MainActivity)?.launchPdfToLongImage()
+                runOnToolsHost({ launchPdfToLongImage() }, { launchPdfToLongImage() })
             }
             llSplitPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchSplitPdf()
+                runOnToolsHost({ launchSplitPdf() }, { launchSplitPdf() })
             }
             llPdfToImage.setOnClickListener {
-                (activity as? MainActivity)?.launchPdfToImage()
+                runOnToolsHost({ launchPdfToImage() }, { launchPdfToImage() })
             }
             llMergePdf.setOnClickListener {
-                (activity as? MainActivity)?.launchMergePdf()
+                runOnToolsHost({ launchMergePdf() }, { launchMergePdf() })
             }
             llSign.setOnClickListener {
-                (activity as? MainActivity)?.launchSignPdf()
+                runOnToolsHost({ launchSignPdf() }, { launchSignPdf() })
             }
             llCreatePdf.setOnClickListener {
-                (activity as? MainActivity)?.launchCreatePdf()
+                runOnToolsHost({ launchCreatePdf() }, { launchCreatePdf() })
             }
             llScanToPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchScanToPdf()
+                runOnToolsHost({ launchScanToPdf() }, { launchScanToPdf() })
             }
             llLockPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchLockPdf()
+                runOnToolsHost({ launchLockPdf() }, { launchLockPdf() })
             }
             llUnlockPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchUnlockPdf()
+                runOnToolsHost({ launchUnlockPdf() }, { launchUnlockPdf() })
             }
             llImportFiles.setOnClickListener {
                 ADSAppManage.isAppOpenBlocked = true
-                (activity as? MainActivity)?.launchImportFiles()
+                runOnToolsHost({ launchImportFiles() }, { launchImportFiles() })
             }
             llPrintPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchPrintPdf()
+                runOnToolsHost({ launchPrintPdf() }, { launchPrintPdf() })
             }
             llCompressPdf.setOnClickListener {
-                (activity as? MainActivity)?.launchCompressPdf()
+                runOnToolsHost({ launchCompressPdf() }, { launchCompressPdf() })
             }
+        }
+    }
+
+    private fun getHomeLauncherFragment(): HomeLauncherFragment? {
+        return (parentFragment as? HomeLauncherFragment)
+            ?: activity?.supportFragmentManager?.fragments
+                ?.filterIsInstance<HomeLauncherFragment>()
+                ?.firstOrNull { it.isAdded }
+    }
+
+    private inline fun runOnToolsHost(
+        mainAction: MainActivity.() -> Unit,
+        launcherAction: HomeLauncherFragment.() -> Unit,
+    ) {
+        when (val act = activity) {
+            is MainActivity -> mainAction(act)
+            else -> getHomeLauncherFragment()?.launcherAction()
         }
     }
 }

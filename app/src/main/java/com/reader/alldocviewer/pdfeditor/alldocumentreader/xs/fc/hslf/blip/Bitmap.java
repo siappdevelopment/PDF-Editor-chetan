@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip;
 
 
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel.PictureData;
 
 import java.io.ByteArrayOutputStream;
 

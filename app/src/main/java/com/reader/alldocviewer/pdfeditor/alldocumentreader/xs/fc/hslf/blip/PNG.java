@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture;
 
 /**
  * Represents a PNG picture data in a PPT file
@@ -54,7 +54,7 @@ public final class PNG extends Bitmap
 
     /**
      * @return type of  this picture
-     * @see  com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture#PNG
+     * @see  com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture#PNG
      */
     public int getType()
     {

@@ -5,7 +5,7 @@
  * 时间:              下午8:38:58
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.format;
 
 import java.text.DecimalFormat;
 import java.text.Format;

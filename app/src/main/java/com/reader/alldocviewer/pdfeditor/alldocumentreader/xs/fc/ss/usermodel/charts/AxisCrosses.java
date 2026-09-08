@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.charts;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.charts;
 
 /**
  * Specifies the possible crossing points for an axis.

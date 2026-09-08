@@ -22,6 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16sdp"
+        android:singleLine="true"
+
         android:gravity="center"
         android:paddingHorizontal="@dimen/_16sdp"
         android:text="@string/unlock_file_saving_behavior"
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         android:gravity="center"
+        android:singleLine="true"
         android:paddingHorizontal="@dimen/_25sdp"
         android:text="@string/save_the_file_as_a_new_copy"
         android:textColor="@color/grey_color"
@@ -82,6 +85,7 @@
             android:layout_height="@dimen/bottom_action_button"
             android:layout_marginEnd="@dimen/_8sdp"
             android:layout_weight="1"
+            android:singleLine="true"
             android:background="@drawable/shape_bt_negative"
             android:gravity="center"
             android:text="@string/overwrite_file"
@@ -97,6 +101,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_bt_positive"
             android:gravity="center"
+            android:singleLine="true"
             android:text="@string/save_as_copy"
             android:textColor="@color/white_"
             android:textSize="@dimen/_12sdp" />

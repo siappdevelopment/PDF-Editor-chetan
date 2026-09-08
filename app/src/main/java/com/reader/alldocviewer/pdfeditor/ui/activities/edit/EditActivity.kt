@@ -73,6 +73,7 @@ import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay
 import com.reader.alldocviewer.pdfeditor.Advertisement.KeyboardBannerAdHelper
 import com.artifex.mupdfdemo.MuPDFPageView
+import com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -159,15 +160,16 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
         super.onCreate(savedInstanceState)
         setCustomStatusBar()
 
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                handleBackPress()
-            }
-        })
+
 
         binding = ActivityEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                handleBackPress()
+                onBack()
+            }
+        })
         relativeLayout = RelativeLayout(this).apply {
             fitsSystemWindows = true
         }
@@ -217,10 +219,10 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
             initMain(savedInstanceState)
         }
 
-        if (ADSMainClass.getOtherAdsShow()) {
-            if (ADSMainClass.getOtherAdsType().equals("native")) {
+        if (ADSMainClass.getPdfEditBottomAdsShow()) {
+            if (ADSMainClass.getPdfEditAdsType().equals("native")) {
                 ADSNativeDisplay.loadAdmobNativeAdBig(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    ADSMainClass.getStringValue(ADSMainClass.PDF_EDIT_SCREEN_NATIVE),
                     findViewById(R.id.flNativeSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
                     "small",
@@ -228,10 +230,11 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
                 )
             } else {
                 ADSBannerSmall.loadAdMobBanner(
-                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    ADSMainClass.getStringValue(ADSMainClass.PDF_EDIT_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -239,7 +242,7 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
             binding.flNativeSmallPlaceholder.visibility = View.GONE
             binding.flBannerSmallPlaceholder.visibility = View.GONE
         }
-        KeyboardBannerAdHelper.attach(this)
+        KeyboardBannerAdHelper.attach(this, R.id.banner, ADSMainClass.getPdfEditBottomAdsShow())
     }
 
     fun onBack() {
@@ -248,7 +251,7 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getEditInterShow())
     }
 
     private fun initMain(bundle: Bundle?) {
@@ -858,7 +861,15 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
                 Toast.makeText(this, getString(R.string.demo_file_not_save), Toast.LENGTH_SHORT)
                     .show()
             } else {
-                saveAnnotations()
+
+                ADSInterDisplayClick.ADSInterstitialShowing(
+                    this,
+                    ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                    {
+                        saveAnnotations()
+
+                    },
+                    ADSMainClass.getEditInterShow())
             }
         }
 
@@ -877,7 +888,7 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
         binding.signButton.setOnClickListener { onSignButtonClick() }
         binding.ivExit.setOnClickListener {
             Const.checkEditClick = false
-            onBackPressedDispatcher.onBackPressed()
+          onBack()
         }
         binding.ivUndo.setOnClickListener { OnUndoClick() }
         binding.ivRedo.setOnClickListener { OnRedoClick() }
@@ -1852,8 +1863,7 @@ class EditActivity : BaseActivity(), FilePicker.FilePickerSupport, PageActionLis
                 clearEditingModes()
                 if (Const.ExternalEditFilesOpen) {
                     Const.ExternalEditFilesOpen = false
-                    onBackPressedDispatcher.onBackPressed()
-                } else {
+onBack()                } else {
                     finish()
                 }
             }

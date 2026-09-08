@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip;
 
 
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
 
 /**
  * Represents a DIB picture data in a PPT file
@@ -37,7 +37,7 @@ public final class DIB extends Bitmap
 
     /**
      * @return type of  this picture
-     * @see  com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture#DIB
+     * @see  com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture#DIB
      */
     public int getType()
     {

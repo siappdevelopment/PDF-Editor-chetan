@@ -4,12 +4,12 @@
  * 编译器:            android2.2
  * 时间:              上午10:51:22
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view.SheetView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view.SheetView;
 
 /**
  * TODO: 文件注释

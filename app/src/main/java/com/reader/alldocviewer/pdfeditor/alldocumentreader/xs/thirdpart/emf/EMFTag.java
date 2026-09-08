@@ -1,12 +1,12 @@
 // Copyright 2001, FreeHEP.
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf;
 
 import java.io.IOException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data.GDIObject;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.Tag;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io.TaggedInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data.GDIObject;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.Tag;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io.TaggedInputStream;
 
 /**
  * EMF specific tag, from which all other EMF Tags inherit.

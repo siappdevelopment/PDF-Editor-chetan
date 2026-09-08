@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 /**
  * Title:        Calc Count Record
@@ -32,7 +32,7 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.Litt
  * @author Andrew C. Oliver (acoliver at apache dot org)
  * @author Jason Height (jheight at chariot dot net dot au)
  * @version 2.0-pre
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CalcModeRecord
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CalcModeRecord
  */
 
 public final class CalcCountRecord

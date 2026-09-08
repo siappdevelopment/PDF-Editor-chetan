@@ -17,13 +17,13 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.property.DocumentProperty;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.property.DocumentProperty;
 
 
 

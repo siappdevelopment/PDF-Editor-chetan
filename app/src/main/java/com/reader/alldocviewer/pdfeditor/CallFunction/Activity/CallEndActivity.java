@@ -51,8 +51,10 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSAdpater;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSAppManage;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeFullDisplay;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSUtilitis;
+import com.reader.alldocviewer.pdfeditor.Advertisement.AdPlacement;
 import com.reader.alldocviewer.pdfeditor.Advertisement.CallEndInterAd;
 import com.reader.alldocviewer.pdfeditor.Advertisement.CallendClass.CallEndPendingLaunch;
 import com.reader.alldocviewer.pdfeditor.CallFunction.Adapter.CallShowTabAdapter;
@@ -133,7 +135,6 @@ public class CallEndActivity extends BaseActivity {
                 getWindow().addFlags(flags);
             }
         }
-//        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_end);
 
 
@@ -279,24 +280,15 @@ public class CallEndActivity extends BaseActivity {
 
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 NativeAdView adView = (NativeAdView) inflater.inflate(R.layout.ads_full_native_load, null);
-                PopulateUnifiedFullNativeAdView(preloadedAd, adView, false);
-                fullAdContainer.removeAllViews();
-                fullAdContainer.addView(adView);
+                ADSNativeDisplay.PopulateUnifiedFullNativeAdView(preloadedAd, adView, false, this);
+                ADSNativeDisplay.mountNativeAdView(fullAdContainer, adView, preloadedAd);
 //                Log.d("FCM_AD", "Preloaded Ad displayed in fullAdContainer.");
             } else {
 //                Log.e("FCM_AD", "Preloaded Native Ad is NULL in CallEndActivity!");
                 mainView.setVisibility(View.VISIBLE);
                 fullAdContainer.setVisibility(View.GONE);
 
-                if (ADSMainClass.getCallEndBottomAdsShow()) {
-                    if (ADSMainClass.getCallEndBottomAdsType().equalsIgnoreCase("native")) {
-                        loadAdmobNative(this);
-                    } else {
-                        loadAdmobBannerAd();
-                    }
-                } else {
-                    linearBannerShimmer.setVisibility(View.GONE);
-                }
+                loadCallEndBottomAds();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                     WindowInsetsController controller = getWindow().getInsetsController();
                     if (controller != null) {
@@ -332,15 +324,7 @@ public class CallEndActivity extends BaseActivity {
         }
 
         if (!isFirebaseFlow) {
-            if (ADSMainClass.getCallEndBottomAdsShow()) {
-                if (ADSMainClass.getCallEndBottomAdsType().equalsIgnoreCase("native")) {
-                    loadAdmobNative(this);
-                } else {
-                    loadAdmobBannerAd();
-                }
-            } else {
-                linearBannerShimmer.setVisibility(View.GONE);
-            }
+            loadCallEndBottomAds();
         }
 
 
@@ -526,12 +510,44 @@ public class CallEndActivity extends BaseActivity {
             AdmobNativeAd = null;
         }
         if (adContainer != null) {
-            adContainer.removeAllViews();
+            ADSNativeDisplay.clearNativeAdViewsFromContainer(adContainer);
         }
         ADSAppManage.dialogboolean = true;
         super.onDestroy();
     }
 
+
+    private void loadCallEndBottomAds() {
+        if (!ADSMainClass.getCallEndBottomAdsShow()) {
+            linearBannerShimmer.setVisibility(View.GONE);
+            return;
+        }
+        if (AdPlacement.shouldUseQuizPriority()) {
+            applyQuizBottomAdResult(AdPlacement.showQuizNativeAd(this, adContainer, null, "big"));
+            return;
+        }
+        if (ADSMainClass.getCallEndBottomAdsType().equalsIgnoreCase("native")) {
+            loadAdmobNative(this);
+        } else {
+            loadAdmobBannerAd();
+        }
+    }
+
+    private boolean applyQuizBottomAdResult(boolean shown) {
+        linearBannerShimmer.setVisibility(View.GONE);
+        if (shown) {
+            isAdsShowComplete = true;
+            if (adContainer != null) {
+                adContainer.setVisibility(View.VISIBLE);
+            }
+            return true;
+        }
+        isAdsShowComplete = false;
+        if (adContainer != null) {
+            adContainer.setVisibility(View.GONE);
+        }
+        return false;
+    }
 
     private void loadAdmobBannerAd() {
         linearBannerShimmer.setVisibility(View.VISIBLE);
@@ -558,10 +574,17 @@ public class CallEndActivity extends BaseActivity {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
+                ADSUtilitis.trackScreen(CallEndActivity.this, "CallEndBanner_Fail");
+                if (adView != null) {
+                    adView.destroy();
+                    adView = null;
+                }
+                if (applyQuizBottomAdResult(AdPlacement.tryShowQuizBannerOnGoogleFail(
+                        CallEndActivity.this, adContainer, null))) {
+                    return;
+                }
                 isAdsShowComplete = false;
                 linearBannerShimmer.setVisibility(View.GONE);
-                ADSUtilitis.trackScreen(CallEndActivity.this, "CallEndBanner_Fail");
-//                Log.d("banner_ads_load_check", "onAdFailedToLoad: " + loadAdError.toString());
             }
 
             @Override
@@ -570,7 +593,6 @@ public class CallEndActivity extends BaseActivity {
                 isAdsShowComplete = true;
                 linearBannerShimmer.setVisibility(View.GONE);
                 ADSUtilitis.trackScreen(CallEndActivity.this, "CallEndBanner_Load");
-//                Log.d("banner_ads_load_check", "onAdToLoad: " + "success Load");
             }
         });
 
@@ -578,14 +600,21 @@ public class CallEndActivity extends BaseActivity {
     }
 
     public void loadAdmobNative(final Context context) {
+      if (ADSMainClass.getStringValue(ADSMainClass.CALL_END_Native).trim().isEmpty()) {
 
-//        Log.d("TAG", "loadAdmobNative: " +ADSMainClass.getStringValue(ADSMainClass.CALL_END_Native));
+          linearBannerShimmer.setVisibility(View.GONE);
+          adContainer.setVisibility(View.GONE);
+            return;
+        }
         AdLoader.Builder builder = new AdLoader.Builder(context, ADSMainClass.getStringValue(ADSMainClass.CALL_END_Native).trim())
             .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                 @Override
                 public void onNativeAdLoaded(NativeAd nativeAd) {
+                    if (isFinishing() || isDestroyed()) {
+                        nativeAd.destroy();
+                        return;
+                    }
                     isAdsShowComplete = true;
-//                        Log.d("TAG", "loadAdmobNative: 666  " );
                     ADSUtilitis.trackScreen(CallEndActivity.this, "CallEndNative_Load");
                     linearBannerShimmer.setVisibility(View.GONE);
                     nativeAd.setOnPaidEventListener(new OnPaidEventListener() {
@@ -597,8 +626,7 @@ public class CallEndActivity extends BaseActivity {
 
                     AdmobNativeAd = nativeAd;
 
-//                        if (ADSMainClass.getAdsTypeManage().equals("Load")) {
-                    if (AdmobNativeAd != null) {
+                    if (AdmobNativeAd != null && adContainer != null && adContainer.isAttachedToWindow()) {
 
                         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -606,30 +634,30 @@ public class CallEndActivity extends BaseActivity {
                         adView = (NativeAdView) inflater.inflate(R.layout.admob_big_native_ad, null);
 
                         adContainer.setVisibility(View.VISIBLE);
-                        PopulateUnifiedFullNativeAdView(AdmobNativeAd, adView, false);
+                        ADSNativeDisplay.PopulateUnifiedFullNativeAdView(AdmobNativeAd, adView, false, context);
 
                         adView.setDescendantFocusability(android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS);
                         adContainer.clearFocus();
-                        adContainer.removeAllViews();
-                        adContainer.addView(adView);
+                        ADSNativeDisplay.mountNativeAdView(adContainer, adView, AdmobNativeAd);
                         ADSAdpater.admob_nativehashmap.put(ADSAdpater.pos, adView);
                     }
-//                        }
                 }
             });
 
         AdLoader adLoader = builder.withAdListener(new AdListener() {
                 @Override
                 public void onAdFailedToLoad(LoadAdError adError) {
-                    isAdsShowComplete = false;
-//                        Log.d("TAG", "loadAdmobNative: 777  "  +adError.getMessage());
                     if (AdmobNativeAd != null) {
+                        AdmobNativeAd.destroy();
                         AdmobNativeAd = null;
                     }
                     ADSUtilitis.trackScreen(CallEndActivity.this, "CallEndNative_Fail");
+                    if (applyQuizBottomAdResult(AdPlacement.tryShowQuizNativeOnGoogleFail(
+                            CallEndActivity.this, adContainer, null, "big"))) {
+                        return;
+                    }
+                    isAdsShowComplete = false;
                     linearBannerShimmer.setVisibility(View.GONE);
-//                        AdmobFullNative(context, adsId, linearLayout, banner_flag);
-
                 }
 
                 @Override
@@ -747,7 +775,7 @@ public class CallEndActivity extends BaseActivity {
                 }
             });
         } else {
-            mediaView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
+//            mediaView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
         }
     }
 

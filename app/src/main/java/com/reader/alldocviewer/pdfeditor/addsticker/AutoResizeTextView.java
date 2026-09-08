@@ -13,7 +13,7 @@ import android.util.TypedValue;
 import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatTextView;
 
-/* loaded from: classes11.dex */
+
 public class AutoResizeTextView extends AppCompatTextView {
     private static final int NO_LINE_LIMIT = -1;
     private RectF mAvailableSpaceRect;
@@ -30,7 +30,7 @@ public class AutoResizeTextView extends AppCompatTextView {
     private RectF mTextRect;
     private int mWidthLimit;
 
-    /* loaded from: classes11.dex */
+    
     public interface SizeTester {
         int onTestSize(int suggestedSize, RectF availableSpace);
     }

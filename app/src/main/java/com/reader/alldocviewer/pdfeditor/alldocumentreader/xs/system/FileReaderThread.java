@@ -4,17 +4,17 @@
  * 编译器:            android2.2
  * 时间:              下午8:11:02
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc.DOCReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc.DOCXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc.TXTReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.PPTReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ppt.PPTXReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.XLSReader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.xls.XLSXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc.DOCReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc.DOCXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc.TXTReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.PPTReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ppt.PPTXReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.XLSReader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.xls.XLSXReader;
 
 import android.os.Handler;
 import android.os.Message;

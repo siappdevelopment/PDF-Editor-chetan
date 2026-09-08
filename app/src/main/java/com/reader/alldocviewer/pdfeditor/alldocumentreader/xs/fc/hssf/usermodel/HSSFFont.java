@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.FontRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.PaletteRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IFont;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.FontRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.PaletteRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IFont;
 
 
 /**
@@ -28,9 +28,9 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermo
  *
  *
  * @author  Andrew C. Oliver
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createFont()
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#getFontAt(short)
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFCellStyle#setFont(HSSFFont)
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createFont()
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#getFontAt(short)
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFCellStyle#setFont(HSSFFont)
  */
 public final class HSSFFont implements IFont {
 
@@ -188,7 +188,7 @@ public final class HSSFFont implements IFont {
      * @return color to use
      * @see #COLOR_NORMAL
      * @see #COLOR_RED
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      */
     public short getColor()
     {

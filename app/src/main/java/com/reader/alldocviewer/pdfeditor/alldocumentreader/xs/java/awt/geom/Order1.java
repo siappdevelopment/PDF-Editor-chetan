@@ -23,7 +23,7 @@
  * have any questions.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 
 final class Order1 extends Curve {

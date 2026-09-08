@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf.BorderFormatting;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CFRuleRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf.BorderFormatting;
 
 
 /**
@@ -29,7 +29,7 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.reco
  * @author Dmitriy Kumshayev
  *
  */
-public final class HSSFBorderFormatting implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.BorderFormatting
+public final class HSSFBorderFormatting implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.BorderFormatting
 {
 	private final CFRuleRecord cfRuleRecord;
 	private final BorderFormatting borderFormatting;

@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
 import com.reader.alldocviewer.pdfeditor.CallFunction.Activity.CallEndActivity;
 
+
 public final class CallEndPendingLaunch {
 
     private static final String TAG = "CallEndPendingLaunch";

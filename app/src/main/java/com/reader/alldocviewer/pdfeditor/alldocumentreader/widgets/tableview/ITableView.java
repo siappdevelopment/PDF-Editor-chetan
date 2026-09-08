@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview;
 
 import android.content.Context;
 import android.view.View;
@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AbstractTableAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
 
 
-/* loaded from: classes11.dex */
+
 public interface ITableView {
     void addView(View view, ViewGroup.LayoutParams layoutParams);
 
@@ -21,25 +21,25 @@ public interface ITableView {
 
     void clearHiddenRowList();
 
-    void filter(@NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.Filter filter);
+    void filter(@NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.Filter filter);
 
     @Nullable
     AbstractTableAdapter getAdapter();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager getCellLayoutManager();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager getCellLayoutManager();
 
     @NonNull
     CellRecyclerView getCellRecyclerView();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager getColumnHeaderLayoutManager();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager getColumnHeaderLayoutManager();
 
     @NonNull
     CellRecyclerView getColumnHeaderRecyclerView();
 
     @Nullable
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ColumnSortHandler getColumnSortHandler();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ColumnSortHandler getColumnSortHandler();
 
     @NonNull
     Context getContext();
@@ -47,7 +47,7 @@ public interface ITableView {
     CornerViewLocation getCornerViewLocation();
 
     @Nullable
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.FilterHandler getFilterHandler();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.FilterHandler getFilterHandler();
 
     int getGravity();
 
@@ -55,7 +55,7 @@ public interface ITableView {
     DividerItemDecoration getHorizontalItemDecoration();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener getHorizontalRecyclerViewListener();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener getHorizontalRecyclerViewListener();
 
     boolean getReverseLayout();
 
@@ -66,17 +66,17 @@ public interface ITableView {
     CellRecyclerView getRowHeaderRecyclerView();
 
     @Nullable
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState getRowHeaderSortingStatus();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState getRowHeaderSortingStatus();
 
     int getRowHeaderWidth();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.ScrollHandler getScrollHandler();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.ScrollHandler getScrollHandler();
 
     int getSelectedColor();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.SelectionHandler getSelectionHandler();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.SelectionHandler getSelectionHandler();
 
     int getSeparatorColor();
 
@@ -85,10 +85,10 @@ public interface ITableView {
     boolean getShowCornerView();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState getSortingStatus(int i);
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState getSortingStatus(int i);
 
     @Nullable
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.ITableViewListener getTableViewListener();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.ITableViewListener getTableViewListener();
 
     int getUnSelectedColor();
 
@@ -96,10 +96,10 @@ public interface ITableView {
     DividerItemDecoration getVerticalItemDecoration();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener getVerticalRecyclerViewListener();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener getVerticalRecyclerViewListener();
 
     @NonNull
-    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.VisibilityHandler getVisibilityHandler();
+    com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.VisibilityHandler getVisibilityHandler();
 
     boolean hasFixedWidth();
 
@@ -145,11 +145,11 @@ public interface ITableView {
 
     void showRow(int i);
 
-    void sortColumn(int i, @NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState sortState);
+    void sortColumn(int i, @NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState sortState);
 
-    void sortRowHeader(@NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState sortState);
+    void sortRowHeader(@NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState sortState);
 
-    /* loaded from: classes11.dex */
+    
     public enum CornerViewLocation {
         TOP_LEFT(0),
         TOP_RIGHT(1),

@@ -15,7 +15,7 @@
    limitations under the License.
    ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.cellwalk;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.cellwalk;
 
 /**
  * @author Roman Kashitsyn

@@ -14,11 +14,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 /**
- * Common interface for {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Header} and
- *  {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Footer}.
+ * Common interface for {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Header} and
+ *  {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Footer}.
  */
 public interface HeaderFooter {
     /**

@@ -15,9 +15,9 @@
    limitations under the License.
    ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.cellwalk;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.cellwalk;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
 
 /**
  * Represents callback for CellWalk traverse method.  

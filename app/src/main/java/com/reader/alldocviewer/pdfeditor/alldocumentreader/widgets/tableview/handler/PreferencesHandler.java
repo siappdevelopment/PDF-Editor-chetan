@@ -1,10 +1,10 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.TableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference.Preferences;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.TableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference.Preferences;
 
-/* loaded from: classes11.dex */
+
 public class PreferencesHandler {
     @NonNull
     private final ScrollHandler scrollHandler;

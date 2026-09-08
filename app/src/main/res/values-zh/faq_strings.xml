@@ -1,37 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="how_can_we_help">我们能如何帮助您？</string>
-    <string name="find_answers_to_frequently_asked">查找有关编辑、注释和管理 PDF 文档的常见问题解答。</string>
-    <string name="search_faqs">搜索常见问题</string>
-    <string name="no_faq_found">未找到常见问题</string>
-    <string name="faq_1_question">1. 什么是 PDF 编辑器？</string>
-    <string name="faq_1_answer">PDF 编辑器允许您通过编辑文本、更改字体、添加图片、插入签名、高亮内容、注释页面、整理文档以及保存更改来修改 PDF 文档，而无需重新创建文件。</string>
-    <string name="faq_2_question">2. 应用中有哪些编辑工具？</string>
-    <string name="faq_2_answer">应用包含文本编辑、更改字体、调整字号、粗体、斜体、下划线、文字颜色、高亮、删除线、添加图片、插入形状、画笔绘制、添加评论、数字签名和页面管理等多种编辑工具。</string>
-    <string name="faq_3_question">3. 我可以编辑任何 PDF 中的文字吗？</string>
-    <string name="faq_3_answer">您可以在大多数可编辑的 PDF 文档中编辑文字。但扫描或基于图像的 PDF 不包含可选文字，如果功能可用，需先通过 OCR（光学字符识别）将其转换为可编辑文字。</string>
-    <string name="faq_4_question">4. 如何更改文字的字体、大小或颜色？</string>
-    <string name="faq_4_answer">选择要修改的文字，然后使用编辑工具栏选择不同字体、调整字号、更改文字颜色，或应用粗体、斜体、下划线等格式。</string>
-    <string name="faq_5_question">5. 如何高亮或注释 PDF？</string>
-    <string name="faq_5_answer">打开文档并选择高亮或注释工具。您可以高亮重要文字、添加评论、手绘、插入形状或在页面任意位置放置便签。</string>
-    <string name="faq_6_question">6. 我可以在 PDF 中添加签名吗？</string>
-    <string name="faq_6_answer">可以。您可以用手指或触控笔绘制签名、输入姓名或导入签名图片。创建后可将签名放置在文档中的任意位置。</string>
-    <string name="faq_7_question">7. 我可以在 PDF 中插入图片或徽标吗？</string>
-    <string name="faq_7_answer">可以。您可以从设备导入图片，并在 PDF 中定位、调整大小或旋转。适用于添加公司徽标、照片、印章或其他图形。</string>
-    <string name="faq_8_question">8. 有哪些页面管理功能？</string>
-    <string name="faq_8_answer">应用允许您重新排序页面、旋转页面、删除不需要的页面、复制页面、提取选定页面、将多个 PDF 合并为一个文件，以及将 PDF 拆分为独立文档。</string>
-    <string name="faq_9_question">9. 应用是否支持扫描的 PDF 文档？</string>
-    <string name="faq_9_answer">支持。扫描的 PDF 可以正常查看。编辑扫描文档中的文字需要 OCR 技术识别文字。没有 OCR 时，只能进行注释或基于图像的编辑。</string>
-    <string name="faq_10_question">10. 应用为什么请求存储或文件访问权限？</string>
-    <string name="faq_10_answer">需要存储或文件访问权限，以便应用打开、编辑、保存、导入、导出和分享设备上存储的 PDF 文档。您的文件始终由您掌控。</string>
-    <string name="faq_11_question">11. 我的文档会保持私密吗？</string>
-    <string name="faq_11_answer">会。在可能的情况下，您的 PDF 文件会在设备本地处理。除非您明确选择云存储或分享功能，应用不会上传您的个人文档。</string>
-    <string name="faq_12_question">12. 我可以分享或导出编辑后的 PDF 吗？</string>
-    <string name="faq_12_answer">可以。编辑后，您可以保存文档，并通过电子邮件、消息应用、云存储服务或设备上安装的任何兼容应用进行分享。</string>
-    <string name="faq_13_question">13. 应用支持哪些文件格式？</string>
-    <string name="faq_13_answer">应用主要支持 PDF 文档，也可能允许导入 JPG、JPEG 和 PNG 等图片，以转换为 PDF 或插入到现有 PDF 文件中。</string>
-    <string name="faq_14_question">14. 为什么有些 PDF 文件无法编辑？</string>
-    <string name="faq_14_answer">某些 PDF 受密码保护、数字安全保护、已损坏或以扫描图像形式创建。在文档解锁或通过 OCR 处理之前，可能无法直接编辑文字。</string>
-    <string name="faq_15_question">15. 如何报告问题或请求新功能？</string>
-    <string name="faq_15_answer">如遇问题或有建议，请使用应用内的联系我们或反馈部分。请提供设备型号、Android 版本和问题简要描述，以帮助我们改善您的体验。</string>
+
 </resources>

@@ -5,20 +5,20 @@
  * 时间:              下午4:12:38
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureCroppedInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.JPEG;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.IAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.ShapeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureCroppedInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.JPEG;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.IAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.ShapeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

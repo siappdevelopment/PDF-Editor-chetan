@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart;
 
 /**
  * A client anchor is attached to an excel worksheet.  It anchors against a

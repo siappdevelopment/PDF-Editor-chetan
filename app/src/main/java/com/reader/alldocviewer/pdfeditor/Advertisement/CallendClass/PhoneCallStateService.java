@@ -8,7 +8,6 @@ import android.util.Log;
 
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSAppManage;
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
-import com.reader.alldocviewer.pdfeditor.CallFunction.Service.PreferenceCallManege;
 
 import java.util.Date;
 
@@ -25,7 +24,7 @@ public class PhoneCallStateService extends BroadcastReceiver {
     static String outgoingNumber;
     protected Context savedContext;
     Date callStartTime = new Date();
-    PreferenceCallManege preferenceCallManager;
+//    PreferenceCallManege preferenceCallManager;
 
     private void sendToMixpanel(String str) {
     }
@@ -33,9 +32,8 @@ public class PhoneCallStateService extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d(TAG, "onReceive:fgsggdsgdsg     1111111 " );
         ADSAppManage.dialogboolean = false;
-        this.preferenceCallManager = PreferenceCallManege.getInstance(context);
+//        this.preferenceCallManager = PreferenceCallManege.getInstance(context);
         this.savedContext = context;
         if ("android.intent.action.PHONE_STATE".equals(intent.getAction())) {
             try {
@@ -84,38 +82,11 @@ public class PhoneCallStateService extends BroadcastReceiver {
         }
     }
 
-    public void onIncomingMainCallStarted(String str, Date date, Context context) {
-        this.preferenceCallManager.getIncoming();
-    }
-
-    public void onOutgoingMainCallStarted(String str, Date date, Context context) {
-        this.preferenceCallManager.getOutgoing();
-    }
-
-    public void onIncomingMainCallEnded(String str, Date date, Date date2, Context context) {
-        if (this.preferenceCallManager.getIncoming()) {
-            openNewActivity(context, str, date, date2, "Incoming");
-        }
-    }
-
-    public void onOutgoingMainCallEnded(String str, Date date, Date date2, Context context) {
-        if (this.preferenceCallManager.getOutgoing()) {
-            openNewActivity(context, str, date, date2, "Outgoing");
-        }
-    }
-
-    public void onMissedCall(String str, Date date, Context context) {
-        if (this.preferenceCallManager.getMissedCall()) {
-            openNewActivity(context, str, date, new Date(), "Missed Call");
-        }
-    }
-
-
     private void openNewActivity(Context context, String str, Date date, Date date2, String str2) {
         if (isIncomingCallSend) {
             sendToMixpanel("Request_to_native_ad_load");
         }
-
+//        Log.d(TAG, "openNewActivity: delegated to CallEndLaunchHelper" +ADSMainClass.getIsShowCallEnd());
         if (!ADSMainClass.getIsShowCallEnd()) {
             outgoingNumber = null;
             isMissCalls = false;
@@ -124,9 +95,8 @@ public class PhoneCallStateService extends BroadcastReceiver {
             return;
         }
 
-//        Log.d(TAG, "openNewActivity: delegated to CallEndLaunchHelper");
-        Log.d(TAG, "onReceive:fgsggdsgdsg     2222222 "+ADSMainClass.getIsShowCallEnd() );
         CallEndLaunchHelper.openAfterCallEnded(context, str, date, date2, str2);
+//        Log.d(TAG, "openNewActivity: delegated to CallEndLaunchHelper");
 
         outgoingNumber = null;
         isMissCalls = false;

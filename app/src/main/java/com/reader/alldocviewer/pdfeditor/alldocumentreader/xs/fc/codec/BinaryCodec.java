@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec;
 
 
 /**
@@ -71,7 +71,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param raw
      *                  the raw binary data to convert
      * @return 0 and 1 ASCII character bytes one for each bit of the argument
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
      */
     public byte[] encode(byte[] raw) {
         return toAsciiBytes(raw);
@@ -85,7 +85,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @return 0 and 1 ASCII character chars one for each bit of the argument
      * @throws EncoderException
      *                  if the argument is not a byte[]
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.Encoder#encode(Object)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.Encoder#encode(Object)
      */
     public Object encode(Object raw) throws EncoderException {
         if (!(raw instanceof byte[])) {
@@ -102,7 +102,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @return the raw encoded binary where each bit corresponds to a byte in the byte array argument
      * @throws DecoderException
      *                  if argument is not a byte[], char[] or String
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
      */
     public Object decode(Object ascii) throws DecoderException {
         if (ascii == null) {
@@ -126,7 +126,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param ascii
      *                  each byte represents an ASCII '0' or '1'
      * @return the raw encoded binary where each bit corresponds to a byte in the byte array argument
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
      */
     public byte[] decode(byte[] ascii) {
         return fromAscii(ascii);
@@ -138,7 +138,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param ascii
      *                  String of '0' and '1' characters
      * @return the raw encoded binary where each bit corresponds to a byte in the byte array argument
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.Decoder#decode(Object)
      */
     public byte[] toByteArray(String ascii) {
         if (ascii == null) {
@@ -224,7 +224,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param raw
      *                  the raw binary data to convert
      * @return an array of 0 and 1 character bytes for each bit of the argument
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
      */
     public static byte[] toAsciiBytes(byte[] raw) {
         if (isEmpty(raw)) {
@@ -254,7 +254,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param raw
      *                  the raw binary data to convert
      * @return an array of 0 and 1 characters for each bit of the argument
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
      */
     public static char[] toAsciiChars(byte[] raw) {
         if (isEmpty(raw)) {
@@ -284,7 +284,7 @@ public class BinaryCodec implements BinaryDecoder, BinaryEncoder {
      * @param raw
      *                  the raw binary data to convert
      * @return a String of 0 and 1 characters representing the binary data
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.BinaryEncoder#encode(byte[])
      */
     public static String toAsciiString(byte[] raw) {
         return new String(toAsciiChars(raw));

@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.font;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.font;
 
 /**
  * FIXME: These methods are not really tested yet.

@@ -23,11 +23,11 @@
  * have any questions.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.PathIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.PathIterator;
 
 import java.util.Enumeration;
 

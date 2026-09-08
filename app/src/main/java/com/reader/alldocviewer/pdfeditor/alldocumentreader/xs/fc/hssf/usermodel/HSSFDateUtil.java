@@ -22,11 +22,11 @@
  *
  * Created on January 19, 2002, 9:30 AM
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 import java.util.Calendar;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.DateUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.DateUtil;
 
 
 /**

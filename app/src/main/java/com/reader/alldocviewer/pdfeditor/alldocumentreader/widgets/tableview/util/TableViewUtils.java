@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.util;
 
 import android.view.View;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes11.dex */
+
 public class TableViewUtils {
     public static void setWidth(@NonNull View view, int i) {
         view.getLayoutParams().width = i;

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,43 +25,43 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.HSLFSlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.CorruptPowerPointFileException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.HeadersFooters;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.MovieShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Notes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Slide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.SlideMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.TitleMaster;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Document;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.DocumentAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExAviMovie;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExHyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExHyperlinkAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExMCIMovie;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExObjList;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExObjListAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExOleObjAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExVideoContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphHeaderAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.FontCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PersistPtrHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PositionDependentRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.RecordTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideListWithText;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlidePersistAtom;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer.ExtendedParaAtomsSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.SlideListWithText.SlideAtomsSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.HSLFSlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.CorruptPowerPointFileException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.HeadersFooters;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.MovieShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Notes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Slide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.SlideMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.TitleMaster;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Document;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.DocumentAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExAviMovie;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExHyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExHyperlinkAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExMCIMovie;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExObjList;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExObjListAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExOleObjAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExVideoContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedParagraphHeaderAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.FontCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.HeadersFootersContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PersistPtrHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PositionDependentRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.PositionDependentRecordContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.RecordTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideListWithText;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlidePersistAtom;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.ExtendedPresRuleContainer.ExtendedParaAtomsSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.SlideListWithText.SlideAtomsSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
 
 
 /**
@@ -321,15 +321,15 @@ public final class SlideShow
                 Record r = getCoreRecordForSAS(masterSets[i]);
                 SlideAtomsSet sas = masterSets[i];
                 int sheetNo = sas.getSlidePersistAtom().getSlideIdentifier();
-                if (r instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)
+                if (r instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)
                 {
-                    TitleMaster master = new TitleMaster((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)r, sheetNo);
+                    TitleMaster master = new TitleMaster((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)r, sheetNo);
                     master.setSlideShow(this);
                     tmr.add(master);
                 }
-                else if (r instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.MainMaster)
+                else if (r instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.MainMaster)
                 {
-                    SlideMaster master = new SlideMaster((com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.MainMaster)r, sheetNo);
+                    SlideMaster master = new SlideMaster((com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.MainMaster)r, sheetNo);
                     master.setSlideShow(this);
                     mmr.add(master);
                 }
@@ -346,28 +346,28 @@ public final class SlideShow
 
         // Start by finding the notes records to go with the entries in
         // notesSLWT
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes[] notesRecords;
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes[] notesRecords;
         SlideAtomsSet[] notesSets = new SlideAtomsSet[0];
         Hashtable<Integer, Integer> slideIdToNotes = new Hashtable<Integer, Integer>();
         if (notesSLWT == null)
         {
             // None
-            notesRecords = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes[0];
+            notesRecords = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes[0];
         }
         else
         {
             // Match up the records and the SlideAtomSets
             notesSets = notesSLWT.getSlideAtomsSets();
-            ArrayList<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes> notesRecordsL = new ArrayList<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes>();
+            ArrayList<com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes> notesRecordsL = new ArrayList<com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes>();
             for (int i = 0; i < notesSets.length; i++)
             {
                 // Get the right core record
                 Record r = getCoreRecordForSAS(notesSets[i]);
 
                 // Ensure it really is a notes record
-                if (r instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes)
+                if (r instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes)
                 {
-                    com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes notesRecord = (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes)r;
+                    com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes notesRecord = (com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes)r;
                     notesRecordsL.add(notesRecord);
 
                     // Record the match between slide id and these notes
@@ -383,32 +383,32 @@ public final class SlideShow
                         + ", but that was actually a " + r);
                 }*/
             }
-            notesRecords = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Notes[notesRecordsL.size()];
+            notesRecords = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Notes[notesRecordsL.size()];
             notesRecords = notesRecordsL.toArray(notesRecords);
         }
 
         // Now, do the same thing for our slides
-        com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide[] slidesRecords;
+        com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide[] slidesRecords;
         SlideAtomsSet[] slidesSets = new SlideAtomsSet[0];
         if (slidesSLWT == null)
         {
             // None
-            slidesRecords = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide[0];
+            slidesRecords = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide[0];
         }
         else
         {
             // Match up the records and the SlideAtomSets
             slidesSets = slidesSLWT.getSlideAtomsSets();
-            slidesRecords = new com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide[slidesSets.length];
+            slidesRecords = new com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide[slidesSets.length];
             for (int i = 0; i < slidesSets.length; i++)
             {
                 // Get the right core record
                 Record r = getCoreRecordForSAS(slidesSets[i]);
 
                 // Ensure it really is a slide record
-                if (r instanceof com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)
+                if (r instanceof com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)
                 {
-                    slidesRecords[i] = (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record.Slide)r;
+                    slidesRecords[i] = (com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record.Slide)r;
                 }
                 /*else
                 {

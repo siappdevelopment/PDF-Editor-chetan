@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午3:27:24
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 

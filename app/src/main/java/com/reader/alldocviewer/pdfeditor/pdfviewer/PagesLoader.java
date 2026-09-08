@@ -9,7 +9,7 @@ import com.shockwave.pdfium.util.SizeF;
 
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class PagesLoader {
     public int cacheOrder;
     public float pageRelativePartHeight;
@@ -22,7 +22,7 @@ public class PagesLoader {
     public float xOffset;
     public float yOffset;
 
-    /* loaded from: classes11.dex */
+    
     public class Holder {
         public int col;
         public int row;
@@ -35,7 +35,7 @@ public class PagesLoader {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class RenderRange {
         public GridSize gridSize;
         public Holder leftTop;
@@ -53,7 +53,7 @@ public class PagesLoader {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class GridSize {
         public int cols;
         public int rows;

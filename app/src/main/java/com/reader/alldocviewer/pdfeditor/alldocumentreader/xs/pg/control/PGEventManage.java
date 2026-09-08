@@ -4,12 +4,12 @@
  * 编译器:            android2.2
  * 时间:              下午7:00:11
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ISlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.ATimer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ISlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.ATimer;
 
 import android.graphics.Rect;
 import android.view.MotionEvent;

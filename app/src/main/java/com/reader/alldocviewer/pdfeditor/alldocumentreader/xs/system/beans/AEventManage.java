@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              下午8:02:22
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ErrorUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.MainControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ErrorUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.MainControl;
 
 import android.content.Context;
 import android.view.GestureDetector;

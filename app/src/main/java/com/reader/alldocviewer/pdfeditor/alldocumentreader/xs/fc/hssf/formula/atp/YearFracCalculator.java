@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.atp;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.atp;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.DateUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.ErrorEval;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.eval.EvaluationException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.DateUtil;
 
 
 

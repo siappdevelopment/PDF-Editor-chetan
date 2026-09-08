@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:             	下午5:06:47
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureEffectInfo;
 
 /**
  * TODO: 文件注释

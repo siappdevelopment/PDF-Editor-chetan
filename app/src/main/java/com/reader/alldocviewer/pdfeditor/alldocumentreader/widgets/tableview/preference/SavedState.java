@@ -1,14 +1,14 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.view.View;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes11.dex */
+
 public class SavedState extends View.BaseSavedState {
     @NonNull
-    public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference.SavedState.1
+    public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference.SavedState.1
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
         @NonNull

@@ -4,16 +4,16 @@
  * 编译器:            android2.2
  * 时间:              下午3:19:10
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.STRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.STRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTable;
 
 
 /**

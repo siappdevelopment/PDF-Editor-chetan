@@ -4,26 +4,26 @@
  * 编译器:            android2.2
  * 时间:              下午1:57:55
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control;
 
 import java.util.List;
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bookmark.Bookmark;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.DialogConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.AbstractControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IMainFrame;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.SysKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.dialog.TXTEncodingDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bookmark.Bookmark;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.DialogConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.AbstractControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IMainFrame;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.SysKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.dialog.TXTEncodingDialog;
 
 import android.app.Activity;
 import android.app.Dialog;

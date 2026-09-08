@@ -1,4 +1,4 @@
-//package com.reader.alldocviewer.pdfeditor.launcher.common;
+package com.reader.alldocviewer.pdfeditor.launcher.common;//package com.reader.alldocviewer.pdfeditor.launcher.common;
 //
 //import android.app.NotificationManager;
 //import android.content.Context;

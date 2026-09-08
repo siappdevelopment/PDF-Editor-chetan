@@ -1,12 +1,12 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter;
 
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class Filter {
     @NonNull
     private final List<FilterItem> filterItems = new ArrayList();

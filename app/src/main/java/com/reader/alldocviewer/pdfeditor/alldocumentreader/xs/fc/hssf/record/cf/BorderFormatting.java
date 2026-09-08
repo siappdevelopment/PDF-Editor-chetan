@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.cf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.cf;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianInput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianInput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 /**
  * Border Formatting Block of the Conditional Formatting Rule Record.
@@ -320,7 +320,7 @@ public final class BorderFormatting {
 
     /**
      * get the color to use for the left border
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      * @return  The index of the color definition
      */
     public int getLeftBorderColor() {
@@ -337,7 +337,7 @@ public final class BorderFormatting {
 
     /**
      * get the color to use for the right border
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     public int getRightBorderColor() {
@@ -354,7 +354,7 @@ public final class BorderFormatting {
 
     /**
      * get the color to use for the top border
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     public int getTopBorderColor() {
@@ -372,7 +372,7 @@ public final class BorderFormatting {
 
     /**
      * get the color to use for the bottom border
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     public int getBottomBorderColor() {
@@ -389,7 +389,7 @@ public final class BorderFormatting {
 
     /**
      * get the color to use for the diagonal border
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     public int getDiagonalBorderColor() {

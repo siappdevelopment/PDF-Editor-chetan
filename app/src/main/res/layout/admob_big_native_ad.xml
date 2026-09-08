@@ -1,6 +1,7 @@
 <com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/mainBacs"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/_5sdp"
     android:background="@drawable/bg_create"
@@ -20,27 +21,18 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ad_view"
-                android:paddingLeft="@dimen/_5sdp"
-                android:paddingTop="@dimen/_2sdp"
-                android:paddingRight="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_2sdp"
-                android:text="Ad"
-                android:textColor="@color/white_"
-                android:textSize="@dimen/_8sdp"
-                android:textStyle="bold" />
-
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
+            <com.google.android.gms.ads.nativead.MediaView
+                android:id="@+id/ad_media"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,33 +46,57 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:adjustViewBounds="true" />
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/textView"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_weight="1"-->
-                <!--                    android:text="IconBackground" />-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/ad_headline"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:includeFontPadding="false"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_12sdp" />
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/_1sdp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ad_view"
+                            android:paddingLeft="@dimen/_4sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingRight="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:text="Ad"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_8sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/ad_headline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_semibold"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                    </LinearLayout>
+
 
                     <LinearLayout
 
                         android:layout_width="match_parent"
+                        android:visibility="gone"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_1sdp"
+
                         android:gravity="center">
 
                         <TextView
@@ -120,8 +136,10 @@
                                 android:paddingEnd="5dp"
                                 android:paddingRight="5dp"
                                 android:singleLine="true"
-                                android:textColor="@color/black"
-                                android:textSize="12sp" />
+                                android:fontFamily="@font/roboto_regular"
+
+                                android:textColor="#9B9999"
+                                android:textSize="@dimen/_9sdp" />
 
                             <TextView
                                 android:id="@+id/ad_store"
@@ -130,10 +148,12 @@
                                 android:paddingStart="5dp"
                                 android:paddingLeft="5dp"
                                 android:paddingEnd="5dp"
+                                android:fontFamily="@font/roboto_regular"
+
                                 android:paddingRight="5dp"
                                 android:singleLine="true"
-                                android:textColor="@color/black"
-                                android:textSize="12sp" />
+                                android:textColor="#9B9999"
+                                android:textSize="@dimen/_9sdp" />
 
 
                         </LinearLayout>
@@ -145,20 +165,18 @@
                         android:id="@+id/ad_body"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
                         android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
                         android:includeFontPadding="false"
-                        android:maxLines="1"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_10sdp" />
+                        android:maxLines="2"
+                        android:lines="2"
+                        android:textColor="#9B9999"
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
 
-            <com.google.android.gms.ads.nativead.MediaView
-                android:id="@+id/ad_media"
-                android:layout_width="250dp"
-                android:layout_height="175dp"
-                android:layout_gravity="center_horizontal" />
 
 
             <LinearLayout
@@ -170,21 +188,21 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    app:cardElevation="0dp"
                     android:layout_margin="@dimen/_5sdp"
-                    app:cardBackgroundColor="@android:color/transparent"
                     app:cardCornerRadius="@dimen/_5sdp">
 
                     <TextView
                         android:id="@+id/ad_call_to_action"
-                        style="@style/TextStyle.SemiBold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ad_view"
                         android:gravity="center"
+                        android:fontFamily="@font/roboto_semibold"
                         android:includeFontPadding="false"
-                        android:padding="@dimen/_10sdp"
-                        android:textColor="@color/white_"
-                        android:textSize="16sp" />
+                        android:padding="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
 
                 </androidx.cardview.widget.CardView>
 

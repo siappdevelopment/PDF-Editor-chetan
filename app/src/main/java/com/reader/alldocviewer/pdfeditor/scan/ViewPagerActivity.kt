@@ -23,6 +23,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -211,8 +212,7 @@ class ViewPagerActivity : BaseActivity() {
         }
 
         binding.ivBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+onBack()        }
 
         binding.ivDoneMain.setOnClickListener {
             val job = rotateJob
@@ -283,7 +283,8 @@ class ViewPagerActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -292,14 +293,14 @@ class ViewPagerActivity : BaseActivity() {
             binding.flBannerSmallPlaceholder.visibility = View.GONE
         }
 
-        /* onBackPressedDispatcher.addCallback(
+         onBackPressedDispatcher.addCallback(
              this,
              object : OnBackPressedCallback(true) {
                  override fun handleOnBackPressed() {
                      onBack()
                  }
              }
-         )*/
+         )
     }
 
     fun onBack() {
@@ -308,7 +309,7 @@ class ViewPagerActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getScanInterShow())
     }
 
     fun processBitmaps(selectedBitmap: ArrayList<Bitmap>) {
@@ -1088,6 +1089,7 @@ class ViewPagerActivity : BaseActivity() {
     private fun navigateToNext() {
         HelperTools.selectedBitmap.clear()
         HelperTools.selectedBitmap.addAll(modifiedMedia)
+        HelperTools.imagesWereEdited = hasEdited
         val intent = Intent(this, OrganizeImageActivity::class.java).apply {
             if (mainTitle.isNotEmpty()) {
                 putExtra("main_title", mainTitle)

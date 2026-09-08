@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianByteArrayOutputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianByteArrayOutputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
 
 /**
  * Subclasses of this class (the majority of BIFF records) are non-continuable.  This allows for
@@ -51,7 +51,7 @@ public abstract class StandardRecord extends Record {
 	 * Write the data content of this BIFF record.  The 'ushort sid' and 'ushort size' header fields
 	 * have already been written by the superclass.<br/>
 	 *
-	 * The subclass must write the exact number of bytes as reported by {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record#getRecordSize()}}
+	 * The subclass must write the exact number of bytes as reported by {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record#getRecordSize()}}
 	 */
 	protected abstract void serialize(LittleEndianOutput out);
 }

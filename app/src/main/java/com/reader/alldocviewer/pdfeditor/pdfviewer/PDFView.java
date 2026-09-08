@@ -55,7 +55,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class PDFView extends RelativeLayout {
     public static final float DEFAULT_MAX_SCALE = 3.0f;
     public static final float DEFAULT_MID_SCALE = 1.75f;
@@ -107,14 +107,14 @@ public class PDFView extends RelativeLayout {
     public Configurator waitingDocumentConfigurator;
     public float zoom;
 
-    /* loaded from: classes11.dex */
+    
     public enum ScrollDir {
         NONE,
         START,
         END
     }
 
-    /* loaded from: classes11.dex */
+    
     public enum State {
         DEFAULT,
         LOADED,
@@ -1053,7 +1053,7 @@ public class PDFView extends RelativeLayout {
         return new Configurator(docSource);
     }
 
-    /* loaded from: classes11.dex */
+    
     public class Configurator {
         public boolean annotationRendering;
         public boolean antialiasing;

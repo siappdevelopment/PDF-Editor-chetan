@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.xpath;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.xpath;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -18,10 +18,10 @@ import java.util.Map;
 
 import javax.xml.namespace.NamespaceContext;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.InvalidXPathException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Node;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.NodeFilter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.XPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.InvalidXPathException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Node;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.NodeFilter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.XPath;
 
 
 /**

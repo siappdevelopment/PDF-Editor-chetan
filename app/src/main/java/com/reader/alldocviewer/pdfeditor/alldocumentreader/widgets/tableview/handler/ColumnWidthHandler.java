@@ -1,9 +1,9 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
 
-/* loaded from: classes11.dex */
+
 public class ColumnWidthHandler {
     @NonNull
     private final ITableView mTableView;

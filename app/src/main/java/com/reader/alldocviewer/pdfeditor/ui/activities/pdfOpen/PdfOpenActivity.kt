@@ -51,14 +51,23 @@ class PdfOpenActivity : BaseActivity() {
 
         binding.tvTitle.text = fileName
         binding.ivBackMain.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            onBack()
+
         }
 
         loadPdf()
 
         binding.btnCompress.setOnClickListener {
             modelFile?.let { file ->
-                compressCheckPdf(file)
+
+                ADSInterDisplayClick.ADSInterstitialShowing(
+                    this,
+                    ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                    {
+                        compressCheckPdf(file)
+
+                    },
+                    ADSMainClass.getPdfOpenInterShow())
             } ?: run {
                 Toast.makeText(this, getString(R.string.file_data_not_found), Toast.LENGTH_SHORT)
                     .show()
@@ -79,7 +88,8 @@ class PdfOpenActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -104,7 +114,7 @@ class PdfOpenActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getPdfOpenInterShow())
     }
 
     private fun loadPdf() {

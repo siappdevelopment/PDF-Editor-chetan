@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
+
+        <variable
+            name="OnClickHandler"
+            type="com.reader.alldocviewer.pdfeditor.utils.OnClickHandler" />
+
+    </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:orientation="vertical"
+         android:orientation="vertical"
+        android:fitsSystemWindows="true"
         tools:context="com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,6 +66,8 @@
                 android:background="@drawable/bg_square_button_primary"
                 android:gravity="center"
                 android:paddingHorizontal="@dimen/_14sdp"
+                android:onClick="@{ (v) -> OnClickHandler.onClick(v)}"
+
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/next"
                 android:textColor="@color/white_"
@@ -73,7 +84,7 @@
             android:layout_height="0dp"
             android:clipToPadding="false"
             android:paddingTop="@dimen/_4sdp"
-            android:paddingBottom="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
             app:layout_constraintBottom_toTopOf="@+id/ll_ads_contains"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,11 +105,12 @@
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:gravity="center"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginVertical="5dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
+                app:cardElevation="0dp">
 
                 <com.facebook.shimmer.ShimmerFrameLayout
                     android:id="@+id/shimmer_container_small"

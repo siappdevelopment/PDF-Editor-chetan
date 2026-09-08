@@ -1,14 +1,14 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll;
 
 import android.util.Log;
 import android.view.MotionEvent;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
 
-/* loaded from: classes11.dex */
+
 public class VerticalRecyclerViewListener extends RecyclerView.OnScrollListener implements RecyclerView.OnItemTouchListener {
     private static final String LOG_TAG = "VerticalRecyclerViewListener";
     @NonNull

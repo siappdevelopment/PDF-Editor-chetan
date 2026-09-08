@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午10:00:00
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view;
 
 /**
  * 视图布局用到工具类

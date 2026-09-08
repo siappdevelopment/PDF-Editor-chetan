@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference;
 
 
 
@@ -183,7 +183,7 @@ public final class SheetNameFormatter {
 	 * For better or worse this implementation attempts to replicate Excel's formula renderer.
 	 * Excel uses range checking on the apparent 'row' and 'column' components.  Note however that
 	 * the maximum sheet size varies across versions.
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference
 	 */
 	/* package */ static boolean cellReferenceIsWithinRange(String lettersPrefix, String numbersSuffix) {
 		return CellReference.cellReferenceIsWithinRange(lettersPrefix, numbersSuffix, SpreadsheetVersion.EXCEL97);

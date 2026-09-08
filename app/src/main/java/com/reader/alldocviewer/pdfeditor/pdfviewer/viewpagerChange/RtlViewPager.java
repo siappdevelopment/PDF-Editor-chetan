@@ -17,7 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import java.util.HashMap;
 
-/* loaded from: classes11.dex */
+
 public class RtlViewPager extends ViewPager {
     private int mLayoutDirection;
     private HashMap<OnPageChangeListener, ReversingOnPageChangeListener> mPageChangeListeners;
@@ -120,7 +120,7 @@ public class RtlViewPager extends ViewPager {
         super.setCurrentItem(position);
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class SavedState implements Parcelable {
         public static final Creator<SavedState> CREATOR = ParcelableCompat.newCreator(new ParcelableCompatCreatorCallbacks<SavedState>() { // from class: com.reader.alldocviewer.pdfeditorpdfviewer.viewpagerChange.RtlViewPager.SavedState.1
             /* JADX WARN: Can't rename method to resolve collision */
@@ -219,7 +219,7 @@ public class RtlViewPager extends ViewPager {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
-    /* loaded from: classes11.dex */
+    
     public class ReversingOnPageChangeListener implements OnPageChangeListener {
         public final OnPageChangeListener mListener;
 
@@ -260,7 +260,7 @@ public class RtlViewPager extends ViewPager {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class ReversingAdapter extends DelegatingPagerAdapter {
         public ReversingAdapter(@NonNull PagerAdapter adapter) {
             super(adapter);

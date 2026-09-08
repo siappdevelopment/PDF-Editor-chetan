@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ShapeKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherProperties;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.AffineTransform;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Arc2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Ellipse2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.GeneralPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Line2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.RoundRectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ShapeKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherProperties;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.AffineTransform;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Arc2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Ellipse2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.GeneralPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Line2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.RoundRectangle2D;
 
 /**
  * Stores definition of auto-shapes.
@@ -57,7 +57,7 @@ public final class AutoShapes
      * We need to transform it into normal slide coordinates
      *
     */
-    public static com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape transform(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape outline, Rectangle2D anchor)
+    public static com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape transform(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape outline, Rectangle2D anchor)
     {
         AffineTransform at = new AffineTransform();
         at.translate(anchor.getX(), anchor.getY());
@@ -71,7 +71,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Rectangle] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 Rectangle2D path = new Rectangle2D.Float(0, 0, 21600, 21600);
                 return path;
@@ -80,7 +80,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.RoundRectangle] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
                 RoundRectangle2D path = new RoundRectangle2D.Float(0, 0, 21600, 21600, adjval,
@@ -91,7 +91,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Ellipse] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 Ellipse2D path = new Ellipse2D.Float(0, 0, 21600, 21600);
                 return path;
@@ -100,7 +100,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Diamond] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 GeneralPath path = new GeneralPath();
                 path.moveTo(10800, 0);
@@ -115,7 +115,7 @@ public final class AutoShapes
         //m@0,l,21600r21600
         shapes[ShapeTypes.IsocelesTriangle] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 10800);
                 GeneralPath path = new GeneralPath();
@@ -129,7 +129,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.RightTriangle] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 GeneralPath path = new GeneralPath();
                 path.moveTo(0, 0);
@@ -142,7 +142,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Parallelogram] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
 
@@ -158,7 +158,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Trapezoid] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
 
@@ -174,7 +174,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Hexagon] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
 
@@ -192,7 +192,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Octagon] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 6326);
 
@@ -212,7 +212,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Plus] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
 
@@ -236,7 +236,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Pentagon] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
 
                 GeneralPath path = new GeneralPath();
@@ -252,7 +252,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.DownArrow] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m0@0 l@1@0 @1,0 @2,0 @2@0,21600@0,10800,21600xe
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 16200);
@@ -272,7 +272,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.UpArrow] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m0@0 l@1@0 @1,21600@2,21600@2@0,21600@0,10800,xe
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
@@ -292,7 +292,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Arrow] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m@0, l@0@1 ,0@1,0@2@0@2@0,21600,21600,10800xe
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 16200);
@@ -312,7 +312,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.LeftArrow] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m@0, l@0@1,21600@1,21600@2@0@2@0,21600,,10800xe
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
@@ -332,7 +332,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.Can] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m10800,qx0@1l0@2qy10800,21600,21600@2l21600@1qy10800,xem0@1qy10800@0,21600@1nfe
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 5400);
@@ -359,7 +359,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.LeftBrace] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m21600,qx10800@0l10800@2qy0@11,10800@3l10800@1qy21600,21600e
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 1800);
@@ -393,7 +393,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.RightBrace] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 //m,qx10800@0 l10800@2qy21600@11,10800@3l10800@1qy,21600e
                 int adjval = ShapeKit.getEscherProperty(shape.getSpContainer(), EscherProperties.GEOMETRY__ADJUSTVALUE, 1800);
@@ -427,7 +427,7 @@ public final class AutoShapes
 
         shapes[ShapeTypes.StraightConnector1] = new ShapeOutline()
         {
-            public com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
+            public com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape getOutline(Shape shape)
             {
                 return new Line2D.Float(0, 0, 21600, 21600);
             }

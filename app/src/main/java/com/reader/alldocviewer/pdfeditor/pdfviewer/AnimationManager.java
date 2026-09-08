@@ -7,7 +7,7 @@ import android.graphics.PointF;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.OverScroller;
 
-/* loaded from: classes11.dex */
+
 public class AnimationManager {
     public ValueAnimator animation;
     public boolean flinging = false;
@@ -106,7 +106,7 @@ public class AnimationManager {
         return this.flinging || this.pageFlinging;
     }
 
-    /* loaded from: classes11.dex */
+    
     public class XAnimation extends AnimatorListenerAdapter implements ValueAnimator.AnimatorUpdateListener {
         public XAnimation() {
         }
@@ -132,7 +132,7 @@ public class AnimationManager {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class YAnimation extends AnimatorListenerAdapter implements ValueAnimator.AnimatorUpdateListener {
         public YAnimation() {
         }
@@ -158,7 +158,7 @@ public class AnimationManager {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class ZoomAnimation implements ValueAnimator.AnimatorUpdateListener, Animator.AnimatorListener {
         public final float centerX;
         public final float centerY;

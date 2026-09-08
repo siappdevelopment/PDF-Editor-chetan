@@ -5,7 +5,7 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 /**
  * The <code>Dimension2D</code> class is to encapsulate a width 
@@ -29,7 +29,7 @@ public abstract class Dimension2D implements Cloneable {
      * the information necessary to satisfy the various accessor
      * methods below.
      *
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension
      * @since 1.2
      */
     protected Dimension2D() {

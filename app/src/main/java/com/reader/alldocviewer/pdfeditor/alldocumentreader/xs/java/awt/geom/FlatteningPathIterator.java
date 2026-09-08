@@ -5,13 +5,13 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 import java.util.NoSuchElementException;
 
 /**
  * The <code>FlatteningPathIterator</code> class returns a flattened view of
- * another {@link PathIterator} object.  Other {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Shape Shape} 
+ * another {@link PathIterator} object.  Other {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Shape Shape} 
  * classes can use this class to provide flattening behavior for their paths
  * without having to perform the interpolation calculations themselves.
  *

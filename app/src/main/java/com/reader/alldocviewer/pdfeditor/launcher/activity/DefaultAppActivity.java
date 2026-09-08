@@ -1,45 +1,58 @@
 package com.reader.alldocviewer.pdfeditor.launcher.activity;
 
+import android.app.Activity;
 import android.app.role.RoleManager;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSAppManage;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSBannerSmall;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass;
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay;
 import com.reader.alldocviewer.pdfeditor.R;
 import com.reader.alldocviewer.pdfeditor.launcher.common.AdPlacement;
 import com.reader.alldocviewer.pdfeditor.launcher.common.Utils;
+import com.reader.alldocviewer.pdfeditor.launcher.utils.DefaultPermissionButtonAd;
+import com.reader.alldocviewer.pdfeditor.launcher.utils.LocaleAwareAppCompatActivity;
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowManager;
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowStep;
 
 
-public class DefaultAppActivity extends AppCompatActivity {
+
+public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
     private AppCompatTextView tvTitle, tvDescription, tvSetAsDefault;
-//    private RelativeLayout rlAdView, rlBannerAdView, rlNativeAdView;
     private ShimmerFrameLayout btnSetDefault, slBannerShimmer, slNativeShimmer;
-//    public LinearLayout llBannerAd;
-//    private FrameLayout flNativeAd;
+    TextView tv_privacy_policy;
     private boolean navigatedAway;
     private boolean waitingForDefaultResult;
+    private boolean isShowingButtonAd;
 
     private final ActivityResultLauncher<Intent> homeRoleLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         waitingForDefaultResult = false;
-        if (Utils.isCompletingDefaultAppSetup(this)) {
-            goNextAfterDefault();
-        } else {
-            finish();
-        }
+        handleDefaultDialogResult(result.getResultCode());
     });
 
     @Override
@@ -56,6 +69,21 @@ public class DefaultAppActivity extends AppCompatActivity {
         }
 
         initViews();
+        manageTextViews();
+        setupBackPress();
+        DefaultPermissionButtonAd.preload(this);
+        if (StartupFlowManager.isStartupFlowActive(this) && Utils.isDefaultHomeApp(this)) {
+            findViewById(android.R.id.content).post(this::goNextAfterDefault);
+        }
+    }
+
+    private void setupBackPress() {
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                StartupFlowManager.exitAppOnBackPress(DefaultAppActivity.this);
+            }
+        });
     }
 
     private void initViews() {
@@ -63,43 +91,160 @@ public class DefaultAppActivity extends AppCompatActivity {
         tvDescription = findViewById(R.id.tvDescription);
         btnSetDefault = findViewById(R.id.btnSetDefault);
         tvSetAsDefault = findViewById(R.id.tvSetAsDefault);
-//        rlAdView = findViewById(R.id.rlAdView);
-//        rlBannerAdView = findViewById(R.id.rlBannerAdView);
-//        slBannerShimmer = findViewById(R.id.slBannerShimmer);
-//        llBannerAd = findViewById(R.id.llBannerAd);
-//        rlNativeAdView = findViewById(R.id.rlNativeAdView);
-//        slNativeShimmer = findViewById(R.id.slNativeShimmer);
-//        flNativeAd = findViewById(R.id.flNativeAd);
+        tv_privacy_policy = findViewById(R.id.tv_privacy_policy);
 
         clickEvents();
+        loadAds();
+    }
+
+    private void loadAds() {
+        if (ADSMainClass.getDefaultPermissionBottomAdsShow()) {
+            if (ADSMainClass.getDefaultPermissionAdsType().equals("native")) {
+                ADSNativeDisplay.loadAdmobNativeAdBig(
+                        ADSMainClass.getStringValue(ADSMainClass.DEFAULT_PERMISSION_SCREEN_NATIVE),
+                        findViewById(R.id.flNativeSmallPlaceholder),
+                        findViewById(R.id.shimmer_container_banner),
+                        "small",
+                        this
+                );
+            } else {
+                ADSBannerSmall.loadAdMobBanner(
+                        ADSMainClass.getStringValue(ADSMainClass.DEFAULT_PERMISSION_SCREEN_BANNER),
+                        findViewById(R.id.flBannerSmallPlaceholder),
+                        findViewById(R.id.shimmer_container_banner),
+                        this,"small"
+                );
+            }
+        } else {
+            findViewById(R.id.shimmer_container_banner).setVisibility(View.GONE);
+            findViewById(R.id.flNativeSmallPlaceholder).setVisibility(View.GONE);
+            findViewById(R.id.flBannerSmallPlaceholder).setVisibility(View.GONE);
+        }
+    }
+
+    private void manageTextViews() {
+        String terms = getString(R.string.terms_of_service);
+        String privacy = getString(R.string.privacy_policy);
+        String text = getString(R.string.we_don_t_collect_personal, terms, privacy);
+
+        SpannableString spannable = new SpannableString(text);
+
+        applyPolicyLinkSpan(spannable, text, terms);
+        applyPolicyLinkSpan(spannable, text, privacy);
+
+        tv_privacy_policy.setText(spannable);
+        tv_privacy_policy.setMovementMethod(LinkMovementMethod.getInstance());
+        tv_privacy_policy.setHighlightColor(Color.TRANSPARENT);
+    }
+
+    private void applyPolicyLinkSpan(SpannableString spannable, String fullText, String label) {
+        if (label == null || label.isEmpty()) {
+            return;
+        }
+
+        int start = fullText.indexOf(label);
+        if (start < 0) {
+            return;
+        }
+
+        int end = start + label.length();
+
+        ClickableSpan clickable = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                openPrivacyPolicyUrl();
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(ContextCompat.getColor(DefaultAppActivity.this, R.color.main_color));
+                ds.setUnderlineText(true);
+            }
+        };
+
+        spannable.setSpan(clickable, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    }
+
+    private void openPrivacyPolicyUrl() {
+        if (!ADSMainClass.getPrivacyPolicy().equals("")) {
+            ADSAppManage.isAppOpenBlocked = true;
+            startActivity(
+                    new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(ADSMainClass.getPrivacyPolicy())
+                    )
+            );
+        } else {
+            Toast.makeText(this, "Something went wrong!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void clickEvents() {
-        Utils.setLocale(this, Utils.getAppLanguageNew(getApplicationContext()));
-
         if (!AdPlacement.getDefaultAdShow()) {
 //            rlAdView.setVisibility(View.GONE);
         } else {
 //            rlAdView.setVisibility(View.VISIBLE);
-
-//            if ("banner".equalsIgnoreCase(AdPlacement.getDefaultAdType())) {
-//                rlBannerAdView.setVisibility(View.VISIBLE);
-//                rlNativeAdView.setVisibility(View.GONE);
-//                AdPlacement.loadBannerAd(this, AdPlacement.getDefaultBannerId(), rlBannerAdView, slBannerShimmer, llBannerAd);
-//            } else {
-//                rlBannerAdView.setVisibility(View.GONE);
-//                rlNativeAdView.setVisibility(View.VISIBLE);
-//                AdPlacement.loadNativeAd(this, AdPlacement.getDefaultNativeId(), rlNativeAdView, slNativeShimmer, flNativeAd, "small");
-//            }
         }
 
         btnSetDefault.setOnClickListener(view -> {
             if (Utils.isDefaultHomeApp(this)) {
+                // Already default — no dialog; continue without Cancel-ad
                 goNextAfterDefault();
             } else {
                 waitingForDefaultResult = true;
                 Utils.setCompletingDefaultAppSetup(this, true);
                 requestDefaultHomeApp();
+            }
+        });
+    }
+
+    /**
+     * Allow  → ads on LauncherHomeActivity (system opens HOME).
+     * Cancel → ads here (if Firebase default_permission_button_ads_show = true).
+     */
+    private void handleDefaultDialogResult(int resultCode) {
+        if (Utils.isDefaultHomeApp(this)) {
+            if (!isFinishing()) {
+                finish();
+            }
+            return;
+        }
+
+        // Cancel (or user did not set as default)
+        boolean isCancel = resultCode == Activity.RESULT_CANCELED || !Utils.isDefaultHomeApp(this);
+        if (isCancel) {
+            showDefaultPermissionButtonAdThen(this::continueAfterCancelAd);
+        } else {
+            continueAfterCancelAd();
+        }
+    }
+
+    private void continueAfterCancelAd() {
+        if (Utils.isCompletingDefaultAppSetup(this)) {
+            goNextAfterDefault();
+        } else if (!isFinishing()) {
+            finish();
+        }
+    }
+
+    private void showDefaultPermissionButtonAdThen(Runnable onComplete) {
+        if (navigatedAway || isFinishing()) {
+            return;
+        }
+        if (isShowingButtonAd) {
+            return;
+        }
+        if (!ADSMainClass.getDefaultPermissionButtonAdsShow() || ADSMainClass.getAds_Free()) {
+            onComplete.run();
+            return;
+        }
+
+        isShowingButtonAd = true;
+        DefaultPermissionButtonAd.show(this, b -> {
+            isShowingButtonAd = false;
+            if (!isFinishing() && !navigatedAway) {
+                onComplete.run();
             }
         });
     }
@@ -110,7 +255,11 @@ public class DefaultAppActivity extends AppCompatActivity {
         }
         navigatedAway = true;
         waitingForDefaultResult = false;
-//        Utils.navigateAfterDefaultAppSetup(this);
+        Utils.setCompletingDefaultAppSetup(this, false);
+        if (Utils.isDefaultHomeApp(this)) {
+            Utils.trackScreen(this, "DEFAULT_HOME_APP_SET");
+        }
+        StartupFlowManager.completeStep(DefaultAppActivity.this, StartupFlowStep.DEFAULT_HOME);
     }
 
     private void requestDefaultHomeApp() {
@@ -149,7 +298,8 @@ public class DefaultAppActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         waitingForDefaultResult = false;
-        goNextAfterDefault();
+        // No chooser — treat as cancel path
+        showDefaultPermissionButtonAdThen(this::continueAfterCancelAd);
     }
 
     private void openHomeSettingsFallback() {
@@ -159,27 +309,27 @@ public class DefaultAppActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
             waitingForDefaultResult = false;
-            goNextAfterDefault();
+            showDefaultPermissionButtonAdThen(this::continueAfterCancelAd);
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Utils.setLocale(this, Utils.getAppLanguageNew(this));
 
         if (tvTitle != null) {
-            tvTitle.setText(getString(R.string.set_default));
-            tvDescription.setText(getString(R.string.set_app_as_default_for_your_SMS_conversations_stored_safely_in_one_clean_simple_inbox));
-            tvSetAsDefault.setText(getString(R.string.set_as_default));
+                    tvSetAsDefault.setText(getString(R.string.set_as_default));
         }
 
-        if (waitingForDefaultResult) {
+        // Home chooser / settings path (no ActivityResult)
+        if (waitingForDefaultResult && !isShowingButtonAd) {
             waitingForDefaultResult = false;
-            if (Utils.isCompletingDefaultAppSetup(this)) {
-                goNextAfterDefault();
+            if (Utils.isDefaultHomeApp(this)) {
+                if (!isFinishing()) {
+                    finish();
+                }
             } else {
-                finish();
+                showDefaultPermissionButtonAdThen(this::continueAfterCancelAd);
             }
         }
     }

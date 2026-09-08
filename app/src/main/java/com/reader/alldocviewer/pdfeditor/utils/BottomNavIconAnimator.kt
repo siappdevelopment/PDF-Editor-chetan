@@ -2,16 +2,17 @@ package com.reader.alldocviewer.pdfeditor.utils
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.OvershootInterpolator
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
-import com.reader.alldocviewer.pdfeditor.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationBarItemView
-import com.google.android.material.navigation.NavigationBarMenuView
-import java.util.WeakHashMap
+import com.reader.alldocviewer.pdfeditor.R
 
 object BottomNavIconAnimator {
 
@@ -37,102 +38,131 @@ object BottomNavIconAnimator {
         }
     }
 
+    fun applyBottomNavItemGravity(bottomNav: BottomNavigationView) {
+        fun applyLayout() {
+            val menuView = bottomNav.getChildAt(0) as? ViewGroup ?: return
+            for (index in 0 until menuView.childCount) {
+                val itemView = menuView.getChildAt(index) as? ViewGroup ?: continue
+                if (index < bottomNav.menu.size() &&
+                    bottomNav.menu.getItem(index).itemId == R.id.nav_add
+                ) {
+                    hideCenterNavPlaceholder(itemView)
+                    continue
+                }
+                centerNavItemContent(itemView)
+            }
+        }
+
+        bottomNav.post { applyLayout() }
+        bottomNav.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
+            bottomNav.post { applyLayout() }
+        }
+    }
+
+    private fun centerNavItemContent(itemView: ViewGroup) {
+        for (index in 0 until itemView.childCount) {
+            val child = itemView.getChildAt(index)
+            val layoutParams = child.layoutParams as? FrameLayout.LayoutParams ?: continue
+            layoutParams.gravity = Gravity.CENTER
+            child.layoutParams = layoutParams
+        }
+    }
+
+    private fun hideCenterNavPlaceholder(itemView: ViewGroup) {
+        itemView.isClickable = false
+        itemView.isFocusable = false
+        hideNavAddContent(itemView)
+    }
+
+    private fun hideNavAddContent(view: View) {
+        when (view) {
+            is ImageView -> view.visibility = View.INVISIBLE
+            is TextView -> view.visibility = View.GONE
+            is ViewGroup -> {
+                for (index in 0 until view.childCount) {
+                    hideNavAddContent(view.getChildAt(index))
+                }
+            }
+        }
+    }
+
     fun updateSelection(
         bottomNav: BottomNavigationView,
         selectedItemId: Int,
         animate: Boolean = true,
         forceAnimate: Boolean = false,
     ) {
-        val menuView = bottomNav.getChildAt(0) as? NavigationBarMenuView
-        if (menuView == null) {
-            bottomNav.post { updateSelection(bottomNav, selectedItemId, animate, forceAnimate) }
-            return
-        }
-        applySelection(menuView, selectedItemId, animate, forceAnimate)
-    }
-
-    private fun applySelection(
-        menuView: NavigationBarMenuView,
-        selectedItemId: Int,
-        animate: Boolean,
-        forceAnimate: Boolean,
-    ) {
-        for (index in 0 until menuView.childCount) {
-            val itemView = menuView.getChildAt(index) as? NavigationBarItemView ?: continue
-            val iconView = itemView.findViewById<ImageView>(
-                com.google.android.material.R.id.navigation_bar_item_icon_view,
-            ) ?: continue
-
-            val itemId = itemView.itemData?.itemId ?: continue
-            val icons = iconMap[itemId] ?: continue
+        iconMap.forEach { (itemId, icons) ->
+            val menuItem = bottomNav.menu.findItem(itemId) ?: return@forEach
             val isSelected = itemId == selectedItemId
             val targetDrawable = if (isSelected) icons.selected else icons.unselected
-
-            iconView.imageTintList = null
-
-            val currentDrawable = iconView.tag as? Int
-            val isSameDrawable = currentDrawable == targetDrawable
-            if (isSameDrawable && !forceAnimate) continue
-            if (isSameDrawable && forceAnimate && !isSelected) continue
-
-            applyIconState(iconView, targetDrawable, animate, isSelected)
-            iconView.tag = targetDrawable
+            menuItem.setIcon(targetDrawable)
         }
+
+        if (!animate && !forceAnimate) return
+
+        bottomNav.post {
+            val menuView = bottomNav.getChildAt(0) as? ViewGroup ?: return@post
+            for (index in 0 until menuView.childCount) {
+                val itemView = menuView.getChildAt(index)
+                if (index >= bottomNav.menu.size()) continue
+                if (bottomNav.menu.getItem(index).itemId == R.id.nav_add) continue
+
+                val itemId = bottomNav.menu.getItem(index).itemId
+                val icons = iconMap[itemId] ?: continue
+                val isSelected = itemId == selectedItemId
+                val targetDrawable = if (isSelected) icons.selected else icons.unselected
+
+                val iconView = findIconView(itemView) ?: continue
+                val currentDrawable = iconView.tag as? Int
+                val isSameDrawable = currentDrawable == targetDrawable
+                if (isSameDrawable && !forceAnimate) continue
+                if (isSameDrawable && forceAnimate && !isSelected) continue
+
+                if (animate) {
+                    applyIconState(iconView, targetDrawable, isSelected)
+                }
+                iconView.tag = targetDrawable
+            }
+        }
+    }
+
+    private fun findIconView(itemView: View): ImageView? {
+        if (itemView is ImageView) return itemView
+        if (itemView !is ViewGroup) return null
+        for (index in 0 until itemView.childCount) {
+            findIconView(itemView.getChildAt(index))?.let { return it }
+        }
+        return null
     }
 
     private fun applyIconState(
         iconView: ImageView,
         targetDrawable: Int,
-        animate: Boolean,
-        isSelecting: Boolean,
-    ) {
-        if (animate) {
-            animateIconTransition(iconView, targetDrawable, isSelecting)
-        } else {
-            iconView.animate().cancel()
-            clearHardwareLayer(iconView)
-            iconView.setImageDrawable(getCachedDrawable(iconView.context, targetDrawable))
-            iconView.scaleX = 1f
-            iconView.scaleY = 1f
-            iconView.alpha = 1f
-        }
-    }
-
-    private fun animateIconTransition(
-        iconView: ImageView,
-        targetDrawable: Int,
         isSelecting: Boolean,
     ) {
         iconView.animate().cancel()
+        clearHardwareLayer(iconView)
+        iconView.setImageDrawable(getCachedDrawable(iconView.context, targetDrawable))
+        iconView.scaleX = 1f
+        iconView.scaleY = 1f
+        iconView.alpha = 1f
 
-        val fadeOutDuration = if (isSelecting) 90L else 70L
-        val fadeInDuration = if (isSelecting) 200L else 110L
         val minScale = if (isSelecting) 0.86f else 0.92f
-
         iconView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-
+        iconView.scaleX = minScale
+        iconView.scaleY = minScale
+        iconView.alpha = 0f
         iconView.animate()
-            .scaleX(minScale)
-            .scaleY(minScale)
-            .alpha(0f)
-            .setDuration(fadeOutDuration)
-            .setInterpolator(DecelerateInterpolator())
-            .withEndAction {
-                iconView.setImageDrawable(getCachedDrawable(iconView.context, targetDrawable))
-                iconView.scaleX = minScale
-                iconView.scaleY = minScale
-                iconView.alpha = 0f
-                iconView.animate()
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .alpha(1f)
-                    .setDuration(fadeInDuration)
-                    .setInterpolator(
-                        if (isSelecting) OvershootInterpolator(2.8f) else DecelerateInterpolator(),
-                    )
-                    .withEndAction { clearHardwareLayer(iconView) }
-                    .start()
-            }
+            .scaleX(1f)
+            .scaleY(1f)
+            .alpha(1f)
+            .setDuration(if (isSelecting) 200L else 110L)
+            .setInterpolator(
+                if (isSelecting) OvershootInterpolator(2.8f)
+                else DecelerateInterpolator(),
+            )
+            .withEndAction { clearHardwareLayer(iconView) }
             .start()
     }
 

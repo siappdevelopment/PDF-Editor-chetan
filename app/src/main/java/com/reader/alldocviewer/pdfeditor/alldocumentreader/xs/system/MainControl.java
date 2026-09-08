@@ -4,25 +4,25 @@
  * 编译器:            android2.2
  * 时间:              下午7:17:16
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system;
 
 import java.lang.reflect.Method;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ISlideShow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc.TXTKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pdf.PDFControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control.PGControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control.SSControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control.WPControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ISlideShow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc.TXTKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pdf.PDFControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control.PGControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control.SSControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control.WPControl;
 
 import android.app.Activity;
 import android.app.Dialog;

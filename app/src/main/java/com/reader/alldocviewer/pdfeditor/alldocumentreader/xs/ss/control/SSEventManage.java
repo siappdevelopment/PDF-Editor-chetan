@@ -5,22 +5,22 @@
  * 时间:              下午1:43:24
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.DrawingCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.FocusCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view.SheetView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ITimerListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.ATimer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.DrawingCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.FocusCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view.SheetView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ITimerListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.ATimer;
 
 import android.graphics.Rect;
 import android.view.MotionEvent;
@@ -723,7 +723,7 @@ public class SSEventManage extends AEventManage  implements ITimerListener
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage#onLongPress(android.view.MotionEvent)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage#onLongPress(android.view.MotionEvent)
      *
      */
     public void onLongPress(MotionEvent e)
@@ -766,7 +766,7 @@ public class SSEventManage extends AEventManage  implements ITimerListener
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
      *
      */
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)

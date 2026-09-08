@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.model.types.TLPAbstractType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.model.types.TLPAbstractType;
 
 public class TableAutoformatLookSpecifier extends TLPAbstractType implements Cloneable
 {

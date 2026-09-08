@@ -151,7 +151,8 @@ class OpenCreatePdfActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -168,7 +169,7 @@ class OpenCreatePdfActivity : BaseActivity() {
             ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
             {
                 finish()
-            })
+            }, ADSMainClass.getOpenCreatePdfInterShow())
     }
 
     private fun hasAnySignatureSticker(): Boolean {
@@ -448,13 +449,21 @@ class OpenCreatePdfActivity : BaseActivity() {
     }
 
     private fun setupListeners() {
-        binding.imClose.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+        binding.imClose.setOnClickListener { onBack() }
         binding.btnSave.setOnClickListener {
             if (isSignatureOnlyMode && !hasAnySignatureSticker()) {
                 Toast.makeText(this, R.string.sign_here, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            savePdfWithStickers()
+
+            ADSInterDisplayClick.ADSInterstitialShowing(
+                this,
+                ADSMainClass.getStringValue(ADSMainClass.INTER_FIRST_TIME),
+                {
+                    savePdfWithStickers()
+
+                },
+                ADSMainClass.getOpenCreatePdfInterShow())
         }
         binding.llText.setOnClickListener {
 //            binding.llText.setBackgroundResource(R.drawable.bg_tab_selected)

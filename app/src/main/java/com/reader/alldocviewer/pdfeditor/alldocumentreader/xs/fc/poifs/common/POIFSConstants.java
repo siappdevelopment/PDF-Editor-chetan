@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common;
 
 /**
  * <p>A repository for constants shared by POI classes.</p>

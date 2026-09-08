@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午3:30:35
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -14,10 +14,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf.PDFLib;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.util.EMFUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf.PDFLib;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.util.EMFUtil;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

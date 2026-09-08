@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -23,44 +23,44 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TreeMap;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ddf.EscherRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.FormulaShifter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Area3DPtg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalSheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.AutoFilterInfoRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.DVRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.DimensionsRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.EscherAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NameRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.NoteRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RowRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.SCLRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.WSBoolRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.WindowTwoRecord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.DataValidityTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.aggregates.WorksheetProtectionBlock;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.ColumnInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util.Region;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.CellRange;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.DataValidation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.DataValidationHelper;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.ICellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.SSCellRange;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.SheetUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ddf.EscherRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.FormulaShifter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Area3DPtg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg.Ptg;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalSheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.model.InternalWorkbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.AutoFilterInfoRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.CellValueRecordInterface;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.DVRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.DimensionsRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.EscherAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ExtendedFormatRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NameRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.NoteRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RowRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.SCLRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.WSBoolRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.WindowTwoRecord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.DataValidityTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.FormulaRecordAggregate;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.aggregates.WorksheetProtectionBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.ColumnInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.HSSFPaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util.Region;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.SpreadsheetVersion;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.CellRange;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.DataValidation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.DataValidationHelper;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.ICellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.HSSFCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.SSCellRange;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.SheetUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 
 /**
@@ -74,7 +74,7 @@ import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POIL
  * @author  Josh Micich
  * @author  Petr Udalau(Petr.Udalau at exigenservices.com) - set/remove array formulas
  */
-public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Sheet
+public final class HSSFSheet implements com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Sheet
 {
     private static final POILogger log = POILogFactory.getLogger(HSSFSheet.class);
     private static final int DEBUG = POILogger.DEBUG;
@@ -116,7 +116,7 @@ public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.
      * scratch.  You should not be calling this from application code (its protected anyhow).
      *
      * @param workbook - The HSSF Workbook object associated with the sheet.
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected HSSFSheet(HSSFWorkbook workbook)
     {
@@ -132,7 +132,7 @@ public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.
      *
      * @param workbook - The HSSF Workbook object associated with the sheet.
      * @param sheet - lowlevel Sheet object this sheet will represent
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected HSSFSheet(HSSFWorkbook workbook, InternalSheet sheet)
     {
@@ -227,8 +227,8 @@ public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.
      *
      * @param rownum  row number
      * @return High level HSSFRow object representing a row in the sheet
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.usermodel.HSSFRow
-     * @see #removeRow(com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.IRow)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.usermodel.HSSFRow
+     * @see #removeRow(com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.IRow)
      */
     public HSSFRow createRow(int rownum)
     {
@@ -675,7 +675,7 @@ public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.
     /**
      * @deprecated (Aug-2008) use <tt>CellRangeAddress</tt> instead of <tt>Region</tt>
      */
-    public int addMergedRegion(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.Region region)
+    public int addMergedRegion(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.Region region)
     {
         return _sheet.addMergedRegion(region.getRowFrom(), region.getColumnFrom(),
         //(short) region.getRowTo(),
@@ -740,20 +740,20 @@ public final class HSSFSheet implements com.reader.alldocviewer.pdfeditoroffice.
      * when the workbook is opened.
      *
      *  <p>
-     *  Calculating the formula values with {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator} is the
+     *  Calculating the formula values with {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.FormulaEvaluator} is the
      *  recommended solution, but this may be used for certain cases where
      *  evaluation in POI is not possible.
      *  </p>
      *
      *  <p>
      *  It is recommended to force recalcuation of formulas on workbook level using
-     *  {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)}
+     *  {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)}
      *  to ensure that all cross-worksheet formuals and external dependencies are updated.
      *  </p>
      * @param value true if the application will perform a full recalculation of
      * this worksheet values when the workbook is opened
      *
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)
      */
     public void setForceFormulaRecalculation(boolean value)
     {

@@ -5,7 +5,7 @@
  * See the bottom of this file for the licence.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,22 +13,22 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.rule.Pattern;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.AbstractDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultAttribute;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultCDATA;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultComment;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultDocumentType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultEntity;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultProcessingInstruction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.DefaultText;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree.QNameCache;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util.SimpleSingleton;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util.SingletonStrategy;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.xpath.DefaultXPath;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.xpath.XPathPattern;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.rule.Pattern;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.AbstractDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultAttribute;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultCDATA;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultComment;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultDocumentType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultEntity;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultProcessingInstruction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.DefaultText;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree.QNameCache;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util.SimpleSingleton;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util.SingletonStrategy;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.xpath.DefaultXPath;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.xpath.XPathPattern;
 
 
 /**
@@ -60,18 +60,18 @@ public class DocumentFactory implements Serializable
         String documentFactoryClassName;
         try
         {
-            documentFactoryClassName = System.getProperty("com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.factory",
-                "com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory");
+            documentFactoryClassName = System.getProperty("com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.factory",
+                "com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory");
         }
         catch(Exception e)
         {
-            documentFactoryClassName = "com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory";
+            documentFactoryClassName = "com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory";
         }
 
         try
         {
             String singletonClass = System.getProperty(
-                "com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.DocumentFactory.singleton.strategy", "com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.util.SimpleSingleton");
+                "com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.DocumentFactory.singleton.strategy", "com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.util.SimpleSingleton");
             Class clazz = Class.forName(singletonClass);
             result = (SingletonStrategy)clazz.newInstance();
         }

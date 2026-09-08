@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 /**
  * Represents an Excel hyperlink.
  */
-public interface IHyperlink extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.usermodel.Hyperlink {
+public interface IHyperlink extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.usermodel.Hyperlink {
     /**
      * Return the row of the first cell that contains the hyperlink
      *

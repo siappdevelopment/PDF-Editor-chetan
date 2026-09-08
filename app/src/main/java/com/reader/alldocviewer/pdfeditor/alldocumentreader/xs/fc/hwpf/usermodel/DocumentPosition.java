@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.HWPFDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.HWPFDocument;
 
 public final class DocumentPosition extends Range
 {

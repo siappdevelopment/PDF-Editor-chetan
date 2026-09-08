@@ -18,8 +18,11 @@ public class ManegeUtilsView {
     public static void isUtilsManege(Context context) {
 
 
-        ManegeParameter.asadpass = "ghjuytrdtdthghjj";//key
-        ManegeParameter.sdasdada = "U2FsdGVkX1+EDaqslLBSqqlk9nRMHjVpg670xK/rT0E==";
+
+
+        ManegeParameter.asadpass = "fffgyjklopiuytre";
+        ManegeParameter.sdasdada = "U2FsdGVkX194DXtPBb84sYHOAT8EtGeZec50FPDdisM=";
+
 
 
         try {
@@ -39,8 +42,5 @@ public class ManegeUtilsView {
         } catch (IllegalBlockSizeException e) {
             throw new RuntimeException(e);
         }
-
     }
-
-
 }

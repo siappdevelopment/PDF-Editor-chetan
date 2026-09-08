@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes11.dex */
+
 public class BorderView extends View {
     public BorderView(Context context) {
         super(context);

@@ -5,9 +5,9 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Rectangle2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Rectangle2D;
 
 import android.graphics.Point;
 
@@ -313,7 +313,7 @@ public class Rectangle extends Rectangle2D
      * <code>setBounds</code> method of <code>Component</code>.
      * @param r the specified <code>Rectangle</code>
      * @see       #getBounds
-     * @see	  java.awt.Component#setBounds(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle)
+     * @see	  java.awt.Component#setBounds(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle)
      * @since     1.1
      */
     public void setBounds(Rectangle r) {
@@ -491,8 +491,8 @@ public class Rectangle extends Rectangle2D
      *                 along the X axis
      * @param dy the distance to move this <code>Rectangle</code> 
      *                 along the Y axis
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle#setLocation(int, int)
-     * @see       com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle#setLocation(java.awt.Point)
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle#setLocation(int, int)
+     * @see       com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle#setLocation(java.awt.Point)
      */
     public void translate(int dx, int dy) {
         int oldv = this.x;
@@ -585,7 +585,7 @@ public class Rectangle extends Rectangle2D
      * This method is included for completeness, to parallel the
      * <code>setSize</code> method of <code>Component</code>.
      * @param d the new size for the <code>Dimension</code> object
-     * @see       java.awt.Component#setSize(com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension)
+     * @see       java.awt.Component#setSize(com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension)
      * @see       #getSize
      * @since     1.1
      */

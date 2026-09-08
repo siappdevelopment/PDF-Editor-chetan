@@ -1,5 +1,5 @@
 // Copyright 2001, FreeHEP.
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io;
 
 /**
  * Keeps the tagID and Length of a specific tag. To be used in the InputStream

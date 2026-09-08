@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel;
 
 
 /**
@@ -23,7 +23,7 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.userm
  * For a list of all the different fields that can be
  *  placed into a footer, such as page number,
  *  bold, underline etc, see 
- *  {@link com.com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.usermodel.HeaderFooter}.
+ *  {@link com.com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.usermodel.HeaderFooter}.
  */
 public interface Footer extends HeaderFooter {
     /**

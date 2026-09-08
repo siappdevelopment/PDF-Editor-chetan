@@ -5,7 +5,7 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 import java.io.Serializable;
 
@@ -488,7 +488,7 @@ public abstract class Rectangle2D extends RectangularShape {
      *
      * @see com.wxiwei.java.awt.geom.geom.Rectangle2D.Float
      * @see com.wxiwei.java.awt.geom.geom.Rectangle2D.Double
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle
      * @since 1.2
      */
     protected Rectangle2D() {

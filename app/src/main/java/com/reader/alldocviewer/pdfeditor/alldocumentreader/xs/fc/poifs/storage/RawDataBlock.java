@@ -17,16 +17,16 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.storage;
 
 
 
 import java.io.*;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.IOUtils;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.IOUtils;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 /**
  * A big block created from an InputStream, holding the raw data
@@ -60,7 +60,7 @@ public class RawDataBlock
      *
      * @param stream the InputStream from which the data will be read
      * @param blockSize the size of the POIFS blocks, normally 512 bytes
-     * {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.common.POIFSConstants#SMALLER_BIG_BLOCK_SIZE}
+     * {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.common.POIFSConstants#SMALLER_BIG_BLOCK_SIZE}
      *
      * @exception IOException on I/O errors, and if an insufficient
      *            amount of data is read (the InputStream must

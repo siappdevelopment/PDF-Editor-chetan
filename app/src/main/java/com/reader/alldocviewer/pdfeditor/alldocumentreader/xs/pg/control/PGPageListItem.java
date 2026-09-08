@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              上午10:24:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.view.SlideDrawKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListItem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.view.SlideDrawKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListItem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListView;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -200,7 +200,7 @@ public class PGPageListItem extends APageListItem
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListItem#onLayout(boolean, int, int, int, int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListItem#onLayout(boolean, int, int, int, int)
      *
      */
     protected void onLayout(boolean changed, int left, int top, int right, int bottom)

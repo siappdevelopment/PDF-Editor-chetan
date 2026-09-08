@@ -4,14 +4,14 @@
  * 编译器:            android2.2
  * 时间:              下午7:38:43
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pdf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pdf;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.ICustomDialog;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.PDFConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro.DialogListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.SafeAsyncTask;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist.APageListItem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.ICustomDialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.PDFConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro.DialogListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.SafeAsyncTask;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist.APageListItem;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

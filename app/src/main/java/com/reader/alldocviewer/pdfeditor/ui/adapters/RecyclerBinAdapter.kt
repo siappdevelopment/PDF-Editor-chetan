@@ -53,7 +53,6 @@ class RecyclerBinAdapter(
             binding.tvFileMeta.text = " • ${FileListAdapter.formatSize(file.size)}"
             binding.ivFileIcon.setImageResource(FileListAdapter.iconResForFile(file))
             
-            // Hide more and show checkbox
             binding.flMore.visibility = View.GONE
             binding.ivCheck.visibility = View.VISIBLE
             

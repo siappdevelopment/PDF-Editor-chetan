@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午4:46:43
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate;
 
 
 /**

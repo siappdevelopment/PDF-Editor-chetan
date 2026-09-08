@@ -1,13 +1,13 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes11.dex */
+
 public class Preferences implements Parcelable {
     @NonNull
-    public static final Parcelable.Creator<Preferences> CREATOR = new Parcelable.Creator<Preferences>() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.preference.Preferences.1
+    public static final Parcelable.Creator<Preferences> CREATOR = new Parcelable.Creator<Preferences>() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.preference.Preferences.1
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
         @NonNull

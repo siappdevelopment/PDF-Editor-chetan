@@ -1,18 +1,18 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.AShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.Gradient;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.LinearGradientShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.PatternShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.TileShader;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect.PictureStretchInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.IAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control.Presentation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.AShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.Gradient;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.LinearGradientShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.PatternShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.TileShader;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect.PictureStretchInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.IAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control.Presentation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.graphics.Canvas;
 import android.graphics.Matrix;

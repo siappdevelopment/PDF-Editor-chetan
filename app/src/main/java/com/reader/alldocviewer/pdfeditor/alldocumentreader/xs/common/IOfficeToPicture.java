@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午2:15:37
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common;
 
 import android.graphics.Bitmap;
 
@@ -27,7 +27,7 @@ import android.graphics.Bitmap;
 public interface IOfficeToPicture
 {
     // 实现IOfficeToPicture接口的类路径
-    public static final String INSTANCE_CLASS_PATH = "com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.officereader.OfficeToPicture";
+    public static final String INSTANCE_CLASS_PATH = "com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.officereader.OfficeToPicture";
     // 视图发生变化时生成picture，例如滚动、fling进行中
     public static final byte VIEW_CHANGING = 0;
     // 视图发生变化结束后，例如滚动、fling、横竖屏切换结束后

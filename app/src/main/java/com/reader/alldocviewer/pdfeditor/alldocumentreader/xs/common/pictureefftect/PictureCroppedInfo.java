@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午5:36:40
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.pictureefftect;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.pictureefftect;
 
 /**
  * TODO: 文件注释

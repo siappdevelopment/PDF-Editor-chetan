@@ -5,28 +5,28 @@
  * 时间:              上午8:56:38
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.AttrIDConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPModelConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.AbstractView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.DocAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.PageAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ParaAttr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ViewContainer;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.ViewKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.control.Word;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.wp.model.WPDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.AttrIDConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPModelConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.AbstractView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.DocAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.PageAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ParaAttr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ViewContainer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.ViewKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.control.Word;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.wp.model.WPDocument;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

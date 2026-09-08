@@ -1,5 +1,5 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage;
 
 public class LittleEndian
 {

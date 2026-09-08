@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午2:49:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant;
 
 /**
  * powerpint的常量类

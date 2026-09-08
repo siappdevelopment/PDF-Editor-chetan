@@ -4,13 +4,13 @@
  * 编译器:            android2.2
  * 时间:              上午10:58:01
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ITimerListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.ATimer;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ITimerListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.ATimer;
 
 /**
  * TODO: 文件注释

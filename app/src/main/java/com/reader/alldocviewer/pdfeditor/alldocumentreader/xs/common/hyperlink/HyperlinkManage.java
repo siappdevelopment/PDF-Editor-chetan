@@ -4,14 +4,14 @@
  * 编译器:             android2.2
  * 时间:               上午10:01:57
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
 
 
 /**

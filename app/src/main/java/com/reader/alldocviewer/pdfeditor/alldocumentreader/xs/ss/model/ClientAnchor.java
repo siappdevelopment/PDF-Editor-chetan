@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor;
 
 /**
  * A client anchor is attached to an excel worksheet.  It anchors against a
@@ -119,7 +119,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getCol1()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getCol1()
      *
      */
     public short getCol1()
@@ -140,7 +140,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setCol1(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setCol1(int)
      *
      */
     public void setCol1(int col1)
@@ -151,7 +151,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getCol2()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getCol2()
      *
      */
     public short getCol2()
@@ -172,7 +172,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setCol2(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setCol2(int)
      *
      */
     public void setCol2(int col2)
@@ -183,7 +183,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getRow1()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getRow1()
      *
      */
     public int getRow1()
@@ -194,7 +194,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setRow1(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setRow1(int)
      *
      */
     public void setRow1(int row1)
@@ -206,7 +206,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getRow2()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#getRow2()
      *
      */
     public int getRow2()
@@ -217,7 +217,7 @@ public final class ClientAnchor extends Anchor implements IClientAnchor
     /**
      * 
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setRow2(int)
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IClientAnchor#setRow2(int)
      *
      */
     public void setRow2(int row2)

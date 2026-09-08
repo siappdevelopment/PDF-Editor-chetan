@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <defaultsMap>
     <entry>
-        <!-- Key Is Your Parameter Name that you created in Remote Config-->
         <key>activityChange</key>
         <value>com.reader.alldocviewer.pdfeditor.ui.activities.MainActivity</value>
+    </entry>
+    <entry>
+        <key>watermark_dialog_show</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>watermark_reward_ads_unit</key>
+        <value></value>
     </entry>
 </defaultsMap>

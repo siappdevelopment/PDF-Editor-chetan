@@ -1,37 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="how_can_we_help">Hvordan kan vi hjælpe?</string>
-    <string name="find_answers_to_frequently_asked">Find svar på ofte stillede spørgsmål om redigering, annotering og administration af dine PDF-dokumenter.</string>
-    <string name="search_faqs">Søg i FAQ</string>
-    <string name="no_faq_found">Ingen FAQ fundet</string>
-    <string name="faq_1_question">1. Hvad er en PDF-editor?</string>
-    <string name="faq_1_answer">En PDF-editor giver dig mulighed for at ændre PDF-dokumenter ved at redigere tekst, ændre skrifttyper, tilføje billeder, indsætte signaturer, fremhæve indhold, annotere sider, organisere dokumenter og gemme ændringer uden at genskabe filen.</string>
-    <string name="faq_2_question">2. Hvilke redigeringsværktøjer er tilgængelige i appen?</string>
-    <string name="faq_2_answer">Appen inkluderer tekstredigering, skrifttypeændring, justering af skriftstørrelse, fed, kursiv, understregning, tekstfarve, fremhævning, gennemstregning, tilføj billeder, indsæt former, tegn med pen, tilføj kommentarer, digital signatur og sideadministration.</string>
-    <string name="faq_3_question">3. Kan jeg redigere teksten i enhver PDF?</string>
-    <string name="faq_3_answer">Du kan redigere tekst i de fleste redigerbare PDF-dokumenter. Scannede eller billedbaserede PDF\'er indeholder dog ikke valgbar tekst. Disse skal først konverteres til redigerbar tekst med OCR, hvis funktionen er tilgængelig.</string>
-    <string name="faq_4_question">4. Hvordan ændrer jeg skrifttype, størrelse eller farve på tekst?</string>
-    <string name="faq_4_answer">Vælg den tekst, du vil ændre, og brug redigeringsværktøjslinjen til at vælge en anden skrifttype, justere størrelsen, ændre tekstfarven eller anvende formatering som fed, kursiv eller understregning.</string>
-    <string name="faq_5_question">5. Hvordan kan jeg fremhæve eller annotere en PDF?</string>
-    <string name="faq_5_answer">Åbn dokumentet og vælg værktøjet Fremhæv eller Annoter. Du kan fremhæve vigtig tekst, tilføje kommentarer, tegne frihånd, indsætte former eller placere sticky notes hvor som helst på siden.</string>
-    <string name="faq_6_question">6. Kan jeg tilføje min signatur til en PDF?</string>
-    <string name="faq_6_answer">Ja. Du kan oprette en signatur ved at tegne den med fingeren eller en stylus, skrive dit navn eller importere et billede af din signatur. Når den er oprettet, kan den placeres hvor som helst i dokumentet.</string>
-    <string name="faq_7_question">7. Kan jeg indsætte billeder eller logoer i en PDF?</string>
-    <string name="faq_7_answer">Ja. Du kan importere billeder fra din enhed og placere, ændre størrelse eller rotere dem i PDF\'en. Dette er nyttigt til at tilføje firmalogoer, fotos, stempler eller anden grafik.</string>
-    <string name="faq_8_question">8. Hvilke sideadministrationsfunktioner er tilgængelige?</string>
-    <string name="faq_8_answer">Appen giver dig mulighed for at omarrangere sider, rotere sider, slette uønskede sider, duplikere sider, udtrække valgte sider, flette flere PDF\'er til én fil og opdele en PDF i separate dokumenter.</string>
-    <string name="faq_9_question">9. Understøtter appen scannede PDF-dokumenter?</string>
-    <string name="faq_9_answer">Ja. Scannede PDF\'er kan ses normalt. Redigering af tekst i et scannet dokument kræver OCR-teknologi. Uden OCR er kun annoteringer eller billedbaserede redigeringer mulige.</string>
-    <string name="faq_10_question">10. Hvorfor anmoder appen om lager- eller filadgangstilladelse?</string>
-    <string name="faq_10_answer">Lager- eller filadgang er nødvendig, så appen kan åbne, redigere, gemme, importere, eksportere og dele PDF-dokumenter på din enhed. Dine filer forbliver under din kontrol.</string>
-    <string name="faq_11_question">11. Vil mine dokumenter forblive private?</string>
-    <string name="faq_11_answer">Ja. Dine PDF-filer behandles lokalt på din enhed, når det er muligt. Appen uploader ikke dine personlige dokumenter, medmindre du udtrykkeligt vælger cloud-lagring eller deling.</string>
-    <string name="faq_12_question">12. Kan jeg dele eller eksportere min redigerede PDF?</string>
-    <string name="faq_12_answer">Ja. Efter redigering kan du gemme dokumentet og dele det via e-mail, beskedapps, cloud-lagringstjenester eller enhver kompatibel app på din enhed.</string>
-    <string name="faq_13_question">13. Hvilke filformater understøtter appen?</string>
-    <string name="faq_13_answer">Appen understøtter primært PDF-dokumenter og kan også tillade import af billeder som JPG, JPEG og PNG til konvertering til PDF eller indsættelse i eksisterende PDF-filer.</string>
-    <string name="faq_14_question">14. Hvorfor kan jeg ikke redigere nogle PDF-filer?</string>
-    <string name="faq_14_answer">Nogle PDF\'er er adgangskodebeskyttede, digitalt sikrede, beskadigede eller oprettet som scannede billeder. Disse begrænsninger kan forhindre direkte tekstredigering, indtil dokumentet er låst op eller behandlet med OCR.</string>
-    <string name="faq_15_question">15. Hvordan rapporterer jeg et problem eller anmoder om en ny funktion?</string>
-    <string name="faq_15_answer">Hvis du oplever problemer eller har forslag, brug Kontakt os- eller Feedback-sektionen i appen. Inkluder din enhedsmodel, Android-version og en kort beskrivelse af problemet for at hjælpe os med at forbedre din oplevelse.</string>
-</resources>
+   </resources>

@@ -26,7 +26,7 @@
  09dec2002  dl               Fix interference checks.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.tree;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.tree;
 
 import java.io.IOException;
 import java.io.Serializable;

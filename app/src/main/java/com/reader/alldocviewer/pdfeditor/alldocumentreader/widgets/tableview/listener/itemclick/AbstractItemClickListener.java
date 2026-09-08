@@ -1,16 +1,16 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.itemclick;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.itemclick;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.SelectionHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.ITableViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.SelectionHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.ITableViewListener;
 
-/* loaded from: classes11.dex */
+
 public abstract class AbstractItemClickListener implements RecyclerView.OnItemTouchListener {
     @NonNull
     protected GestureDetector mGestureDetector;
@@ -40,7 +40,7 @@ public abstract class AbstractItemClickListener implements RecyclerView.OnItemTo
         this.mRecyclerView = cellRecyclerView;
         this.mTableView = iTableView;
         this.mSelectionHandler = iTableView.getSelectionHandler();
-        this.mGestureDetector = new GestureDetector(this.mRecyclerView.getContext(), new GestureDetector.SimpleOnGestureListener() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.itemclick.AbstractItemClickListener.1
+        this.mGestureDetector = new GestureDetector(this.mRecyclerView.getContext(), new GestureDetector.SimpleOnGestureListener() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.itemclick.AbstractItemClickListener.1
             @Nullable
             MotionEvent start;
 

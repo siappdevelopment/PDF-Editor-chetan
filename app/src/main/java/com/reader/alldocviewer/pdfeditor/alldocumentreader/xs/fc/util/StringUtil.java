@@ -15,19 +15,19 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util;
 
 import java.io.UnsupportedEncodingException;
 import java.text.FieldPosition;
 import java.text.NumberFormat;
 import java.util.Iterator;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordInputStream;
 
 /**
  *  Title: String Utility Description: Collection of string handling utilities<p/>
  *
- * Note - none of the methods in this class deals with {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.ContinueRecord}s.  For such
+ * Note - none of the methods in this class deals with {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.ContinueRecord}s.  For such
  * functionality, consider using {@link RecordInputStream
 } *
  *

@@ -5,7 +5,7 @@
  * 时间:              下午7:49:30
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty;
 
 /**
  * 窗口冻结

@@ -12,7 +12,7 @@ import android.util.Log;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.exception.PageRenderingException;
 import com.reader.alldocviewer.pdfeditor.pdfviewer.model.PagePart;
 
-/* loaded from: classes11.dex */
+
 public class RenderingHandler extends Handler {
     public static final int MSG_RENDER_TASK = 1;
     public static final String TAG = "com.reader.alldocviewer.pdfeditorpdfviewer.RenderingHandler";
@@ -102,7 +102,7 @@ public class RenderingHandler extends Handler {
         this.running = true;
     }
 
-    /* loaded from: classes11.dex */
+    
     public class RenderingTask {
         public boolean annotationRendering;
         public boolean bestQuality;

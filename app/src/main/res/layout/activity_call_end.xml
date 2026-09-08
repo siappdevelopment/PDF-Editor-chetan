@@ -103,7 +103,7 @@
                     android:layout_height="@dimen/_34sdp"
                     android:padding="@dimen/_7sdp"
                     android:src="@drawable/ic_call"
-                    android:tint="@color/black" />
+                    app:tint="@color/black" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -129,6 +129,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="5dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -142,207 +144,43 @@
                     android:id="@+id/linearBannerShimmer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bg_create"
-                    android:backgroundTint="@color/white"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvLanguages">
 
-                    <com.facebook.shimmer.ShimmerFrameLayout
-                        android:id="@+id/lehfv_shimmer"
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp">
+                        android:gravity="center"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
 
-                        <LinearLayout
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_container_small"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minHeight="50dp"
-                            android:orientation="vertical"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="5dp"
-                            android:paddingRight="5dp">
+                            android:visibility="visible"
+                            app:shimmer_auto_start="true"
+                            app:shimmer_base_color="#ccc">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_vertical">
+                            <include layout="@layout/layout_big_native_ad_load" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/ad_view"
-                                    android:paddingLeft="@dimen/_5sdp"
-                                    android:paddingTop="@dimen/_2sdp"
-                                    android:paddingRight="@dimen/_5sdp"
-                                    android:paddingBottom="@dimen/_2sdp"
-                                    android:text="Ad"
-                                    android:textColor="@color/white_"
-                                    android:textSize="@dimen/_8sdp"
-                                    android:textStyle="bold" />
+                        </com.facebook.shimmer.ShimmerFrameLayout>
 
-                            </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
+                        <FrameLayout
+                            android:id="@+id/flNativeSmallPlaceholder"
+                            style="@style/NativeAdsView" />
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                    </androidx.cardview.widget.CardView>
 
-                                    <ImageView
-                                        android:id="@+id/lehfv_logo"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_margin="@dimen/_5sdp"
-                                        android:adjustViewBounds="true"
-                                        android:background="#AAA8A8" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="@dimen/_10sdp"
-                                        android:layout_marginRight="@dimen/_10sdp"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:id="@+id/lehfv_top_line"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:background="#AAA8A8"
-                                            android:fontFamily="@font/manrope_regular"
-                                            android:includeFontPadding="false"
-                                            android:textColor="@color/black"
-                                            android:textSize="@dimen/_12sdp" />
-
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:gravity="center">
-
-                                            <TextView
-                                                android:id="@+id/lehfv_advertisment"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:fontFamily="@font/manrope_regular"
-                                                android:gravity="bottom"
-                                                android:includeFontPadding="false"
-                                                android:singleLine="true"
-                                                android:textColor="@color/black"
-                                                android:textSize="12sp"
-                                                android:textStyle="bold" />
-
-                                            <RatingBar
-                                                android:id="@+id/lehfv_rate_stars"
-                                                style="?android:attr/ratingBarStyleSmall"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:isIndicator="true"
-                                                android:numStars="5"
-                                                android:stepSize="0.5" />
-
-                                            <LinearLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginLeft="@dimen/_10sdp"
-                                                android:layout_weight="1"
-                                                android:gravity="end"
-                                                android:orientation="horizontal">
-
-                                                <TextView
-                                                    android:id="@+id/lehfv_fees"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:paddingStart="5dp"
-                                                    android:paddingLeft="5dp"
-                                                    android:paddingEnd="5dp"
-                                                    android:paddingRight="5dp"
-                                                    android:singleLine="true"
-                                                    android:textColor="@color/black"
-                                                    android:textSize="12sp" />
-
-                                                <TextView
-                                                    android:id="@+id/lehfv_store"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:paddingStart="5dp"
-                                                    android:paddingLeft="5dp"
-                                                    android:paddingEnd="5dp"
-                                                    android:paddingRight="5dp"
-                                                    android:singleLine="true"
-                                                    android:textColor="@color/black"
-                                                    android:textSize="12sp" />
-
-                                            </LinearLayout>
-
-                                        </LinearLayout>
-
-                                        <TextView
-                                            android:id="@+id/lehfv_body"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:background="#AAA8A8"
-                                            android:ellipsize="end"
-                                            android:fontFamily="@font/manrope_regular"
-                                            android:includeFontPadding="false"
-                                            android:maxLines="1"
-                                            android:textColor="@color/black"
-                                            android:textSize="@dimen/_10sdp" />
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <com.google.android.gms.ads.nativead.MediaView
-                                    android:id="@+id/lehfv_media_view"
-                                    android:layout_width="250dp"
-                                    android:layout_height="155dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginTop="5dp"
-                                    android:background="#AAA8A8" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <androidx.cardview.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_margin="@dimen/_5sdp"
-                                        app:cardBackgroundColor="@android:color/transparent"
-                                        app:cardCornerRadius="@dimen/_5sdp">
-
-                                        <TextView
-                                            android:id="@+id/lehfv_install_button"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/bg_create"
-                                            android:backgroundTint="#AAA8A8"
-                                            android:fontFamily="@font/manrope_medium"
-                                            android:gravity="center"
-                                            android:includeFontPadding="false"
-                                            android:padding="@dimen/_10sdp"
-                                            android:textColor="@color/white"
-                                            android:textSize="16sp" />
-
-                                    </androidx.cardview.widget.CardView>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </com.facebook.shimmer.ShimmerFrameLayout>
-
+                    <FrameLayout
+                        android:id="@+id/flBannerSmallPlaceholder"
+                        style="@style/NativeAdsView" />
                 </LinearLayout>
 
                 <FrameLayout
@@ -385,7 +223,7 @@
                 android:backgroundTint="@color/exo_black_opacity_60"
                 android:padding="@dimen/_3sdp"
                 android:src="@drawable/iv_close"
-                android:tint="@color/white_" />
+                app:tint="@color/white_" />
 
         </LinearLayout>
 

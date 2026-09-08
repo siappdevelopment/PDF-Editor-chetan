@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
-import android.util.Log
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -22,12 +21,15 @@ import androidx.databinding.DataBindingUtil
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSBannerSmall
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay
-import com.reader.alldocviewer.pdfeditor.Advertisement.ADSUtilitis
 import com.reader.alldocviewer.pdfeditor.CallFunction.Activity.OverlayPermissionActivity
 import com.reader.alldocviewer.pdfeditor.R
 import com.reader.alldocviewer.pdfeditor.databinding.ActivityPermissionBinding
+import com.reader.alldocviewer.pdfeditor.launcher.utils.Constance
+import com.reader.alldocviewer.pdfeditor.launcher.utils.PermissionManager
+import com.reader.alldocviewer.pdfeditor.launcher.utils.SharedPreferenceManager
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowManager
+import com.reader.alldocviewer.pdfeditor.navigation.StartupFlowStep
 import com.reader.alldocviewer.pdfeditor.ui.activities.base.BaseActivity
-import com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity
 import com.reader.alldocviewer.pdfeditor.ui.activities.main.MainActivity
 
 class PermissionActivity : BaseActivity() {
@@ -49,6 +51,7 @@ class PermissionActivity : BaseActivity() {
             if (Settings.canDrawOverlays(this)) {
                 handleOverlayGranted()
             } else {
+                PermissionManager.markOverlayPermissionDeclined(this)
                 proceedToNextScreen()
             }
         }
@@ -87,7 +90,8 @@ class PermissionActivity : BaseActivity() {
                     ADSMainClass.getStringValue(ADSMainClass.SETTING_SCREEN_BANNER),
                     findViewById(R.id.flBannerSmallPlaceholder),
                     findViewById(R.id.shimmer_container_banner),
-                    this
+                    this,
+                    "small"
                 )
             }
         } else {
@@ -106,7 +110,7 @@ class PermissionActivity : BaseActivity() {
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                goNext()
+                StartupFlowManager.exitAppOnBackPress(this@PermissionActivity)
             }
         })
 
@@ -236,6 +240,9 @@ class PermissionActivity : BaseActivity() {
         overlayFlowCompleted = true
         awaitingOverlayGrant = false
         stopOverlayChecker()
+        if (!PermissionManager.hasOverlayPermission(this)) {
+            PermissionManager.markOverlayPermissionDeclined(this)
+        }
         setResult(RESULT_OK)
         goNext()
     }
@@ -311,42 +318,17 @@ class PermissionActivity : BaseActivity() {
     }
 
     private fun goNext() {
+        if (isFinishing) return
 
-        Log.e("TAG", "goNext:dg ${ADSMainClass.getSplashToLanguage()}")
+        SharedPreferenceManager.putBoolean(this, Constance.PERMISSION_SCREEN_SHOWN, true)
+        PermissionManager.checkAndTrackDefaultDialer(this)
 
-        if (ADSUtilitis.IsNetworkConnected(this)) {
-            if (ADSMainClass.getSplashToLanguage()) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-                Log.e("ssssfsfsdfsfsfsdfsd", "goNext: "+1 )
-            } else {
-                val isFromLanguage = intent.getBooleanExtra("language", false)
-                if (isFromLanguage) {
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
-                    Log.e("ssssfsfsdfsfsfsdfsd", "goNext: "+2 )
-
-                } else {
-                    startActivity(Intent(this, LanguageActivity::class.java))
-                    finish()
-                    Log.e("ssssfsfsdfsfsfsdfsd", "goNext: "+3 )
-
-                }
-            }
-        } else {
-            val isFromLanguage = intent.getBooleanExtra("language", false)
-            if (isFromLanguage) {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-                Log.e("ssssfsfsdfsfsfsdfsd", "goNext: "+4 )
-
-            } else {
-                startActivity(Intent(this, LanguageActivity::class.java))
-                Log.e("ssssfsfsdfsfsfsdfsd", "goNext: "+5 )
-
-                finish()
-            }
+        if (StartupFlowManager.isStartupFlowActive(this)) {
+            StartupFlowManager.completeStep(this, StartupFlowStep.PERMISSION)
+            return
         }
+
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

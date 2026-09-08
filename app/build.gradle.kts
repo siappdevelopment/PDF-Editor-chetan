@@ -9,7 +9,7 @@ plugins {
 android {
     namespace = "com.reader.alldocviewer.pdfeditor"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -17,7 +17,7 @@ android {
     defaultConfig {
         applicationId = "com.reader.alldocviewer.pdfeditor"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 3
         versionName = "1.2"
 
@@ -66,6 +66,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.browser:browser:1.8.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -157,4 +158,7 @@ dependencies {
     implementation("com.google.android.play:app-update-ktx:2.1.0")
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+
+    implementation (libs.installreferrer)
+
 }

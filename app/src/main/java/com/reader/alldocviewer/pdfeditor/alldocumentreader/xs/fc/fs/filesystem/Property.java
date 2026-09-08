@@ -1,5 +1,5 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.RawDataBlock;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.RawDataBlock;
 
 /**
  * This abstract base class is the ancestor of all classes

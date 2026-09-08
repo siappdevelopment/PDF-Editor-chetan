@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              上午10:22:11
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

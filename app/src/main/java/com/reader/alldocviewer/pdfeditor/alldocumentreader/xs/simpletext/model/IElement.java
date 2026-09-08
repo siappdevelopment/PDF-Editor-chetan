@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午4:06:29
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model;
 
 /**
  * Model的元素，主要是章节、段落、Leaf

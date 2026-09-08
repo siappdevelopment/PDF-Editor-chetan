@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.util;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.util;
 
 /**
  * Common conversion functions between Excel style A1, C27 style
@@ -24,7 +24,7 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.uti
  * @author  Avik Sengupta
  * @author  Dennis Doubleday (patch to seperateRowColumns())
  */
-public final class CellReference extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.CellReference {
+public final class CellReference extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.CellReference {
     /**
      * Create an cell ref from a string representation.  Sheet names containing special characters should be
      * delimited and escaped as per normal syntax rules for formulas.

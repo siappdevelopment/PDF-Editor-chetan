@@ -66,6 +66,7 @@
                             android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
                             android:ellipsize="end"
+                            android:maxLines="2"
                             android:text="@string/image_to_pdf"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_11sdp" />
@@ -91,8 +92,8 @@
                             android:background="@drawable/bg_icon_rounded_blue">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="24dp"
+                                android:layout_height="28dp"
                                 android:layout_gravity="center"
                                 android:contentDescription="@null"
                                 android:src="@drawable/ic_pdf_to_long_image_" />
@@ -106,6 +107,8 @@
                             android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
                             android:ellipsize="end"
+                            android:maxLines="2"
+
                             android:text="@string/pdf_to_long_image"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_11sdp" />
@@ -119,6 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:singleLine="true"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/pdf_convert"
                     android:textColor="@color/black"
@@ -169,6 +173,7 @@
                             android:layout_marginHorizontal="@dimen/_2sdp"
                             android:layout_marginTop="@dimen/_6sdp"
                             android:ellipsize="end"
+
                             android:gravity="center"
                             android:text="@string/split_pdf"
                             android:textColor="@color/black"
@@ -306,6 +311,8 @@
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/pdf_editor"
+                    android:singleLine="true"
+
                     android:textColor="@color/black"
                     android:textSize="@dimen/_13sdp" />
 
@@ -491,6 +498,8 @@
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/pdf_manager"
+                    android:singleLine="true"
+
                     android:textColor="@color/black"
                     android:textSize="@dimen/_13sdp" />
 

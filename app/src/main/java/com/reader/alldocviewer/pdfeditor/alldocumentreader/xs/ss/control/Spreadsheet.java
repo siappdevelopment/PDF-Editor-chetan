@@ -5,30 +5,30 @@
  * 时间:              下午3:48:56
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control;
 
 import java.io.File;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.IOfficeToPicture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.hyperlink.Hyperlink;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.control.IWord;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IReaderListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ModelUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.FindingMgr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view.SheetView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IFind;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.ReaderHandler;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.AEventManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.IOfficeToPicture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.hyperlink.Hyperlink;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.control.IWord;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IReaderListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ModelUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.FindingMgr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view.SheetView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IFind;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.ReaderHandler;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.AEventManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.IExportListener;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -762,7 +762,7 @@ public class Spreadsheet extends LinearLayout implements IFind, IReaderListener,
      * this function be callde by sheet reader thread,
      *  so we need to post to main thread to update UI
      *(non-Javadoc)
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IReaderListener#OnReadingFinished()
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IReaderListener#OnReadingFinished()
      *
      */
     public void OnReadingFinished()

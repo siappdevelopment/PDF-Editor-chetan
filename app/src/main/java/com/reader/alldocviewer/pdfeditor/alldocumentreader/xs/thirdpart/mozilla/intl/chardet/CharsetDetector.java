@@ -38,7 +38,7 @@
  *    AutoDetect/tools/
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.mozilla.intl.chardet;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.mozilla.intl.chardet;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

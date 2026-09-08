@@ -1,15 +1,15 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.CellLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnLayoutManager;
 
-/* loaded from: classes11.dex */
+
 public class ScrollHandler {
     @NonNull
     private final CellLayoutManager mCellLayoutManager;

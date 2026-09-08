@@ -4,12 +4,12 @@
  * 编译器:            android2.2
  * 时间:              下午4:13:50
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.sheetbar;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.sheetbar;
 
 import java.util.Vector;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
 
 import android.content.Context;
 import android.content.res.Configuration;

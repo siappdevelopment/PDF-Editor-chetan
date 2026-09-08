@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec;
 
 /**
  * Provides Base32 encoding and decoding as defined by <a href="http://www.ietf.org/rfc/rfc4648.txt">RFC 4648</a>.

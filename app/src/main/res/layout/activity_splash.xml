@@ -7,64 +7,261 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
+        android:gravity="center"
         android:orientation="vertical"
-        tools:context="com.reader.alldocviewer.pdfeditor.ui.activities.splash.SplashActivity">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lavSplashLogo"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:adjustViewBounds="true"
-            app:layout_constraintBottom_toTopOf="@+id/ll_ads_contains"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="false"
-            app:lottie_rawRes="@raw/splash_anim" />
-
+        tools:context=".activities.splash.SplashActivity">
 
         <LinearLayout
-            android:id="@+id/ll_ads_contains"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
+            android:layout_gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lavSplashLogo">
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_12sdp"
-                android:layout_marginHorizontal="@dimen/_60sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:indeterminate="true"
-                android:indeterminateTint="@color/app_color" />
+            <ImageView
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_95sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:src="@drawable/image_round_logo_icons"
+                android:adjustViewBounds="true"/>
 
             <TextView
-                android:id="@+id/text"
-                style="@style/TextStyle.Medium"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:text="@string/this_action_may_contains_ads"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_11sdp" />
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/app_name"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                style="@style/TextStyle.Medium"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center"
+                android:alpha="0.7"
+                android:text="Read, view, and manage your PDF files with a simple and fast PDF Reader."
+                android:textColor="@color/grey_color" />
+
         </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_above="@+id/text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/main_color" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:text="@string/this_action_may_contains_ads"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_container_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:shimmer_auto_start="false"
+                        app:shimmer_base_color="#ccc">
+
+                        <include layout="@layout/ad_unifiled_small" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/flNativeSmallPlaceholder"
+                        style="@style/NativeAdsView" />
+
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:id="@+id/flBannerSmallPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
 </layout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--    <data>-->
+
+<!--    </data>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/white"-->
+<!--        android:orientation="vertical"-->
+<!--        tools:context="com.reader.alldocviewer.pdfeditor.ui.activities.splash.SplashActivity">-->
+
+<!--&lt;!&ndash;        <com.airbnb.lottie.LottieAnimationView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/lavSplashLogo"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginHorizontal="@dimen/_10sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="@dimen/_10sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:adjustViewBounds="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/ll_ads_contains"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:lottie_autoPlay="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:lottie_loop="false"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:lottie_rawRes="@raw/splash_anim" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="@dimen/_120sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="@dimen/_120sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src=""&ndash;&gt;-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_ads_contains"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--            <ProgressBar-->
+<!--                android:id="@+id/progressBar"-->
+<!--                style="?android:attr/progressBarStyleHorizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_12sdp"-->
+<!--                android:layout_marginHorizontal="@dimen/_60sdp"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:indeterminate="true"-->
+<!--                android:indeterminateTint="@color/app_color" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/text"-->
+<!--                style="@style/TextStyle.Medium"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="@dimen/_2sdp"-->
+<!--                android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                android:text="@string/this_action_may_contains_ads"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/_11sdp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/banner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    app:cardBackgroundColor="#00000000"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="0dp">-->
+
+<!--                    <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                        android:id="@+id/shimmer_container_banner"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:visibility="visible"-->
+<!--                        app:shimmer_auto_start="true"-->
+<!--                        app:shimmer_base_color="#ccc">-->
+
+<!--                        <include layout="@layout/ad_unifiled_small" />-->
+
+<!--                    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+<!--                    <FrameLayout-->
+<!--                        android:id="@+id/flNativeSmallPlaceholder"-->
+<!--                        style="@style/NativeAdsView" />-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/flBannerSmallPlaceholder"-->
+<!--                    style="@style/NativeAdsView"-->
+<!--                    android:visibility="gone" />-->
+
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--</layout>-->

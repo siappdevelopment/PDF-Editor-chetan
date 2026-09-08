@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              下午4:39:56
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.pagelist;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.pagelist;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro.TouchEventListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro.TouchEventListener;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;

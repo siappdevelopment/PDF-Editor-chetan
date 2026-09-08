@@ -4,7 +4,7 @@
  * 编译器:            android2.2
  * 时间:              下午3:15:38
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,16 +13,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.STRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.interfacePart.IReaderListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.STRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.interfacePart.IReaderListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.PaneInformation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTable;
 
 
 /**

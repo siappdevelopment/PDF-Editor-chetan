@@ -151,7 +151,7 @@ object AppPreferences {
     fun getAppTheme(context: Context): Int {
         // 0 -> System Default, 1 -> Light Theme, 2 -> Dark Theme
         return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .getInt(KEY_APP_THEME, 0)
+            .getInt(KEY_APP_THEME, 1)
     }
 
     fun setAppTheme(context: Context, theme: Int) {

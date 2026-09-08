@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.formula.ptg;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.formula.ptg;
 
 /**
  * Common interface for AreaPtg and Area3DPtg, and their child classes.

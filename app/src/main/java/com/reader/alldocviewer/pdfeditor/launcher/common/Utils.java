@@ -2,7 +2,6 @@ package com.reader.alldocviewer.pdfeditor.launcher.common;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.WallpaperColors;
 import android.app.WallpaperManager;
@@ -21,14 +20,13 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.telephony.SmsManager;
 import android.util.TypedValue;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.reader.alldocviewer.pdfeditor.R;
-import com.reader.alldocviewer.pdfeditor.ui.activities.language.LanguageActivity;
-import com.reader.alldocviewer.pdfeditor.ui.activities.main.MainActivity;
-
+import com.reader.alldocviewer.pdfeditor.launcher.utils.ThemeManager;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -104,6 +102,7 @@ public class Utils {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             configuration.setLayoutDirection(locale);
         }
+        ThemeManager.applyUiModeToConfiguration(context, configuration);
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
     }
 
@@ -116,6 +115,7 @@ public class Utils {
         Locale.setDefault(locale);
         Configuration configuration = new Configuration(context.getResources().getConfiguration());
         configuration.setLocale(locale);
+        ThemeManager.applyUiModeToConfiguration(context, configuration);
         return context.createConfigurationContext(configuration);
     }
 
@@ -359,19 +359,42 @@ public class Utils {
 //        }
 //    }
 
+    /** Avoid re-sampling wallpaper on every page swipe / status-bar update. */
+    private static final long WALLPAPER_DARK_CACHE_MS = 60_000L;
+    private static Boolean cachedWallpaperDark;
+    private static long wallpaperDarkCachedAtMs;
+
+    public static void invalidateWallpaperDarkCache() {
+        cachedWallpaperDark = null;
+        wallpaperDarkCachedAtMs = 0L;
+    }
+
     public static boolean isWallpaperDark(Context context) {
+        long now = SystemClock.elapsedRealtime();
+        if (cachedWallpaperDark != null
+                && (now - wallpaperDarkCachedAtMs) < WALLPAPER_DARK_CACHE_MS) {
+            return cachedWallpaperDark;
+        }
+        boolean dark;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             try {
-                WallpaperColors colors = WallpaperManager.getInstance(context).getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
+                WallpaperColors colors = WallpaperManager.getInstance(context)
+                        .getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
                 if (colors != null) {
                     int hints = colors.getColorHints();
-                    return (hints & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) == 0;
+                    dark = (hints & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) == 0;
+                    cachedWallpaperDark = dark;
+                    wallpaperDarkCachedAtMs = now;
+                    return dark;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        return isWallpaperDarkFromBitmap(context);
+        dark = isWallpaperDarkFromBitmap(context);
+        cachedWallpaperDark = dark;
+        wallpaperDarkCachedAtMs = now;
+        return dark;
     }
 
     private static boolean isWallpaperDarkFromBitmap(Context context) {
@@ -439,5 +462,10 @@ public class Utils {
         intent.addCategory(Intent.CATEGORY_HOME);
         ResolveInfo resolveInfo = context.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
         return resolveInfo != null && resolveInfo.activityInfo != null && context.getPackageName().equals(resolveInfo.activityInfo.packageName);
+    }
+
+    /** Alias for {@link #isDefaultHomeApp(Context)} — used by Home custom dialog flow. */
+    public static boolean isAppDefaultLauncher(Context context) {
+        return isDefaultHomeApp(context);
     }
 }

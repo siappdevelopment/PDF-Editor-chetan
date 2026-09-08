@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.format;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.format;
 
 /**
  * The different kinds of formats that the formatter understands.

@@ -1,13 +1,13 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort;
 
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractSorterViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractSorterViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.layoutmanager.ColumnHeaderLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class ColumnSortHelper {
     @NonNull
     private static final Directive EMPTY_DIRECTIVE = new Directive(-1, SortState.UNSORTED);
@@ -66,7 +66,7 @@ public class ColumnSortHelper {
         return EMPTY_DIRECTIVE;
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class Directive {
         private final int column;
         @NonNull

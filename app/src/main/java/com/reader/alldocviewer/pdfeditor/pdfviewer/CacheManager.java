@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-/* loaded from: classes11.dex */
+
 public class CacheManager {
     public final PriorityQueue<PagePart> activeCache;
     public final PagePartComparator orderComparator;
@@ -174,7 +174,7 @@ public class CacheManager {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class PagePartComparator implements Comparator<PagePart> {
         public PagePartComparator() {
         }

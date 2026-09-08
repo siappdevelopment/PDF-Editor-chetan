@@ -5,9 +5,9 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape;
 
 /**
  * The <code>AffineTransform</code> class represents a 2D affine transform

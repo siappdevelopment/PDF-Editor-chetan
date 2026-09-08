@@ -4,9 +4,9 @@
  * 编译器:            android2.2
  * 时间:              下午2:25:43
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.tableStyle;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.tableStyle;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.dom4j.Element;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.dom4j.Element;
 
 /**
  * TODO: 文件注释

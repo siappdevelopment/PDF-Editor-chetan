@@ -1,13 +1,13 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Workbook;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.BorderStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.TableFormatManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ModelUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Workbook;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.BorderStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.TableFormatManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ModelUtil;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

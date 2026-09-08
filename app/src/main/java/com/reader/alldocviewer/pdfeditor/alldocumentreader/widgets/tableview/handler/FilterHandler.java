@@ -1,20 +1,20 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import androidx.annotation.NonNull;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.Filter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterItem;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.FilterType;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.filter.IFilterableModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.Filter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterItem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.FilterType;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.filter.IFilterableModel;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class FilterHandler<T extends IFilterableModel> {
     @NonNull
     private final AdapterDataSetChangedListener adapterDataSetChangedListener;
@@ -25,13 +25,13 @@ public class FilterHandler<T extends IFilterableModel> {
     private List<T> originalRowDataStore;
 
     public FilterHandler(@NonNull ITableView iTableView) {
-        AdapterDataSetChangedListener adapterDataSetChangedListener = new AdapterDataSetChangedListener() { // from class: com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler.FilterHandler.1
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
+        AdapterDataSetChangedListener adapterDataSetChangedListener = new AdapterDataSetChangedListener() { // from class: com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler.FilterHandler.1
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
             public void onRowHeaderItemsChanged(@NonNull List list) {
                 FilterHandler.this.originalRowDataStore = new ArrayList(list);
             }
 
-            @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
+            @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener
             public void onCellItemsChanged(@NonNull List list) {
                 FilterHandler.this.originalCellDataStore = new ArrayList(list);
             }

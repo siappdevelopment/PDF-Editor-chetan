@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 /**
  * Title:     Record Format Exception
@@ -25,7 +25,7 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.rec
  */
 
 public class RecordFormatException
-    extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.RecordFormatException
+    extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.RecordFormatException
 {
     public RecordFormatException(String exception)
     {

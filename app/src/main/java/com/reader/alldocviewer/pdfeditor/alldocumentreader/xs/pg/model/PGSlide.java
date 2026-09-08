@@ -4,22 +4,22 @@
  * 编译器:            android2.2
  * 时间:              下午3:59:06
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AbstractShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.SmartArt;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.TableShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectanglef;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.ShapeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AbstractShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.SmartArt;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.TableShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectanglef;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.ShapeAnimation;
 
 /**
  * Slide数据

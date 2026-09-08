@@ -30,6 +30,24 @@
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
 
     <application
         android:name=".ApplicationClass"
@@ -43,44 +61,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PdfReader">
+
         <activity
             android:name=".ui.activities.permission.PermissionActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.recycleBin.RecycleBinActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.activities.language.LanguageActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.settings.SettingActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.faq.GiftFAQActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.splash.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.activities.main.MainActivity"
+            android:screenOrientation="portrait"
+
             android:exported="true"
             android:launchMode="singleTop">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
 
         <provider
@@ -110,47 +139,67 @@
             android:configChanges="keyboardHidden"
             android:excludeFromRecents="true"
             android:exported="true"
+
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/StorageGuideActivity.Theme" />
         <activity
             android:name=".ui.activities.pdfviewer.PdfViewerActivity"
+            android:screenOrientation="portrait"
+
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:launchMode="singleTop" />
         <activity
             android:name=".ui.activities.pdfOpen.PdfOpenActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".managepdf.OrganizePagesActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".managepdf.PageSetupActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.officeviewer.ViewFilesNewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.createPdf.CreatePdfActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.openPdf.OpenCreatePdfActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.signature.SignatureHostActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.edit.EditActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".launcher.LauncherHomeActivity"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Home">
@@ -163,23 +212,35 @@
         </activity>
         <activity
             android:name=".launcher.activity.DefaultAppActivity"
-            android:exported="true" />
-        <activity
-            android:name=".launcher.NewsActivity"
-            android:exported="true" />
+            android:screenOrientation="portrait"
 
+            android:exported="true" />
         <activity
-            android:name=".launcher.LauncherAppsActivity"
+            android:name=".privacy.PrivacyPolicySetting"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".launcher.intro.Intro1Activity"
+            android:screenOrientation="portrait"
             android:exported="false"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.Home" />
+            android:windowDisablePreview="true" />
+        <activity
+            android:name=".launcher.intro.Intro2Activity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".launcher.intro.Intro3Activity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
 
         <activity
             android:name=".launcher.LauncherSettingsActivity"
+            android:screenOrientation="portrait"
+
             android:exported="true" />
 
         <!--
-<activity
+            <activity
             android:name=".ui.activities.edit.AddSignActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -189,31 +250,44 @@
             android:allowEmbedded="true"
             android:configChanges="keyboardHidden"
             android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+
             android:exported="false"
             android:launchMode="singleInstance"
             android:theme="@style/StorageGuideActivity.Theme" />
         <activity
             android:name=".picker.MediaPickerActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.activities.search.SearchAllFilesActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.activities.pdfToImage.PDFToImageActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
+
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.activities.watermark.CheckWatermarkActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
+
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.activities.preview.PreviewShareActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
+
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".scan.ViewPagerActivity"
             android:exported="false"
+
             android:screenOrientation="portrait" />
         <activity
             android:name=".scan.organize.OrganizeImageActivity"

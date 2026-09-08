@@ -3,6 +3,11 @@
     <style name="Base.Theme.PdfReader" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="icon_color">@color/app_color</item>
         <item name="bg_color_edit">@color/selected_edit_tool_bg</item>
+
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
 
     <style name="Theme.PdfReader" parent="Base.Theme.PdfReader" />

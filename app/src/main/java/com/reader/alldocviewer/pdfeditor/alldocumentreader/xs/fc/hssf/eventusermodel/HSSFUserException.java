@@ -16,7 +16,7 @@
 ==================================================================== */
 
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel;
 
 /**
  * <p>This exception is provided as a way for API users to throw 

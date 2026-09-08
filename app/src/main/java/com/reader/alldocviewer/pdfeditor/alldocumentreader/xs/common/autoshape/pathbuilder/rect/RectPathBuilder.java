@@ -4,10 +4,10 @@
  * 编译器:            android2.2
  * 时间:              下午2:36:05
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.rect;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.rect;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.AutoShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.ShapeTypes;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.AutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.ShapeTypes;
 
 import android.graphics.Path;
 import android.graphics.Rect;

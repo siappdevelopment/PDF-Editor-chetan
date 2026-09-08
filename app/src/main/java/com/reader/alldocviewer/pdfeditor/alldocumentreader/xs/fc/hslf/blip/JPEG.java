@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture;
 
 /**
  * Represents a JPEG picture data in a PPT file
@@ -29,7 +29,7 @@ public final class JPEG extends Bitmap
 
     /**
      * @return type of  this picture
-     * @see  com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture#JPEG
+     * @see  com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture#JPEG
      */
     public int getType()
     {

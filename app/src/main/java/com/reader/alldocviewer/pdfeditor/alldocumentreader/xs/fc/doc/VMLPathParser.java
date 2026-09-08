@@ -1,11 +1,11 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.doc;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.doc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.autoshape.pathbuilder.LineArrowPathBuilder;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.WPAutoShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.ArrowPathAndTail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.autoshape.pathbuilder.LineArrowPathBuilder;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.WPAutoShape;
 
 import android.graphics.Path;
 import android.graphics.PointF;

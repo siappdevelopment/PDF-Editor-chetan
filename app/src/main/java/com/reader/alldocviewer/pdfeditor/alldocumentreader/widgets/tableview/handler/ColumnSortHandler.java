@@ -1,26 +1,26 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.handler;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.handler;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DiffUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.ColumnHeaderRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnForRowHeaderSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortCallback;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.ISortableModel;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderForCellSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderSortCallback;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.RowHeaderSortComparator;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.sort.SortState;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.ColumnHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnForRowHeaderSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortCallback;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ColumnSortStateChangedListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.ISortableModel;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderForCellSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderSortCallback;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.RowHeaderSortComparator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.sort.SortState;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public class ColumnSortHandler {
     private final CellRecyclerViewAdapter<List<ISortableModel>> mCellRecyclerViewAdapter;
     private final ColumnHeaderRecyclerViewAdapter mColumnHeaderRecyclerViewAdapter;

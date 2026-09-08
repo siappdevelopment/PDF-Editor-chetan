@@ -4,7 +4,7 @@
  * 编译器:             android2.2
  * 时间:               上午10:51:23
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.record;
 
 import java.io.IOException;
 import java.io.OutputStream;

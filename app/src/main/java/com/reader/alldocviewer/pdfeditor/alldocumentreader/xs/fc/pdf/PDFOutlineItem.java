@@ -5,7 +5,7 @@
  * 时间:              下午4:40:25
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.pdf;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.pdf;
 
 /**
  * PDF document outline information

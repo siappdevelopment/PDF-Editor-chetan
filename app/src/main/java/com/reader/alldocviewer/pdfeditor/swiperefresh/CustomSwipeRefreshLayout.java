@@ -17,7 +17,7 @@ import android.view.animation.Transformation;
 import androidx.core.view.ViewCompat;
 import com.reader.alldocviewer.pdfeditor.R;
 
-/* loaded from: classes11.dex */
+
 public class CustomSwipeRefreshLayout extends ViewGroup {
     private static final float ACCELERATE_INTERPOLATION_FACTOR = 1.5f;
     public static final boolean DEBUG = false;
@@ -86,27 +86,27 @@ public class CustomSwipeRefreshLayout extends ViewGroup {
     private int mTriggerOffset;
     int refresshMode;
 
-    /* loaded from: classes11.dex */
+    
     public interface CustomSwipeRefreshHeadLayout {
         void onStateChange(State currentState, State lastState);
     }
 
-    /* loaded from: classes11.dex */
+    
     public interface OnRefreshListener {
         void onRefresh();
     }
 
-    /* loaded from: classes11.dex */
+    
     public interface RefreshCheckHandler {
         boolean canRefresh();
     }
 
-    /* loaded from: classes11.dex */
+    
     public interface ScrollLeftOrRightHandler {
         boolean canScrollLeftOrRight(View view, int direction);
     }
 
-    /* loaded from: classes11.dex */
+    
     public interface ScrollUpHandler {
         boolean canScrollUp(View view);
     }
@@ -887,7 +887,7 @@ public class CustomSwipeRefreshLayout extends ViewGroup {
         this.mTriggerDistance = distance;
     }
 
-    /* loaded from: classes11.dex */
+    
     public static class State {
         public static final int STATE_COMPLETE = 3;
         public static final int STATE_NORMAL = 0;
@@ -930,7 +930,7 @@ public class CustomSwipeRefreshLayout extends ViewGroup {
         }
     }
 
-    /* loaded from: classes11.dex */
+    
     public class BaseAnimationListener implements Animation.AnimationListener {
         @Override // android.view.animation.Animation.AnimationListener
         public void onAnimationEnd(Animation animation) {

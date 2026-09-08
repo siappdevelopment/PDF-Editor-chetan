@@ -4,14 +4,14 @@
  * 编译器:             android2.2
  * 时间:               上午11:21:10
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.dialog;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.dialog;
 
 import java.util.Vector;
 
 import com.reader.alldocviewer.pdfeditor.R;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IControl;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.IDialogAction;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.ADialog;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IControl;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.IDialogAction;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.ADialog;
 
 import android.content.Context;
 import android.content.res.Configuration;

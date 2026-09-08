@@ -11,6 +11,7 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
 import androidx.activity.ComponentActivity
+import androidx.activity.result.ActivityResultCaller
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
@@ -18,9 +19,13 @@ import com.reader.alldocviewer.pdfeditor.ui.activities.storagePermission.Storage
 
 /**
  * All-files access: in-app overlay prompt → settings → poll → return to app + scan.
+ *
+ * [resultCaller] must be the Activity or Fragment that owns this helper, and this
+ * helper must be constructed before that owner reaches STARTED (typically in onCreate).
  */
 class StoragePermissionHelper(
     private val activity: ComponentActivity,
+    resultCaller: ActivityResultCaller = activity,
     private val onAccessGranted: () -> Unit,
     private val onSettingsFlowStarted: () -> Unit = {},
     private val onPermissionDeclined: () -> Unit = {},
@@ -52,7 +57,7 @@ class StoragePermissionHelper(
         }
     }
 
-    private val legacyPermissionLauncher = activity.registerForActivityResult(
+    private val legacyPermissionLauncher = resultCaller.registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions(),
     ) { _ ->
         if (hasAllFilesAccess()) {
@@ -62,7 +67,7 @@ class StoragePermissionHelper(
         }
     }
 
-    private val manageStorageLauncher = activity.registerForActivityResult(
+    private val manageStorageLauncher = resultCaller.registerForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
     ) {
         hidePermissionOverlayInternal()

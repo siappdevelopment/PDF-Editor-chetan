@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.eventusermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.eventusermodel;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.Record;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record.RecordFactoryInputStream;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.Record;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record.RecordFactoryInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DirectoryNode;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem;
 
 
 /**
@@ -98,7 +98,7 @@ public class HSSFEventFactory {
 	 * the method will return just as with <code>abortableProcessEvents</code>, but no
 	 * user code or <code>HSSFUserException</code> will be passed back.
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
 	 * @param req an Instance of HSSFRequest which has your registered listeners
 	 * @param in  a DocumentInputStream obtained from POIFS's POIFSFileSystem object
 	 */
@@ -114,7 +114,7 @@ public class HSSFEventFactory {
 	/**
 	 * Processes a DocumentInputStream into essentially Record events.
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
 	 * @param req an Instance of HSSFRequest which has your registered listeners
 	 * @param in  a DocumentInputStream obtained from POIFS's POIFSFileSystem object
 	 * @return    numeric user-specified result code.
@@ -127,7 +127,7 @@ public class HSSFEventFactory {
 	/**
 	 * Processes a DocumentInputStream into essentially Record events.
 	 *
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.POIFSFileSystem#createDocumentInputStream(String)
 	 * @param req an Instance of HSSFRequest which has your registered listeners
 	 * @param in  a DocumentInputStream obtained from POIFS's POIFSFileSystem object
 	 * @return    numeric user-specified result code.

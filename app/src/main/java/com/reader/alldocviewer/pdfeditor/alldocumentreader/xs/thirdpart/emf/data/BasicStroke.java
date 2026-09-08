@@ -5,12 +5,12 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.data;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.data;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Shape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Stroke;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.Path2D;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom.PathIterator;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Shape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Stroke;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.Path2D;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom.PathIterator;
 
 /**
  * The <code>BasicStroke</code> class defines a basic set of rendering

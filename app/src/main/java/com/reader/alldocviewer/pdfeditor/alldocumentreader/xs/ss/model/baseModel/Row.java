@@ -5,15 +5,15 @@
  * 时间:              下午3:17:14
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel;
 
 import java.util.Collection;
 import java.util.Hashtable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.bg.BackgroundAndFill;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.bg.BackgroundAndFill;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
 
 
 /**

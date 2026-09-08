@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.crypt;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.crypt;
 
 
 import java.io.IOException;
@@ -22,9 +22,9 @@ import java.io.ByteArrayInputStream;
 
 import org.w3c.dom.NamedNodeMap;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.EncryptedDocumentException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec.Base64;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.EncryptedDocumentException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec.Base64;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.filesystem.DocumentInputStream;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 

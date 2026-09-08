@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.codec;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.codec;
 
 /**
  * Thrown when there is a failure condition during the decoding process. This exception is thrown when a {@link Decoder}

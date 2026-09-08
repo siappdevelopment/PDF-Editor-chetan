@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.sl.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.sl.usermodel;
 
 /**
  * A PowerPoint hyperlink
  */
-public interface Hyperlink extends com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.usermodel.Hyperlink {
+public interface Hyperlink extends com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.usermodel.Hyperlink {
 }

@@ -1,5 +1,5 @@
 // Copyright 2001 freehep
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.emf.io;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.emf.io;
 
 /**
  * Constants for the EEXEC encoding (used by Type1 Fonts).

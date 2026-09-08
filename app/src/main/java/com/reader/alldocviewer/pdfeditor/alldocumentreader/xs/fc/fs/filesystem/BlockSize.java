@@ -1,7 +1,7 @@
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.filesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.filesystem;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.fs.storage.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.fs.storage.LittleEndian;
 
 
 /**

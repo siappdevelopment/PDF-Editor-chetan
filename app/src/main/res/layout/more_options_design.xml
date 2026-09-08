@@ -488,6 +488,7 @@
                         style="@style/TextStyle.SemiBold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:singleLine="true"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/add_to_home_screen"
                         android:textColor="@color/black"

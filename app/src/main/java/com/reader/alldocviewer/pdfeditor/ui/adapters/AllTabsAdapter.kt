@@ -5,7 +5,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.reader.alldocviewer.pdfeditor.ui.fragments.filesTab.FileTabFragment
 
-class AllTabsAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+class AllTabsAdapter : FragmentStateAdapter {
+
+    constructor(fragmentActivity: FragmentActivity) : super(fragmentActivity)
+
+    constructor(fragment: Fragment) : super(fragment)
 
     override fun getItemCount(): Int = TAB_COUNT
 

@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_16sdp"
         app:boxStrokeColor="@color/app_color"
+        app:cursorColor="@color/black"
         app:hintTextColor="@color/app_color">
 
         <com.google.android.material.textfield.TextInputEditText

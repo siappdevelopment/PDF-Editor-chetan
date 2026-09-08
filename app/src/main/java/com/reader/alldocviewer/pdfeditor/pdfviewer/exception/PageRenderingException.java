@@ -1,6 +1,6 @@
 package com.reader.alldocviewer.pdfeditor.pdfviewer.exception;
 
-/* loaded from: classes11.dex */
+
 public class PageRenderingException extends Exception {
     public final int page;
 

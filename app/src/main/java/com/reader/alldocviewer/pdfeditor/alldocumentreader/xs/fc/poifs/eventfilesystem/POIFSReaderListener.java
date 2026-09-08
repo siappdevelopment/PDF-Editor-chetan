@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.poifs.eventfilesystem;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.poifs.eventfilesystem;
 
 /**
  * Interface POIFSReaderListener

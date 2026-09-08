@@ -1,20 +1,26 @@
 package com.reader.alldocviewer.pdfeditor.ui.adapters
 
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.ShapeAppearanceModel
-import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay
 import com.reader.alldocviewer.pdfeditor.R
 import com.reader.alldocviewer.pdfeditor.data.local.entity.ModelFile
 import com.reader.alldocviewer.pdfeditor.databinding.ItemFileBinding
 import com.reader.alldocviewer.pdfeditor.databinding.ItemFileGridBinding
+import com.reader.alldocviewer.pdfeditor.databinding.ItemFileListNativeBinding
 import com.reader.alldocviewer.pdfeditor.utils.FileConst
 import com.reader.alldocviewer.pdfeditor.utils.FileDedupe
 import com.reader.alldocviewer.pdfeditor.utils.PdfGridThumbnailLoader
@@ -30,7 +36,7 @@ class FileListAdapter(
     private val onFavoriteClick: (ModelFile) -> Unit,
     private val onItemLongClick: (ModelFile) -> Unit,
     private val onMoreClick: (ModelFile) -> Unit,
-) : ListAdapter<ModelFile, RecyclerView.ViewHolder>(DiffCallback) {
+) : ListAdapter<FileListRow, RecyclerView.ViewHolder>(DiffCallback) {
 
     val selectedFiles = mutableSetOf<ModelFile>()
     var isSelectionMode: Boolean = false
@@ -40,23 +46,67 @@ class FileListAdapter(
             if (!value) {
                 selectedFiles.clear()
             }
-            notifyDataSetChanged()
+            refreshSelectionState()
         }
     var onSelectionChangedListener: (() -> Unit)? = null
+    var onEmptyStateChanged: ((Boolean) -> Unit)? = null
 
     var viewMode: String = FileConst.VIEW_MODE_LIST
         set(value) {
             if (field == value) return
             field = value
-            notifyDataSetChanged()
+            submitList(currentList.toList())
         }
 
-    override fun getItemViewType(position: Int): Int =
-        if (viewMode == FileConst.VIEW_MODE_GRID) VIEW_TYPE_GRID else VIEW_TYPE_LIST
+    var hostActivity: Activity? = null
+
+    var listAdTabKey: String = SHARED_LIST_NATIVE_AD_KEY
+
+    var canBindListNativeAds: () -> Boolean = { true }
+
+    val currentFileList: List<ModelFile>
+        get() = currentList.filterIsInstance<FileListRow.FileItem>().map { it.file }
+
+    fun refreshSelectionState() {
+        if (itemCount <= 0) return
+        notifyItemRangeChanged(0, itemCount, PAYLOAD_SELECTION)
+    }
+
+    fun isFileSelected(file: ModelFile): Boolean =
+        selectedFiles.any { itemKey(it) == itemKey(file) }
+
+    private fun addToSelection(file: ModelFile) {
+        removeFromSelection(file)
+        selectedFiles.add(file)
+    }
+
+    private fun removeFromSelection(file: ModelFile) {
+        selectedFiles.removeAll { itemKey(it) == itemKey(file) }
+    }
+
+    private fun toggleSelectionFor(file: ModelFile) {
+        if (isFileSelected(file)) {
+            removeFromSelection(file)
+        } else {
+            addToSelection(file)
+        }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return when (getItem(position)) {
+            is FileListRow.NativeAdItem -> VIEW_TYPE_NATIVE
+            is FileListRow.FileItem ->
+                if (viewMode == FileConst.VIEW_MODE_GRID) VIEW_TYPE_GRID else VIEW_TYPE_LIST
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return when (viewType) {
+            VIEW_TYPE_NATIVE -> {
+                val binding = ItemFileListNativeBinding.inflate(inflater, parent, false)
+                NativeAdViewHolder(binding)
+            }
             VIEW_TYPE_GRID -> {
                 val binding = ItemFileGridBinding.inflate(inflater, parent, false)
                 GridViewHolder(binding)
@@ -69,23 +119,134 @@ class FileListAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val file = getItem(position)
-        when (holder) {
-            is ListViewHolder -> holder.bind(file)
-            is GridViewHolder -> holder.bind(file)
+        when (val row = getItem(position)) {
+            is FileListRow.FileItem -> when (holder) {
+                is ListViewHolder -> holder.bind(row.file)
+                is GridViewHolder -> holder.bind(row.file)
+            }
+            is FileListRow.NativeAdItem -> {
+                (holder as? NativeAdViewHolder)?.bind(row.slot)
+            }
         }
     }
 
+    override fun onBindViewHolder(
+        holder: RecyclerView.ViewHolder,
+        position: Int,
+        payloads: MutableList<Any>,
+    ) {
+        if (payloads.isNotEmpty() && payloads.all { it == PAYLOAD_SELECTION }) {
+            val row = getItem(position)
+            if (row is FileListRow.FileItem) {
+                when (holder) {
+                    is ListViewHolder -> holder.updateSelectionUi(row.file)
+                    is GridViewHolder -> holder.updateSelectionUi(row.file)
+                }
+            }
+            return
+        }
+        onBindViewHolder(holder, position)
+    }
+
     override fun onViewRecycled(holder: RecyclerView.ViewHolder) {
-        if (holder is GridViewHolder) {
-            holder.clearThumbnail()
+        when (holder) {
+            is GridViewHolder -> holder.clearThumbnail()
+            is NativeAdViewHolder -> holder.clearAd()
         }
         super.onViewRecycled(holder)
+    }
+
+    override fun onCurrentListChanged(
+        previousList: List<FileListRow>,
+        currentList: List<FileListRow>,
+    ) {
+        super.onCurrentListChanged(previousList, currentList)
+        val previousEmpty = previousList.none { it is FileListRow.FileItem }
+        val currentEmpty = currentList.none { it is FileListRow.FileItem }
+        if (previousEmpty != currentEmpty) {
+            onEmptyStateChanged?.invoke(currentEmpty)
+        }
+    }
+
+    inner class NativeAdViewHolder(
+        private val binding: ItemFileListNativeBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(slot: Int) {
+            if (!canBindListNativeAds()) {
+                hideShimmer()
+                return
+            }
+            val activity = hostActivity ?: binding.root.context.findHostActivity()
+            if (activity == null) {
+                hideShimmer()
+                return
+            }
+            applyListNativeAdTheme(binding.root.context)
+            val adUnitId = resolveListNativeAdUnitId(slot)
+            if (adUnitId.isBlank()) {
+                hideShimmer()
+                binding.root.visibility = View.GONE
+                return
+            }
+            binding.root.visibility = View.VISIBLE
+            ADSNativeDisplay.loadListNativeAd(
+                listAdTabKey,
+                slot,
+                adUnitId,
+                binding.flListNativePlaceholder,
+                binding.shimmerContainerListNative,
+                activity,
+            )
+        }
+
+        private fun hideShimmer() {
+            binding.shimmerContainerListNative.stopShimmer()
+            binding.shimmerContainerListNative.visibility = View.GONE
+        }
+
+        fun clearAd() {
+            ADSNativeDisplay.detachListNativeAd(binding.flListNativePlaceholder)
+            hideShimmer()
+        }
+
+        private fun applyListNativeAdTheme(context: Context) {
+            val backgroundColor = ADSNativeDisplay.getListNativeAdBackgroundColor(context)
+            binding.cvListNativeAd.setCardBackgroundColor(backgroundColor)
+            binding.flListNativePlaceholder.setBackgroundColor(backgroundColor)
+            if (binding.flListNativePlaceholder.childCount > 0) {
+                val adView = binding.flListNativePlaceholder.getChildAt(0)
+                ADSNativeDisplay.applyListNativeAdBackground(adView, context)
+            }
+        }
+    }
+
+    private fun resolveListNativeAdUnitId(slot: Int): String {
+        val primary = if (slot == 1) {
+            ADSMainClass.getStringValue(ADSMainClass.HOME_SCREEN_NATIVE1)
+        } else {
+            ADSMainClass.getStringValue(ADSMainClass.HOME_SCREEN_NATIVE2)
+        }
+        if (primary.isNotBlank()) return primary
+        val shared = ADSMainClass.getStringValue(ADSMainClass.ALARM_LIST_NATIVE_AD)
+        if (shared.isNotBlank()) return shared
+        return ADSMainClass.getStringValue(ADSMainClass.HOME_SCREEN_NATIVE)
+    }
+
+    private fun Context.findHostActivity(): Activity? {
+        var ctx: Context? = this
+        while (ctx is ContextWrapper) {
+            if (ctx is Activity) return ctx
+            ctx = ctx.baseContext
+        }
+        return null
     }
 
     inner class ListViewHolder(
         private val binding: ItemFileBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        private var boundFile: ModelFile? = null
 
         init {
             binding.root.setOnClickListener { dispatchClick() }
@@ -97,22 +258,37 @@ class FileListAdapter(
         }
 
         fun bind(file: ModelFile) {
-            val displayName = displayName(file)
-            binding.tvFileName.text = displayName
+            boundFile = file
+            binding.tvFileName.text = displayName(file)
             binding.tvDate.text = formatDateList(displayTime(file))
             binding.tvFileMeta.text = " • ${formatSize(file.size)}"
             binding.ivFileIcon.setImageResource(iconResForFile(file))
+            updateSelectionUi(file)
+        }
 
+        fun updateSelectionUi(file: ModelFile) {
             if (isSelectionMode) {
                 binding.flMore.visibility = View.GONE
-                binding.ivCheck.visibility = View.VISIBLE
-                val isSelected = selectedFiles.contains(file)
-                binding.ivCheck.setImageResource(if (isSelected) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck)
-            } else if (checkFileName == "merge_pdf") {
                 binding.ivMore.visibility = View.GONE
                 binding.ivCheck.visibility = View.VISIBLE
-                val isSelected = selectedFiles.contains(file)
-                binding.ivCheck.setImageResource(if (isSelected) R.drawable.ic_round_radio_button_checked else R.drawable.ic_round_radio_uncheck)
+                binding.ivCheck.setImageResource(
+                    if (isFileSelected(file)) {
+                        R.drawable.ic_round_radio_button_checked
+                    } else {
+                        R.drawable.ic_round_radio_uncheck
+                    },
+                )
+            } else if (checkFileName == "merge_pdf") {
+                binding.flMore.visibility = View.GONE
+                binding.ivMore.visibility = View.GONE
+                binding.ivCheck.visibility = View.VISIBLE
+                binding.ivCheck.setImageResource(
+                    if (isFileSelected(file)) {
+                        R.drawable.ic_round_radio_button_checked
+                    } else {
+                        R.drawable.ic_round_radio_uncheck
+                    },
+                )
             } else {
                 if (file.isEncrypted) {
                     binding.flMore.visibility = View.GONE
@@ -125,53 +301,50 @@ class FileListAdapter(
             }
         }
 
-        private fun dispatchClick() {
+        private fun currentFile(): ModelFile? {
+            boundFile?.let { return it }
             val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                val item = getItem(position)
-                if (isSelectionMode) {
-                    if (selectedFiles.contains(item)) {
-                        selectedFiles.remove(item)
-                    } else {
-                        selectedFiles.add(item)
-                    }
-                    notifyItemChanged(position)
-                    onSelectionChangedListener?.invoke()
-                } else {
-                    onItemClick(item)
-                }
+            if (position == RecyclerView.NO_POSITION) return null
+            return (getItem(position) as? FileListRow.FileItem)?.file
+        }
+
+        private fun dispatchClick() {
+            val item = currentFile() ?: return
+            if (isSelectionMode) {
+                toggleSelection(item)
+            } else {
+                onItemClick(item)
             }
         }
 
         private fun dispatchLongClick() {
-            val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                val item = getItem(position)
-                if (isSelectionMode) {
-                    if (selectedFiles.contains(item)) {
-                        selectedFiles.remove(item)
-                    } else {
-                        selectedFiles.add(item)
-                    }
-                    notifyItemChanged(position)
-                    onSelectionChangedListener?.invoke()
-                } else {
-                    onItemLongClick(item)
-                }
+            val item = currentFile() ?: return
+            if (isSelectionMode) {
+                toggleSelection(item)
+            } else {
+                onItemLongClick(item)
             }
         }
 
         private fun dispatchMoreClick() {
+            val item = currentFile() ?: return
+            onMoreClick(item)
+        }
+
+        private fun toggleSelection(item: ModelFile) {
             val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                onMoreClick(getItem(position))
-            }
+            if (position == RecyclerView.NO_POSITION) return
+            toggleSelectionFor(item)
+            notifyItemChanged(position, PAYLOAD_SELECTION)
+            onSelectionChangedListener?.invoke()
         }
     }
 
     inner class GridViewHolder(
         private val binding: ItemFileGridBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        private var boundFile: ModelFile? = null
 
         init {
             binding.root.setOnClickListener { dispatchClick() }
@@ -186,11 +359,10 @@ class FileListAdapter(
         }
 
         fun bind(file: ModelFile) {
-            val displayName = displayName(file)
-            val iconRes = iconResForFile(file)
-            binding.tvFileName.text = displayName
+            boundFile = file
+            binding.tvFileName.text = displayName(file)
             binding.tvMeta.text = fileMetaText(file)
-            binding.ivFileIcon.setImageResource(iconRes)
+            binding.ivFileIcon.setImageResource(iconResForFile(file))
             showPlaceholderPreview()
             if (isPdfFile(file) && !file.isEncrypted) {
                 PdfGridThumbnailLoader.load(file.path, binding.ivThumbnail) {
@@ -199,13 +371,16 @@ class FileListAdapter(
                     }
                 }
             }
+            updateSelectionUi(file)
+        }
 
+        fun updateSelectionUi(file: ModelFile) {
             if (isSelectionMode) {
                 binding.flMore.visibility = View.GONE
+                binding.ivMore.visibility = View.GONE
                 binding.ivCheck.visibility = View.VISIBLE
-                val isSelected = selectedFiles.contains(file)
                 binding.ivCheck.setImageResource(
-                    if (isSelected) {
+                    if (isFileSelected(file)) {
                         R.drawable.ic_round_radio_button_checked
                     } else {
                         R.drawable.ic_round_radio_uncheck
@@ -214,10 +389,10 @@ class FileListAdapter(
                 binding.cvImage.setCardBackgroundColor(0xFFFFFFFF.toInt())
             } else if (checkFileName == "merge_pdf") {
                 binding.flMore.visibility = View.GONE
+                binding.ivMore.visibility = View.GONE
                 binding.ivCheck.visibility = View.VISIBLE
-                val isSelected = selectedFiles.contains(file)
                 binding.ivCheck.setImageResource(
-                    if (isSelected) {
+                    if (isFileSelected(file)) {
                         R.drawable.ic_round_radio_button_checked
                     } else {
                         R.drawable.ic_round_radio_uncheck
@@ -284,53 +459,101 @@ class FileListAdapter(
                 .setBottomRightCorner(CornerFamily.ROUNDED, 0f)
                 .build()
 
-        private fun dispatchClick() {
+        private fun currentFile(): ModelFile? {
+            boundFile?.let { return it }
             val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                val item = getItem(position)
-                if (isSelectionMode) {
-                    if (selectedFiles.contains(item)) {
-                        selectedFiles.remove(item)
-                    } else {
-                        selectedFiles.add(item)
-                    }
-                    notifyItemChanged(position)
-                    onSelectionChangedListener?.invoke()
-                } else {
-                    onItemClick(item)
-                }
+            if (position == RecyclerView.NO_POSITION) return null
+            return (getItem(position) as? FileListRow.FileItem)?.file
+        }
+
+        private fun dispatchClick() {
+            val item = currentFile() ?: return
+            if (isSelectionMode) {
+                toggleSelection(item)
+            } else {
+                onItemClick(item)
             }
         }
 
         private fun dispatchLongClick() {
-            val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                val item = getItem(position)
-                if (isSelectionMode) {
-                    if (selectedFiles.contains(item)) {
-                        selectedFiles.remove(item)
-                    } else {
-                        selectedFiles.add(item)
-                    }
-                    notifyItemChanged(position)
-                    onSelectionChangedListener?.invoke()
-                } else {
-                    onItemLongClick(item)
-                }
+            val item = currentFile() ?: return
+            if (isSelectionMode) {
+                toggleSelection(item)
+            } else {
+                onItemLongClick(item)
             }
         }
 
         private fun dispatchMoreClick() {
+            val item = currentFile() ?: return
+            onMoreClick(item)
+        }
+
+        private fun toggleSelection(item: ModelFile) {
             val position = bindingAdapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                onMoreClick(getItem(position))
-            }
+            if (position == RecyclerView.NO_POSITION) return
+            toggleSelectionFor(item)
+            notifyItemChanged(position, PAYLOAD_SELECTION)
+            onSelectionChangedListener?.invoke()
         }
     }
 
     companion object {
+        private const val PAYLOAD_SELECTION = "payload_selection"
         private const val VIEW_TYPE_LIST = 0
         private const val VIEW_TYPE_GRID = 1
+        const val VIEW_TYPE_NATIVE = 2
+        const val SHARED_LIST_NATIVE_AD_KEY = "file_tabs"
+
+        fun filesOnlyRows(files: List<ModelFile>): List<FileListRow> =
+            files.map { FileListRow.FileItem(it) }
+
+        fun clearCachedListNativeAdsForTab(tabKey: String) {
+            ADSNativeDisplay.clearListNativeAdCacheForTab(tabKey)
+        }
+
+        fun clearCachedListNativeAds() {
+            ADSNativeDisplay.clearListNativeAdCache()
+        }
+
+        fun buildDisplayRows(files: List<ModelFile>): List<FileListRow> {
+            if (files.isEmpty()) return emptyList()
+            if (!shouldInjectNativeAds()) {
+                return files.map { FileListRow.FileItem(it) }
+            }
+
+            val rows = mutableListOf<FileListRow>()
+            var fileIndex = 0
+            var adapterPos = 0
+            while (fileIndex < files.size) {
+                when {
+                    adapterPos == 0 && ADSMainClass.getFirstNativePosition1() -> {
+                        rows.add(FileListRow.NativeAdItem(1))
+                        adapterPos++
+                    }
+                    adapterPos == 4 && shouldShowNativeAtPosition4(files.size) -> {
+                        rows.add(FileListRow.NativeAdItem(2))
+                        adapterPos++
+                    }
+                    else -> {
+                        rows.add(FileListRow.FileItem(files[fileIndex++]))
+                        adapterPos++
+                    }
+                }
+            }
+            return rows
+        }
+
+        private fun shouldInjectNativeAds(): Boolean {
+            return ADSMainClass.getHomeScreenAdsType() == "native" &&
+                (ADSMainClass.getFirstNativePosition1() || ADSMainClass.getFirstNativePosition3())
+        }
+
+        private fun shouldShowNativeAtPosition4(fileCount: Int): Boolean {
+            if (!ADSMainClass.getFirstNativePosition3()) return false
+            val minFiles = if (ADSMainClass.getFirstNativePosition1()) 3 else 4
+            return fileCount >= minFiles
+        }
 
         private fun listDateFormat(): SimpleDateFormat =
             SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
@@ -338,12 +561,18 @@ class FileListAdapter(
         private fun gridDateFormat(): SimpleDateFormat =
             SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
 
-        private val DiffCallback = object : DiffUtil.ItemCallback<ModelFile>() {
-            override fun areItemsTheSame(oldItem: ModelFile, newItem: ModelFile): Boolean =
-                itemKey(oldItem) == itemKey(newItem)
+        private val DiffCallback = object : DiffUtil.ItemCallback<FileListRow>() {
+            override fun areItemsTheSame(oldItem: FileListRow, newItem: FileListRow): Boolean =
+                oldItem.stableId == newItem.stableId
 
-            override fun areContentsTheSame(oldItem: ModelFile, newItem: ModelFile): Boolean =
-                displayContentEquals(oldItem, newItem)
+            override fun areContentsTheSame(oldItem: FileListRow, newItem: FileListRow): Boolean =
+                when {
+                    oldItem is FileListRow.FileItem && newItem is FileListRow.FileItem ->
+                        displayContentEquals(oldItem.file, newItem.file)
+                    oldItem is FileListRow.NativeAdItem && newItem is FileListRow.NativeAdItem ->
+                        oldItem.slot == newItem.slot
+                    else -> false
+                }
         }
 
         private fun displayName(file: ModelFile): String =
@@ -356,10 +585,7 @@ class FileListAdapter(
             return type == FileConst.PDF_FILE
         }
 
-        private fun itemKey(file: ModelFile): String {
-            if (file.fileKey.isNotBlank()) return file.fileKey
-            return file.path.orEmpty()
-        }
+        private fun itemKey(file: ModelFile): String = FileListRow.listItemKey(file)
 
         fun displayContentEquals(oldItem: ModelFile, newItem: ModelFile): Boolean =
             itemKey(oldItem) == itemKey(newItem) &&
@@ -374,6 +600,11 @@ class FileListAdapter(
                 oldItem.lastOpenTime == newItem.lastOpenTime &&
                 oldItem.isEncrypted == newItem.isEncrypted
 
+        fun displayListsEqual(oldList: List<ModelFile>, newList: List<ModelFile>): Boolean {
+            if (oldList.size != newList.size) return false
+            return oldList.indices.all { displayContentEquals(oldList[it], newList[it]) }
+        }
+
         fun fileNameText(file: ModelFile): String = displayName(file)
 
         fun fileMetaText(file: ModelFile): String =
@@ -381,11 +612,6 @@ class FileListAdapter(
 
         private fun displayTime(file: ModelFile): Long =
             if (file.recent == 1 && file.lastOpenTime > 0) file.lastOpenTime else file.time
-
-        fun displayListsEqual(oldList: List<ModelFile>, newList: List<ModelFile>): Boolean {
-            if (oldList.size != newList.size) return false
-            return oldList.indices.all { displayContentEquals(oldList[it], newList[it]) }
-        }
 
         fun formatDateList(timeMs: Long): String {
             if (timeMs <= 0) return ""

@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -8,17 +8,17 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.ITableView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview.ColumnHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.CellRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.RowHeaderRecyclerViewAdapter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.ITableView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview.ColumnHeaderRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes11.dex */
+
 public abstract class AbstractTableAdapter<CH, RH, C> implements ITableAdapter<CH, RH, C> {
-    private List<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> dataSetChangedListeners;
+    private List<com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> dataSetChangedListeners;
     protected List<List<C>> mCellItems;
     private CellRecyclerViewAdapter mCellRecyclerViewAdapter;
     private int mColumnHeaderHeight;
@@ -30,17 +30,17 @@ public abstract class AbstractTableAdapter<CH, RH, C> implements ITableAdapter<C
     private int mRowHeaderWidth;
     private ITableView mTableView;
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
     public int getCellItemViewType(int i) {
         return 0;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
     public int getColumnHeaderItemViewType(int i) {
         return 0;
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
     public int getRowHeaderItemViewType(int i) {
         return 0;
     }
@@ -102,7 +102,7 @@ public abstract class AbstractTableAdapter<CH, RH, C> implements ITableAdapter<C
         }
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
     @Nullable
     public View getCornerView() {
         return this.mCornerView;
@@ -248,7 +248,7 @@ public abstract class AbstractTableAdapter<CH, RH, C> implements ITableAdapter<C
         this.mCellRecyclerViewAdapter.notifyCellDataSetChanged();
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
     public ITableView getTableView() {
         return this.mTableView;
     }
@@ -259,34 +259,34 @@ public abstract class AbstractTableAdapter<CH, RH, C> implements ITableAdapter<C
     }
 
     private void dispatchColumnHeaderDataSetChangesToListeners(@NonNull List<CH> list) {
-        List<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
+        List<com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
         if (list2 != null) {
-            for (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
+            for (com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
                 adapterDataSetChangedListener.onColumnHeaderItemsChanged(list);
             }
         }
     }
 
     private void dispatchRowHeaderDataSetChangesToListeners(@NonNull List<RH> list) {
-        List<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
+        List<com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
         if (list2 != null) {
-            for (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
+            for (com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
                 adapterDataSetChangedListener.onRowHeaderItemsChanged(list);
             }
         }
     }
 
     private void dispatchCellDataSetChangesToListeners(@NonNull List<List<C>> list) {
-        List<com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
+        List<com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C>> list2 = this.dataSetChangedListeners;
         if (list2 != null) {
-            for (com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
+            for (com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener : list2) {
                 adapterDataSetChangedListener.onCellItemsChanged(list);
             }
         }
     }
 
-    @Override // com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.ITableAdapter
-    public void addAdapterDataSetChangedListener(@NonNull com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener) {
+    @Override // com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.ITableAdapter
+    public void addAdapterDataSetChangedListener(@NonNull com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.AdapterDataSetChangedListener<CH, RH, C> adapterDataSetChangedListener) {
         if (this.dataSetChangedListeners == null) {
             this.dataSetChangedListeners = new ArrayList();
         }

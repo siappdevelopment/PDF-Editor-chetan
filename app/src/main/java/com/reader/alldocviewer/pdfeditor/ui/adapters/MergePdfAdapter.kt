@@ -44,11 +44,10 @@ class MergePdfAdapter(
             }
         }
         
-        holder.itemView.setOnTouchListener { _, event: MotionEvent ->
-            if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
-                onDragStartListener(holder)
-            }
-            false
+
+        holder.itemView.setOnLongClickListener {
+            onDragStartListener(holder)
+            true
         }
         
         val date = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date(mediaFile.time))

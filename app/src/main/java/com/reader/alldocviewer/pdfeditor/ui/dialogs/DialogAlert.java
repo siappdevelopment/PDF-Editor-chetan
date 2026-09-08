@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import com.reader.alldocviewer.pdfeditor.R;
 
-/* loaded from: classes11.dex */
+
 public class DialogAlert extends Dialog {
     TextView btnCancel;
     TextView btnOk;
@@ -26,10 +26,10 @@ public class DialogAlert extends Dialog {
     TextView tvMsg;
     TextView tvTitle;
 
-    /* loaded from: classes11.dex */
+    
     public interface OnClick {
 
-        /* loaded from: classes11.dex */
+        
         public static final class C1825CC {
             public static void $default$onDiscard(OnClick onClick) {
             }

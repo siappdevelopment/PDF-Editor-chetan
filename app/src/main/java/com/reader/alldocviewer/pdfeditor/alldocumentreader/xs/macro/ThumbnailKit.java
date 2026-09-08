@@ -4,10 +4,10 @@
  * 编译器:            android2.2
  * 时间:              上午10:52:03
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ReaderThumbnail;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ReaderThumbnail;
 
 import android.graphics.Bitmap;
 
@@ -99,7 +99,7 @@ public class ThumbnailKit
      * 
      * @param filePath
      * @param zoom (0 < thumbnail zoom value <= MAXZOOM_THUMBNAIL )
-     * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.macro.Application #MAXZOOM_THUMBNAIL
+     * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.macro.Application #MAXZOOM_THUMBNAIL
      * @return
      */
     public Bitmap getPDFThumbnail(String filePath, int zoom)

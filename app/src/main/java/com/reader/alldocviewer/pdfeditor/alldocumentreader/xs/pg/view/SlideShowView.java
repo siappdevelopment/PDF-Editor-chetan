@@ -4,25 +4,25 @@
  * 编译器:            android2.2
  * 时间:              下午8:58:00
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.view;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.GroupShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.shape.IShape;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Dimension;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.Rectangle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.Animation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.AnimationManager;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.EmphanceAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.FadeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.IAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.animate.ShapeAnimation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.control.Presentation;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.pg.model.PGSlide;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.GroupShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.shape.IShape;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Dimension;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.Rectangle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.Animation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.AnimationManager;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.EmphanceAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.FadeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.IAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.animate.ShapeAnimation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.control.Presentation;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.pg.model.PGSlide;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.system.beans.CalloutView.CalloutView;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

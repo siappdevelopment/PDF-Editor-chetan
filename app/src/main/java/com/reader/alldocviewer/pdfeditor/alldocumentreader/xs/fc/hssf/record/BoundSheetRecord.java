@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hssf.record;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hssf.record;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.WorkbookUtil;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitField;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.BitFieldFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.HexDump;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndianOutput;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.StringUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.WorkbookUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitField;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.BitFieldFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.HexDump;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndianOutput;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.StringUtil;
 
 
 
@@ -87,7 +87,7 @@ public final class BoundSheetRecord extends StandardRecord {
 	/**
 	 * Set the sheetname for this sheet.  (this appears in the tabs at the bottom)
 	 * @param sheetName the name of the sheet
-	 * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+	 * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
 	 *      for a safe way to create valid names
 	 * @throws IllegalArgumentException if sheet name will cause excel to crash.
 	 */

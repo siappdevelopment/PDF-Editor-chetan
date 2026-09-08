@@ -5,6 +5,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,13 +21,15 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import com.reader.alldocviewer.pdfeditor.Advertisement.AdPlacement;
 import com.reader.alldocviewer.pdfeditor.R;
 import com.reader.alldocviewer.pdfeditor.launcher.LauncherHomeActivity;
+import com.reader.alldocviewer.pdfeditor.launcher.common.AppUsageStatsHelper;
 import com.reader.alldocviewer.pdfeditor.launcher.common.Utils;
 import com.reader.alldocviewer.pdfeditor.launcher.interfaces.OnAppsUninstallClickListener;
 import com.reader.alldocviewer.pdfeditor.launcher.model.AppsModel;
@@ -36,6 +39,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
+    private static PopupWindow appActionPopup;
+
     private final Context context;
     private final List<AppsModel> arrayListApps;
     private int textColor;
@@ -80,24 +85,28 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
             holder.tvAppName.setVisibility(View.GONE);
         }
 
+//        holder.itemView.setOnClickListener(v -> {
+//            int adapterPosition = holder.getBindingAdapterPosition();
+//            if (adapterPosition == RecyclerView.NO_POSITION) {
+//                return;
+//            }
+//
+//            if (LauncherHomeActivity.appsFolderDialog != null && LauncherHomeActivity.appsFolderDialog.isShowing()) {
+//                LauncherHomeActivity.appsFolderDialog.dismiss();
+//            }
+//
+////            MyApplication.isAppOpenBlock = true;
+//            String packageName = arrayListApps.get(adapterPosition).getPackageName();
+//            launchApp(packageName);
+//
+//        });
         holder.itemView.setOnClickListener(v -> {
             int adapterPosition = holder.getBindingAdapterPosition();
-            if (adapterPosition == RecyclerView.NO_POSITION) {
+            if (adapterPosition == RecyclerView.NO_POSITION || adapterPosition >= arrayListApps.size()) {
                 return;
             }
-
-            if (LauncherHomeActivity.appsFolderDialog != null && LauncherHomeActivity.appsFolderDialog.isShowing()) {
-                LauncherHomeActivity.appsFolderDialog.dismiss();
-            }
-
-//            MyApplication.isAppOpenBlock = true;
-            setRecentApp(arrayListApps.get(adapterPosition).getPackageName());
-            Intent intent = context.getPackageManager().getLaunchIntentForPackage(arrayListApps.get(adapterPosition).getPackageName());
-            if (intent != null) {
-                context.startActivity(intent);
-            }
+            launchAppWithAd(arrayListApps.get(adapterPosition).getPackageName());
         });
-
         holder.itemView.setOnLongClickListener(v -> {
             int adapterPosition = holder.getBindingAdapterPosition();
             if (adapterPosition == RecyclerView.NO_POSITION) {
@@ -106,6 +115,39 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
             showAppDialog(v, arrayListApps.get(adapterPosition).getAppName(), arrayListApps.get(adapterPosition).getPackageName());
             return true;
         });
+    }
+
+    private void launchAppWithAd(String packageName) {
+        Activity activity = getHostActivity();
+        if (activity != null) {
+            AdPlacement.handleLauncherAppClickAd(activity, () -> launchApp(packageName));
+        } else {
+            launchApp(packageName);
+        }
+    }
+
+    @Nullable
+    private Activity getHostActivity() {
+        if (context instanceof Activity) {
+            return (Activity) context;
+        }
+        return null;
+    }
+
+    private void launchApp(String packageName) {
+        dismissAppsFolderDialog();
+        setRecentApp(packageName);
+        AppUsageStatsHelper.onAppLaunched(context, packageName);
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
+        if (intent != null) {
+            context.startActivity(intent);
+        }
+    }
+
+    private static void dismissAppsFolderDialog() {
+        if (LauncherHomeActivity.appsFolderDialog != null && LauncherHomeActivity.appsFolderDialog.isShowing()) {
+            LauncherHomeActivity.appsFolderDialog.dismiss();
+        }
     }
 
     @Override
@@ -169,13 +211,24 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
         notifyDataSetChanged();
     }
 
+    public static void dismissAppActionPopup() {
+        if (appActionPopup != null && appActionPopup.isShowing()) {
+            appActionPopup.dismiss();
+        }
+        appActionPopup = null;
+    }
+
     @SuppressLint("InflateParams")
     private void showAppDialog(View view, String appName, String appPackage) {
+        dismissAppActionPopup();
+
         Context context = view.getContext();
         View popupView = LayoutInflater.from(context).inflate(R.layout.dialog_app_action, null);
         PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popupWindow.setElevation(10f);
+        popupWindow.setOnDismissListener(() -> appActionPopup = null);
+        appActionPopup = popupWindow;
 
         popupView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
         int popupHeight = popupView.getMeasuredHeight();
@@ -211,17 +264,7 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
 
         llAppOpen.setOnClickListener(view1 -> {
             popupWindow.dismiss();
-
-            if (LauncherHomeActivity.appsFolderDialog != null && LauncherHomeActivity.appsFolderDialog.isShowing()) {
-                LauncherHomeActivity.appsFolderDialog.dismiss();
-            }
-
-//            MyApplication.isAppOpenBlock = true;
-            setRecentApp(appPackage);
-            Intent intent = context.getPackageManager().getLaunchIntentForPackage(appPackage);
-            if (intent != null) {
-                context.startActivity(intent);
-            }
+            launchAppWithAd(appPackage);
         });
 
         llAppUninstall.setOnClickListener(view1 -> {

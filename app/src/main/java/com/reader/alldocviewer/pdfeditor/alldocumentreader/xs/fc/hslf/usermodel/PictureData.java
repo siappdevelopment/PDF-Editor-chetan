@@ -15,25 +15,25 @@
    limitations under the License.
 ==================================================================== */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.usermodel;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.usermodel;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.DIB;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.EMF;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.ImagePainter;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.JPEG;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.PICT;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.PNG;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.blip.WMF;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hslf.model.Picture;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.LittleEndian;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogFactory;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.util.POILogger;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.DIB;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.EMF;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.ImagePainter;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.JPEG;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.PICT;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.PNG;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.blip.WMF;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.exceptions.HSLFException;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hslf.model.Picture;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.LittleEndian;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogFactory;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.util.POILogger;
 
 
 /**

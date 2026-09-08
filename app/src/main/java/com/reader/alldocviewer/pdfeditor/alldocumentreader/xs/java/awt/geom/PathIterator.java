@@ -5,11 +5,11 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.geom;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.java.awt.geom;
 
 /**
  * The <code>PathIterator</code> interface provides the mechanism 
- * for objects that implement the {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Shape Shape}
+ * for objects that implement the {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Shape Shape}
  * interface to return the geometry of their boundary by allowing
  * a caller to retrieve the path of that boundary a segment at a
  * time.  This interface allows these objects to retrieve the path of
@@ -28,14 +28,14 @@ package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.java.awt.ge
  * Be aware that manually closing an outline as opposed to using a
  * "CLOSE" segment to close the path might result in different line
  * style decorations being used at the end points of the subpath.
- * For example, the {@link com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.BasicStroke BasicStroke} object 
+ * For example, the {@link com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.BasicStroke BasicStroke} object 
  * uses a line "JOIN" decoration to connect the first and last points 
  * if a "CLOSE" segment is encountered, whereas simply ending the path 
  * on the same coordinate as the beginning coordinate results in line
  * "CAP" decorations being used at the ends.
  *
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.fc.hwpf.usermodel.Shape
- * @see com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.thirdpart.achartengine.renderers.BasicStroke
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.fc.hwpf.usermodel.Shape
+ * @see com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.thirdpart.achartengine.renderers.BasicStroke
  *
  * @version %I%, %G%
  * @author Jim Graham

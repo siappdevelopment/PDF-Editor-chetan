@@ -1,4 +1,4 @@
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.adapter.recyclerview;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.adapter.recyclerview;
 
 import android.content.Context;
 import android.util.Log;
@@ -8,10 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.reader.alldocviewer.pdfeditor.R;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.HorizontalRecyclerViewListener;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.widgets.tableview.listener.scroll.VerticalRecyclerViewListener;
 
-/* loaded from: classes11.dex */
+
 public class CellRecyclerView extends RecyclerView {
     private static final String LOG_TAG = "CellRecyclerView";
     private boolean mIsHorizontalScrollListenerRemoved;

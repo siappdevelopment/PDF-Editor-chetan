@@ -4,44 +4,44 @@
  * 编译器:            android2.2
  * 时间:              下午2:37:48
  */
-package com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.view;
+package com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.view;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.PaintKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.common.picture.PictureKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.EventConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.MainConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.SSConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPAttrConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.constant.wp.WPViewConstant;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.font.FontKit;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.AttrManage;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IAttributeSet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.IElementCollection;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.STDocument;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.model.SectionElement;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.IView;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.simpletext.view.STRoot;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.control.Spreadsheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.CellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Cell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Row;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.baseModel.Sheet;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.style.CellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTable;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.model.table.SSTableCellStyle;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.DrawingCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.FindingMgr;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.FocusCell;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.other.SheetScroller;
-import com.reader.alldocviewer.pdfeditoroffice.alldocumentreader.xs.ss.util.ModelUtil;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.PaintKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.common.picture.PictureKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.EventConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.MainConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.SSConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPAttrConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.constant.wp.WPViewConstant;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.font.FontKit;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.AttrManage;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IAttributeSet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.IElementCollection;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.STDocument;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.model.SectionElement;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.IView;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.simpletext.view.STRoot;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.control.Spreadsheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.CellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Cell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Row;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.baseModel.Sheet;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.sheetProperty.ColumnInfo;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.style.CellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTable;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.model.table.SSTableCellStyle;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.DrawingCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.ExpandedCellRangeAddress;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.FindingMgr;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.FocusCell;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.other.SheetScroller;
+import com.reader.alldocviewer.pdfeditor.alldocumentreader.xs.ss.util.ModelUtil;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
