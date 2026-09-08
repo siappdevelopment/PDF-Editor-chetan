@@ -1056,7 +1056,9 @@ class MainActivity : BaseActivity(), OnClickHandler {
         }
 
         binding.vpContainer.adapter = AllTabsAdapter(this)
-        binding.vpContainer.offscreenPageLimit = 1
+        // Keep every file tab alive so swiping does not recreate its RecyclerView,
+        // resubmit the same files, or lose the saved scroll position.
+        binding.vpContainer.offscreenPageLimit = TAB_COUNT - 1
         setupCollapsingHeaderScroll()
 
         TabLayoutMediator(binding.allTabs, binding.vpContainer) { tab, position ->
@@ -1068,9 +1070,6 @@ class MainActivity : BaseActivity(), OnClickHandler {
                 override fun onPageSelected(position: Int) {
                     updateHeaderColor(position)
                     fileViewModel.showTab(tabFileTypeForPosition(position))
-                    binding.vpContainer.post {
-                        refreshCurrentTabFragment()
-                    }
                 }
             },
         )
