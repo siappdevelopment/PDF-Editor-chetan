@@ -11,6 +11,7 @@ import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSUtilitis
 import com.reader.alldocviewer.pdfeditor.launcher.LauncherHomeActivity
 import com.reader.alldocviewer.pdfeditor.launcher.activity.DefaultAppActivity
+import com.reader.alldocviewer.pdfeditor.launcher.activity.DefaultSettingHomeActivity
 import com.reader.alldocviewer.pdfeditor.launcher.common.Utils
 import com.reader.alldocviewer.pdfeditor.launcher.intro.Intro1Activity
 import com.reader.alldocviewer.pdfeditor.launcher.utils.Constance
@@ -33,12 +34,24 @@ object StartupFlowManager {
     private const val KEY_FLOW_ACTIVE = "flow_active"
     private const val KEY_INTRO_SCREEN = "intro_screen"
 
+    private const val KEY_FORCE_DEFAULT = "force_default_launcher"
+
     private val DEFAULT_FLOW_KEYS = listOf(
         "Language",
         "Permission",
         "DefaultHome",
         "Home"
     )
+
+    @JvmStatic
+    fun saveDefaultLauncherConfig(context: Context, force: Boolean) {
+        getPrefs(context).edit().putBoolean(KEY_FORCE_DEFAULT, force).apply()
+    }
+
+    /** Force_Default_Launcher_Show: the DefaultHome step ends only once this app really is the Home app. */
+    @JvmStatic
+    fun isForceDefaultLauncher(context: Context): Boolean =
+        getPrefs(context).getBoolean(KEY_FORCE_DEFAULT, false)
 
     @JvmStatic
     fun saveFlow(context: Context, rawSteps: List<String>) {
@@ -165,11 +178,20 @@ object StartupFlowManager {
 
         val flow = getSavedFlow(activity)
         val index = getCurrentIndex(activity)
-        val onDefaultHomeStep = index in flow.indices && flow[index] == StartupFlowStep.DEFAULT_HOME
+        val currentStep = flow.getOrNull(index)
+        val onDefaultHomeStep = currentStep == StartupFlowStep.DEFAULT_HOME ||
+            currentStep == StartupFlowStep.DEFAULT_SETTING_HOME
 
         return when {
             completingSetup || onDefaultHomeStep -> {
-                showDefaultPermissionButtonAdOnAllowThenComplete(activity)
+                showDefaultPermissionButtonAdOnAllowThenComplete(
+                    activity,
+                    if (currentStep == StartupFlowStep.DEFAULT_SETTING_HOME) {
+                        StartupFlowStep.DEFAULT_SETTING_HOME
+                    } else {
+                        StartupFlowStep.DEFAULT_HOME
+                    }
+                )
                 true
             }
             index < flow.size && flow[index] != StartupFlowStep.HOME -> {
@@ -191,14 +213,17 @@ object StartupFlowManager {
         }
     }
 
-    private fun showDefaultPermissionButtonAdOnAllowThenComplete(activity: Activity) {
+    private fun showDefaultPermissionButtonAdOnAllowThenComplete(
+        activity: Activity,
+        step: StartupFlowStep = StartupFlowStep.DEFAULT_HOME
+    ) {
         if (!ADSMainClass.getDefaultPermissionButtonAdsShow() || ADSMainClass.getAds_Free()) {
-            completeStep(activity, StartupFlowStep.DEFAULT_HOME)
+            completeStep(activity, step)
             return
         }
         DefaultPermissionButtonAd.show(activity) {
             if (!activity.isFinishing) {
-                completeStep(activity, StartupFlowStep.DEFAULT_HOME)
+                completeStep(activity, step)
             }
         }
     }
@@ -244,6 +269,9 @@ object StartupFlowManager {
             StartupFlowStep.POLICY_SCREEN ->
                 SharedPreferenceManager.getBoolean(context, Constance.PRIVACY_DATA_CONSENT, false)
 
+            // Already the Home app: both default steps are skipped. DefultSettingHome is never forced.
+            StartupFlowStep.DEFAULT_SETTING_HOME -> Utils.isDefaultHomeApp(context)
+
             StartupFlowStep.DEFAULT_HOME -> Utils.isDefaultHomeApp(context)
 
             StartupFlowStep.HOME -> false
@@ -275,6 +303,17 @@ object StartupFlowManager {
                 LocaleHelper.setLocale(activity, LocaleHelper.readSavedLanguage(activity))
                 ADSUtilitis.trackScreen(activity, "Flow_TO_PolicyScreen")
                 Intent(activity, PrivacyPolicySetting::class.java)
+            }
+
+            StartupFlowStep.DEFAULT_SETTING_HOME -> {
+                ADSUtilitis.trackScreen(activity, "Flow_TO_DefaultSettingHome")
+                // No UI: keep the previous screen until the system Home settings page is up, so nothing blinks.
+                // DefaultSettingHomeActivity closes the whole task affinity once the flow moves on.
+                activity.startActivity(
+                    Intent(activity, DefaultSettingHomeActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                )
+                return
             }
 
             StartupFlowStep.DEFAULT_HOME -> {

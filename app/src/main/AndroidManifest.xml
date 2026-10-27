@@ -209,6 +209,19 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".launcher.activity.DefaultSettingHomeActivity"
+            android:exported="false"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name=".launcher.activity.DefaultHomeGuideActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            android:theme="@style/GuideTheme" />
+        <activity
             android:name=".launcher.activity.DefaultAppActivity"
             android:screenOrientation="portrait"
 

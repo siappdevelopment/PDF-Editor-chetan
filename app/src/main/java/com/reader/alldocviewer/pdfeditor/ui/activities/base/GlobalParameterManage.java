@@ -47,7 +47,10 @@ public class GlobalParameterManage {
     public static final String APPOPEN_ADS_LOAD_TYPE = "appopen_ads_load_type";
     /** Startup intro screen flow steps array */
     public static final String SHOW_INTRO_SCREEN_FLOW = "show_intro_screen_flow";
-    /** Show overlay permission notification */
+    /** Startup screen flow steps array (preferred key, falls back to SHOW_INTRO_SCREEN_FLOW) */
+    public static final String SHOW_SCREEN_FLOW = "Show_Screen_Flow";
+    /** Force the user to make this app the default Home app (DefaultHome step only ends when it is) */
+    public static final String FORCE_DEFAULT_LAUNCHER_SHOW = "Force_Default_Launcher_Show";    /** Show overlay permission notification */
     public static final String OVERLAY_PERMISSION_NOTIFICATION_SHOW = "overlay_permission_notification_show";
     /** Overlay permission notification show days count */
     public static final String OVERLAY_PERMISSION_NOTIFICATION_DAYS_SHOW_COUNT = "overlay_permission_notification_days_show_count";

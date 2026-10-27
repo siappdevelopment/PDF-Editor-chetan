@@ -1272,6 +1272,8 @@ public class LauncherHomeActivity extends LocaleAwareAppCompatActivity implement
 
     @Override
     protected void onDestroy() {
+        // The ad loading dialog is static; a dialog left open here would leak this activity's window.
+        ADSUtilitis.MassageBoxFullDismiss();
         LauncherFirebaseConfigRefresh.unregisterNetworkListener(this);
         if (viewPager != null) {
             viewPager.removeCallbacks(deferredHomeAdsRunnable);

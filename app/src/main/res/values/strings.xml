@@ -494,4 +494,6 @@
     <string name="make_pdf_your_default">Make PDF Your Default</string>
     <string name="set_our_pdf_app_as_your_default_to_easily_view_manage_edit_and_organize_all_your_pdf_documents">Set our PDF app as your default to easily view, manage, edit, and organize all your PDF documents.</string>
 
+    <string name="default_home_guide_message">Tap here to select this app as your default Home app</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

@@ -467,4 +467,6 @@
     <string name="tap_to_add_more_images">Toque para agregar más imágenes</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">Convierte, combina, divide, firma y gestiona PDF con facilidad</string>
     <string name="powerful_pdf_tools">Potentes herramientas PDF</string>
+    <string name="default_home_guide_message">Toca aquí para elegir esta app como tu aplicación de inicio predeterminada</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

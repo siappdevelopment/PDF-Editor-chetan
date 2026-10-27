@@ -5,6 +5,7 @@ enum class StartupFlowStep(val key: String) {
     ONBOARDING("OnBoarding"),
     PERMISSION("Permission"),
     POLICY_SCREEN("PolicyScreen"),
+    DEFAULT_SETTING_HOME("DefultSettingHome"),
     DEFAULT_HOME("DefaultHome"),
     HOME("Home");
 
@@ -23,7 +24,8 @@ enum class StartupFlowStep(val key: String) {
         get() = when (this) {
             ONBOARDING -> listOf("Onboarding", "Intro", "IntroFlow")
             POLICY_SCREEN -> listOf("PrivacyPolicySetting", "PrivacyPolicy", "Policy")
-            DEFAULT_HOME -> listOf("DefaultHomeApp", "DefaultApp", "DefaultHomeAppActivity")
+            DEFAULT_SETTING_HOME -> listOf("DefaultSettingHome")
+            DEFAULT_HOME -> listOf("DefaultHomeApp", "DefaultApp", "DefaultHomeAppActivity", "default_home")
             HOME -> listOf("Main", "HomeActivity")
             else -> emptyList()
         }

@@ -468,4 +468,6 @@
     <string name="tap_to_add_more_images">Daha fazla görsel eklemek için dokunun</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">PDF\'leri kolayca dönüştürün, birleştirin, bölün, imzalayın ve yönetin</string>
     <string name="powerful_pdf_tools">Güçlü PDF Araçları</string>
+    <string name="default_home_guide_message">Bu uygulamayı varsayılan ana ekran uygulaması yapmak için buraya dokunun</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

@@ -468,4 +468,6 @@
     <string name="tap_to_add_more_images">I-tap para magdagdag ng higit pang larawan</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">I-convert, pagsamahin, hatiin, lagdaan, at pamahalaan ang mga PDF nang madali</string>
     <string name="powerful_pdf_tools">Makapangyarihang mga tool sa PDF</string>
+    <string name="default_home_guide_message">I-tap dito para piliin ang app na ito bilang default na Home app</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

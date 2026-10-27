@@ -65,6 +65,10 @@ public class ADSUtilitis {
             if (MassageBoxFull != null && MassageBoxFull.isShowing()) {
                 return;
             }
+            if (context instanceof Activity
+                    && (((Activity) context).isFinishing() || ((Activity) context).isDestroyed())) {
+                return;
+            }
 
             cancelMassageBoxFullTimeout();
             MassageBoxFull = new Dialog(context);

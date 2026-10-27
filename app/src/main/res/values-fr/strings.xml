@@ -468,4 +468,6 @@
     <string name="tap_to_add_more_images">Appuyez pour ajouter plus d’images</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">Convertissez, fusionnez, divisez, signez et gérez vos PDF en toute simplicité</string>
     <string name="powerful_pdf_tools">Outils PDF puissants</string>
+    <string name="default_home_guide_message">Appuyez ici pour choisir cette appli comme application d\'accueil par défaut</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

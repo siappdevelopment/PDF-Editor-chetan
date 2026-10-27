@@ -467,4 +467,6 @@
     <string name="tap_to_add_more_images">Tryk for at tilføje flere billeder</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">Konverter, flet, opdel, signer og administrer PDF\'er nemt</string>
     <string name="powerful_pdf_tools">Kraftfulde PDF-værktøjer</string>
+    <string name="default_home_guide_message">Tryk her for at vælge denne app som din standard-startskærm</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -50,6 +52,25 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
     private boolean waitingForDefaultResult;
     private boolean homeRoleRequestInFlight;
     private boolean isShowingButtonAd;
+    /** Force_Default_Launcher_Show: the step ends only when this app really is the Home app. */
+    private boolean forceDefault;
+    private boolean guideShown;
+    private final Handler homeWatcherHandler = new Handler(Looper.getMainLooper());
+    private final Runnable homeWatcher = new Runnable() {
+        @Override
+        public void run() {
+            if (navigatedAway || isFinishing() || isDestroyed() || !waitingForDefaultResult) {
+                return;
+            }
+            if (Utils.isDefaultHomeApp(DefaultAppActivity.this)) {
+                // Settings can stay open after the pick: bring the user back to this screen.
+                startActivity(new Intent(DefaultAppActivity.this, DefaultAppActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP));
+            } else {
+                homeWatcherHandler.postDelayed(this, 500L);
+            }
+        }
+    };
 
     private final ActivityResultLauncher<Intent> homeRoleLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         homeRoleRequestInFlight = false;
@@ -61,6 +82,7 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_default_app);
+        forceDefault = StartupFlowManager.isForceDefaultLauncher(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             WindowInsetsController controller = getWindow().getInsetsController();
@@ -194,9 +216,16 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
                 // Already default — no dialog; continue without Cancel-ad
                 goNextAfterDefault();
             } else {
+                if (waitingForDefaultResult || homeRoleRequestInFlight) {
+                    return; // double tap: one request only
+                }
                 waitingForDefaultResult = true;
                 Utils.setCompletingDefaultAppSetup(this, true);
-                requestDefaultHomeApp();
+                if (forceDefault) {
+                    requestDefaultHomeAppForced();
+                } else {
+                    requestDefaultHomeApp();
+                }
             }
         });
     }
@@ -206,10 +235,21 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
      * Cancel → ads here (if Firebase default_permission_button_ads_show = true).
      */
     private void handleDefaultDialogResult(int resultCode) {
+        homeWatcherHandler.removeCallbacks(homeWatcher);
         if (Utils.isDefaultHomeApp(this)) {
-            if (!isFinishing()) {
+            if (forceDefault && !isFinishing()) {
+                // Forced: no Home intent ends the step for us, carry the flow on here.
+                goNextAfterDefault();
+            } else if (!isFinishing()) {
                 finish();
             }
+            return;
+        }
+
+        if (forceDefault) {
+            // Cancelled / another app picked: stay on this screen so the user can try again.
+            Utils.trackScreen(this, "DEFAULT_HOME_APP_CANCEL");
+            Utils.setCompletingDefaultAppSetup(this, false);
             return;
         }
 
@@ -262,6 +302,36 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
             Utils.trackScreen(this, "DEFAULT_HOME_APP_SET");
         }
         StartupFlowManager.completeStep(DefaultAppActivity.this, StartupFlowStep.DEFAULT_HOME);
+    }
+
+    /** Forced mode: the system Home settings list first (the user must pick this app), role dialog as fallback. */
+    private void requestDefaultHomeAppForced() {
+        try {
+            Intent settings = null;
+            Intent[] candidates = {
+                    new Intent(Settings.ACTION_HOME_SETTINGS),
+                    new Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
+            };
+            for (Intent candidate : candidates) {
+                if (candidate.resolveActivity(getPackageManager()) != null) {
+                    settings = candidate;
+                    break;
+                }
+            }
+            if (settings == null) {
+                requestDefaultHomeApp();
+                return;
+            }
+            ADSAppManage.isAppOpenBlocked = true;
+            homeRoleRequestInFlight = true;
+            homeRoleLauncher.launch(settings);
+            homeWatcherHandler.removeCallbacks(homeWatcher);
+            homeWatcherHandler.postDelayed(homeWatcher, 500L);
+        } catch (Exception e) {
+            homeRoleRequestInFlight = false;
+            e.printStackTrace();
+            requestDefaultHomeApp();
+        }
     }
 
     private void requestDefaultHomeApp() {
@@ -319,6 +389,22 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
         }
     }
 
+    // Forced mode: Settings covers this screen, put the guide card on top of the system Home list.
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (forceDefault && homeRoleRequestInFlight && !guideShown && !isFinishing()) {
+            guideShown = true;
+            DefaultHomeGuideActivity.show(this);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        homeWatcherHandler.removeCallbacks(homeWatcher);
+        super.onDestroy();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -327,9 +413,20 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
                     tvSetAsDefault.setText(getString(R.string.set_as_default));
         }
 
+        // Forced and the app became the Home app while Settings was open: the step is done.
+        if (forceDefault && waitingForDefaultResult && Utils.isDefaultHomeApp(this)) {
+            homeWatcherHandler.removeCallbacks(homeWatcher);
+            homeRoleRequestInFlight = false;
+            goNextAfterDefault();
+            return;
+        }
+
         // Home chooser / settings path (no ActivityResult)
         if (waitingForDefaultResult && !homeRoleRequestInFlight && !isShowingButtonAd) {
             waitingForDefaultResult = false;
+            if (forceDefault && !Utils.isDefaultHomeApp(this)) {
+                return; // forced: stay here, the user can retry
+            }
             if (Utils.isDefaultHomeApp(this)) {
                 if (!isFinishing()) {
                     finish();

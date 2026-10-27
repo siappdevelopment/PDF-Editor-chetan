@@ -468,4 +468,6 @@
     <string name="tap_to_add_more_images">और छवियाँ जोड़ने के लिए टैप करें</string>
     <string name="convert_merge_split_sign_and_manage_pdfs_with_ease">आसानी से PDF कन्वर्ट, मर्ज, स्प्लिट, साइन और प्रबंधित करें</string>
     <string name="powerful_pdf_tools">शक्तिशाली PDF उपकरण</string>
+    <string name="default_home_guide_message">इस ऐप को अपना डिफ़ॉल्ट होम ऐप चुनने के लिए यहाँ टैप करें</string>
+    <string name="home_selection_tap_hand">&#128070;</string>
 </resources>

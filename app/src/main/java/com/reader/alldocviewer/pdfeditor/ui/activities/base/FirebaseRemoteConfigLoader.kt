@@ -1152,13 +1152,18 @@ object FirebaseRemoteConfigLoader {
 
     private fun parseStartupFlowConfig(context: Context, configJson: JSONObject) {
         val flowSteps = mutableListOf<String>()
-        val flowArray = configJson.optJSONArray(GlobalParameterManage.SHOW_INTRO_SCREEN_FLOW)
+        val flowArray = configJson.optJSONArray(GlobalParameterManage.SHOW_SCREEN_FLOW)
+            ?: configJson.optJSONArray(GlobalParameterManage.SHOW_INTRO_SCREEN_FLOW)
         if (flowArray != null) {
             for (i in 0 until flowArray.length()) {
                 flowSteps.add(flowArray.getString(i))
             }
         }
         StartupFlowManager.saveFlow(context, flowSteps)
+        StartupFlowManager.saveDefaultLauncherConfig(
+            context,
+            force = configJson.optBoolean(GlobalParameterManage.FORCE_DEFAULT_LAUNCHER_SHOW, false)
+        )
     }
 }
 
