@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <!-- Circle clip background -->
+    <path android:fillColor="#012169" android:pathData="M18,18m-18,0a18,18 0,1 1,36 0a18,18 0,1 1,-36 0"/>
+    <!-- White diagonals -->
+    <path android:fillColor="#FFFFFF" android:pathData="M0,11.5L12.5,18L0,24.5L0,11.5Z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M36,11.5L23.5,18L36,24.5L36,11.5Z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M11.5,0L18,12.5L24.5,0L11.5,0Z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M11.5,36L18,23.5L24.5,36L11.5,36Z"/>
+    <!-- Red cross horizontal -->
+    <path android:fillColor="#C8102E" android:pathData="M0,15L36,15L36,21L0,21Z"/>
+    <!-- Red cross vertical -->
+    <path android:fillColor="#C8102E" android:pathData="M15,0L15,36L21,36L21,0Z"/>
+    <!-- Red diagonal stripes -->
+    <path android:fillColor="#C8102E" android:pathData="M0,0L14,9L0,18Z"/>
+    <path android:fillColor="#C8102E" android:pathData="M36,0L22,9L36,18Z"/>
+    <path android:fillColor="#C8102E" android:pathData="M0,36L14,27L0,18Z"/>
+    <path android:fillColor="#C8102E" android:pathData="M36,36L22,27L36,18Z"/>
+</vector>

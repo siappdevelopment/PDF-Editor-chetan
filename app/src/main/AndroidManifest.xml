@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VIDEO"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_launcher"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PdfReader">
+
+        <activity
+            android:name=".ui.activities.permission.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.recycleBin.RecycleBinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.language.LanguageActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.settings.SettingActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.faq.GiftFAQActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.main.MainActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="true"
+            android:launchMode="singleTop">
+
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".CallFunction.Activity.CallEndActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:showOnLockScreen="false"
+            android:taskAffinity=""
+            android:theme="@style/TransparentTheme"
+            android:turnScreenOn="false"
+            android:configChanges="keyboardHidden|orientation|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CallFunction.Activity.OverlayPermissionActivity"
+            android:allowEmbedded="true"
+            android:configChanges="keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="true"
+
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorageGuideActivity.Theme" />
+        <activity
+            android:name=".ui.activities.pdfviewer.PdfViewerActivity"
+            android:screenOrientation="portrait"
+
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activities.pdfOpen.PdfOpenActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".managepdf.OrganizePagesActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".managepdf.PageSetupActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.officeviewer.ViewFilesNewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.createPdf.CreatePdfActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.openPdf.OpenCreatePdfActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.signature.SignatureHostActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.edit.EditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".launcher.LauncherHomeActivity"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".launcher.activity.DefaultAppActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="true" />
+        <activity
+            android:name=".privacy.PrivacyPolicySetting"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".launcher.intro.Intro1Activity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowDisablePreview="true" />
+        <activity
+            android:name=".launcher.intro.Intro2Activity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".launcher.intro.Intro3Activity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity
+            android:name=".launcher.LauncherSettingsActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="true" />
+
+        <!--
+            <activity
+            android:name=".ui.activities.edit.AddSignActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".ui.activities.storagePermission.StoragePermissionGuideActivity"
+            android:allowEmbedded="true"
+            android:configChanges="keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/StorageGuideActivity.Theme" />
+        <activity
+            android:name=".picker.MediaPickerActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.search.SearchAllFilesActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.pdfToImage.PDFToImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.watermark.CheckWatermarkActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.preview.PreviewShareActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".scan.ViewPagerActivity"
+            android:exported="false"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scan.organize.OrganizeImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merge.MergePdfActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splitPdf.SplitPdfActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.comingSoon.CommingActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="129383253777802" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="true" />
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true" />
+
+        <receiver
+            android:name=".widget.DashboardWidgetProvider"
+            android:exported="true"
+            android:label="PDF Dashboard">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_dashboard_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.SearchWidgetProvider"
+            android:exported="true"
+            android:label="PDF Search">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_search_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.CreatePdfWidgetProvider"
+            android:exported="true"
+            android:label="Create PDF">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_create_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.ImageToPdfWidgetProvider"
+            android:exported="true"
+            android:label="Image to PDF">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_image_to_pdf_info" />
+        </receiver>
+        <receiver
+            android:name=".Advertisement.CallendClass.PhoneCallStateService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="998">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.example.autostart.ACTION_IMPLICIT_BROADCAST" />
+                <action android:name="com.example.autostart.ACTION_EXPLICIT_BROADCAST" />
+
+                <category android:name="com.example.autostart.CATEGORY_AUTOSTART" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Advertisement.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Advertisement.Overlay.DailyNotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".CallFunction.Notification.RemindReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name=".Advertisement.PermissionAnalyticsHelper$InitProvider"
+            android:authorities="${applicationId}.permission_analytics_init"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <provider
+            android:name=".CallFunction.Other.RemindProviderMain"
+            android:authorities="com.reader.alldocviewer.pdfeditor.provider.RemindProviderMain"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,78 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PdfReader" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="icon_color">@color/app_color</item>
+        <item name="bg_color_edit">@color/selected_edit_tool_bg</item>
+
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="Theme.PdfReader" parent="Base.Theme.PdfReader" />
+
+    <style name="StorageGuideActivity.Theme" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowEnterAnimation">@anim/enter_left_to_right</item>
+        <item name="android:windowExitAnimation">@anim/exit_left_to_right</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">0</item>
+        <item name="android:showOnLockScreen">true</item>
+        <item name="android:ambientShadowAlpha">0</item>
+        <item name="android:spotShadowAlpha">0</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="enableEdgeToEdge">true</item>
+    </style>
+
+    <style name="ImmersiveBottomSheetDialogTheme" parent="CustomBottomSheetDialogTheme">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="enableEdgeToEdge">true</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TransparentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_color</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#ADA1A1A1</item>
+        <item name="colorControlActivated">#AD707070</item>
+    </style>
+
+    <style name="ExitDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_item_from_bottom_anim</item>
+        <item name="android:windowExitAnimation">@anim/anim_topbottom_anim</item>
+    </style>
+    <style name="Theme.Home" parent="Base.Theme.MessagesSmartSMS">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Base.Theme.MessagesSmartSMS" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorControlActivated">@color/primary</item>
+    </style>
+
+</resources>

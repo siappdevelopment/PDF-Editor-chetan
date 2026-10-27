@@ -1,0 +1,119 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 24 min SDK version: arm64-v8a",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON F:\\HiteshAndroid\\PdfReader\\mupdfdemo-jni\\build\\.cxx\\Debug\\274b5x1o\\arm64-v8a\\android_gradle_build.json due to:",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "- no fingerprint file, will remove stale configuration folder",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027F:\\HiteshAndroid\\PdfReader\\mupdfdemo-jni\\build\\.cxx\\Debug\\274b5x1o\\arm64-v8a\u0027",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027F:\\HiteshAndroid\\PdfReader\\mupdfdemo-jni\\build\\.cxx\\Debug\\274b5x1o\\arm64-v8a\u0027",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "executing ndkBuild @echo off\n\"C:\\\\Users\\\\codebuzz\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\\\\ndk-build.cmd\" ^\n  \"NDK_PROJECT_PATH\u003dnull\" ^\n  \"APP_BUILD_SCRIPT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdf-android-viewer-old\\\\jni\\\\Android.mk\" ^\n  \"NDK_APPLICATION_MK\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdf-android-viewer-old\\\\jni\\\\Application.mk\" ^\n  \"APP_ABI\u003darm64-v8a\" ^\n  \"NDK_ALL_ABIS\u003darm64-v8a\" ^\n  \"NDK_DEBUG\u003d1\" ^\n  \"APP_PLATFORM\u003dandroid-24\" ^\n  \"NDK_OUT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdfdemo-jni\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\274b5x1o/obj\" ^\n  \"NDK_LIBS_OUT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdfdemo-jni\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\274b5x1o/lib\" ^\n  -j4 ^\n  \"APP_SHORT_COMMANDS\u003dfalse\" ^\n  \"LOCAL_SHORT_COMMANDS\u003dfalse\" ^\n  -B ^\n  -n\n",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "@echo off\n\"C:\\\\Users\\\\codebuzz\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\\\\ndk-build.cmd\" ^\n  \"NDK_PROJECT_PATH\u003dnull\" ^\n  \"APP_BUILD_SCRIPT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdf-android-viewer-old\\\\jni\\\\Android.mk\" ^\n  \"NDK_APPLICATION_MK\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdf-android-viewer-old\\\\jni\\\\Application.mk\" ^\n  \"APP_ABI\u003darm64-v8a\" ^\n  \"NDK_ALL_ABIS\u003darm64-v8a\" ^\n  \"NDK_DEBUG\u003d1\" ^\n  \"APP_PLATFORM\u003dandroid-24\" ^\n  \"NDK_OUT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdfdemo-jni\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\274b5x1o/obj\" ^\n  \"NDK_LIBS_OUT\u003dF:\\\\HiteshAndroid\\\\PdfReader\\\\mupdfdemo-jni\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\274b5x1o/lib\" ^\n  -j4 ^\n  \"APP_SHORT_COMMANDS\u003dfalse\" ^\n  \"LOCAL_SHORT_COMMANDS\u003dfalse\" ^\n  -B ^\n  -n\n",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "Received process result: 0",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "parse and convert ndk-build output to build configuration JSON",
+    "file_": "F:\\HiteshAndroid\\PdfReader\\mupdf-android-viewer-old\\jni\\Android.mk",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  }
+]

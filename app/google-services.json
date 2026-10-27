@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "61944502432",
+    "project_id": "alldocviewer-pdfeditor",
+    "storage_bucket": "alldocviewer-pdfeditor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61944502432:android:6d56d518b29e9c641051c5",
+        "android_client_info": {
+          "package_name": "com.reader.alldocviewer.pdfeditor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMZ3h3smI-xuHtkvEqEVED2Cn7dSxUhi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

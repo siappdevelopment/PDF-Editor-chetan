@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mid_bg_corner">@dimen/_11sdp</dimen>
+    <dimen name="toolbar_title_text">@dimen/_14sdp</dimen>
+    <dimen name="sub_title_text">@dimen/_12sdp</dimen>
+    <dimen name="btn_text">@dimen/_12sdp</dimen>
+    <dimen name="bottom_edit_text">@dimen/_40sdp</dimen>
+    <dimen name="bottom_action_button">@dimen/_40sdp</dimen>
+    <dimen name="bottom_size_h">@dimen/_55sdp</dimen>
+    <dimen name="default_row_header_width">55dp</dimen>
+    <dimen name="default_column_header_height">55dp</dimen>
+    <dimen name="material_button_corner_radius">24dp</dimen>
+
+</resources>

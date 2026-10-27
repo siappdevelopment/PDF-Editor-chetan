@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_24sdp">
+
+    <FrameLayout
+        android:id="@+id/frameCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.reader.alldocviewer.pdfeditor.scan.CropImageView
+            android:id="@+id/crop_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_12sdp"
+            app:civGuideLineColor="#0e61d4"
+            app:civLineColor="#998e8d8d"
+            app:civMagnifierCrossColor="#80050505"
+            app:civPointColor="#0e61d4"
+            app:civPointFillColor="#9cc3fa"
+            app:civShowEdgeMidPoint="true" />
+    </FrameLayout>
+</FrameLayout>

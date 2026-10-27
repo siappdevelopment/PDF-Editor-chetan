@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tooltip"
+    android:elevation="3dp"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/btnWidth"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_signature_thinkness" />
+
+    <ImageView
+        android:id="@+id/btnColor"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_signature_color" />
+
+    <ImageView
+        android:id="@+id/btnBold"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_bold" />
+
+    <ImageView
+        android:id="@+id/btnItalic"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_italics" />
+
+    <ImageView
+        android:id="@+id/btnUnderline"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_underline" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_delete"
+        android:visibility="gone" />
+</LinearLayout>

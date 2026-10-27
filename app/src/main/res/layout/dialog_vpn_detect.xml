@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_create7"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_vpn_detect" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="VPN Detected"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="A VPN connection has been detected. Please disable your VPN and tap Recheck to continue."
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_11sdp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnReCheck"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button_radius_100"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/roboto_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Recheck"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_12sdp" />
+
+</LinearLayout>

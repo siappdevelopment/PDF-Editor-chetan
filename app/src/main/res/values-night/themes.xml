@@ -1,0 +1,44 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="ImmersiveBottomSheetDialogTheme" parent="CustomBottomSheetDialogTheme">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="enableEdgeToEdge">true</item>
+    </style>
+    <style name="Base.Theme.PdfReader" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="icon_color">@color/app_color</item>
+        <item name="bg_color_edit">@color/selected_edit_tool_bg</item>
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+    <style name="Theme.PdfReader" parent="Base.Theme.PdfReader" />
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TransparentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#ADA1A1A1</item>
+        <item name="colorControlActivated">#AD707070</item>
+    </style>
+
+    <style name="ExitDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_item_from_bottom_anim</item>
+        <item name="android:windowExitAnimation">@anim/anim_topbottom_anim</item>
+    </style>
+
+</resources>

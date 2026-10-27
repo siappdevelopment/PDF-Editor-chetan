@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white_">#FFFFFFFF</color>
+    <color name="white">#151515</color>
+    <color name="app_color">#E30000</color>
+    <color name="nav_unselected">#99FFFFFF</color>
+    <color name="nav_indicator">#33E30000</color>
+    <color name="bottom_nav_divider">#14FFFFFF</color>
+    <color name="filter_color">#363636</color>
+    <color name="card_color">#3B3A3A</color>
+    <color name="bg_color">#2C2C2C</color>
+    <color name="list_native_ad_bg">#2C2C2C</color>
+    <color name="list_native_ad_bg_light">#E7EAED</color>
+    <color name="list_native_ad_bg_dark">#2C323B</color>
+    <color name="pdfviewlight">#2C2C2C</color>
+    <color name="bg_view_pager">#2C2C2C</color>
+    <color name="navigation_color">#2C2C2C</color>
+    <color name="reward_dialog_tint">#33FFF2F2</color>
+
+    <color name="icon_bg_orange">#33F58C1D</color>
+    <color name="icon_bg_blue">#330F7CD3</color>
+    <color name="icon_bg_purple">#337A5AF8</color>
+    <color name="icon_bg_pink">#33E30080</color>
+    <color name="icon_bg_light_pink">#33E30080</color>
+    <color name="icon_bg_print">#293840</color>
+    <color name="icon_bg_coral">#3B3B3B</color>
+    <color name="pdf_manager_card_stroke">#33FFFFFF</color>
+    <color name="grid_color">#33FFFFFF</color>
+    <color name="border_color">#494949</color>
+    <color name="setup_select">#462C2C</color>
+    <color name="grey_color">#9898A3</color>
+    <color name="add_signature_corner">#5F5F5F</color>
+    <color name="add_signature_bg">#222222</color>
+    <color name="exo_black_opacity_60">#40FFFFFF</color>
+    <color name="app_text_color">#FFFFFF</color>
+    <color name="circle_border">#FFFFFFFF</color>
+    <color name="new_color">#3B3A3A</color>
+    <color name="border_color_light">#2C2C2C</color>
+
+
+    <color name="gray">#AEAEAE</color>
+    <color name="primary">#E30000</color>
+    <color name="text_secondary_light">#9AA0A6</color>
+    <color name="quiz_rating_star_filled">#FFC107</color>
+    <color name="divider">#1A1A1A</color>
+    <color name="shimmer">#333333</color>
+    <color name="shimmer_base">#444444</color>
+
+    <color name="launcher_search_bg">#99000000</color>
+    <color name="launcher_apps_drawer_search_bg">#2A2A2A</color>
+    <color name="launcher_search_hint">#FFFFFFFF</color>
+    <color name="launcher_on_wallpaper">#FFFFFFFF</color>
+    <color name="launcher_folder_bg">#99000000</color>
+    <color name="launcher_surface">#FF121212</color>
+    <color name="bacssss">#151515</color>
+
+
+    <color name="main_color">#E30000</color>
+    <color name="black_color">#FFFFFFFF</color>
+
+
+    <color name="divider_grey">#33FFFFFF</color>
+</resources>

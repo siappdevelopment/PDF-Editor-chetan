@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle" />
+
+    <style name="TextStyle.Regular" parent="TextStyle">
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.Medium" parent="TextStyle">
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.SemiBold" parent="TextStyle">
+        <item name="android:fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.Bold" parent="TextStyle">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontWeight">700</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="NavIndicator">
+        <item name="android:width">56dp</item>
+        <item name="android:height">28dp</item>
+        <item name="android:color">@color/nav_indicator</item>
+        <item name="marginHorizontal">4dp</item>
+        <item name="shapeAppearance">@style/NavShape</item>
+    </style>
+
+    <style name="NavShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="TabTextStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TopRoundedOnly" parent="ShapeAppearance.Material3.Corner.None">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="GridPreviewCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/card_color</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="shapeAppearance">@style/TopRoundedOnly</item>
+    </style>
+
+    <style name="RoundedImage" parent="ShapeAppearance.Material3.Corner.None">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+
+    <attr name="refresh_mode">
+        <enum name="swipe_mode" value="1" />
+        <enum name="pull_mode" value="2" />
+    </attr>
+
+    <declare-styleable name="CustomSwipeRefreshLayout">
+        <attr name="enable_top_progress_bar" format="boolean" />
+        <attr name="keep_refresh_head" format="boolean" />
+        <attr name="refresh_mode" />
+        <attr name="return_to_header_duration" format="integer" />
+        <attr name="return_to_top_duration" format="integer" />
+        <attr name="time_out_refresh_complete" format="integer" />
+        <attr name="time_out_return_to_top" format="integer" />
+        <attr name="top_progress_bar_color_1" format="color" />
+        <attr name="top_progress_bar_color_2" format="color" />
+        <attr name="top_progress_bar_color_3" format="color" />
+        <attr name="top_progress_bar_color_4" format="color" />
+    </declare-styleable>
+
+
+    <attr name="icon_color" format="color|reference" />
+
+    <declare-styleable name="TableView">
+        <attr name="row_header_width" format="dimension" />
+        <attr name="column_header_height" format="dimension" />
+        <attr name="corner_view_location" format="integer" />
+        <attr name="reverse_layout" format="boolean" />
+        <attr name="selected_color" format="color" />
+        <attr name="unselected_color" format="color" />
+        <attr name="shadow_color" format="color" />
+        <attr name="separator_color" format="color" />
+        <attr name="show_vertical_separator" format="boolean" />
+        <attr name="show_horizontal_separator" format="boolean" />
+        <attr name="allow_click_inside_cell" format="boolean" />
+        <attr name="allow_click_inside_row_header" format="boolean" />
+        <attr name="allow_click_inside_column_header" format="boolean" />
+    </declare-styleable>
+
+
+    <style name="ProgressbarColor" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/app_color</item>
+    </style>
+
+
+    <declare-styleable name="SeekView">
+        <attr name="indicatorColor" format="color" />
+        <attr name="indicatorRadius" format="dimension" />
+        <attr name="indicatorShadowColor" format="color" />
+        <attr name="indicatorShadowEnable" format="boolean" />
+        <attr name="indicatorShadowRadius" format="dimension" />
+        <attr name="seekBackgroundColor" format="color" />
+        <attr name="seekForegroundColor" format="color" />
+        <attr name="seekHeight" format="dimension" />
+        <attr name="seekShadowColor" format="color" />
+        <attr name="seekShadowEnable" format="boolean" />
+        <attr name="seekShadowRadius" format="dimension" />
+        <attr name="touchEnable" format="boolean" />
+    </declare-styleable>
+
+    <integer name="default_item_cache_size">5</integer>
+
+    <style name="ManagePageOptionText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="android:background">@drawable/bg_page_option</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">@dimen/_50sdp</item>
+        <item name="android:paddingHorizontal">@dimen/_10sdp</item>
+        <item name="android:paddingVertical">@dimen/_6sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+    </style>
+
+    <style name="RoundedCorner10" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+
+    <style name="toolBarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/_8sdp</item>
+    </style>
+
+    <style name="NativeAdsView">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

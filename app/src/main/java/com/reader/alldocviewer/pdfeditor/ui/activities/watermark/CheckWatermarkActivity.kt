@@ -1,0 +1,363 @@
+package com.reader.alldocviewer.pdfeditor.ui.activities.watermark
+
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.media.MediaScannerConnection
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSBannerSmall
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSInterDisplayClick
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
+import com.reader.alldocviewer.pdfeditor.Advertisement.ADSNativeDisplay
+import com.reader.alldocviewer.pdfeditor.R
+import com.reader.alldocviewer.pdfeditor.databinding.ActivityCheckWatermarkBinding
+import com.reader.alldocviewer.pdfeditor.helper_tool.HelperTools
+import com.reader.alldocviewer.pdfeditor.ui.ProgressDialogFragment
+import com.reader.alldocviewer.pdfeditor.ui.activities.base.BaseActivity
+import com.reader.alldocviewer.pdfeditor.ui.activities.preview.PreviewShareActivity
+import com.reader.alldocviewer.pdfeditor.ui.adapters.SelectedImagesAdapter
+import com.reader.alldocviewer.pdfeditor.ui.dialogs.NoWatermarkRewardDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.File
+
+@AndroidEntryPoint
+class CheckWatermarkActivity : BaseActivity() {
+
+    private lateinit var binding: ActivityCheckWatermarkBinding
+    private var adapter: SelectedImagesAdapter? = null
+    private var mergeJob: Job? = null
+    private var checkWaterMark: Boolean = true
+    private var checkFileName: String = ""
+    private var path: String = ""
+    private var hasUnlockedNoWatermark: Boolean = false
+    private var selectedLongBitmap: List<Bitmap> = emptyList()
+    private var watermarkLogo: Bitmap? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityCheckWatermarkBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        checkFileName = intent.getStringExtra("checkFileName").orEmpty()
+        path = intent.getStringExtra("path").orEmpty()
+        hasUnlockedNoWatermark =
+            savedInstanceState?.getBoolean(KEY_UNLOCKED_NO_WATERMARK, false) == true
+
+        selectedLongBitmap = HelperTools.selectedLongBitmap.toList()
+        if (selectedLongBitmap.isEmpty()) {
+            // Process was killed / bitmaps lost — cannot safely continue
+            finish()
+            return
+        }
+
+        reattachRewardDialogListener()
+
+        binding.recyclerBitmap.layoutManager = GridLayoutManager(this, 2)
+
+        watermarkLogo = createWatermarkLogo()
+        // Preview only: show originals + tiny overlay (no full-size clones)
+        adapter = SelectedImagesAdapter(selectedLongBitmap, watermarkLogo)
+        binding.recyclerBitmap.adapter = adapter
+
+        binding.ivBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
+        binding.llNoWatermark.setOnClickListener {
+            selectNoWatermarkOption()
+        }
+
+        binding.llWatermark.setOnClickListener {
+            selectWatermarkOption()
+        }
+
+        binding.btnConvert.setOnClickListener {
+            if (checkWaterMark) {
+                startConvert(withWatermark = true)
+            } else {
+                onNoWatermarkSelected()
+            }
+        }
+
+        if (ADSMainClass.getOtherAdsShow()) {
+            if (ADSMainClass.getOtherAdsType().equals("native")) {
+                ADSNativeDisplay.loadAdmobNativeAdBig(
+                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_NATIVE),
+                    findViewById(R.id.flNativeSmallPlaceholder),
+                    findViewById(R.id.shimmer_container_banner),
+                    "small",
+                    this
+                )
+            } else {
+                ADSBannerSmall.loadAdMobBanner(
+                    ADSMainClass.getStringValue(ADSMainClass.OTHER_SCREEN_BANNER),
+                    findViewById(R.id.flBannerSmallPlaceholder),
+                    findViewById(R.id.shimmer_container_banner),
+                    this,
+                    "small"
+                )
+            }
+        } else {
+            binding.shimmerContainerBanner.visibility = View.GONE
+            binding.flNativeSmallPlaceholder.visibility = View.GONE
+            binding.flBannerSmallPlaceholder.visibility = View.GONE
+        }
+
+        onBackPressedDispatcher.addCallback(
+            this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    onBack()
+                }
+            }
+        )
+    }
+
+    private fun createWatermarkLogo(): Bitmap {
+        val logoDrawable = ContextCompat.getDrawable(this, R.mipmap.ic_launcher)
+        return if (logoDrawable != null) {
+            val size = (resources.displayMetrics.density * 60).toInt()
+            val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(bitmap)
+            logoDrawable.setBounds(0, 0, size, size)
+            logoDrawable.alpha = 100
+            logoDrawable.draw(canvas)
+            bitmap
+        } else {
+            val bitmap = Bitmap.createBitmap(320, 80, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(bitmap)
+            val paint = Paint().apply {
+                color = Color.GRAY
+                alpha = 100
+                textSize = 28f
+                isAntiAlias = true
+                textAlign = Paint.Align.CENTER
+            }
+            canvas.drawText(getString(R.string.pdf_reader), 160f, 48f, paint)
+            bitmap
+        }
+    }
+
+    fun onBack() {
+        ADSInterDisplayClick.ADSBackDisplayInterstitial(
+            this@CheckWatermarkActivity,
+            ADSMainClass.getStringValue(ADSMainClass.INTER_SECOND_TIME),
+            {
+                finish()
+            }, ADSMainClass.getWatermarkInterShow())
+    }
+
+    private fun onNoWatermarkSelected() {
+        if (hasUnlockedNoWatermark ||
+            ADSMainClass.getAds_Free() ||
+            !ADSMainClass.getWatermarkDialogShow()
+        ) {
+            startConvert(withWatermark = false)
+            return
+        }
+        if (supportFragmentManager.findFragmentByTag(NoWatermarkRewardDialogFragment.TAG) != null) {
+            return
+        }
+        NoWatermarkRewardDialogFragment.show(
+            supportFragmentManager,
+            rewardUnlockListener(),
+        )
+    }
+
+    private fun startConvert(withWatermark: Boolean) {
+        if (checkFileName == "pdf_to_long_image") {
+            convertLongImages(withWatermark, "JPG")
+        } else {
+            convertAllImages(withWatermark, "JPG")
+        }
+    }
+
+    private fun reattachRewardDialogListener() {
+        (supportFragmentManager.findFragmentByTag(NoWatermarkRewardDialogFragment.TAG)
+                as? NoWatermarkRewardDialogFragment)
+            ?.setListener(rewardUnlockListener())
+    }
+
+    private fun rewardUnlockListener(): NoWatermarkRewardDialogFragment.Listener {
+        return NoWatermarkRewardDialogFragment.Listener {
+            if (!isFinishing) {
+                hasUnlockedNoWatermark = true
+                startConvert(withWatermark = false)
+            }
+        }
+    }
+
+    private fun selectNoWatermarkOption() {
+        checkWaterMark = false
+        adapter?.toggleWaterMark(false)
+        binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_selector)
+        binding.llWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+    }
+
+    private fun selectWatermarkOption() {
+        checkWaterMark = true
+        adapter?.toggleWaterMark(true)
+        binding.llWatermark.setBackgroundResource(R.drawable.radio_button_selector)
+        binding.llNoWatermark.setBackgroundResource(R.drawable.radio_button_unselector)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean(KEY_UNLOCKED_NO_WATERMARK, hasUnlockedNoWatermark)
+    }
+
+    private fun convertLongImages(withWatermark: Boolean, format: String) {
+        if (selectedLongBitmap.isEmpty()) {
+            Log.e("BitmapMerge", "Failed: Bitmap list is empty")
+            return
+        }
+
+        val progressDialog = ProgressDialogFragment()
+        progressDialog.show(supportFragmentManager, "progressDialog")
+        val logo = watermarkLogo
+
+        mergeJob = lifecycleScope.launch {
+            try {
+                val bitmapsForSave = withContext(Dispatchers.IO) {
+                    if (withWatermark && logo != null) {
+                        // Create watermarked copies only at convert time, one list for combine
+                        HelperTools.addImageWatermarkToList(selectedLongBitmap, logo)
+                    } else {
+                        selectedLongBitmap
+                    }
+                }
+
+                val savedPath = HelperTools.combineBitmapsAndSave(bitmapsForSave, format) { progress ->
+                    progressDialog.setProgress(progress)
+                }
+
+                if (withWatermark && bitmapsForSave !== selectedLongBitmap) {
+                    bitmapsForSave.forEach { if (!it.isRecycled) it.recycle() }
+                }
+
+                withContext(Dispatchers.Main) {
+                    if (!isFinishing) {
+                        progressDialog.dismiss()
+                        if (savedPath != null) {
+                            MediaScannerConnection.scanFile(
+                                this@CheckWatermarkActivity,
+                                arrayOf(savedPath),
+                                null
+                            ) { _, _ -> }
+
+                            val intent = Intent(
+                                this@CheckWatermarkActivity,
+                                PreviewShareActivity::class.java
+                            ).apply {
+                                putExtra("path", savedPath)
+                                putExtra("checkTool", "ToolsCheck")
+                                putExtra("checkFileName", checkFileName)
+                                putExtra("imageCount", 1)
+                                putExtra("imageCheck", "longImage")
+                            }
+                            startActivity(intent)
+                        } else {
+                            Log.e("FilePath", "Failed to save image")
+                        }
+                    }
+                }
+            } catch (e: CancellationException) {
+                // job cancelled
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun convertAllImages(withWatermark: Boolean, format: String) {
+        if (selectedLongBitmap.isEmpty()) {
+            Log.e("BitmapMerge", "Failed: Bitmap list is empty")
+            return
+        }
+
+        val progressDialog = ProgressDialogFragment()
+        progressDialog.show(supportFragmentManager, "progressDialog")
+        val logo = watermarkLogo
+
+        val pdfFile = File(path)
+        val pdfName = if (pdfFile.exists()) pdfFile.nameWithoutExtension else "PDF_Converted"
+
+        mergeJob = lifecycleScope.launch(Dispatchers.IO) {
+            try {
+                // Watermark + save page-by-page so peak memory stays ~1 extra bitmap
+                val savedFolder = HelperTools.saveBitmapsToPublicDocumentsFolder(
+                    this@CheckWatermarkActivity,
+                    selectedLongBitmap,
+                    pdfName,
+                    format,
+                    watermark = if (withWatermark) logo else null
+                ) { progress ->
+                    lifecycleScope.launch(Dispatchers.Main) {
+                        progressDialog.setProgress(progress)
+                    }
+                }
+
+                withContext(Dispatchers.Main) {
+                    if (!isFinishing) {
+                        progressDialog.dismiss()
+                        if (savedFolder != null) {
+                            val files = File(savedFolder).listFiles()?.map { it.absolutePath }
+                                ?.toTypedArray()
+                            if (!files.isNullOrEmpty()) {
+                                MediaScannerConnection.scanFile(
+                                    this@CheckWatermarkActivity,
+                                    files,
+                                    null
+                                ) { _, _ -> }
+                            }
+
+                            val intent = Intent(
+                                this@CheckWatermarkActivity,
+                                PreviewShareActivity::class.java
+                            ).apply {
+                                putExtra("path", savedFolder)
+                                putExtra("checkTool", "ToolsCheck")
+                                putExtra("checkFileName", checkFileName)
+                                putExtra("imageCount", selectedLongBitmap.size)
+                                putExtra("imageCheck", "multiImage")
+                            }
+                            startActivity(intent)
+                        } else {
+                            Log.e("FilePath", "Failed to save images")
+                        }
+                    }
+                }
+            } catch (e: CancellationException) {
+                // job cancelled
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        mergeJob?.cancel()
+        watermarkLogo?.let {
+            if (!it.isRecycled) it.recycle()
+        }
+        watermarkLogo = null
+        super.onDestroy()
+    }
+
+    companion object {
+        private const val KEY_UNLOCKED_NO_WATERMARK = "unlocked_no_watermark"
+    }
+}
