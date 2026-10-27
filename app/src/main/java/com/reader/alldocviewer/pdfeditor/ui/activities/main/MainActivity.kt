@@ -636,6 +636,7 @@ class MainActivity : BaseActivity(), OnClickHandler {
         if (PermissionManager.hasOverlayPermission(this)) return
         PermissionManager.markOverlayPermissionDeclined(this)
         overlaySettingsLauncher.launch(PermissionManager.getOverlaySettingsIntent(this))
+        PermissionManager.showOverlayGuide(this)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {

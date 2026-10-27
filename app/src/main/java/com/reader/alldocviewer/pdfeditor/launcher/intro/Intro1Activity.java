@@ -94,7 +94,12 @@ public class Intro1Activity extends LocaleAwareAppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                StartupFlowManager.exitAppOnBackPress(Intro1Activity.this);
+                // Back = the Next button: straight to the next intro page / step.
+                if (btnNext != null) {
+                    btnNext.performClick();
+                } else {
+                    IntroNavigation.goToNextIntroButtonScreen(Intro1Activity.this, 1);
+                }
             }
         });
     }

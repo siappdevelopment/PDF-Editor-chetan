@@ -35,6 +35,8 @@ object StartupFlowManager {
     private const val KEY_INTRO_SCREEN = "intro_screen"
 
     private const val KEY_FORCE_DEFAULT = "force_default_launcher"
+    private const val KEY_DEFAULT_ANSWER_AT = "default_answer_at"
+    private const val DEFAULT_HAND_OVER_GRACE_MS = 3_000L
 
     private val DEFAULT_FLOW_KEYS = listOf(
         "Language",
@@ -81,6 +83,12 @@ object StartupFlowManager {
             return
         }
 
+        if (completedStep == StartupFlowStep.DEFAULT_HOME ||
+            completedStep == StartupFlowStep.DEFAULT_SETTING_HOME
+        ) {
+            getPrefs(activity).edit().putLong(KEY_DEFAULT_ANSWER_AT, System.currentTimeMillis()).commit()
+        }
+
         val flow = getSavedFlow(activity)
         val completedIndex = flow.indexOf(completedStep)
         val currentIndex = getCurrentIndex(activity)
@@ -106,6 +114,13 @@ object StartupFlowManager {
     fun completeOnboarding(activity: Activity) {
         Utils.setIntroCompleted(activity.applicationContext, true)
         completeStep(activity, StartupFlowStep.ONBOARDING)
+    }
+
+    /** True while [step] is the step the flow is currently on (it has not been completed or skipped past). */
+    @JvmStatic
+    fun isCurrentStep(context: Context, step: StartupFlowStep): Boolean {
+        if (!isStartupFlowActive(context)) return false
+        return getSavedFlow(context).getOrNull(getCurrentIndex(context)) == step
     }
 
     @JvmStatic
@@ -194,6 +209,14 @@ object StartupFlowManager {
                 )
                 true
             }
+            // Home button pressed while this app already is the Home app and onboarding is unfinished:
+            // end onboarding and show the launcher. A Home intent right after the default answer is the
+            // system confirming the choice (not a press), so it keeps the flow going as before.
+            index < flow.size && flow[index] != StartupFlowStep.HOME &&
+                Utils.isDefaultHomeApp(activity) && !isWithinDefaultHandOver(activity) -> {
+                skipOnboarding(activity)
+                false
+            }
             index < flow.size && flow[index] != StartupFlowStep.HOME -> {
                 when (flow[index]) {
                     StartupFlowStep.ONBOARDING -> when (getIntroScreen(activity)) {
@@ -211,6 +234,16 @@ object StartupFlowManager {
             }
             else -> false
         }
+    }
+
+    /** The default-launcher answer was just given: a Home intent now is the system's confirmation. */
+    private fun isWithinDefaultHandOver(context: Context): Boolean {
+        val at = getPrefs(context).getLong(KEY_DEFAULT_ANSWER_AT, 0L)
+        return at != 0L && System.currentTimeMillis() - at in 0..DEFAULT_HAND_OVER_GRACE_MS
+    }
+
+    private fun skipOnboarding(context: Context) {
+        clearFlowState(context)
     }
 
     private fun showDefaultPermissionButtonAdOnAllowThenComplete(

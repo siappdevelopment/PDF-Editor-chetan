@@ -34,6 +34,9 @@ public class ADSBannerAdaptive {
     private static boolean bannerLoading;
 
     public static void preloadAdMobBanner(String adUnit, Activity activity) {
+        if (!AdsLocationGate.isAllowed(activity)) {
+            return;
+        }
         if (!ADSMainClass.isBannerPreLoad() || TextUtils.isEmpty(adUnit) || activity == null) {
             return;
         }
@@ -71,6 +74,11 @@ public class ADSBannerAdaptive {
 
     @SuppressLint("MissingPermission")
     public static void loadAdMobBanner(String adUint, FrameLayout adContainerView, ShimmerFrameLayout shimmerFrameLayout, Activity activity, String big) {
+        if (!AdsLocationGate.isAllowed(activity)) {
+            if (adContainerView != null) adContainerView.setVisibility(View.GONE);
+            if (shimmerFrameLayout != null) shimmerFrameLayout.setVisibility(View.GONE);
+            return;
+        }
 //        if (AdPlacement.shouldUseQuizPriority()) {
 //            if (!AdPlacement.showQuizBannerAd(activity, adContainerView, shimmerFrameLayout)) {
 //                hideBannerPlaceholder(adContainerView, shimmerFrameLayout);
@@ -154,6 +162,13 @@ public class ADSBannerAdaptive {
                 onLoadComplete.run();
             }
         };
+
+        if (!AdsLocationGate.isAllowed(activity)) {
+            if (adContainerView != null) adContainerView.setVisibility(View.GONE);
+            if (shimmerFrameLayout != null) shimmerFrameLayout.setVisibility(View.GONE);
+            complete.run();
+            return;
+        }
 
         if (AdPlacement.shouldUseQuizPriority()) {
             Activity activity1 = activity instanceof Activity ? (Activity) activity : null;

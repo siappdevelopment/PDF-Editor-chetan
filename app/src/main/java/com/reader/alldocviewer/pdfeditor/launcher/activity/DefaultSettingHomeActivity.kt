@@ -30,6 +30,14 @@ class DefaultSettingHomeActivity : AppCompatActivity() {
     private val watcher = object : Runnable {
         override fun run() {
             if (hasContinued || isDestroyed) return
+            if (StartupFlowManager.isStartupFlowActive(this@DefaultSettingHomeActivity) &&
+                !StartupFlowManager.isCurrentStep(this@DefaultSettingHomeActivity, StartupFlowStep.DEFAULT_SETTING_HOME)
+            ) {
+                // Flow already moved on (launcher handled the Home intent): just go away, never relaunch.
+                hasContinued = true
+                finish()
+                return
+            }
             if (Utils.isDefaultHomeApp(this@DefaultSettingHomeActivity)) {
                 // Some Settings screens stay open after a pick: bring the user back to this step.
                 startActivity(
@@ -99,6 +107,15 @@ class DefaultSettingHomeActivity : AppCompatActivity() {
         if (hasContinued || isFinishing) return
         hasContinued = true
         handler.removeCallbacks(watcher)
+        // The launcher (system Home intent) may already have moved the flow on and opened the next screen:
+        // then this invisible screen only has to disappear, and must not close that screen with it.
+        if (StartupFlowManager.isStartupFlowActive(this) &&
+            !StartupFlowManager.isCurrentStep(this, StartupFlowStep.DEFAULT_SETTING_HOME)
+        ) {
+            finish()
+            overridePendingTransition(0, 0)
+            return
+        }
         Utils.setCompletingDefaultAppSetup(this, false)
         if (settingsOpened) {
             Utils.trackScreen(
@@ -108,9 +125,11 @@ class DefaultSettingHomeActivity : AppCompatActivity() {
         }
         if (StartupFlowManager.isStartupFlowActive(this)) {
             StartupFlowManager.completeStep(this, StartupFlowStep.DEFAULT_SETTING_HOME)
+            // The previous screen was kept so nothing blinked before the system page: close it with this one.
+            finishAffinity()
+        } else {
+            finish()
         }
-        // The previous screen was kept so nothing blinked before the system page: close it with this one.
-        finishAffinity()
     }
 
     private companion object {

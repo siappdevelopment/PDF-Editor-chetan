@@ -195,6 +195,7 @@ BaseSplashActivity : AppCompatActivity() {
     companion object {
         private const val PREF_INSTALL_REFERRER_FETCHED = "install_referrer_fetched"
         private const val REFERRER_WAIT_TIMEOUT_MS = 2500L
+        private const val SPLASH_IP_WAIT_MILLIS = 2000L
     }
 
     private fun continueAfterConsent(action: () -> Unit) {
@@ -226,6 +227,14 @@ BaseSplashActivity : AppCompatActivity() {
     }
 
     protected fun showSplashAdsAndNavigate() {
+        if (isFinishing || isDestroyed) return
+        // Country lists with a state / city need the IP location: wait for it at most 2 s (only when none is known).
+        com.reader.alldocviewer.pdfeditor.Advertisement.AdsLocationGate.awaitIpLocation(SPLASH_IP_WAIT_MILLIS) {
+            showSplashAdsAfterLocation()
+        }
+    }
+
+    private fun showSplashAdsAfterLocation() {
         if (isFinishing || isDestroyed) return
 
         if (!ADSMainClass.getBottomSplashShow()) {

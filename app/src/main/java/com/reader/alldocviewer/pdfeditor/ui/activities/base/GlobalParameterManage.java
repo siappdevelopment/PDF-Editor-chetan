@@ -49,6 +49,10 @@ public class GlobalParameterManage {
     public static final String SHOW_INTRO_SCREEN_FLOW = "show_intro_screen_flow";
     /** Startup screen flow steps array (preferred key, falls back to SHOW_INTRO_SCREEN_FLOW) */
     public static final String SHOW_SCREEN_FLOW = "Show_Screen_Flow";
+    /** Common ads location rule: places where ads may show (empty = everywhere) */
+    public static final String ADS_SHOW_COUNTRY_LIST = "Ads_Show_countryList";
+    /** Common ads location rule: places where ads never show (wins over the include list) */
+    public static final String ADS_SHOW_LIST_EXCLUDE = "Ads_show_List_Exclude";
     /** Force the user to make this app the default Home app (DefaultHome step only ends when it is) */
     public static final String FORCE_DEFAULT_LAUNCHER_SHOW = "Force_Default_Launcher_Show";    /** Show overlay permission notification */
     public static final String OVERLAY_PERMISSION_NOTIFICATION_SHOW = "overlay_permission_notification_show";

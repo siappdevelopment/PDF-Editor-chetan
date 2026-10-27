@@ -53,7 +53,12 @@ public class PrivacyPolicySetting extends LocaleAwareAppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                finish();
+                // Back = the Agree button (unchecked box still shows the toast and stays).
+                if (StartupFlowManager.isStartupFlowActive(PrivacyPolicySetting.this)) {
+                    btnAgreeContinue.performClick();
+                } else {
+                    finish();
+                }
             }
         });
 

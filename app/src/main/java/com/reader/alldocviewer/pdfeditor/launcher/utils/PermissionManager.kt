@@ -106,9 +106,46 @@ object PermissionManager {
         return !hasPermission && isPermissionDialogShown(context)
     }
 
-    fun needsOverlayPermission(context: Context): Boolean {
+    /**
+     * "Display over other apps" is needed only while the app can't draw over others AND is not the default
+     * Home app (the Home app can start screens from the background without it).
+     */
+    @JvmStatic
+    fun isOverlayNeeded(context: Context): Boolean {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
                 !hasOverlayPermission(context) &&
+                !com.reader.alldocviewer.pdfeditor.launcher.common.Utils.isDefaultHomeApp(context)
+    }
+
+    /**
+     * After the system overlay settings were opened from [activity]: show the existing guide card on top
+     * of it (Settings opens a moment later and would cover it). The card closes on any touch and brings the
+     * app back to [activity] as soon as the permission is granted.
+     */
+    @JvmStatic
+    fun showOverlayGuide(activity: android.app.Activity) {
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+            if (activity.isFinishing || activity.isDestroyed || !isOverlayNeeded(activity)) return@postDelayed
+            activity.startActivity(
+                Intent(
+                    activity,
+                    com.reader.alldocviewer.pdfeditor.CallFunction.Activity.OverlayPermissionActivity::class.java
+                ).apply {
+                    putExtra(
+                        com.reader.alldocviewer.pdfeditor.CallFunction.Activity.OverlayPermissionActivity.EXTRA_HOST_TASK_ID,
+                        activity.taskId
+                    )
+                    putExtra(
+                        com.reader.alldocviewer.pdfeditor.CallFunction.Activity.OverlayPermissionActivity.EXTRA_RETURN_CLASS,
+                        activity.javaClass.name
+                    )
+                }
+            )
+        }, 350L)
+    }
+
+    fun needsOverlayPermission(context: Context): Boolean {
+        return isOverlayNeeded(context) &&
                 !SharedPreferenceManager.getBoolean(context, Constance.OVERLAY_PERMISSION_SKIP)
     }
 
@@ -117,8 +154,7 @@ object PermissionManager {
     }
 
     fun shouldShowOverlayPermissionBanner(context: Context): Boolean {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
-                !hasOverlayPermission(context) &&
+        return isOverlayNeeded(context) &&
                 SharedPreferenceManager.getBoolean(context, Constance.OVERLAY_PERMISSION_SKIP)
     }
 

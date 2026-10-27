@@ -55,6 +55,13 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
     /** Force_Default_Launcher_Show: the step ends only when this app really is the Home app. */
     private boolean forceDefault;
     private boolean guideShown;
+    /** The live screen, so the launcher can hand the answer back to it instead of showing itself. */
+    private static java.lang.ref.WeakReference<DefaultAppActivity> activeInstance;
+
+    public static boolean isRequestOpen() {
+        DefaultAppActivity a = activeInstance == null ? null : activeInstance.get();
+        return a != null && !a.isFinishing() && !a.isDestroyed() && !a.navigatedAway;
+    }
     private final Handler homeWatcherHandler = new Handler(Looper.getMainLooper());
     private final Runnable homeWatcher = new Runnable() {
         @Override
@@ -83,6 +90,7 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_default_app);
         forceDefault = StartupFlowManager.isForceDefaultLauncher(this);
+        activeInstance = new java.lang.ref.WeakReference<>(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             WindowInsetsController controller = getWindow().getInsetsController();
@@ -105,7 +113,10 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                StartupFlowManager.exitAppOnBackPress(DefaultAppActivity.this);
+                // Back = the Set as default button; its guards stop a second request while one is open.
+                if (btnSetDefault != null) {
+                    btnSetDefault.performClick();
+                }
             }
         });
     }
@@ -238,9 +249,10 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
         homeWatcherHandler.removeCallbacks(homeWatcher);
         if (Utils.isDefaultHomeApp(this)) {
             if (forceDefault && !isFinishing()) {
-                // Forced: no Home intent ends the step for us, carry the flow on here.
+                // Forced: carry the flow on here.
                 goNextAfterDefault();
             } else if (!isFinishing()) {
+                // Not forced: the system's Home intent reaches the launcher, which continues the flow.
                 finish();
             }
             return;
@@ -402,6 +414,9 @@ public class DefaultAppActivity extends LocaleAwareAppCompatActivity {
     @Override
     protected void onDestroy() {
         homeWatcherHandler.removeCallbacks(homeWatcher);
+        if (activeInstance != null && activeInstance.get() == this) {
+            activeInstance = null;
+        }
         super.onDestroy();
     }
 

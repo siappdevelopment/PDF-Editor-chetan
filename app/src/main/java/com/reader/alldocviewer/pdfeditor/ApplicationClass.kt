@@ -25,6 +25,7 @@ class ApplicationClass : ADSAppManage() {
 
     override fun onCreate() {
         super.onCreate()
+        com.reader.alldocviewer.pdfeditor.Advertisement.AdsLocationGate.attach(this)
         ActivityStackTracker.register(this)
         ThemeManager.applySavedThemeGlobally(this)
         // Apply saved language locale globally

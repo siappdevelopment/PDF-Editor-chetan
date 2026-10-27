@@ -8,6 +8,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSMainClass
+import com.reader.alldocviewer.pdfeditor.Advertisement.AdsLocationGate
 import com.reader.alldocviewer.pdfeditor.Advertisement.ADSUtilitis
 import com.reader.alldocviewer.pdfeditor.Advertisement.ManegeUtilsView
 import com.reader.alldocviewer.pdfeditor.R
@@ -715,6 +716,7 @@ object FirebaseRemoteConfigLoader {
 
         parseStartupFlowConfig(context, configJson)
         parseQuizAdsConfig(context, configJson)
+        parseAdsLocationConfig(context, configJson)
         return update_coming_soon
     }
 
@@ -1148,6 +1150,17 @@ object FirebaseRemoteConfigLoader {
         } catch (e: Exception) {
             Log.e("QuizAds", "parseQuizAdsConfig: ${e.message}")
         }
+    }
+
+    /** Ads_Show_countryList / Ads_show_List_Exclude (profile root) and the IP checker URL of AppProxyStructure. */
+    private fun parseAdsLocationConfig(context: Context, configJson: JSONObject) {
+        val proxy = configJson.optJSONObject(GlobalParameterManage.APP_PROXY_STRUCTURE)
+        AdsLocationGate.configure(
+            context,
+            configJson.opt(GlobalParameterManage.ADS_SHOW_COUNTRY_LIST),
+            configJson.opt(GlobalParameterManage.ADS_SHOW_LIST_EXCLUDE),
+            proxy?.optString("App_Proxy_Ip_Checker_Url", "")
+        )
     }
 
     private fun parseStartupFlowConfig(context: Context, configJson: JSONObject) {

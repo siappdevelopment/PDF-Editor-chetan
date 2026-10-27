@@ -2100,8 +2100,12 @@ public class ADSMainClass {
         return context.getSharedPreferences("ADSAppManage", Context.MODE_PRIVATE);
     }
 
+    /**
+     * True when no ad may be shown: ads removed by config (AdsBlocks) or the device is in a place the common
+     * country lists (Ads_Show_countryList / Ads_show_List_Exclude) do not allow.
+     */
     public static boolean getAds_Free() {
-        return ADSPrefManage().getBoolean(Ads_Free, false);
+        return ADSPrefManage().getBoolean(Ads_Free, false) || !AdsLocationGate.isAllowed(getAppContext());
     }
 
     public static void setAds_Free(boolean value) {

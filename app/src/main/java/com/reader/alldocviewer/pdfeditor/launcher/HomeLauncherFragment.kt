@@ -857,6 +857,7 @@ import kotlin.text.equals
         if (PermissionManager.hasOverlayPermission(requireContext())) return
         PermissionManager.markOverlayPermissionDeclined(requireContext())
         overlaySettingsLauncher.launch(PermissionManager.getOverlaySettingsIntent(requireContext()))
+        PermissionManager.showOverlayGuide(requireActivity())
     }
 
     private fun setupWindowInsets() {

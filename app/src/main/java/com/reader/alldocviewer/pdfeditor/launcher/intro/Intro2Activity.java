@@ -93,7 +93,12 @@ public class Intro2Activity extends LocaleAwareAppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                finish();
+                // Back = the Next button: straight to the next intro page / step.
+                if (btnNext != null) {
+                    btnNext.performClick();
+                } else {
+                    IntroNavigation.goToNextIntroButtonScreen(Intro2Activity.this, 2);
+                }
             }
         });
     }

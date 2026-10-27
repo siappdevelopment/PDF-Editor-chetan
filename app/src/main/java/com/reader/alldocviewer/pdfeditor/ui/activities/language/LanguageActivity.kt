@@ -279,6 +279,10 @@ class LanguageActivity : LocaleAwareAppCompatActivity(), OnClickHandler {
     }
     private var lastClickTime = 0L
 
+    private companion object {
+        const val DEFAULT_LANGUAGE_CODE = "en"
+    }
+
     fun isValidClick(delay: Long = 500L): Boolean {
         val currentTime = System.currentTimeMillis()
 
@@ -292,42 +296,46 @@ class LanguageActivity : LocaleAwareAppCompatActivity(), OnClickHandler {
     override fun onClick(view: View) {
         if (!isValidClick()) return
         when (view.id) {
-            binding.btnNext.id -> {
-                if (adapter.getSelectedPosition() == -1) {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.please_select_language),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    return
-                }
-                tempSelectedLanguageCode = adapter.getSelectedLanguage().code
+            binding.btnNext.id -> onNextClicked(fromBack = false)
+        }
+    }
 
-                if (LanguageManager.isSameLanguage(this, tempSelectedLanguageCode)
-                    && SharedPreferenceManager.getBoolean(this, Constance.IS_LOG_IN)
-                ) {
-                    if (showIcon) {
-                        finish()
-                    } else {
-                        StartupFlowManager.completeStep(this, StartupFlowStep.LANGUAGE)
-                    }
-                    return
-                }
-
-                if (ADSMainClass.getLanguageInterShow()) {
-                    ADSInterDisplay.ADSInterstitialShowing(
-                        this@LanguageActivity,
-                        ADSMainClass.getStringValue(INTER_FIRST_TIME),
-                        { _ -> navigateAfterLanguageSelected() },
-                        ADSMainClass.getLanguageInterShow()
-                    )
-                } else {
-                    navigateAfterLanguageSelected()
-                }
+    /** Main action of the screen; Back runs the same one (with the default language when nothing is picked). */
+    private fun onNextClicked(fromBack: Boolean) {
+        if (adapter.getSelectedPosition() == -1) {
+            if (!fromBack) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.please_select_language),
+                    Toast.LENGTH_SHORT
+                ).show()
+                return
             }
+            tempSelectedLanguageCode = DEFAULT_LANGUAGE_CODE
+        } else {
+            tempSelectedLanguageCode = adapter.getSelectedLanguage().code
+        }
 
+        if (LanguageManager.isSameLanguage(this, tempSelectedLanguageCode)
+            && SharedPreferenceManager.getBoolean(this, Constance.IS_LOG_IN)
+        ) {
+            if (showIcon) {
+                finish()
+            } else {
+                StartupFlowManager.completeStep(this, StartupFlowStep.LANGUAGE)
+            }
+            return
+        }
 
-
+        if (ADSMainClass.getLanguageInterShow()) {
+            ADSInterDisplay.ADSInterstitialShowing(
+                this@LanguageActivity,
+                ADSMainClass.getStringValue(INTER_FIRST_TIME),
+                { _ -> navigateAfterLanguageSelected() },
+                ADSMainClass.getLanguageInterShow()
+            )
+        } else {
+            navigateAfterLanguageSelected()
         }
     }
 
@@ -341,7 +349,8 @@ class LanguageActivity : LocaleAwareAppCompatActivity(), OnClickHandler {
             )
             return
         }
-        StartupFlowManager.exitAppOnBackPress(this)
+        // First run: Back = the Next button, straight to the next step.
+        if (isValidClick()) onNextClicked(fromBack = true)
     }
 
     override fun onResume() {

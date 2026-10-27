@@ -78,8 +78,8 @@ public class DefaultPermissionButtonAd {
             presentAppOpen(context);
             return;
         }
-        ADSUtilitis.MassageBoxFull(context);
-        loadAppOpen(context, true);
+        // Only a preloaded ad is shown: never a loading dialog, navigation must not wait on a missing ad.
+        finishCallback(false);
     }
 
     private static void showInterstitial(Activity context) {
@@ -87,8 +87,8 @@ public class DefaultPermissionButtonAd {
             presentInterstitial(context);
             return;
         }
-        ADSUtilitis.MassageBoxFull(context);
-        loadInterstitial(context, true);
+        // Only a preloaded ad is shown: never a loading dialog, navigation must not wait on a missing ad.
+        finishCallback(false);
     }
 
     private static void loadAppOpen(Activity context, boolean showWhenReady) {

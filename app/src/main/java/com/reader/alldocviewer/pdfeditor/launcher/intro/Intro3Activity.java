@@ -93,6 +93,11 @@ public class Intro3Activity extends LocaleAwareAppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
+                // Back = the Next button: straight to the next intro page / step.
+                if (btnNext != null) {
+                    btnNext.performClick();
+                    return;
+                }
                 finish();
             }
         });

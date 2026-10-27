@@ -26,6 +26,8 @@ import org.jetbrains.annotations.Nullable;
 public class OverlayPermissionActivity extends AppCompatActivity {
 
     public static final String EXTRA_HOST_TASK_ID = "extra_host_task_id";
+    /** Class name of the screen to bring back once granted (default: PermissionActivity). */
+    public static final String EXTRA_RETURN_CLASS = "extra_return_class";
     private static final long CHECK_INTERVAL_MS = 500L;
 
     private Window window;
@@ -59,6 +61,9 @@ public class OverlayPermissionActivity extends AppCompatActivity {
         overlay_root = findViewById(R.id.overlay_root);
         window = getWindow();
         window.addFlags(7078560);
+        // The window is not touch-modal, so touches outside the card go to the screen behind it. Ask for
+        // ACTION_OUTSIDE too, so a touch outside closes the card (and still reaches the Settings switch).
+        window.addFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
         window.setSoftInputMode(2);
         setFinishOnTouchOutside(true);
         int animEnter = R.anim.optin_slide_up;
@@ -71,9 +76,21 @@ public class OverlayPermissionActivity extends AppCompatActivity {
         layoutParams.gravity = Gravity.BOTTOM;
         layoutParams.x = 1;
         layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        layoutParams.dimAmount = 0.2f;
+        // Full-height (transparent) window with the card kept at the bottom: Android puts an input sink over
+        // the whole activity, so a window that only covers the card never sees touches outside it. With the
+        // window covering the screen every touch lands in it and closes the guide.
+        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+        layoutParams.dimAmount = 0f;
         window.setAttributes(layoutParams);
+        View content = findViewById(android.R.id.content);
+        if (content instanceof android.view.ViewGroup && ((android.view.ViewGroup) content).getChildCount() > 0) {
+            View card = ((android.view.ViewGroup) content).getChildAt(0);
+            android.widget.FrameLayout.LayoutParams cardParams = new android.widget.FrameLayout.LayoutParams(
+                    android.widget.FrameLayout.LayoutParams.MATCH_PARENT,
+                    android.widget.FrameLayout.LayoutParams.WRAP_CONTENT,
+                    Gravity.BOTTOM);
+            card.setLayoutParams(cardParams);
+        }
 
         overlay_root.setOnClickListener(v -> OverlayPermissionActivity.this.finish());
     }
@@ -96,6 +113,7 @@ public class OverlayPermissionActivity extends AppCompatActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent motionEvent) {
+        // Any touch, inside the card or outside it (ACTION_OUTSIDE), closes the guide.
         finish();
         return super.dispatchTouchEvent(motionEvent);
     }
@@ -131,14 +149,24 @@ public class OverlayPermissionActivity extends AppCompatActivity {
         grantHandled = true;
         stopOverlayChecker();
 
-        Intent intent = new Intent(this, PermissionActivity.class);
+        Class<?> returnClass = PermissionActivity.class;
+        String returnName = getIntent().getStringExtra(EXTRA_RETURN_CLASS);
+        if (returnName != null) {
+            try {
+                returnClass = Class.forName(returnName);
+            } catch (ClassNotFoundException ignored) {
+            }
+        }
+        Intent intent = new Intent(this, returnClass);
         intent.addFlags(
                 Intent.FLAG_ACTIVITY_CLEAR_TOP
                         | Intent.FLAG_ACTIVITY_SINGLE_TOP
                         | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         | Intent.FLAG_ACTIVITY_NEW_TASK
         );
-        intent.putExtra(PermissionActivity.EXTRA_OVERLAY_GRANTED, true);
+        if (returnClass == PermissionActivity.class) {
+            intent.putExtra(PermissionActivity.EXTRA_OVERLAY_GRANTED, true);
+        }
         startActivity(intent);
 
         int hostTaskId = getIntent().getIntExtra(EXTRA_HOST_TASK_ID, -1);

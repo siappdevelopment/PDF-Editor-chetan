@@ -110,7 +110,8 @@ class PermissionActivity : BaseActivity() {
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                StartupFlowManager.exitAppOnBackPress(this@PermissionActivity)
+                // Back = the Allow button (same permission request, then the next step).
+                binding.btnAllowPermission.performClick()
             }
         })
 
@@ -152,7 +153,8 @@ class PermissionActivity : BaseActivity() {
     }
 
     private fun checkAndRequestOverlayPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+        // Not needed when this app is the default Home app.
+        if (PermissionManager.isOverlayNeeded(this)) {
             val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION).apply {
                 data = Uri.parse("package:$packageName")
             }

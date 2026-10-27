@@ -136,7 +136,9 @@ public final class AdPlacement {
     }
 
     public static boolean shouldUseQuizPriority() {
-        return "QUIZ".equalsIgnoreCase(getAdPriority());
+        // Quiz ads follow the same country rule as Google ads: nothing is shown in a blocked place.
+        return "QUIZ".equalsIgnoreCase(getAdPriority())
+                && AdsLocationGate.isAllowed(ADSMainClass.getAppContext());
     }
 
     public static boolean getGoogleAdFailedShowQuiz() {
